@@ -57,7 +57,7 @@ Because I’m just one person, I’m hoping that there might be some traction he
 
 ## Install and run
 
-1. Clone the repo: `gh repo clone philsherry/hmrc-cypress`
+1. Clone the repo: `gh repo clone philsherry/govuk-cypress`
 2. Install the dependencies: `npm install`
 3. Install Cypress: `npm run cypress:install`
 4. Start the server: `npm start`

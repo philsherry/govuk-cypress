@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+{{ components.cypress.component[6].name }} -
+{{ components.cypress.heading }} -
+{{ serviceName }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <header class="hmrc-page-heading">
+      <h1 class="govuk-heading-xl">
+        {{ components.cypress.component[6].name }}
+      </h1>
+      <p class="govuk-caption-xl hmrc-caption-xl"><span class="govuk-visually-hidden">This section is </span>{{
+        components.cypress.heading }}</p>
+    </header>
+  </div>
+</div>
+
+<div class="govuk-grid-row main-section">
+  {% include "includes/skip-links.html" %}
+
+  <div class="govuk-grid-column-one-third">
+    {% include "includes/nav-cypress.html" %}
+  </div>
+
+  <div id="cypress-section" class="govuk-grid-column-two-thirds cypress-section">
+
+    <h2 class="govuk-heading-m" id="component-1">Example one</h2>
+    <p class="govuk-body">{{ components.cypress.component[6].body }}</p>
+
+<pre>
+  <code class="language-javascript hljs">
+
+  </code>
+</pre>
+
+  </div>
+
+</div>
+
+{% endblock %}

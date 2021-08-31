@@ -1,0 +1,40 @@
+{
+  "options": {
+    "chromeLaunchConfig": {
+      "args": [
+        "--no-sandbox",
+        "--disable-setuid-sandbox"
+      ]
+    },
+    "concurrency": 4,
+    "hideElements": "#global-cookie-message",
+    "ignore": [
+      "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail"
+    ],
+    "includeNotices": false,
+    "includeWarnings": true,
+    "level": "warning",
+    "log": {
+      "debug": "console.log",
+      "error": "console.error",
+      "info": "console.info"
+    },
+    "reporter": "json",
+    "rootElement": "main",
+    "runner": [
+      "axe",
+      "htmlcs"
+    ],
+    "standard": "WCAG2AA",
+    "threshold": 9,
+    "timeout": 2147483647,
+    "useIncognitoBrowserContext": true,
+    "userAgent": "A11Y TESTS",
+    "viewport": {
+      "deviceScaleFactor": 2,
+      "height": 720,
+      "isMobile": false,
+      "width": 1280
+    }
+  }
+}

@@ -1,0 +1,3 @@
+{% set exampleURL = "/" + params.dept + "/" + params.slug + "/" + params.example %}
+{% set iframeID = "iframe-" + params.example %}
+<iframe data-module="app-example-frame" id="{{ iframeID }}" class="app-example__frame {% if not params.height %}app-example__frame--resizable{% endif %}" {% if params.height %}height="{{ params.height}}px"{% endif %} src="{{ exampleURL }}"{% if params.description %} title="{{description}} example"{% endif %}></iframe>

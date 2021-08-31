@@ -1,0 +1,25 @@
+{
+  "recommendations": [
+    "2gua.rainbow-brackets",
+    "bierner.github-markdown-preview",
+    "bierner.markdown-checkbox",
+    "bierner.markdown-emoji",
+    "bierner.markdown-preview-github-styles",
+    "bierner.markdown-prism",
+    "bierner.markdown-yaml-preamble",
+    "davidanson.vscode-markdownlint",
+    "douglaszaltron.nunjucks-vscode-extensionpack",
+    "esbenp.prettier-vscode",
+    "eseom.nunjucks-template",
+    "jebbs.markdown-extended",
+    "jerriepelser.copy-markdown-as-html",
+    "josefbiehler.cypress-fixture-intellisense",
+    "luwenjiechn.nunjucks-vscode-snippets",
+    "okitavera.vscode-nunjucks-formatter",
+    "ronnidc.nunjucks",
+    "shelex.vscode-cy-helper",
+    "shevtsov.qa-extension-pack",
+    "simonwhatley.govuk-design-system-snippets",
+    "yzhang.markdown-all-in-one"
+  ]
+}

@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+{{ components.cypress.component[0].name }} -
+{{ components.cypress.heading }} -
+{{ serviceName }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <header class="hmrc-page-heading">
+      <h1 class="govuk-heading-xl">
+        {{ components.cypress.component[0].name }}
+      </h1>
+      <p class="govuk-caption-xl hmrc-caption-xl"><span class="govuk-visually-hidden">This section is </span>{{
+        components.cypress.heading }}</p>
+    </header>
+  </div>
+</div>
+
+<div class="govuk-grid-row main-section">
+  {% include "includes/skip-links.html" %}
+
+  <div class="govuk-grid-column-one-third">
+    {% include "includes/nav-cypress.html" %}
+  </div>
+
+  <div id="cypress-section" class="govuk-grid-column-two-thirds cypress-section">
+
+    <h2 class="govuk-heading-m">Setup</h2>
+    <p class="govuk-body">{{ components.cypress.component[0].body }}</p>
+
+<pre>
+  <code class="language-javascript hljs">
+  const page = "/hmrc/currency-input";
+  const env = require("../../../fixtures/env.json");
+  const user = require("../../../fixtures/user.json");
+  const { terminalLog } = require("../../../plugins/hmrc");
+
+  /**
+   * @screenshotFormat png
+   * @screenshotFileName `${service}--${component}--${viewport}--${state}`
+   **/
+  const service = "homepage";
+  const journey = "desktop";
+  let thing = "currency-input";
+  let state = "default";
+  </code>
+</pre>
+
+    <h2 class="govuk-heading-m"><code role="text">beforeEach</code></h2>
+    <p class="govuk-body">{{ components.cypress.component[0].body }}</p>
+
+<pre>
+  <code class="language-javascript hljs">
+  beforeEach(() => {
+    cy.viewport(env.desktop.viewport[0]);
+    cy.visit(page);
+    cy.injectAxe();
+
+    // set up aliases here
+    cy.get(".govuk-form-group")
+      .as("component");
+    cy.get(".govuk-form-group .govuk-label")
+      .as("componentLabel");
+    cy.get(".govuk-form-group .govuk-hint")
+      .as("componentHint");
+    cy.get(".govuk-form-group .govuk-input__wrapper")
+      .as("componentInputWrapper");
+    cy.get(".govuk-form-group .govuk-input__prefix")
+      .as("componentInputPrefix");
+    cy.get(".govuk-form-group .govuk-input")
+      .as("componentInput");
+  });
+  </code>
+</pre>
+
+  </div>
+
+</div>
+
+{% endblock %}

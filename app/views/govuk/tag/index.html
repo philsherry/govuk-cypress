@@ -1,0 +1,313 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+{{ components.govuk.component[25].name }} -
+{{ components.govuk.heading }} -
+{{ serviceName }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <header class="hmrc-page-heading">
+      <h1 class="govuk-heading-xl">
+        {{ components.govuk.component[25].name }}
+      </h1>
+      <p class="govuk-caption-xl hmrc-caption-xl"><span class="govuk-visually-hidden">This section is </span>{{
+        components.govuk.heading }}</p>
+    </header>
+  </div>
+</div>
+
+<div class="govuk-grid-row main-section">
+  {% include "includes/skip-links.html" %}
+
+  <div class="govuk-grid-column-one-third">
+    <nav aria-label="In-page">
+      <h2 class="govuk-heading-m">In-page navigation</h2>
+      <h3 class="govuk-heading-s" id="in-page-navigation__components">Components</h3>
+      <ol class="govuk-list" role="list" aria-describedby="in-page-navigation__components">
+        <li><a class="govuk-link" href="#component-1">{{ components.govuk.component[25].example[0].heading }}</a></li>
+        <li><a class="govuk-link" href="#component-2">{{ components.govuk.component[25].example[1].heading }}</a></li>
+        <li><a class="govuk-link" href="#component-3">{{ components.govuk.component[25].example[2].heading }}</a></li>
+      </ol>
+      <h3 class="govuk-heading-s" id="in-page-navigation__cypress">Cypress tests</h3>
+      <ol class="govuk-list" role="list" aria-describedby="in-page-navigation__cypress">
+        <li><a class="govuk-link" href="#cypress-1">{{components.cypress.env[0].heading}}</a></li>
+        <li><a class="govuk-link" href="#cypress-2">{{components.cypress.env[1].heading}}</a></li>
+        <li><a class="govuk-link" href="#cypress-3">{{components.cypress.env[2].heading}}</a></li>
+      </ol>
+    </nav>
+    {% include "includes/nav-govuk.html" %}
+  </div>
+
+  <div id="component-section" class="govuk-grid-column-two-thirds">
+    <p class="govuk-body">{{ components.govuk.component[25].body }}</p>
+
+    <div class="component-section" id="component-1">
+      <h2 class="govuk-heading-m">
+        {{ components.govuk.component[25].example[0].heading }}
+      </h2>
+      <p class="govuk-body">
+        {{ components.govuk.component[25].example[0].body }}
+      </p>
+
+      <div class="component-section__example" role="region" aria-label="Component example: {{ components.govuk.component[25].example[0].heading }}">
+        {{ govukTag({
+          text: "completed"
+        }) }}
+      </div>
+
+      <footer class="component-section__footer">
+        {{ govukDetails({
+        summaryText: "What we are testing in this component",
+        html: "<ul class='govuk-list govuk-list--bullet'>
+          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
+          <li>The hint text must be associated correctly with the checkboxes.</li>
+          <li>The focus colours must be the updated version.</li>
+        </ul>"
+        }) }}
+      </footer>
+    </div>
+
+    <div class="component-section" id="component-2">
+      <h2 class="govuk-heading-m">
+        {{ components.govuk.component[25].example[1].heading }}
+      </h2>
+      <p class="govuk-body">
+        {{ components.govuk.component[25].example[1].body }}
+      </p>
+
+      <div class="component-section__example" role="region" aria-label="Component example: {{ components.govuk.component[25].example[1].heading }}">
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="col"> Name of user </th>
+              <th class="govuk-table__header" scope="col"> Status </th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                Rachel Silver
+              </td>
+              <td class="govuk-table__cell">
+                {{govukTag({
+                text: "Inactive",
+                classes: "govuk-tag--grey"
+                })}}
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                Jesse Smith
+              </td>
+              <td class="govuk-table__cell">
+                {{govukTag({
+                text: "Inactive",
+                classes: "govuk-tag--grey"
+                })}}
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                Joshua Wessel
+              </td>
+              <td class="govuk-table__cell">
+                {{govukTag({
+                text: "Active"
+                })}}
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                Rachael Pepper
+              </td>
+              <td class="govuk-table__cell">
+                {{govukTag({
+                text: "Active"
+                })}}
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                Stuart Say
+              </td>
+              <td class="govuk-table__cell">
+                {{govukTag({
+                text: "Inactive",
+                classes: "govuk-tag--grey"
+                })}}
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                Laura Frith
+              </td>
+              <td class="govuk-table__cell">
+                {{govukTag({
+                text: "Active"
+                })}}
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                Tim Harvey
+              </td>
+              <td class="govuk-table__cell">
+                {{govukTag({
+                text: "Inactive",
+                classes: "govuk-tag--grey"
+                })}}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <footer class="component-section__footer">
+        {{ govukDetails({
+        summaryText: "What we are testing in this component",
+        html: "<ul class='govuk-list govuk-list--bullet'>
+          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
+          <li>The hint text must be associated correctly with the checkboxes.</li>
+          <li>The focus colours must be the updated version.</li>
+        </ul>"
+        }) }}
+      </footer>
+    </div>
+
+    <div class="component-section" id="component-3">
+      <h2 class="govuk-heading-m">
+        {{ components.govuk.component[25].example[2].heading }}
+      </h2>
+      <p class="govuk-body">
+        {{ components.govuk.component[25].example[2].body }}
+      </p>
+
+      <div class="component-section__example" role="region" aria-label="Component example: {{ components.govuk.component[25].example[2].heading }}">
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="col"> Application </th>
+              <th class="govuk-table__header" scope="col"> Status </th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                Joshua Wessel
+              </td>
+              <td class="govuk-table__cell">
+                {{govukTag({
+                text: "Urgent",
+                classes: "govuk-tag--red"
+                })}}
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                Rachel Silver
+              </td>
+              <td class="govuk-table__cell">
+                {{govukTag({
+                text: "New",
+                classes: "govuk-tag--blue"
+                })}}
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                Laura Frith
+              </td>
+              <td class="govuk-table__cell">
+                {{govukTag({
+                text: "New",
+                classes: "govuk-tag--blue"
+                })}}
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                Paul French
+              </td>
+              <td class="govuk-table__cell">
+                {{govukTag({
+                text: "New",
+                classes: "govuk-tag--blue"
+                })}}
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                Jesse Smith
+              </td>
+              <td class="govuk-table__cell">
+                {{govukTag({
+                text: "New",
+                classes: "govuk-tag--blue"
+                })}}
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                Rachael Pepper
+              </td>
+              <td class="govuk-table__cell">
+                {{govukTag({
+                text: "Finished",
+                classes: "govuk-tag--green"
+                })}}
+              </td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                Emma Tennant
+              </td>
+              <td class="govuk-table__cell">
+                {{govukTag({
+                text: "Waiting on",
+                classes: "govuk-tag--yellow"
+                })}}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <footer class="component-section__footer">
+        {{ govukDetails({
+        summaryText: "What we are testing in this component",
+        html: "<ul class='govuk-list govuk-list--bullet'>
+          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
+          <li>The hint text must be associated correctly with the checkboxes.</li>
+          <li>The focus colours must be the updated version.</li>
+        </ul>"
+        }) }}
+      </footer>
+    </div>
+
+  </div>
+
+  <div id="cypress-section" class="govuk-grid-column-two-thirds cypress-section">
+    <h2 class="govuk-heading-l">Cypress tests</h2>
+    <div class="cypress-section__output">
+      <h3 class="govuk-heading-m" id="cypress-1">{{components.cypress.env[0].heading}}</h3>
+    </div>
+
+    <div class="cypress-section__output">
+      <h3 class="govuk-heading-m" id="cypress-2">{{components.cypress.env[1].heading}}</h3>
+    </div>
+
+    <div class="cypress-section__output">
+      <h3 class="govuk-heading-m" id="cypress-3">{{components.cypress.env[2].heading}}</h3>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

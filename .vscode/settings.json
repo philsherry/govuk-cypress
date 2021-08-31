@@ -1,0 +1,25 @@
+{
+  "cSpell.userWords": ["describedby", "firefox", "govuk", "greyscale", "hljs", "hmrc", "inputmode", "ios", "javascripts", "labelledby", "macos", "monochromacy", "noindex", "nvda", "philsherry", "tabindex", "talkback", "vodafone", "wcag", "xcode", "zoomtext"],
+  "files.watcherExclude": {
+    "**/target": true
+  },
+  "markdownlint.config": {
+    "default": true,
+    "MD003": {
+      "style": "atx"
+    },
+    "MD013": false,
+    "MD024": {
+      "siblings_only": true
+    },
+    "MD029": false,
+    "MD031": false,
+    "MD032": false,
+    "MD033": {
+      "allowed_elements": ["a", "abbr", "caption", "code", "dd", "details", "summary", "del", "dl", "dt", "figcaption", "figure", "img", "kbd", "li", "mark", "strong", "table", "tbody", "td", "tfoot", "th", "thead", "tr", "ul"]
+    },
+    "MD041": false
+  },
+  "spellright.documentTypes": ["markdown", "plaintext"],
+  "spellright.language": ["en_GB"]
+}

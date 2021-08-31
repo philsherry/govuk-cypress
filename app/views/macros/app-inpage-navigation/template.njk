@@ -1,0 +1,29 @@
+<nav aria-label="In-page">
+  <h2 class="govuk-heading-m">In-page navigation</h2>
+  <h3 class="govuk-heading-s" id="in-page-navigation__components">Components</h3>
+  <ol class="govuk-list" role="list" aria-describedby="in-page-navigation__components">
+  {% for item in component.example %}
+    <li>
+      <a class="govuk-link" href="#component-{{loop.index}}">
+        {{ item.heading }}
+      </a>
+    </li>
+  {% else %}
+    <li>Data error</li>
+  {% endfor %}
+  </ol>
+  <h3 class="govuk-heading-s" id="in-page-navigation__cypress">
+    Cypress tests
+  </h3>
+  <ol class="govuk-list" role="list" aria-describedby="in-page-navigation__cypress">
+  {% for item in components.cypress.env %}
+    <li>
+      <a class="govuk-link" href="#cypress-{{loop.index}}">
+        {{ item.heading }}
+      </a>
+    </li>
+  {% else %}
+    <li>Data error</li>
+  {% endfor %}
+  </ol>
+</nav>

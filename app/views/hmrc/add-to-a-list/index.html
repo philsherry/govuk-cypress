@@ -1,0 +1,340 @@
+{% extends "layout.html" %}
+{%- from "hmrc/components/add-to-a-list/macro.njk" import hmrcAddToAList -%}
+
+{% set component = components.hmrc.component[2] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+{{ appPageTitle() }}
+{% endblock %}
+
+{% block content %}
+
+{{ appPageHeader() }}
+
+<div class="govuk-grid-row main-section">
+  {% include "includes/skip-links.html" %}
+
+  <div class="govuk-grid-column-one-third">
+    {{ appInpageNavigation() }}
+    {% include "includes/nav-hmrc.html" %}
+  </div>
+
+  <div id="component-section" class="govuk-grid-column-two-thirds">
+    <p class="govuk-body">{{ component.body }}</p>
+
+    {% call appComponentSection({
+      componentIndex: 1,
+      heading: component.example[0].heading,
+      body: component.example[0].body,
+      testing: component.example[0].testing
+    }) -%}
+      {{
+        hmrcAddToAList({
+          itemList: [
+            {
+              name: 'David St. Hubbins',
+              changeUrl: '#',
+              removeUrl: '#'
+            },
+            {
+              name: 'Nigel Tufnel',
+              changeUrl: '#',
+              removeUrl: '#'
+            },
+            {
+              name: 'Derek Smalls',
+              changeUrl: '#',
+              removeUrl: '#'
+            }
+          ],
+          itemType: {
+            singular: 'director',
+            plural: 'directors',
+            formAction: '#'
+          },
+          hintText: 'You must tell us about all your directors.'
+        })
+      }}
+    {%-endcall %}
+
+    {% call appComponentSection({
+      componentIndex: 2,
+      heading: component.example[1].heading,
+      body: component.example[1].body,
+      testing: component.example[1].testing
+    }) -%}
+      {{
+        hmrcAddToAList({
+          itemList: [
+            {
+              name: 'David St. Hubbins',
+              changeUrl: '#',
+              removeUrl: '#'
+            },
+            {
+              name: 'Nigel Tufnel',
+              changeUrl: '#',
+              removeUrl: '#'
+            },
+            {
+              name: 'Derek Smalls',
+              changeUrl: '#',
+              removeUrl: '#'
+            },
+            {
+              name: 'Mick Shrimpton',
+              changeUrl: '#',
+              removeUrl: '#'
+            }
+          ],
+          itemType: {
+            singular: 'director',
+            plural: 'directors',
+            formAction: '#'
+          },
+          hintText: 'You must tell us about all your directors.',
+          messages: {
+            yes: 'Yes',
+            no: 'No'
+          }
+        })
+      }}
+    {%-endcall %}
+
+    {% call appComponentSection({
+      componentIndex: 3,
+      heading: component.example[2].heading,
+      body: component.example[2].body,
+      testing: component.example[2].testing
+    }) -%}
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds-from-desktop">
+          <h1 class="govuk-heading-l">Check your answers</h1>
+
+          {{ govukSummaryList({
+            classes: 'govuk-!-margin-bottom-9',
+            rows: [
+              {
+                key: {
+                  text: "What is the director’s name?"
+                },
+                value: {
+                  text: "Mick Shrimpton"
+                },
+                actions: {
+                  items: [
+                    {
+                      href: "#",
+                      text: "Change",
+                      visuallyHiddenText: "name"
+                    }
+                  ]
+                }
+              },
+              {
+                key: {
+                  text: "What is Mick Shrimpton’s date of birth?"
+                },
+                value: {
+                  text: "12 October 1953"
+                },
+                actions: {
+                  items: [
+                    {
+                      href: "#",
+                      text: "Change",
+                      visuallyHiddenText: "date of birth"
+                    }
+                  ]
+                }
+              },
+              {
+                key: {
+                  text: "Does Mick Shrimpton have a National Insurance number?"
+                },
+                value: {
+                  html: "Yes"
+                },
+                actions: {
+                  items: [
+                    {
+                      href: "#",
+                      text: "Change",
+                      visuallyHiddenText: "if they have National Insurance number"
+                    }
+                  ]
+                }
+              },
+              {
+                key: {
+                  text: "National Insurance number"
+                },
+                value: {
+                  text: 'QQ 12 34 56 C'
+                },
+                actions: {
+                  items: [
+                    {
+                      href: "#",
+                      text: "Change",
+                      visuallyHiddenText: "National Insurance number"
+                    }
+                  ]
+                }
+              }
+            ]
+          }) }}
+
+          <form action="/form-handler" method="post" novalidate>
+            <input type="hidden" name="answers-checked" value="true">
+            {{ govukButton({
+              text: "Continue"
+            }) }}
+          </form>
+        </div>
+      </div>
+    {%-endcall %}
+
+    {% call appComponentSection({
+      componentIndex: 4,
+      heading: component.example[3].heading,
+      body: component.example[3].body,
+      testing: component.example[3].testing
+    }) -%}
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds-from-desktop">
+          <h1 class="govuk-heading-xl">Change Mick Shrimpton’s details</h1>
+          {{ govukSummaryList({
+            classes: 'govuk-!-margin-bottom-9',
+            rows: [
+              {
+                key: {
+                  text: "What is the director’s name?"
+                },
+                value: {
+                  text: "Mick Shrimpton"
+                },
+                actions: {
+                  items: [
+                    {
+                      href: "#",
+                      text: "Change",
+                      visuallyHiddenText: "name"
+                    }
+                  ]
+                }
+              },
+              {
+                key: {
+                  text: "What is Mick Shrimpton’s date of birth?"
+                },
+                value: {
+                  text: "12 October 1953"
+                },
+                actions: {
+                  items: [
+                    {
+                      href: "#",
+                      text: "Change",
+                      visuallyHiddenText: "date of birth"
+                    }
+                  ]
+                }
+              },
+              {
+                key: {
+                  text: "Does Mick Shrimpton have a National Insurance number?"
+                },
+                value: {
+                  html: "Yes"
+                },
+                actions: {
+                  items: [
+                    {
+                      href: "#",
+                      text: "Change",
+                      visuallyHiddenText: "if they have National Insurance number"
+                    }
+                  ]
+                }
+              },
+              {
+                key: {
+                  text: "National Insurance number"
+                },
+                value: {
+                  text: 'QQ 12 34 56 C'
+                },
+                actions: {
+                  items: [
+                    {
+                      href: "#",
+                      text: "Change",
+                      visuallyHiddenText: "National Insurance number"
+                    }
+                  ]
+                }
+              }
+            ]
+          }) }}
+
+          <form action="/form-handler" method="post" novalidate>
+            <input type="hidden" name="answers-checked" value="true">
+            {{ govukButton({
+              text: "Continue"
+            }) }}
+          </form>
+        </div>
+      </div>
+    {%-endcall %}
+
+    {% call appComponentSection({
+      componentIndex: 5,
+      heading: component.example[4].heading,
+      body: component.example[4].body,
+      testing: component.example[4].testing
+    }) -%}
+      <form>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">Are you sure you want to remove Nigel Tufnel?</h1>
+            </legend>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input id="yes" type="radio" name="delete" class="govuk-radios__input" value="Yes">
+                <label class="govuk-radios__label" for="yes">Yes</label>
+              </div>
+              <div class="govuk-radios__item">
+                <input id="no" type="radio" name="delete" class="govuk-radios__input" value="No">
+                <label class="govuk-radios__label" for="no">No</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <button type="submit" class="govuk-button">Continue</button>
+      </form>
+    {%-endcall %}
+
+  </div>
+
+  <div id="cypress-section" class="govuk-grid-column-two-thirds cypress-section">
+    <h2 class="govuk-heading-l">Cypress tests</h2>
+    <div class="cypress-section__output">
+      <h3 class="govuk-heading-m" id="cypress-1">{{components.cypress.env[0].heading}}</h3>
+    </div>
+
+    <div class="cypress-section__output">
+      <h3 class="govuk-heading-m" id="cypress-2">{{components.cypress.env[1].heading}}</h3>
+    </div>
+
+    <div class="cypress-section__output">
+      <h3 class="govuk-heading-m" id="cypress-3">{{components.cypress.env[2].heading}}</h3>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

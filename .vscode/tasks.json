@@ -1,0 +1,66 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "sbt clean",
+      "type": "shell",
+      "command": "sbt",
+      "args": [
+        "clean"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "sbt compile",
+      "type": "shell",
+      "command": "sbt",
+      "args": [
+        "compile"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "sbt evicted",
+      "type": "shell",
+      "command": "sbt",
+      "args": [
+        "evicted"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "sbt run",
+      "type": "shell",
+      "command": "sbt",
+      "args": [
+        "run",
+        "--mem",
+        "6699"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "sbt test",
+      "type": "shell",
+      "command": "sbt",
+      "args": [
+        "test",
+        "--mem",
+        "6699"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+  ]
+}

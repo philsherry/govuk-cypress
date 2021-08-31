@@ -1,0 +1,429 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+{{ components.govuk.component[23].name }} -
+{{ components.govuk.heading }} -
+{{ serviceName }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <header class="hmrc-page-heading">
+      <h1 class="govuk-heading-xl">
+        {{ components.govuk.component[23].name }}
+      </h1>
+      <p class="govuk-caption-xl hmrc-caption-xl"><span class="govuk-visually-hidden">This section is </span>{{
+        components.govuk.heading }}</p>
+    </header>
+  </div>
+</div>
+
+<div class="govuk-grid-row main-section">
+  {% include "includes/skip-links.html" %}
+
+  <div class="govuk-grid-column-one-third">
+    <nav aria-label="In-page">
+      <h2 class="govuk-heading-m">In-page navigation</h2>
+      <h3 class="govuk-heading-s" id="in-page-navigation__components">Components</h3>
+      <ol class="govuk-list" role="list" aria-describedby="in-page-navigation__components">
+        <li><a class="govuk-link" href="#component-1">{{ components.govuk.component[23].example[0].heading }}</a></li>
+        <li><a class="govuk-link" href="#component-2">{{ components.govuk.component[23].example[1].heading }}</a></li>
+        <li><a class="govuk-link" href="#component-3">{{ components.govuk.component[23].example[2].heading }}</a></li>
+        <li><a class="govuk-link" href="#component-4">{{ components.govuk.component[23].example[3].heading }}</a></li>
+        <li><a class="govuk-link" href="#component-5">{{ components.govuk.component[23].example[4].heading }}</a></li>
+      </ol>
+      <h3 class="govuk-heading-s" id="in-page-navigation__cypress">Cypress tests</h3>
+      <ol class="govuk-list" role="list" aria-describedby="in-page-navigation__cypress">
+        <li><a class="govuk-link" href="#cypress-1">{{components.cypress.env[0].heading}}</a></li>
+        <li><a class="govuk-link" href="#cypress-2">{{components.cypress.env[1].heading}}</a></li>
+        <li><a class="govuk-link" href="#cypress-3">{{components.cypress.env[2].heading}}</a></li>
+      </ol>
+    </nav>
+    {% include "includes/nav-govuk.html" %}
+  </div>
+
+  <div id="component-section" class="govuk-grid-column-two-thirds">
+    <p class="govuk-body">{{ components.govuk.component[23].body }}</p>
+
+    <div class="component-section" id="component-1">
+      <h2 class="govuk-heading-m">
+        {{ components.govuk.component[23].example[0].heading }}
+      </h2>
+      <p class="govuk-body">
+        {{ components.govuk.component[23].example[0].body }}
+      </p>
+
+      <div class="component-section__example" role="region" aria-label="Component example: {{ components.govuk.component[23].example[0].heading }}">
+        {{ govukTable({
+          caption: "Months and rates",
+          captionClasses: "govuk-table__caption--l",
+          firstCellIsHeader: true,
+          head: [
+            {
+              text: "Month you apply"
+            },
+            {
+              text: "Rate for vehicles"
+            }
+          ],
+          rows: [
+            [
+              {
+                text: "January"
+              },
+              {
+                text: "£95"
+              }
+            ],
+            [
+              {
+                text: "February"
+              },
+              {
+                text: "£55"
+              }
+            ],
+            [
+              {
+                text: "March"
+              },
+              {
+                text: "£125"
+              }
+            ]
+          ]
+        }) }}
+      </div>
+
+      <footer class="component-section__footer">
+        {{ govukDetails({
+        summaryText: "What we are testing in this component",
+        html: "<ul class='govuk-list govuk-list--bullet'>
+          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
+          <li>The hint text must be associated correctly with the checkboxes.</li>
+          <li>The focus colours must be the updated version.</li>
+        </ul>"
+        }) }}
+      </footer>
+    </div>
+
+    <div class="component-section" id="component-2">
+      <h2 class="govuk-heading-m">
+        {{ components.govuk.component[23].example[1].heading }}
+      </h2>
+      <p class="govuk-body">
+        {{ components.govuk.component[23].example[1].body }}
+      </p>
+
+      <div class="component-section__example" role="region" aria-label="Component example: {{ components.govuk.component[23].example[1].heading }}">
+        {{ govukTable({
+          caption: "Dates and amounts",
+          captionClasses: "govuk-table__caption--m",
+          firstCellIsHeader: true,
+          head: [
+            {
+              text: "Date"
+            },
+            {
+              text: "Amount"
+            }
+          ],
+          rows: [
+            [
+              {
+                text: "First 6 weeks"
+              },
+              {
+                text: "£109.80 per week"
+              }
+            ],
+            [
+              {
+                text: "Next 33 weeks"
+              },
+              {
+                text: "£109.80 per week"
+              }
+            ],
+            [
+              {
+                text: "Total estimated pay"
+              },
+              {
+                text: "£4,282.20"
+              }
+            ]
+          ]
+        }) }}
+      </div>
+
+      <footer class="component-section__footer">
+        {{ govukDetails({
+        summaryText: "What we are testing in this component",
+        html: "<ul class='govuk-list govuk-list--bullet'>
+          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
+          <li>The hint text must be associated correctly with the checkboxes.</li>
+          <li>The focus colours must be the updated version.</li>
+        </ul>"
+        }) }}
+      </footer>
+    </div>
+
+    <div class="component-section" id="component-3">
+      <h2 class="govuk-heading-m">
+        {{ components.govuk.component[23].example[2].heading }}
+      </h2>
+      <p class="govuk-body">
+        {{ components.govuk.component[23].example[2].body }}
+      </p>
+
+      <div class="component-section__example" role="region" aria-label="Component example: {{ components.govuk.component[23].example[2].heading }}">
+        {{ govukTable({
+          caption: "Months and rates",
+          captionClasses: "govuk-table__caption--m",
+          firstCellIsHeader: true,
+          head: [
+            {
+              text: "Month you apply"
+            },
+            {
+              text: "Rate for bicycles",
+              format: "numeric"
+            },
+            {
+              text: "Rate for vehicles",
+              format: "numeric"
+            }
+          ],
+          rows: [
+            [
+              {
+                text: "January"
+              },
+              {
+                text: "£85",
+                format: "numeric"
+              },
+              {
+                text: "£95",
+                format: "numeric"
+              }
+            ],
+            [
+              {
+                text: "February"
+              },
+              {
+                text: "£75",
+                format: "numeric"
+              },
+              {
+                text: "£55",
+                format: "numeric"
+              }
+            ],
+            [
+              {
+                text: "March"
+              },
+              {
+                text: "£165",
+                format: "numeric"
+              },
+              {
+                text: "£125",
+                format: "numeric"
+              }
+            ]
+          ]
+        }) }}
+      </div>
+
+      <footer class="component-section__footer">
+        {{ govukDetails({
+        summaryText: "What we are testing in this component",
+        html: "<ul class='govuk-list govuk-list--bullet'>
+          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
+          <li>The hint text must be associated correctly with the checkboxes.</li>
+          <li>The focus colours must be the updated version.</li>
+        </ul>"
+        }) }}
+      </footer>
+    </div>
+
+    <div class="component-section" id="component-4">
+      <h2 class="govuk-heading-m">
+        {{ components.govuk.component[23].example[3].heading }}
+      </h2>
+      <p class="govuk-body">
+        {{ components.govuk.component[23].example[3].body }}
+      </p>
+
+      <div class="component-section__example" role="region" aria-label="Component example: {{ components.govuk.component[23].example[3].heading }}">
+        {{ govukTable({
+          caption: "Month you apply",
+          captionClasses: "govuk-table__caption--m",
+          firstCellIsHeader: true,
+          head: [
+            {
+              text: "Date",
+              classes: 'govuk-!-width-one-half'
+            },
+            {
+              text: "Rate for vehicles",
+              classes: 'govuk-!-width-one-quarter'
+            },
+            {
+              text: "Rate for bicycles",
+              classes: 'govuk-!-width-one-quarter'
+            }
+          ],
+          rows: [
+            [
+              {
+                text: "First 6 weeks"
+              },
+              {
+                text: "£109.80 per week"
+              },
+              {
+                text: "£59.10 per week"
+              }
+            ],
+            [
+              {
+                text: "Next 33 weeks"
+              },
+              {
+                text: "£159.80 per week"
+              },
+              {
+                text: "£89.10 per week"
+              }
+            ],
+            [
+              {
+                text: "Total estimated pay"
+              },
+              {
+                text: "£4,282.20"
+              },
+              {
+                text: "£2,182.20"
+              }
+            ]
+          ]
+        }) }}
+      </div>
+
+      <footer class="component-section__footer">
+        {{ govukDetails({
+        summaryText: "What we are testing in this component",
+        html: "<ul class='govuk-list govuk-list--bullet'>
+          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
+          <li>The hint text must be associated correctly with the checkboxes.</li>
+          <li>The focus colours must be the updated version.</li>
+        </ul>"
+        }) }}
+      </footer>
+    </div>
+
+    <div class="component-section" id="component-5">
+      <h2 class="govuk-heading-m">
+        {{ components.govuk.component[23].example[4].heading }}
+      </h2>
+      <p class="govuk-body">
+        {{ components.govuk.component[23].example[4].body }}
+      </p>
+
+      <div class="component-section__example" role="region" aria-label="Component example: {{ components.govuk.component[23].example[4].heading }}">
+        {{ govukTable({
+          caption: "Month you apply",
+          captionClasses: "govuk-table__caption--m",
+          firstCellIsHeader: true,
+          head: [
+            {
+              text: "Date",
+              classes: 'app-custom-class'
+            },
+            {
+              text: "Rate for vehicles",
+              classes: 'app-custom-class'
+            },
+            {
+              text: "Rate for bicycles",
+              classes: 'app-custom-class'
+            }
+          ],
+          rows: [
+            [
+              {
+                text: "First 6 weeks"
+              },
+              {
+                text: "£109.80 per week"
+              },
+              {
+                text: "£59.10 per week"
+              }
+            ],
+            [
+              {
+                text: "Next 33 weeks"
+              },
+              {
+                text: "£159.80 per week"
+              },
+              {
+                text: "£89.10 per week"
+              }
+            ],
+            [
+              {
+                text: "Total estimated pay"
+              },
+              {
+                text: "£4,282.20"
+              },
+              {
+                text: "£2,182.20"
+              }
+            ]
+          ]
+        }) }}
+      </div>
+
+      <footer class="component-section__footer">
+        {{ govukDetails({
+        summaryText: "What we are testing in this component",
+        html: "<ul class='govuk-list govuk-list--bullet'>
+          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
+          <li>The hint text must be associated correctly with the checkboxes.</li>
+          <li>The focus colours must be the updated version.</li>
+        </ul>"
+        }) }}
+      </footer>
+    </div>
+
+  </div>
+
+  <div id="cypress-section" class="govuk-grid-column-two-thirds cypress-section">
+    <h2 class="govuk-heading-l">Cypress tests</h2>
+    <div class="cypress-section__output">
+      <h3 class="govuk-heading-m" id="cypress-1">{{components.cypress.env[0].heading}}</h3>
+    </div>
+
+    <div class="cypress-section__output">
+      <h3 class="govuk-heading-m" id="cypress-2">{{components.cypress.env[1].heading}}</h3>
+    </div>
+
+    <div class="cypress-section__output">
+      <h3 class="govuk-heading-m" id="cypress-3">{{components.cypress.env[2].heading}}</h3>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

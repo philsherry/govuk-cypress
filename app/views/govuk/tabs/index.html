@@ -1,0 +1,328 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+{{ components.govuk.component[24].name }} -
+{{ components.govuk.heading }} -
+{{ serviceName }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <header class="hmrc-page-heading">
+      <h1 class="govuk-heading-xl">
+        {{ components.govuk.component[24].name }}
+      </h1>
+      <p class="govuk-caption-xl hmrc-caption-xl"><span class="govuk-visually-hidden">This section is </span>{{
+        components.govuk.heading }}</p>
+    </header>
+  </div>
+</div>
+
+<div class="govuk-grid-row main-section">
+  {% include "includes/skip-links.html" %}
+
+  <div class="govuk-grid-column-one-third">
+    <nav aria-label="In-page">
+      <h2 class="govuk-heading-m">In-page navigation</h2>
+      <h3 class="govuk-heading-s" id="in-page-navigation__components">Components</h3>
+      <ol class="govuk-list" role="list" aria-describedby="in-page-navigation__components">
+        <li><a class="govuk-link" href="#component-1">{{ components.govuk.component[24].example[0].heading }}</a></li>
+      </ol>
+      <h3 class="govuk-heading-s" id="in-page-navigation__cypress">Cypress tests</h3>
+      <ol class="govuk-list" role="list" aria-describedby="in-page-navigation__cypress">
+        <li><a class="govuk-link" href="#cypress-1">{{components.cypress.env[0].heading}}</a></li>
+        <li><a class="govuk-link" href="#cypress-2">{{components.cypress.env[1].heading}}</a></li>
+        <li><a class="govuk-link" href="#cypress-3">{{components.cypress.env[2].heading}}</a></li>
+      </ol>
+    </nav>
+    {% include "includes/nav-govuk.html" %}
+  </div>
+
+  <div id="component-section" class="govuk-grid-column-two-thirds">
+    <p class="govuk-body">{{ components.govuk.component[24].body }}</p>
+
+    <div class="component-section" id="component-1">
+      <h2 class="govuk-heading-m">
+        {{ components.govuk.component[24].example[0].heading }}
+      </h2>
+      <p class="govuk-body">
+        {{ components.govuk.component[24].example[0].body }}
+      </p>
+
+      <div class="component-section__example" role="region" aria-label="Component example: {{ components.govuk.component[24].example[0].heading }}">
+        {% set pastDayHtml %}
+        <h2 class="govuk-heading-l">Past day</h2>
+        {{ govukTable({
+          head: [
+            {
+              text: "Case manager"
+            },
+            {
+              text: "Cases opened"
+            },
+            {
+              text: "Cases closed"
+            }
+          ],
+          rows: [
+            [
+              {
+                text: "David Francis"
+              },
+              {
+                text: "3"
+              },
+              {
+                text: "0"
+              }
+            ],
+            [
+              {
+                text: "Paul Farmer"
+              },
+              {
+                text: "1"
+              },
+              {
+                text: "0"
+              }
+            ],
+            [
+              {
+                text: "Rita Patel"
+              },
+              {
+                text: "2"
+              },
+              {
+                text: "0"
+              }
+            ]
+          ]
+        }) }}
+        {% endset -%}
+
+        {% set pastWeekHtml %}
+        <h2 class="govuk-heading-l">Past week</h2>
+        {{ govukTable({
+          head: [
+            {
+              text: "Case manager"
+            },
+            {
+              text: "Cases opened"
+            },
+            {
+              text: "Cases closed"
+            }
+          ],
+          rows: [
+            [
+              {
+                text: "David Francis"
+              },
+              {
+                text: "24"
+              },
+              {
+                text: "18"
+              }
+            ],
+            [
+              {
+                text: "Paul Farmer"
+              },
+              {
+                text: "16"
+              },
+              {
+                text: "20"
+              }
+            ],
+            [
+              {
+                text: "Rita Patel"
+              },
+              {
+                text: "24"
+              },
+              {
+                text: "27"
+              }
+            ]
+          ]
+        }) }}
+        {% endset -%}
+
+        {% set pastMonthHtml %}
+        <h2 class="govuk-heading-l">Past month</h2>
+        {{ govukTable({
+          head: [
+            {
+              text: "Case manager"
+            },
+            {
+              text: "Cases opened"
+            },
+            {
+              text: "Cases closed"
+            }
+          ],
+          rows: [
+            [
+              {
+                text: "David Francis"
+              },
+              {
+                text: "98"
+              },
+              {
+                text: "95"
+              }
+            ],
+            [
+              {
+                text: "Paul Farmer"
+              },
+              {
+                text: "122"
+              },
+              {
+                text: "131"
+              }
+            ],
+            [
+              {
+                text: "Rita Patel"
+              },
+              {
+                text: "126"
+              },
+              {
+                text: "142"
+              }
+            ]
+          ]
+        }) }}
+        {% endset -%}
+
+        {% set pastYearHtml %}
+        <h2 class="govuk-heading-l">Past year</h2>
+        {{ govukTable({
+          head: [
+            {
+              text: "Case manager"
+            },
+            {
+              text: "Cases opened"
+            },
+            {
+              text: "Cases closed"
+            }
+          ],
+          rows: [
+            [
+              {
+                text: "David Francis"
+              },
+              {
+                text: "1380"
+              },
+              {
+                text: "1472"
+              }
+            ],
+            [
+              {
+                text: "Paul Farmer"
+              },
+              {
+                text: "1129"
+              },
+              {
+                text: "1083"
+              }
+            ],
+            [
+              {
+                text: "Rita Patel"
+              },
+              {
+                text: "1539"
+              },
+              {
+                text: "1265"
+              }
+            ]
+          ]
+        }) }}
+        {% endset -%}
+
+        {{ govukTabs({
+          items: [
+            {
+              label: "Past day",
+              id: "past-day",
+              panel: {
+                html: pastDayHtml
+              }
+            },
+            {
+              label: "Past week",
+              id: "past-week",
+              panel: {
+                html: pastWeekHtml
+              }
+            },
+            {
+              label: "Past month",
+              id: "past-month",
+              panel: {
+                html: pastMonthHtml
+              }
+            },
+            {
+              label: "Past year",
+              id: "past-year",
+              panel: {
+                html: pastYearHtml
+              }
+            }
+          ]
+        }) }}
+      </div>
+
+      <footer class="component-section__footer">
+        {{ govukDetails({
+        summaryText: "What we are testing in this component",
+        html: "<ul class='govuk-list govuk-list--bullet'>
+          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
+          <li>The hint text must be associated correctly with the checkboxes.</li>
+          <li>The focus colours must be the updated version.</li>
+        </ul>"
+        }) }}
+      </footer>
+    </div>
+
+  </div>
+
+  <div id="cypress-section" class="govuk-grid-column-two-thirds cypress-section">
+    <h2 class="govuk-heading-l">Cypress tests</h2>
+    <div class="cypress-section__output">
+      <h3 class="govuk-heading-m" id="cypress-1">{{components.cypress.env[0].heading}}</h3>
+    </div>
+
+    <div class="cypress-section__output">
+      <h3 class="govuk-heading-m" id="cypress-2">{{components.cypress.env[1].heading}}</h3>
+    </div>
+
+    <div class="cypress-section__output">
+      <h3 class="govuk-heading-m" id="cypress-3">{{components.cypress.env[2].heading}}</h3>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

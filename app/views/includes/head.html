@@ -1,0 +1,7 @@
+<!--[if lte IE 8]><link href="/public/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if gt IE 8]><!--><link href="/public/stylesheets/application.css" media="all" rel="stylesheet" /><!--<![endif]-->
+
+{% for stylesheetUrl in extensionConfig.stylesheets %}
+  <link href="{{ stylesheetUrl }}" rel="stylesheet" />
+{% endfor %}
+<link media="screen" href="/public/stylesheets/github-dark.css" rel="stylesheet" />

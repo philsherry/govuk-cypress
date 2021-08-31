@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  {{ appPageTitle() }}
+{% endblock %}
+
+{% block content %}
+  {{ content | safe }}
+{%- endblock -%}
+
+{% block header %}{% endblock %}
+{% block footer %}{% endblock %}
+
+{% block bodyEnd %}
+  {% block scripts %}
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+  <script src="/extension-assets/govuk-frontend/govuk/all.js"></script>
+  <script src="/extension-assets/hmrc-frontend/hmrc/all.js"></script>
+  <script src="/extension-assets/hmrc-frontend/hmrc/init-all.js"></script>
+  <script src="/public/javascripts/application.js"></script>
+  <script src="/public/javascripts/iframeResizer.contentWindow.js"></script>
+  <script>var iFrameResizer = iFrameResizer;</script>
+  {% if useAutoStoreData %}
+  <script src="/public/javascripts/auto-store-data.js"></script>
+  {% endif %}
+  {% endblock %}
+{% endblock %}

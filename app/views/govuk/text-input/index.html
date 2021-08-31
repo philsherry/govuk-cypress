@@ -1,0 +1,505 @@
+{% extends "layout.html" %}
+{% set component = components.govuk.component[26] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+{{ appPageTitle() }}
+{% endblock %}
+
+{% block content %}
+
+{{ appPageHeader() }}
+
+<div class="govuk-grid-row main-section">
+  {% include "includes/skip-links.html" %}
+
+  <div class="govuk-grid-column-one-third">
+    {{ appInpageNavigation() }}
+    {% include "includes/nav-hmrc.html" %}
+  </div>
+
+  <div id="component-section" class="govuk-grid-column-two-thirds">
+    <p class="govuk-body">{{ component.body }}</p>
+
+    {% call appComponentSection({
+      componentIndex: 1,
+      heading: component.example[0].heading,
+      body: component.example[0].body,
+      testing: component.example[0].testing
+    }) -%}
+      {{ govukInput({
+        label: {
+          text: "What is the name of the event?",
+          classes: "govuk-label--l",
+          isPageHeading: true
+        },
+        id: "event-name",
+        name: "event-name"
+      }) }}
+    {%-endcall %}
+
+    {% call appComponentSection({
+      componentIndex: 2,
+      heading: component.example[1].heading,
+      body: component.example[1].body,
+      testing: component.example[1].testing
+    }) -%}
+      {{ govukInput({
+        label: {
+          text: "What is the name of the event?"
+        },
+        id: "event-name",
+        name: "event-name"
+      }) }}
+    {%-endcall %}
+
+    {% call appComponentSection({
+      componentIndex: 3,
+      heading: component.example[2].heading,
+      body: component.example[2].body,
+      testing: component.example[2].testing
+    }) -%}
+      {{ govukInput({
+        label: {
+          text: "20 character width"
+        },
+        classes: "govuk-input--width-20",
+        id: "width-20",
+        name: "width-20"
+      }) }}
+
+      {{ govukInput({
+        label: {
+          text: "10 character width"
+        },
+        classes: "govuk-input--width-10",
+        id: "width-10",
+        name: "width-10"
+      }) }}
+
+      {{ govukInput({
+        label: {
+          text: "5 character width"
+        },
+        classes: "govuk-input--width-5",
+        id: "width-5",
+        name: "width-5"
+      }) }}
+
+      {{ govukInput({
+        label: {
+          text: "4 character width"
+        },
+        classes: "govuk-input--width-4",
+        id: "width-4",
+        name: "width-4"
+      }) }}
+
+      {{ govukInput({
+        label: {
+          text: "3 character width"
+        },
+        classes: "govuk-input--width-3",
+        id: "width-3",
+        name: "width-3"
+      }) }}
+
+      {{ govukInput({
+        label: {
+          text: "2 character width"
+        },
+        classes: "govuk-input--width-2",
+        id: "width-2",
+        name: "width-2"
+      }) }}
+    {%-endcall %}
+
+    {% call appComponentSection({
+      componentIndex: 4,
+      heading: component.example[3].heading,
+      body: component.example[3].body,
+      testing: component.example[3].testing
+    }) -%}
+      {{ govukInput({
+        label: {
+          text: "Full width"
+        },
+        classes: "govuk-!-width-full",
+        id: "full",
+        name: "full"
+      }) }}
+
+      {{ govukInput({
+        label: {
+          text: "Three-quarters width"
+        },
+        classes: "govuk-!-width-three-quarters",
+        id: "three-quarters",
+        name: "three-quarters"
+      }) }}
+
+      {{ govukInput({
+        label: {
+          text: "Two-thirds width"
+        },
+        classes: "govuk-!-width-two-thirds",
+        id: "two-thirds",
+        name: "two-thirds"
+      }) }}
+
+      {{ govukInput({
+        label: {
+          text: "One-half width"
+        },
+        classes: "govuk-!-width-one-half",
+        id: "one-half",
+        name: "one-half"
+      }) }}
+
+      {{ govukInput({
+        label: {
+          text: "One-third width"
+        },
+        classes: "govuk-!-width-one-third",
+        id: "one-third",
+        name: "one-third"
+      }) }}
+
+      {{ govukInput({
+        label: {
+          text: "One-quarter width"
+        },
+        classes: "govuk-!-width-one-quarter",
+        id: "one-quarter",
+        name: "one-quarter"
+      }) }}
+    {%-endcall %}
+
+    {% call appComponentSection({
+      componentIndex: 5,
+      heading: component.example[4].heading,
+      body: component.example[4].body,
+      testing: component.example[4].testing
+    }) -%}
+        {{ govukInput({
+          label: {
+            text: "What is the name of the event?",
+            classes: "govuk-label--l",
+            isPageHeading: true
+          },
+          hint: {
+            text: "The name you’ll use on promotional material."
+          },
+          id: "event-name",
+          name: "event-name"
+        }) }}
+    {%-endcall %}
+
+    {% call appComponentSection({
+      componentIndex: 6,
+      heading: component.example[5].heading,
+      body: component.example[5].body,
+      testing: component.example[5].testing
+    }) -%}
+      {{ govukInput({
+        label: {
+          text: "What is your account number?",
+          classes: "govuk-label--l",
+          isPageHeading: true
+        },
+        classes: "govuk-input--width-10",
+        hint: {
+          text: "Must be between 6 and 8 digits long"
+        },
+        id: "account-number",
+        name: "account-number",
+        inputmode: "numeric",
+        pattern: "[0-9]*",
+        spellcheck: false
+      }) }}
+    {%-endcall %}
+
+    {% call appComponentSection({
+      componentIndex: 7,
+      heading: component.example[6].heading,
+      body: component.example[6].body,
+      testing: component.example[6].testing
+    }) -%}
+      {{ govukInput({
+        label: {
+          text: "Weight, in kilograms"
+        },
+        classes: "govuk-input--width-5",
+        id: "weight",
+        name: "weight",
+        suffix: {
+          text: "kg"
+        },
+        spellcheck: false
+      }) }}
+    {%-endcall %}
+
+    {% call appComponentSection({
+      componentIndex: 8,
+      heading: component.example[7].heading,
+      body: component.example[7].body,
+      testing: component.example[7].testing
+    }) -%}
+      {{ govukInput({
+        id: "cost-per-item",
+        name: "cost-per-item",
+        label: {
+          text: "What is the cost per item, in pounds?",
+          classes: "govuk-label--l",
+          isPageHeading: true
+        },
+        prefix: {
+          text: "£"
+        },
+        suffix: {
+          text: "per item"
+        },
+        classes: "govuk-input--width-5",
+        spellcheck: false
+      }) }}
+    {%-endcall %}
+
+    <div class="component-section" id="component-9">
+      <h2 class="govuk-heading-m">
+        {{ components.govuk.component[26].example[8].heading }}
+      </h2>
+      <p class="govuk-body">
+        {{ components.govuk.component[26].example[8].body }}
+      </p>
+
+      <div class="component-section__example" role="region" aria-label="Component example: {{ components.govuk.component[26].example[8].heading }}">
+        {{ govukInput({
+          id: "cost",
+          name: "cost",
+          label: {
+            text: "What is the cost in pounds?",
+            classes: "govuk-label--l",
+            isPageHeading: true
+          },
+          prefix: {
+            text: "£"
+          },
+          classes: "govuk-input--width-5",
+          spellcheck: false
+        }) }}
+      </div>
+
+      <footer class="component-section__footer">
+        {{ govukDetails({
+        summaryText: "What we are testing in this component",
+        html: "<ul class='govuk-list govuk-list--bullet'>
+          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
+          <li>The hint text must be associated correctly with the checkboxes.</li>
+          <li>The focus colours must be the updated version.</li>
+        </ul>"
+        }) }}
+      </footer>
+    </div>
+
+    <div class="component-section" id="component-10">
+      <h2 class="govuk-heading-m">
+        {{ components.govuk.component[26].example[9].heading }}
+      </h2>
+      <p class="govuk-body">
+        {{ components.govuk.component[26].example[9].body }}
+      </p>
+
+      <div class="component-section__example" role="region" aria-label="Component example: {{ components.govuk.component[26].example[9].heading }}">
+        {{ govukInput({
+          id: "weight",
+          name: "weight",
+          label: {
+            text: "What is the weight in kilograms?",
+            classes: "govuk-label--l",
+            isPageHeading: true
+          },
+          suffix: {
+            text: "kg"
+          },
+          classes: "govuk-input--width-5",
+          spellcheck: false
+        }) }}
+      </div>
+
+      <footer class="component-section__footer">
+        {{ govukDetails({
+        summaryText: "What we are testing in this component",
+        html: "<ul class='govuk-list govuk-list--bullet'>
+          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
+          <li>The hint text must be associated correctly with the checkboxes.</li>
+          <li>The focus colours must be the updated version.</li>
+        </ul>"
+        }) }}
+      </footer>
+    </div>
+
+    <div class="component-section" id="component-11">
+      <h2 class="govuk-heading-m">
+        {{ components.govuk.component[26].example[10].heading }}
+      </h2>
+      <p class="govuk-body">
+        {{ components.govuk.component[26].example[10].body }}
+      </p>
+
+      <div class="component-section__example" role="region" aria-label="Component example: {{ components.govuk.component[26].example[10].heading }}">
+        {{ govukInput({
+          label: {
+            text: "Postcode"
+          },
+          classes: "govuk-input--width-10",
+          id: "postcode",
+          name: "postcode",
+          autocomplete: "postal-code"
+        }) }}
+      </div>
+
+      <footer class="component-section__footer">
+        {{ govukDetails({
+        summaryText: "What we are testing in this component",
+        html: "<ul class='govuk-list govuk-list--bullet'>
+          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
+          <li>The hint text must be associated correctly with the checkboxes.</li>
+          <li>The focus colours must be the updated version.</li>
+        </ul>"
+        }) }}
+      </footer>
+    </div>
+
+    <div class="component-section" id="component-12">
+      <h2 class="govuk-heading-m">
+        {{ components.govuk.component[26].example[11].heading }}
+      </h2>
+      <p class="govuk-body">
+        {{ components.govuk.component[26].example[11].body }}
+      </p>
+
+      <div class="component-section__example" role="region" aria-label="Component example: {{ components.govuk.component[26].example[11].heading }}">
+        {{ govukInput({
+          label: {
+            text: "Reference number"
+          },
+          id: "name",
+          name: "name",
+          spellcheck: false
+        }) }}
+      </div>
+
+      <footer class="component-section__footer">
+        {{ govukDetails({
+        summaryText: "What we are testing in this component",
+        html: "<ul class='govuk-list govuk-list--bullet'>
+          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
+          <li>The hint text must be associated correctly with the checkboxes.</li>
+          <li>The focus colours must be the updated version.</li>
+        </ul>"
+        }) }}
+      </footer>
+    </div>
+
+    <div class="component-section" id="component-13">
+      <h2 class="govuk-heading-m">
+        {{ components.govuk.component[26].example[12].heading }}
+      </h2>
+      <p class="govuk-body">
+        {{ components.govuk.component[26].example[12].body }}
+      </p>
+
+      <div class="component-section__example" role="region" aria-label="Component example: {{ components.govuk.component[26].example[12].heading }}">
+        {{ govukInput({
+          label: {
+            text: "What is the name of the event?",
+            classes: "govuk-label--l",
+            isPageHeading: true
+          },
+          id: "event-name",
+          name: "event-name",
+          hint: {
+            text: "The name you’ll use on promotional material."
+          },
+          errorMessage: {
+            text: "Enter an event name"
+          }
+        }) }}
+      </div>
+
+      <footer class="component-section__footer">
+        {{ govukDetails({
+        summaryText: "What we are testing in this component",
+        html: "<ul class='govuk-list govuk-list--bullet'>
+          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
+          <li>The hint text must be associated correctly with the checkboxes.</li>
+          <li>The focus colours must be the updated version.</li>
+        </ul>"
+        }) }}
+      </footer>
+    </div>
+
+    <div class="component-section" id="component-14">
+      <h2 class="govuk-heading-m">
+        {{ components.govuk.component[26].example[13].heading }}
+      </h2>
+      <p class="govuk-body">
+        {{ components.govuk.component[26].example[13].body }}
+      </p>
+
+      <div class="component-section__example" role="region" aria-label="Component example: {{ components.govuk.component[26].example[13].heading }}">
+        {{ govukInput({
+          id: "cost-per-item-error",
+          name: "cost-per-item-error",
+          label: {
+            text: "What is the cost per item, in pounds?",
+            classes: "govuk-label--l",
+            isPageHeading: true
+          },
+          prefix: {
+            text: "£"
+          },
+          suffix: {
+            text: "per item"
+          },
+          errorMessage: {
+            text: "Enter a cost per item, in pounds"
+          },
+          classes: "govuk-input--width-5",
+          spellcheck: false
+        }) }}
+      </div>
+
+      <footer class="component-section__footer">
+        {{ govukDetails({
+        summaryText: "What we are testing in this component",
+        html: "<ul class='govuk-list govuk-list--bullet'>
+          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
+          <li>The hint text must be associated correctly with the checkboxes.</li>
+          <li>The focus colours must be the updated version.</li>
+        </ul>"
+        }) }}
+      </footer>
+    </div>
+
+  </div>
+
+  <div id="cypress-section" class="govuk-grid-column-two-thirds cypress-section">
+    <h2 class="govuk-heading-l">Cypress tests</h2>
+    <div class="cypress-section__output">
+      <h3 class="govuk-heading-m" id="cypress-1">{{components.cypress.env[0].heading}}</h3>
+    </div>
+
+    <div class="cypress-section__output">
+      <h3 class="govuk-heading-m" id="cypress-2">{{components.cypress.env[1].heading}}</h3>
+    </div>
+
+    <div class="cypress-section__output">
+      <h3 class="govuk-heading-m" id="cypress-3">{{components.cypress.env[2].heading}}</h3>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

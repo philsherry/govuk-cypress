@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+{{ components.govuk.heading }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">{{ components.govuk.heading }}</h1>
+    <p class="govuk-body">{{ components.govuk.body }}</p>
+
+    <dl class="govuk-list">
+      {% for item in components.govuk.component %}
+      <dt class="govuk-heading-m">
+        <a class="govuk-link" href="/govuk/{{ item.slug }}">
+          {{ item.name }}
+        </a>
+      </dt>
+      <dd class="govuk-body">{{ item.body }}</dd>
+      {% else %}
+      <dt class="govuk-heading-m">Data error</dt>
+      {% endfor %}
+    </dl>
+
+  </div>
+</div>
+
+{% endblock %}

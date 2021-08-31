@@ -1,0 +1,33 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "chromeWebSecurity": false,
+  "env": {
+    "browserPermissions": {
+      "camera": "block",
+      "cookies": "allow",
+      "geolocation": "allow",
+      "images": "allow",
+      "javascript": "allow",
+      "microphone": "block",
+      "notifications": "allow",
+      "plugins": "ask",
+      "popups": "ask"
+    },
+    "FAIL_FAST_ENABLED": false,
+    "FAIL_FAST_STRATEGY": "run"
+  },
+  "reporter": "mocha-multi-reporters",
+  "reporterOptions": {
+    "configFile": "cypress-reporters.json",
+    "html": true,
+    "json": true,
+    "overwrite": false,
+    "reportDir": "cypress/results"
+  },
+  "retries": {
+    "openMode": 1,
+    "runMode": 1
+  },
+  "viewportHeight": 900,
+  "viewportWidth": 1440
+}

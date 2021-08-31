@@ -1,0 +1,298 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+{{ components.hmrc.component[10].name }} -
+{{ components.hmrc.heading }} -
+{{ serviceName }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <header class="hmrc-page-heading">
+      <h1 class="govuk-heading-xl">
+        {{ components.hmrc.component[10].name }}
+      </h1>
+      <p class="govuk-caption-xl hmrc-caption-xl"><span class="govuk-visually-hidden">This section is </span>{{
+        components.hmrc.heading }}</p>
+    </header>
+  </div>
+</div>
+
+<div class="govuk-grid-row main-section">
+  {% include "includes/skip-links.html" %}
+
+  <div class="govuk-grid-column-one-third">
+    <nav aria-label="In-page">
+      <h2 class="govuk-heading-m">In-page navigation</h2>
+      <h3 class="govuk-heading-s" id="in-page-navigation__components">Components</h3>
+      <ol class="govuk-list" role="list" aria-describedby="in-page-navigation__components">
+        <li><a class="govuk-link" href="#component-1">{{ components.hmrc.component[10].example[0].heading }}</a></li>
+        <li><a class="govuk-link" href="#component-2">{{ components.hmrc.component[10].example[1].heading }}</a></li>
+        <li><a class="govuk-link" href="#component-3">{{ components.hmrc.component[10].example[2].heading }}</a></li>
+        <li><a class="govuk-link" href="#component-4">{{ components.hmrc.component[10].example[3].heading }}</a></li>
+        <li><a class="govuk-link" href="#component-5">{{ components.hmrc.component[10].example[4].heading }}</a></li>
+      </ol>
+      <h3 class="govuk-heading-s" id="in-page-navigation__cypress">Cypress tests</h3>
+      <ol class="govuk-list" role="list" aria-describedby="in-page-navigation__cypress">
+        <li><a class="govuk-link" href="#cypress-1">{{components.cypress.env[0].heading}}</a></li>
+        <li><a class="govuk-link" href="#cypress-2">{{components.cypress.env[1].heading}}</a></li>
+        <li><a class="govuk-link" href="#cypress-3">{{components.cypress.env[2].heading}}</a></li>
+      </ol>
+    </nav>
+    {% include "includes/nav-hmrc.html" %}
+  </div>
+
+  <div id="component-section" class="govuk-grid-column-two-thirds component-section">
+    <p class="govuk-body">{{ components.hmrc.component[10].body }}</p>
+
+    <div class="component-section" id="component-1">
+      <h2 class="govuk-heading-m">
+        {{ components.hmrc.component[10].example[0].heading }}
+      </h2>
+      <p class="govuk-body">
+        {{ components.hmrc.component[10].example[0].body }}
+      </p>
+
+      <div class="component-section__example" role="region" aria-label="Component example: {{ components.hmrc.component[10].example[0].heading }}">
+        {{ govukRadios({
+          classes: "govuk-radios",
+          idPrefix: "business-type",
+          name: "business-type",
+          fieldset: {
+            legend: {
+              text: "What type of business are you?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          items: [
+            {
+              value: "limited-company",
+              text: "Limited Company"
+            },
+            {
+              value: "sole-trader",
+              text: "Sole trader"
+            },
+              {
+                value: "partnership",
+                text: "Partnership"
+              },
+              {
+                value: "trust",
+                text: "Trust"
+              }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </div>
+
+      <footer class="component-section__footer">
+        {{ govukDetails({
+        summaryText: "What we are testing in this component",
+        html: "<ul class='govuk-list govuk-list--bullet'>
+          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
+          <li>The hint text must be associated correctly with the checkboxes.</li>
+          <li>The focus colours must be the updated version.</li>
+        </ul>"
+        }) }}
+      </footer>
+    </div>
+
+    <div class="component-section" id="component-2">
+      <h2 class="govuk-heading-m">
+        {{ components.hmrc.component[10].example[1].heading }}
+      </h2>
+      <p class="govuk-body">
+        {{ components.hmrc.component[10].example[1].body }}
+      </p>
+
+      <div class="component-section__example" role="region" aria-label="Component example: {{ components.hmrc.component[10].example[1].heading }}">
+        {{ govukRadios({
+          classes: "govuk-radios--inline",
+          idPrefix: "has-registration-number",
+          name: "has-registration-number",
+          fieldset: {
+            legend: {
+              text: "Do you have a company registration number?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          hint: {
+            text: "Companies House may have sent this to you if you registered as a limited partnership."
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </div>
+
+      <footer class="component-section__footer">
+        {{ govukDetails({
+        summaryText: "What we are testing in this component",
+        html: "<ul class='govuk-list govuk-list--bullet'>
+          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
+          <li>The hint text must be associated correctly with the checkboxes.</li>
+          <li>The focus colours must be the updated version.</li>
+        </ul>"
+        }) }}
+      </footer>
+    </div>
+
+    <div class="component-section" id="component-3">
+      <h2 class="govuk-heading-m">
+        {{ components.hmrc.component[10].example[2].heading }}
+      </h2>
+      <p class="govuk-body">
+        {{ components.hmrc.component[10].example[2].body }}
+      </p>
+
+      <div class="component-section__example" role="region" aria-label="Component example: {{ components.hmrc.component[10].example[2].heading }}">
+        <h1 class="govuk-heading-xl">What is your company registration number?</h1>
+
+        <p class="govuk-body">You can <a class="govuk-link" href="https://find-and-update.company-information.service.gov.uk/" rel="noreferrer noopener" target="_blank">search Companies House for your company registration number (opens in a new tab)</a>.</p>
+
+        {{ govukInput({
+          label: {
+            text: "What is your company registration number?",
+            classes: "govuk-visually-hidden"
+          },
+          hint: {
+            text: "It is 8 characters. For example, 01234567 or AC012345."
+          },
+          id: "company-registration-number",
+          classes: "govuk-input--width-10"
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </div>
+
+      <footer class="component-section__footer">
+        {{ govukDetails({
+        summaryText: "What we are testing in this component",
+        html: "<ul class='govuk-list govuk-list--bullet'>
+          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
+          <li>The hint text must be associated correctly with the checkboxes.</li>
+          <li>The focus colours must be the updated version.</li>
+        </ul>"
+        }) }}
+      </footer>
+    </div>
+
+    <div class="component-section" id="component-4">
+      <h2 class="govuk-heading-m">
+        {{ components.hmrc.component[10].example[3].heading }}
+      </h2>
+      <p class="govuk-body">
+        {{ components.hmrc.component[10].example[3].body }}
+      </p>
+
+      <div class="component-section__example" role="region" aria-label="Component example: {{ components.hmrc.component[10].example[3].heading }}">
+        <h1 class="govuk-heading-xl">Is this your business?</h1>
+        <p class="govuk-body">ABC limited</p>
+
+        {{ govukRadios({
+          classes: "govuk-radios--inline",
+          idPrefix: "is-business",
+          name: "is-business",
+          fieldset: {
+            legend: {
+              text: "Is this your business?",
+              isPageHeading: false,
+              classes: "govuk-visually-hidden"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </div>
+
+      <footer class="component-section__footer">
+        {{ govukDetails({
+        summaryText: "What we are testing in this component",
+        html: "<ul class='govuk-list govuk-list--bullet'>
+          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
+          <li>The hint text must be associated correctly with the checkboxes.</li>
+          <li>The focus colours must be the updated version.</li>
+        </ul>"
+        }) }}
+      </footer>
+    </div>
+
+    <div class="component-section" id="component-5">
+      <h2 class="govuk-heading-m">
+        {{ components.hmrc.component[10].example[4].heading }}
+      </h2>
+      <p class="govuk-body">
+        {{ components.hmrc.component[10].example[4].body }}
+      </p>
+
+      <div class="component-section__example" role="region" aria-label="Component example: {{ components.hmrc.component[10].example[4].heading }}">
+        <h1 class="govuk-heading-xl">The details you entered did not match our records</h1>
+        <p class="govuk-body">We could not match the details you entered with records held by HMRC.</p>
+        <p class="govuk-body">If you used the wrong details, you can <a class="govuk-link" href="#">try again using different details</a>.</p>
+      </div>
+
+      <footer class="component-section__footer">
+        {{ govukDetails({
+        summaryText: "What we are testing in this component",
+        html: "<ul class='govuk-list govuk-list--bullet'>
+          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
+          <li>The hint text must be associated correctly with the checkboxes.</li>
+          <li>The focus colours must be the updated version.</li>
+        </ul>"
+        }) }}
+      </footer>
+    </div>
+
+  </div>
+
+  <div id="cypress-section" class="govuk-grid-column-two-thirds cypress-section">
+    <h2 class="govuk-heading-l">Cypress tests</h2>
+    <div class="cypress-section__output">
+      <h3 class="govuk-heading-m" id="cypress-1">{{components.cypress.env[0].heading}}</h3>
+    </div>
+
+    <div class="cypress-section__output">
+      <h3 class="govuk-heading-m" id="cypress-2">{{components.cypress.env[1].heading}}</h3>
+    </div>
+
+    <div class="cypress-section__output">
+      <h3 class="govuk-heading-m" id="cypress-3">{{components.cypress.env[2].heading}}</h3>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

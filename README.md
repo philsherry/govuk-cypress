@@ -1,6 +1,8 @@
 # GOV.UK Cypress framework
 
-A demonstration of how to use the Cypress framework to test GOV.UK & HMRC components and patterns.
+A demonstration of how to use the [Cypress](https://www.cypress.io/) framework to test GOV.UK & HMRC components and patterns.
+
+Install instructions are further down.
 
 ## What this is not
 
@@ -58,11 +60,17 @@ Because I’m just one person, I’m hoping that there might be some traction he
 ## Install and run
 
 1. Clone the repo: `gh repo clone philsherry/govuk-cypress`
+   - [GitHub CLI](https://cli.github.com/)
+   - [GitHub Desktop](https://desktop.github.com/)
 2. Install the dependencies: `npm install`
 3. Install Cypress: `npm run cypress:install`
 4. Start the server: `npm start`
 5. Visit the page in your browser: `http://localhost:3000`
 6. Open Cypress to run some tests: `npm run cypress:open`
+
+### Tools
+
+- [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Custom Cypress Commands
 

@@ -10,5 +10,6 @@ usage-data-config.json
 *.scss
 node_modules/
 package-lock.json
+public
 server.cert
 server.key

@@ -900,10 +900,22 @@ module.exports = {
             body: "",
             heading: "View a summary of what they have added to the list",
             testing: [
-              "The focus colours must be the updated version.",
-              "The hint text must be associated correctly with the checkboxes.",
-              "“Do you need to add another director?” should be a `legend` for a `fieldset` around the checkboxes; potential for a nested heading in there.",
-              "The links must have unique, hidden context for screen reader users.",
+              {
+                reason: "Focus colours must be the latest version.",
+                wcag: ["1.4.11", "2.4.7"],
+              },
+              {
+                reason: "Hint text must be associated correctly with the checkboxes.",
+                wcag: ["1.3.1"],
+              },
+              {
+                reason: "“Do you need to add another director?” should be a `legend` for a `fieldset` around the checkboxes; potential for a nested heading in there.",
+                wcag: ["best-practice"],
+              },
+              {
+                reason: "The links must have unique, hidden context for screen reader users.",
+                wcag: ["2.4.4", "2.4.9"],
+              },
             ],
           },
           {

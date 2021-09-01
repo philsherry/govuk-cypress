@@ -38,6 +38,16 @@ module.exports = function (env) {
 
   ------------------------------------------------------------------ */
 
+    /**
+     * @description Takes a success criteria number (like 2.4.7) and returns a dashed tag for use in CSS.
+     * @param {*} tag
+     * @param {*} sc
+     * @returns {String}
+     */
+    filters.wcagTag = function(tag, sc) {
+      return tag.replace(/\./g, '-');
+    }
+
   /* ------------------------------------------------------------------
     keep the following line to return your filters to the app
   ------------------------------------------------------------------ */

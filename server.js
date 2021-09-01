@@ -26,6 +26,7 @@ const utils = require("./lib/utils.js");
 const extensions = require("./lib/extensions/extensions.js");
 const cats = require("./app/cats");
 const components = require("./app/components");
+const wcag = require("./app/wcag");
 
 // Variables for v6 backwards compatibility
 // Set false by default, then turn on if we find /app/v6/routes.js

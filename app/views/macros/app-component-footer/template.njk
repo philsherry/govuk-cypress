@@ -8,7 +8,12 @@
     <div class="govuk-details__text">
       <ul class="govuk-list govuk-list--bullet">
       {% for item in params.testing %}
-        <li>{{ item }}</li>
+        <li>
+          <p>{{ item.reason }}</p>
+          {% for sc in item.wcag %}
+          <span class="wcag-tag wcag-tag__{{ sc | wcagTag }}" data-wcag-sc="{{ sc }}">{{ sc }}</span>
+          {% endfor %}
+        </li>
       {% else %}
         <li>Data error</li>
       {% endfor %}

@@ -1,0 +1,29 @@
+/**
+ * Using min-width to set the width of the iFrame, works around an
+ * issue in iOS that can prevent the iFrame from sizing correctly.
+ **/
+
+iframe {
+  min-width: 100%;
+  width: 1px;
+}
+
+.app-example__frame {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  border: none;
+  border-right: 1px solid #b1b4b6;
+  background: #fff;
+}
+
+.app-example__frame--resizable {
+  min-width: 230px;
+  min-height: 60px;
+  overflow: auto;
+  transform: translateZ(0);
+
+  @media (min-width: 48.0625em) {
+    resize: both;
+  }
+}

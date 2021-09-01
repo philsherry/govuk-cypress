@@ -1,0 +1,41 @@
+:root {
+  // 🔴 (H) Fail: High Priority
+  --level-a: hsl(0, 100%, 44%);
+  // 🟠 (M) Fail: Medium Priority
+  --level-aa: hsl(26, 100%, 47%);
+  // 🟣 (L) Fail: Low Priority
+  --level-aaa: hsl(280, 100%, 50%);
+}
+
+.component-section__footer {
+
+  .govuk-list p {
+    margin: 0;
+  }
+
+}
+
+.wcag-tag {
+  display: inline-block;
+}
+
+.wcag-tag__a,
+.wcag-tag__1-1-1,
+.wcag-tag__1-2-1,
+.wcag-tag__1-2-2,
+.wcag-tag__1-2-3,
+.wcag-tag__1-3-1,
+.wcag-tag__1-3-2,
+.wcag-tag__1-3-3,
+.wcag-tag__1-4-1,
+.wcag-tag__1-4-2 {
+  border-color: var(--level-a);
+}
+
+.wcag-tag__aa {
+  border-color: var(--level-aa);
+}
+
+.wcag-tag__aaa {
+  border-color: var(--level-aaa);
+}

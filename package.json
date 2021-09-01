@@ -67,6 +67,7 @@
     "mochawesome-merge": "^4.2.0",
     "mochawesome-report-generator": "^5.2.0",
     "sass": "^1.38.2",
+    "sass-migrator": "^1.5.2",
     "standard": "^16.0.3",
     "supertest": "^6.1.6"
   },
@@ -87,6 +88,7 @@
     "cypress:run": "cypress run --reporter mochawesome --reporter-options reportDir='cypress/results',overwrite=false,html=true,json=true",
     "lint": "standard",
     "start": "NODE_ENV=development node start.js",
+    "postinstall": "sass-migrator division **/*.scss",
     "test": "npm run lint && gulp generate-assets && jest"
   },
   "version": "9.14.1"

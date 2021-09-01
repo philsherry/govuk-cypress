@@ -1,0 +1,16 @@
+@media screen and (min-width: 40.0625em) {
+  .main-section {
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .govuk-grid-column-two-thirds {
+      float: right;
+    }
+
+    .govuk-grid-column-one-third {
+      float: left;
+    }
+  }
+}

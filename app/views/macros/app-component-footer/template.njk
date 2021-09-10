@@ -8,11 +8,22 @@
     <div class="govuk-details__text">
       <ul class="govuk-list govuk-list--bullet">
       {% for item in params.testing %}
+        {% set tagWcag = item.tags.wcag %}
+        {% set tagBest = item.tags.best %}
         <li>
-          <p>{{ item.reason }}</p>
-          {% for sc in item.wcag %}
-          <span class="wcag-tag wcag-tag__{{ sc | wcagTag }}" data-wcag-sc="{{ sc }}">{{ sc }}</span>
-          {% endfor %}
+          <p>{{ item.reason | safe }}</p>
+          <div class="wcag-tags">
+            {% if tagWcag|length %}
+              {% for tag in tagWcag %}
+                {{ appTagify({ tag: tag | tagify }) }}
+              {% endfor %}
+            {% endif %}
+            {% if tagBest|length %}
+              {% for tag in tagBest %}
+                {{ appTagify({ tag: tag | tagify }) }}
+              {% endfor %}
+            {% endif %}
+          </div>
         </li>
       {% else %}
         <li>Data error</li>

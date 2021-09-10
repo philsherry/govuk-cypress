@@ -1,18 +1,28 @@
 module.exports = {
+  // This one accommodates the things we find in the Design System.
+  best: [
+    {
+      description: "How to markup and style labels, legends and headings.",
+      level: "best-practice",
+      ref_id: "labels-legends-headings",
+      title: "Making labels and legends headings",
+      url: "https://design-system.service.gov.uk/get-started/labels-legends-headings/",
+    },
+    {
+      description: "Some people use keyboards or other devices to navigate through a page by jumping from one interactive element to the next. Focus states let users know which element they’re currently on and is ready to be interacted with.",
+      level: "best-practice",
+      ref_id: "focus-states",
+      title: "Understanding focus state styles",
+      url: "https://design-system.service.gov.uk/get-started/focus-states/",
+    },
+  ],
   wcag: [
     {
-      ref_id: "1",
-      title: "Perceivable",
-      description:
-        "Information and user interface components must be presentable to users in ways they can perceive.",
-      url: "https://www.w3.org/TR/WCAG21/#perceivable",
+      description: "Information and user interface components must be presentable to users in ways they can perceive.",
       guidelines: [
         {
+          description: "Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language.",
           ref_id: "1.1",
-          title: "Text Alternatives",
-          description:
-            "Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language.",
-          url: "https://www.w3.org/TR/WCAG21/#text-alternatives",
           references: [
             {
               title: "Understanding Guideline 1.1",
@@ -21,51 +31,10 @@ module.exports = {
           ],
           success_criteria: [
             {
-              ref_id: "1.1.1",
-              title: "Non-text Content",
-              description:
-                "All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for the situations listed below.",
-              url: "https://www.w3.org/TR/WCAG21/#non-text-content",
+              description: "All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for the situations listed below.",
               level: "A",
-              special_cases: [
-                {
-                  type: "exception",
-                  title: "Controls, Input",
-                  description:
-                    "If non-text content is a control or accepts user input, then it has a name that describes its purpose. (Refer to Guideline 4.1 for additional requirements for controls and content that accepts user input.)",
-                },
-                {
-                  type: "exception",
-                  title: "Time-based Media",
-                  description:
-                    "If non-text content is time-based media, then text alternatives at least provide descriptive identification of the non-text content. (Refer to Guideline 1.2 for additional requirements for media.)",
-                },
-                {
-                  type: "exception",
-                  title: "Test",
-                  description:
-                    "If non-text content is a test or exercise that would be invalid if presented in text, then text alternatives at least provide descriptive identification of the non-text content.",
-                },
-                {
-                  type: "exception",
-                  title: "Sensory",
-                  description:
-                    "If non-text content is primarily intended to create a specific sensory experience, then text alternatives at least provide descriptive identification of the non-text content.",
-                },
-                {
-                  type: "exception",
-                  title: "CAPTCHA",
-                  description:
-                    "If the purpose of non-text content is to confirm that content is being accessed by a person rather than a computer, then text alternatives that identify and describe the purpose of the non-text content are provided, and alternative forms of CAPTCHA using output modes for different types of sensory perception are provided to accommodate different disabilities.",
-                },
-                {
-                  type: "exception",
-                  title: "Decoration, Formatting, Invisible",
-                  description:
-                    "If non-text content is pure decoration, is used only for visual formatting, or is not presented to users, then it is implemented in a way that it can be ignored by assistive technology.",
-                },
-              ],
               notes: null,
+              ref_id: "1.1.1",
               references: [
                 {
                   title: "How to Meet 1.1.1",
@@ -76,14 +45,54 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html",
                 },
               ],
+              special_cases: [
+                {
+                  description:
+                    "If non-text content is a control or accepts user input, then it has a name that describes its purpose. (Refer to Guideline 4.1 for additional requirements for controls and content that accepts user input.)",
+                  title: "Controls, Input",
+                  type: "exception",
+                },
+                {
+                  description:
+                    "If non-text content is time-based media, then text alternatives at least provide descriptive identification of the non-text content. (Refer to Guideline 1.2 for additional requirements for media.)",
+                  title: "Time-based Media",
+                  type: "exception",
+                },
+                {
+                  description:
+                    "If non-text content is a test or exercise that would be invalid if presented in text, then text alternatives at least provide descriptive identification of the non-text content.",
+                  title: "Test",
+                  type: "exception",
+                },
+                {
+                  description:
+                    "If non-text content is primarily intended to create a specific sensory experience, then text alternatives at least provide descriptive identification of the non-text content.",
+                  title: "Sensory",
+                  type: "exception",
+                },
+                {
+                  description:
+                    "If the purpose of non-text content is to confirm that content is being accessed by a person rather than a computer, then text alternatives that identify and describe the purpose of the non-text content are provided, and alternative forms of CAPTCHA using output modes for different types of sensory perception are provided to accommodate different disabilities.",
+                  title: "CAPTCHA",
+                  type: "exception",
+                },
+                {
+                  description:
+                    "If non-text content is pure decoration, is used only for visual formatting, or is not presented to users, then it is implemented in a way that it can be ignored by assistive technology.",
+                  title: "Decoration, Formatting, Invisible",
+                  type: "exception",
+                },
+              ],
+              title: "Non-text Content",
+              url: "https://www.w3.org/TR/WCAG21/#non-text-content",
             },
           ],
+          title: "Text Alternatives",
+          url: "https://www.w3.org/TR/WCAG21/#text-alternatives",
         },
         {
-          ref_id: "1.2",
-          title: "Time-based Media",
           description: "Provide alternatives for time-based media.",
-          url: "https://www.w3.org/TR/WCAG21/#time-based-media",
+          ref_id: "1.2",
           references: [
             {
               title: "Understanding Guideline 1.2",
@@ -92,27 +101,11 @@ module.exports = {
           ],
           success_criteria: [
             {
-              ref_id: "1.2.1",
-              title: "Audio-only and Video-only (Prerecorded)",
               description:
                 "For prerecorded audio-only and prerecorded video-only media, the following are true, except when the audio or video is a media alternative for text and is clearly labeled as such.",
-              url: "https://www.w3.org/TR/WCAG21/#audio-only-and-video-only-prerecorded",
               level: "A",
-              special_cases: [
-                {
-                  type: "all_true",
-                  title: "Prerecorded Audio-only",
-                  description:
-                    "An alternative for time-based media is provided that presents equivalent information for prerecorded audio-only content.",
-                },
-                {
-                  type: "all_true",
-                  title: "Prerecorded Video-only",
-                  description:
-                    "Either an alternative for time-based media or an audio track is provided that presents equivalent information for prerecorded video-only content.",
-                },
-              ],
               notes: null,
+              ref_id: "1.2.1",
               references: [
                 {
                   title: "How to Meet 1.2.1",
@@ -123,16 +116,29 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded.html",
                 },
               ],
+              special_cases: [
+                {
+                  description:
+                    "An alternative for time-based media is provided that presents equivalent information for prerecorded audio-only content.",
+                  title: "Prerecorded Audio-only",
+                  type: "all_true",
+                },
+                {
+                  description:
+                    "Either an alternative for time-based media or an audio track is provided that presents equivalent information for prerecorded video-only content.",
+                  title: "Prerecorded Video-only",
+                  type: "all_true",
+                },
+              ],
+              title: "Audio-only and Video-only (Prerecorded)",
+              url: "https://www.w3.org/TR/WCAG21/#audio-only-and-video-only-prerecorded",
             },
             {
-              ref_id: "1.2.2",
-              title: "Captions (Prerecorded)",
               description:
                 "Captions are provided for all prerecorded audio content in synchronized media, except when the media is a media alternative for text and is clearly labeled as such.",
-              url: "https://www.w3.org/TR/WCAG21/#captions-prerecorded",
               level: "A",
-              special_cases: null,
               notes: null,
+              ref_id: "1.2.2",
               references: [
                 {
                   title: "How to Meet 1.2.2",
@@ -143,16 +149,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/captions-prerecorded.html",
                 },
               ],
+              special_cases: null,
+              title: "Captions (Prerecorded)",
+              url: "https://www.w3.org/TR/WCAG21/#captions-prerecorded",
             },
             {
-              ref_id: "1.2.3",
-              title: "Audio Description or Media Alternative (Prerecorded)",
               description:
                 "An alternative for time-based media or audio description of the prerecorded video content is provided for synchronized media, except when the media is a media alternative for text and is clearly labeled as such.",
-              url: "https://www.w3.org/TR/WCAG21/#audio-description-or-media-alternative-prerecorded",
               level: "A",
-              special_cases: null,
               notes: null,
+              ref_id: "1.2.3",
               references: [
                 {
                   title: "How to Meet 1.2.3",
@@ -163,16 +169,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/audio-description-or-media-alternative-prerecorded.html",
                 },
               ],
+              special_cases: null,
+              title: "Audio Description or Media Alternative (Prerecorded)",
+              url: "https://www.w3.org/TR/WCAG21/#audio-description-or-media-alternative-prerecorded",
             },
             {
-              ref_id: "1.2.4",
-              title: "Captions (Live)",
               description:
                 "Captions are provided for all live audio content in synchronized media.",
-              url: "https://www.w3.org/TR/WCAG21/#captions-live",
               level: "AA",
-              special_cases: null,
               notes: null,
+              ref_id: "1.2.4",
               references: [
                 {
                   title: "How to Meet 1.2.4",
@@ -183,16 +189,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/captions-live.html",
                 },
               ],
+              special_cases: null,
+              title: "Captions (Live)",
+              url: "https://www.w3.org/TR/WCAG21/#captions-live",
             },
             {
-              ref_id: "1.2.5",
-              title: "Audio Description (Prerecorded)",
               description:
                 "Audio description is provided for all prerecorded video content in synchronized media.",
-              url: "https://www.w3.org/TR/WCAG21/#audio-description-prerecorded",
               level: "AA",
-              special_cases: null,
               notes: null,
+              ref_id: "1.2.5",
               references: [
                 {
                   title: "How to Meet 1.2.5",
@@ -203,16 +209,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded.html",
                 },
               ],
+              special_cases: null,
+              title: "Audio Description (Prerecorded)",
+              url: "https://www.w3.org/TR/WCAG21/#audio-description-prerecorded",
             },
             {
-              ref_id: "1.2.6",
-              title: "Sign Language (Prerecorded)",
               description:
                 "Sign language interpretation is provided for all prerecorded audio content in synchronized media.",
-              url: "https://www.w3.org/TR/WCAG21/#sign-language-prerecorded",
               level: "AAA",
-              special_cases: null,
               notes: null,
+              ref_id: "1.2.6",
               references: [
                 {
                   title: "How to Meet 1.2.6",
@@ -223,16 +229,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/sign-language-prerecorded.html",
                 },
               ],
+              special_cases: null,
+              title: "Sign Language (Prerecorded)",
+              url: "https://www.w3.org/TR/WCAG21/#sign-language-prerecorded",
             },
             {
-              ref_id: "1.2.7",
-              title: "Extended Audio Description (Prerecorded)",
               description:
                 "Where pauses in foreground audio are insufficient to allow audio descriptions to convey the sense of the video, extended audio description is provided for all prerecorded video content in synchronized media.",
-              url: "https://www.w3.org/TR/WCAG21/#extended-audio-description-prerecorded",
               level: "AAA",
-              special_cases: null,
               notes: null,
+              ref_id: "1.2.7",
               references: [
                 {
                   title: "How to Meet 1.2.7",
@@ -243,16 +249,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/extended-audio-description-prerecorded.html",
                 },
               ],
+              special_cases: null,
+              title: "Extended Audio Description (Prerecorded)",
+              url: "https://www.w3.org/TR/WCAG21/#extended-audio-description-prerecorded",
             },
             {
-              ref_id: "1.2.8",
-              title: "Media Alternative (Prerecorded)",
               description:
                 "An alternative for time-based media is provided for all prerecorded synchronized media and for all prerecorded video-only media.",
-              url: "https://www.w3.org/TR/WCAG21/#media-alternative-prerecorded",
               level: "AAA",
-              special_cases: null,
               notes: null,
+              ref_id: "1.2.8",
               references: [
                 {
                   title: "How to Meet 1.2.8",
@@ -263,16 +269,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/media-alternative-prerecorded.html",
                 },
               ],
+              special_cases: null,
+              title: "Media Alternative (Prerecorded)",
+              url: "https://www.w3.org/TR/WCAG21/#media-alternative-prerecorded",
             },
             {
-              ref_id: "1.2.9",
-              title: "Audio-only (Live)",
               description:
                 " An alternative for time-based media that presents equivalent information for live audio-only content is provided.",
-              url: "https://www.w3.org/TR/WCAG21/#audio-only-live",
               level: "AAA",
-              special_cases: null,
               notes: null,
+              ref_id: "1.2.9",
               references: [
                 {
                   title: "How to Meet 1.2.9",
@@ -283,15 +289,18 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/audio-only-live.html",
                 },
               ],
+              special_cases: null,
+              title: "Audio-only (Live)",
+              url: "https://www.w3.org/TR/WCAG21/#audio-only-live",
             },
           ],
+          title: "Time-based Media",
+          url: "https://www.w3.org/TR/WCAG21/#time-based-media",
         },
         {
-          ref_id: "1.3",
-          title: "Adaptable",
           description:
             "Create content that can be presented in different ways (for example simpler layout) without losing information or structure.",
-          url: "https://www.w3.org/TR/WCAG21/#adaptable",
+          ref_id: "1.3",
           references: [
             {
               title: "Understanding Guideline 1.3",
@@ -300,14 +309,11 @@ module.exports = {
           ],
           success_criteria: [
             {
-              ref_id: "1.3.1",
-              title: "Info and Relationships",
               description:
                 "Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.",
-              url: "https://www.w3.org/TR/WCAG21/#info-and-relationships",
               level: "A",
-              special_cases: null,
               notes: null,
+              ref_id: "1.3.1",
               references: [
                 {
                   title: "How to Meet 1.3.1",
@@ -318,16 +324,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html",
                 },
               ],
+              special_cases: null,
+              title: "Info and Relationships",
+              url: "https://www.w3.org/TR/WCAG21/#info-and-relationships",
             },
             {
-              ref_id: "1.3.2",
-              title: "Meaningful Sequence",
               description:
                 "When the sequence in which content is presented affects its meaning, a correct reading sequence can be programmatically determined.",
-              url: "https://www.w3.org/TR/WCAG21/#meaningful-sequence",
               level: "A",
-              special_cases: null,
               notes: null,
+              ref_id: "1.3.2",
               references: [
                 {
                   title: "How to Meet 1.3.2",
@@ -338,21 +344,21 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence.html",
                 },
               ],
+              special_cases: null,
+              title: "Meaningful Sequence",
+              url: "https://www.w3.org/TR/WCAG21/#meaningful-sequence",
             },
             {
-              ref_id: "1.3.3",
-              title: "Sensory Characteristics",
               description:
                 "Instructions provided for understanding and operating content do not rely solely on sensory characteristics of components such as shape, size, visual location, orientation, or sound.",
-              url: "https://www.w3.org/TR/WCAG21/#sensory-characteristics",
               level: "A",
-              special_cases: null,
               notes: [
                 {
                   content:
                     "For requirements related to color, refer to Guideline 1.4.",
                 },
               ],
+              ref_id: "1.3.3",
               references: [
                 {
                   title: "How to Meet 1.3.3",
@@ -363,21 +369,21 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html",
                 },
               ],
+              special_cases: null,
+              title: "Sensory Characteristics",
+              url: "https://www.w3.org/TR/WCAG21/#sensory-characteristics",
             },
             {
-              ref_id: "1.3.4",
-              title: "Orientation",
               description:
                 "Content does not restrict its view and operation to a single display orientation, such as portrait or landscape, unless a specific display orientation is essential.",
-              url: "https://www.w3.org/TR/WCAG21/#orientation",
               level: "AA",
-              special_cases: null,
               notes: [
                 {
                   content:
                     "Examples where a particular display orientation may be essential are a bank check, a piano application, slides for a projector or television, or virtual reality content where binary display orientation is not applicable.",
                 },
               ],
+              ref_id: "1.3.4",
               references: [
                 {
                   title: "How to Meet 1.3.4",
@@ -388,27 +394,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/orientation.html",
                 },
               ],
+              special_cases: null,
+              title: "Orientation",
+              url: "https://www.w3.org/TR/WCAG21/#orientation",
             },
             {
-              ref_id: "1.3.5",
-              title: "Identify Input Purpose",
               description:
                 "The purpose of each input field collecting information about the user can be programmatically determined when:",
-              url: "https://www.w3.org/TR/WCAG21/#identify-input-purpose",
               level: "AA",
-              special_cases: [
-                {
-                  type: "all_true",
-                  title:
-                    "The input field serves a purpose identified in the Input Purposes for User Interface Components section; and",
-                },
-                {
-                  type: "all_true",
-                  title:
-                    "The content is implemented using technologies with support for identifying the expected meaning for form input data.",
-                },
-              ],
               notes: null,
+              ref_id: "1.3.5",
               references: [
                 {
                   title: "How to Meet 1.3.5",
@@ -419,16 +414,27 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html",
                 },
               ],
+              special_cases: [
+                {
+                  title:
+                    "The input field serves a purpose identified in the Input Purposes for User Interface Components section; and",
+                  type: "all_true",
+                },
+                {
+                  title:
+                    "The content is implemented using technologies with support for identifying the expected meaning for form input data.",
+                  type: "all_true",
+                },
+              ],
+              title: "Identify Input Purpose",
+              url: "https://www.w3.org/TR/WCAG21/#identify-input-purpose",
             },
             {
-              ref_id: "1.3.6",
-              title: "Identify Purpose",
               description:
                 "In content implemented using markup languages, the purpose of User Interface Components, icons, and regions can be programmatically determined.",
-              url: "https://www.w3.org/TR/WCAG21/#identify-purpose",
               level: "AAA",
-              special_cases: null,
               notes: null,
+              ref_id: "1.3.6",
               references: [
                 {
                   title: "How to Meet 1.3.6",
@@ -439,15 +445,18 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/identify-purpose.html",
                 },
               ],
+              special_cases: null,
+              title: "Identify Purpose",
+              url: "https://www.w3.org/TR/WCAG21/#identify-purpose",
             },
           ],
+          title: "Adaptable",
+          url: "https://www.w3.org/TR/WCAG21/#adaptable",
         },
         {
-          ref_id: "1.4",
-          title: "Distinguishable",
           description:
             "Make it easier for users to see and hear content including separating foreground from background.",
-          url: "https://www.w3.org/TR/WCAG21/#distinguishable",
+          ref_id: "1.4",
           references: [
             {
               title: "Understanding Guideline 1.4",
@@ -456,19 +465,16 @@ module.exports = {
           ],
           success_criteria: [
             {
-              ref_id: "1.4.1",
-              title: "Use of Color",
               description:
                 "Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.",
-              url: "https://www.w3.org/TR/WCAG21/#use-of-color",
               level: "A",
-              special_cases: null,
               notes: [
                 {
                   content:
                     "This success criterion addresses color perception specifically. Other forms of perception are covered in Guideline 1.3 including programmatic access to color and other visual presentation coding.",
                 },
               ],
+              ref_id: "1.4.1",
               references: [
                 {
                   title: "How to Meet 1.4.1",
@@ -479,21 +485,21 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html",
                 },
               ],
+              special_cases: null,
+              title: "Use of Color",
+              url: "https://www.w3.org/TR/WCAG21/#use-of-color",
             },
             {
-              ref_id: "1.4.2",
-              title: "Audio Control",
               description:
                 "If any audio on a Web page plays automatically for more than 3 seconds, either a mechanism is available to pause or stop the audio, or a mechanism is available to control audio volume independently from the overall system volume level.",
-              url: "https://www.w3.org/TR/WCAG21/#audio-control",
               level: "A",
-              special_cases: null,
               notes: [
                 {
                   content:
                     "Since any content that does not meet this success criterion can interfere with a user's ability to use the whole page, all content on the Web page (whether or not it is used to meet other success criteria) must meet this success criterion. See Conformance Requirement 5: Non-Interference. (https://www.w3.org/TR/WCAG21/#cc5)",
                 },
               ],
+              ref_id: "1.4.2",
               references: [
                 {
                   title: "How to Meet 1.4.2",
@@ -504,35 +510,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/audio-control.html",
                 },
               ],
+              special_cases: null,
+              title: "Audio Control",
+              url: "https://www.w3.org/TR/WCAG21/#audio-control",
             },
             {
-              ref_id: "1.4.3",
-              title: "Contrast (Minimum)",
               description:
                 " The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, except for the following:",
-              url: "https://www.w3.org/TR/WCAG21/#contrast-minimum",
               level: "AA",
-              special_cases: [
-                {
-                  type: "exception",
-                  title: "Large Text",
-                  description:
-                    "Large-scale text and images of large-scale text have a contrast ratio of at least 3:1;",
-                },
-                {
-                  type: "exception",
-                  title: "Incidental",
-                  description:
-                    "Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement.",
-                },
-                {
-                  type: "exception",
-                  title: "Logotypes",
-                  description:
-                    "Text that is part of a logo or brand name has no minimum contrast requirement.",
-                },
-              ],
               notes: null,
+              ref_id: "1.4.3",
               references: [
                 {
                   title: "How to Meet 1.4.3",
@@ -543,16 +530,35 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html",
                 },
               ],
+              special_cases: [
+                {
+                  description:
+                    "Large-scale text and images of large-scale text have a contrast ratio of at least 3:1;",
+                  title: "Large Text",
+                  type: "exception",
+                },
+                {
+                  description:
+                    "Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement.",
+                  title: "Incidental",
+                  type: "exception",
+                },
+                {
+                  description:
+                    "Text that is part of a logo or brand name has no minimum contrast requirement.",
+                  title: "Logotypes",
+                  type: "exception",
+                },
+              ],
+              title: "Contrast (Minimum)",
+              url: "https://www.w3.org/TR/WCAG21/#contrast-minimum",
             },
             {
-              ref_id: "1.4.4",
-              title: "Resize text",
               description:
                 "Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality.",
-              url: "https://www.w3.org/TR/WCAG21/#resize-text",
               level: "AA",
-              special_cases: null,
               notes: null,
+              ref_id: "1.4.4",
               references: [
                 {
                   title: "How to Meet 1.4.4",
@@ -563,34 +569,21 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html",
                 },
               ],
+              special_cases: null,
+              title: "Resize text",
+              url: "https://www.w3.org/TR/WCAG21/#resize-text",
             },
             {
-              ref_id: "1.4.5",
-              title: "Images of Text",
               description:
                 "If the technologies being used can achieve the visual presentation, text is used to convey information rather than images of text except for the following:",
-              url: "https://www.w3.org/TR/WCAG21/#images-of-text",
               level: "AA",
-              special_cases: [
-                {
-                  type: "exception",
-                  title: "Customizable",
-                  description:
-                    "The image of text can be visually customized to the user's requirements;",
-                },
-                {
-                  type: "exception",
-                  title: "Essential",
-                  description:
-                    "A particular presentation of text is essential to the information being conveyed.",
-                },
-              ],
               notes: [
                 {
                   content:
                     "Logotypes (text that is part of a logo or brand name) are considered essential.",
                 },
               ],
+              ref_id: "1.4.5",
               references: [
                 {
                   title: "How to Meet 1.4.5",
@@ -601,35 +594,29 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html",
                 },
               ],
-            },
-            {
-              ref_id: "1.4.6",
-              title: "Contrast (Enhanced)",
-              description:
-                "The visual presentation of text and images of text has a contrast ratio of at least 7:1, except for the following: ",
-              url: "https://www.w3.org/TR/WCAG21/#contrast-enhanced",
-              level: "AAA",
               special_cases: [
                 {
-                  type: "exception",
-                  title: "Large Text",
                   description:
-                    "Large-scale text and images of large-scale text have a contrast ratio of at least 4.5:1;",
+                    "The image of text can be visually customized to the user's requirements;",
+                  title: "Customizable",
+                  type: "exception",
                 },
                 {
-                  type: "exception",
-                  title: "Incidental",
                   description:
-                    "Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement.",
-                },
-                {
+                    "A particular presentation of text is essential to the information being conveyed.",
+                  title: "Essential",
                   type: "exception",
-                  title: "Logotypes",
-                  description:
-                    "Text that is part of a logo or brand name has no minimum contrast requirement.",
                 },
               ],
+              title: "Images of Text",
+              url: "https://www.w3.org/TR/WCAG21/#images-of-text",
+            },
+            {
+              description:
+                "The visual presentation of text and images of text has a contrast ratio of at least 7:1, except for the following: ",
+              level: "AAA",
               notes: null,
+              ref_id: "1.4.6",
               references: [
                 {
                   title: "How to Meet 1.4.6",
@@ -640,38 +627,40 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced.html",
                 },
               ],
-            },
-            {
-              ref_id: "1.4.7",
-              title: "Low or No Background Audio",
-              description:
-                "For prerecorded audio-only content that (1) contains primarily speech in the foreground, (2) is not an audio CAPTCHA or audio logo, and (3) is not vocalization intended to be primarily musical expression such as singing or rapping, at least one of the following is true:",
-              url: "https://www.w3.org/TR/WCAG21/#low-or-no-background-audio",
-              level: "AAA",
               special_cases: [
                 {
-                  type: "at_least_one",
-                  title: "No Background",
-                  description: "The audio does not contain background sounds.",
-                },
-                {
-                  type: "at_least_one",
-                  title: "Turn Off",
-                  description: "The background sounds can be turned off.",
-                },
-                {
-                  type: "at_least_one",
-                  title: "20 dB",
                   description:
-                    "The background sounds are at least 20 decibels lower than the foreground speech content, with the exception of occasional sounds that last for only one or two seconds.",
+                    "Large-scale text and images of large-scale text have a contrast ratio of at least 4.5:1;",
+                  title: "Large Text",
+                  type: "exception",
+                },
+                {
+                  description:
+                    "Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement.",
+                  title: "Incidental",
+                  type: "exception",
+                },
+                {
+                  description:
+                    "Text that is part of a logo or brand name has no minimum contrast requirement.",
+                  title: "Logotypes",
+                  type: "exception",
                 },
               ],
+              title: "Contrast (Enhanced)",
+              url: "https://www.w3.org/TR/WCAG21/#contrast-enhanced",
+            },
+            {
+              description:
+                "For prerecorded audio-only content that (1) contains primarily speech in the foreground, (2) is not an audio CAPTCHA or audio logo, and (3) is not vocalization intended to be primarily musical expression such as singing or rapping, at least one of the following is true:",
+              level: "AAA",
               notes: [
                 {
                   content:
                     "Per the definition of 'decibel,' background sound that meets this requirement will be approximately four times quieter than the foreground speech content.",
                 },
               ],
+              ref_id: "1.4.7",
               references: [
                 {
                   title: "How to Meet 1.4.7",
@@ -682,42 +671,33 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/low-or-no-background-audio.html",
                 },
               ],
-            },
-            {
-              ref_id: "1.4.8",
-              title: "Visual Presentation",
-              description:
-                "For the visual presentation of blocks of text, a mechanism is available to achieve the following:",
-              url: "https://www.w3.org/TR/WCAG21/#visual-presentation",
-              level: "AAA",
               special_cases: [
                 {
-                  type: "all_true",
-                  title:
-                    "Foreground and background colors can be selected by the user.",
+                  description: "The audio does not contain background sounds.",
+                  title: "No Background",
+                  type: "at_least_one",
                 },
                 {
-                  type: "all_true",
-                  title:
-                    "Width is no more than 80 characters or glyphs (40 if CJK).",
+                  description: "The background sounds can be turned off.",
+                  title: "Turn Off",
+                  type: "at_least_one",
                 },
                 {
-                  type: "all_true",
-                  title:
-                    "Text is not justified (aligned to both the left and the right margins).",
-                },
-                {
-                  type: "all_true",
-                  title:
-                    "Line spacing (leading) is at least space-and-a-half within paragraphs, and paragraph spacing is at least 1.5 times larger than the line spacing.",
-                },
-                {
-                  type: "all_true",
-                  title:
-                    "Text can be resized without assistive technology up to 200 percent in a way that does not require the user to scroll horizontally to read a line of text on a full-screen window.",
+                  description:
+                    "The background sounds are at least 20 decibels lower than the foreground speech content, with the exception of occasional sounds that last for only one or two seconds.",
+                  title: "20 dB",
+                  type: "at_least_one",
                 },
               ],
+              title: "Low or No Background Audio",
+              url: "https://www.w3.org/TR/WCAG21/#low-or-no-background-audio",
+            },
+            {
+              description:
+                "For the visual presentation of blocks of text, a mechanism is available to achieve the following:",
+              level: "AAA",
               notes: null,
+              ref_id: "1.4.8",
               references: [
                 {
                   title: "How to Meet 1.4.8",
@@ -728,21 +708,47 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/visual-presentation.html",
                 },
               ],
+              special_cases: [
+                {
+                  title:
+                    "Foreground and background colors can be selected by the user.",
+                  type: "all_true",
+                },
+                {
+                  title:
+                    "Width is no more than 80 characters or glyphs (40 if CJK).",
+                  type: "all_true",
+                },
+                {
+                  title:
+                    "Text is not justified (aligned to both the left and the right margins).",
+                  type: "all_true",
+                },
+                {
+                  title:
+                    "Line spacing (leading) is at least space-and-a-half within paragraphs, and paragraph spacing is at least 1.5 times larger than the line spacing.",
+                  type: "all_true",
+                },
+                {
+                  title:
+                    "Text can be resized without assistive technology up to 200 percent in a way that does not require the user to scroll horizontally to read a line of text on a full-screen window.",
+                  type: "all_true",
+                },
+              ],
+              title: "Visual Presentation",
+              url: "https://www.w3.org/TR/WCAG21/#visual-presentation",
             },
             {
-              ref_id: "1.4.9",
-              title: "Images of Text (No Exception)",
               description:
                 "Images of text are only used for pure decoration or where a particular presentation of text is essential to the information being conveyed.",
-              url: "https://www.w3.org/TR/WCAG21/#images-of-text-no-exception",
               level: "AAA",
-              special_cases: null,
               notes: [
                 {
                   content:
                     "Logotypes (text that is part of a logo or brand name) are considered essential.",
                 },
               ],
+              ref_id: "1.4.9",
               references: [
                 {
                   title: "How to Meet 1.4.9",
@@ -753,31 +759,14 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/images-of-text-no-exception.html",
                 },
               ],
+              special_cases: null,
+              title: "Images of Text (No Exception)",
+              url: "https://www.w3.org/TR/WCAG21/#images-of-text-no-exception",
             },
             {
-              ref_id: "1.4.10",
-              title: "Reflow",
               description:
                 "Content can be presented without loss of information or functionality, and without requiring scrolling in two dimensions for:",
-              url: "https://www.w3.org/TR/WCAG21/#reflow",
               level: "AA",
-              special_cases: [
-                {
-                  type: "all_true",
-                  title:
-                    "Vertical scrolling content at a width equivalent to 320 CSS pixels;",
-                },
-                {
-                  type: "all_true",
-                  title:
-                    "Horizontal scrolling content at a height equivalent to 256 CSS pixels.",
-                },
-                {
-                  type: "exception",
-                  title:
-                    "Except for parts of the content which require two-dimensional layout for usage or meaning.",
-                },
-              ],
               notes: [
                 {
                   content:
@@ -788,6 +777,7 @@ module.exports = {
                     "Examples of content which require two-dimensional layout are images, maps, diagrams, video, games, presentations, data tables, and interfaces where it is necessary to keep toolbars in view while manipulating content.",
                 },
               ],
+              ref_id: "1.4.10",
               references: [
                 {
                   title: "How to Meet 1.4.10",
@@ -798,29 +788,32 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/reflow.html",
                 },
               ],
-            },
-            {
-              ref_id: "1.4.11",
-              title: "Non-text Contrast",
-              description:
-                "The visual presentation of the following have a contrast ratio of at least 3:1 against adjacent color(s):",
-              url: "https://www.w3.org/TR/WCAG21/#non-text-contrast",
-              level: "AA",
               special_cases: [
                 {
+                  title:
+                    "Vertical scrolling content at a width equivalent to 320 CSS pixels;",
                   type: "all_true",
-                  title: "User Interface Components",
-                  description:
-                    "Visual information required to identify user interface components and states, except for inactive components or where the appearance of the component is determined by the user agent and not modified by the author;",
                 },
                 {
+                  title:
+                    "Horizontal scrolling content at a height equivalent to 256 CSS pixels.",
                   type: "all_true",
-                  title: "Graphical Objects",
-                  description:
-                    "Parts of graphics required to understand the content, except when a particular presentation of graphics is essential to the information being conveyed.",
+                },
+                {
+                  title:
+                    "Except for parts of the content which require two-dimensional layout for usage or meaning.",
+                  type: "exception",
                 },
               ],
+              title: "Reflow",
+              url: "https://www.w3.org/TR/WCAG21/#reflow",
+            },
+            {
+              description:
+                "The visual presentation of the following have a contrast ratio of at least 3:1 against adjacent color(s):",
+              level: "AA",
               notes: null,
+              ref_id: "1.4.11",
               references: [
                 {
                   title: "How to Meet 1.4.11",
@@ -831,41 +824,29 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html",
                 },
               ],
-            },
-            {
-              ref_id: "1.4.12",
-              title: "Text Spacing",
-              description:
-                "In content implemented using markup languages that support the following text style properties, no loss of content or functionality occurs by setting all of the following and by changing no other style property:",
-              url: "https://www.w3.org/TR/WCAG21/#text-spacing",
-              level: "AA",
               special_cases: [
                 {
+                  description:
+                    "Visual information required to identify user interface components and states, except for inactive components or where the appearance of the component is determined by the user agent and not modified by the author;",
+                  title: "User Interface Components",
                   type: "all_true",
-                  title:
-                    "Line height (line spacing) to at least 1.5 times the font size;",
                 },
                 {
+                  description:
+                    "Parts of graphics required to understand the content, except when a particular presentation of graphics is essential to the information being conveyed.",
+                  title: "Graphical Objects",
                   type: "all_true",
-                  title:
-                    "Spacing following paragraphs to at least 2 times the font size;",
-                },
-                {
-                  type: "all_true",
-                  title:
-                    "Letter spacing (tracking) to at least 0.12 times the font size;",
-                },
-                {
-                  type: "all_true",
-                  title: "Word spacing to at least 0.16 times the font size.",
-                },
-                {
-                  type: "exception",
-                  title:
-                    "Exception: Human languages and scripts that do not make use of one or more of these text style properties in written text can conform using only the properties that exist for that combination of language and script.",
                 },
               ],
+              title: "Non-text Contrast",
+              url: "https://www.w3.org/TR/WCAG21/#non-text-contrast",
+            },
+            {
+              description:
+                "In content implemented using markup languages that support the following text style properties, no loss of content or functionality occurs by setting all of the following and by changing no other style property:",
+              level: "AA",
               notes: null,
+              ref_id: "1.4.12",
               references: [
                 {
                   title: "How to Meet 1.4.12",
@@ -876,39 +857,39 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html",
                 },
               ],
-            },
-            {
-              ref_id: "1.4.13",
-              title: "Content on Hover or Focus",
-              description:
-                "Where receiving and then removing pointer hover or keyboard focus triggers additional content to become visible and then hidden, the following are true:",
-              url: "https://www.w3.org/TR/WCAG21/#content-on-hover-or-focus",
-              level: "AA",
               special_cases: [
                 {
-                  type: "all_true",
-                  title: "Dismissable",
-                  description:
-                    "A mechanism is available to dismiss the additional content without moving pointer hover or keyboard focus, unless the additional content communicates an input error or does not obscure or replace other content;",
-                },
-                {
-                  type: "all_true",
-                  title: "Hoverable",
-                  description:
-                    "If pointer hover can trigger the additional content, then the pointer can be moved over the additional content without the additional content disappearing;",
-                },
-                {
-                  type: "all_true",
-                  title: "Persistent",
-                  description:
-                    "The additional content remains visible until the hover or focus trigger is removed, the user dismisses it, or its information is no longer valid.",
-                },
-                {
-                  type: "exception",
                   title:
-                    "Exception: The visual presentation of the additional content is controlled by the user agent and is not modified by the author.",
+                    "Line height (line spacing) to at least 1.5 times the font size;",
+                  type: "all_true",
+                },
+                {
+                  title:
+                    "Spacing following paragraphs to at least 2 times the font size;",
+                  type: "all_true",
+                },
+                {
+                  title:
+                    "Letter spacing (tracking) to at least 0.12 times the font size;",
+                  type: "all_true",
+                },
+                {
+                  title: "Word spacing to at least 0.16 times the font size.",
+                  type: "all_true",
+                },
+                {
+                  title:
+                    "Exception: Human languages and scripts that do not make use of one or more of these text style properties in written text can conform using only the properties that exist for that combination of language and script.",
+                  type: "exception",
                 },
               ],
+              title: "Text Spacing",
+              url: "https://www.w3.org/TR/WCAG21/#text-spacing",
+            },
+            {
+              description:
+                "Where receiving and then removing pointer hover or keyboard focus triggers additional content to become visible and then hidden, the following are true:",
+              level: "AA",
               notes: [
                 {
                   content:
@@ -919,6 +900,7 @@ module.exports = {
                     "Custom tooltips, sub-menus, and other nonmodal popups that display on hover and focus are examples of additional content covered by this criterion.",
                 },
               ],
+              ref_id: "1.4.13",
               references: [
                 {
                   title: "How to Meet 1.4.13",
@@ -929,22 +911,49 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html",
                 },
               ],
+              special_cases: [
+                {
+                  description:
+                    "A mechanism is available to dismiss the additional content without moving pointer hover or keyboard focus, unless the additional content communicates an input error or does not obscure or replace other content;",
+                  title: "Dismissable",
+                  type: "all_true",
+                },
+                {
+                  description:
+                    "If pointer hover can trigger the additional content, then the pointer can be moved over the additional content without the additional content disappearing;",
+                  title: "Hoverable",
+                  type: "all_true",
+                },
+                {
+                  description:
+                    "The additional content remains visible until the hover or focus trigger is removed, the user dismisses it, or its information is no longer valid.",
+                  title: "Persistent",
+                  type: "all_true",
+                },
+                {
+                  title:
+                    "Exception: The visual presentation of the additional content is controlled by the user agent and is not modified by the author.",
+                  type: "exception",
+                },
+              ],
+              title: "Content on Hover or Focus",
+              url: "https://www.w3.org/TR/WCAG21/#content-on-hover-or-focus",
             },
           ],
+          title: "Distinguishable",
+          url: "https://www.w3.org/TR/WCAG21/#distinguishable",
         },
       ],
+      ref_id: "1",
+      title: "Perceivable",
+      url: "https://www.w3.org/TR/WCAG21/#perceivable",
     },
     {
-      ref_id: "2",
-      title: "Operable",
       description: "User interface components and navigation must be operable.",
-      url: "https://www.w3.org/TR/WCAG21/#operable",
       guidelines: [
         {
-          ref_id: "2.1",
-          title: "Keyboard Accessible",
           description: "Make all functionality available from a keyboard.",
-          url: "https://www.w3.org/TR/WCAG21/#keyboard-accessible",
+          ref_id: "2.1",
           references: [
             {
               title: "Understanding Guideline 2.1",
@@ -953,13 +962,9 @@ module.exports = {
           ],
           success_criteria: [
             {
-              ref_id: "2.1.1",
-              title: "Keyboard",
               description:
                 "All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes, except where the underlying function requires input that depends on the path of the user's movement and not just the endpoints.",
-              url: "https://www.w3.org/TR/WCAG21/#keyboard",
               level: "A",
-              special_cases: null,
               notes: [
                 {
                   content:
@@ -970,6 +975,7 @@ module.exports = {
                     "This does not forbid and should not discourage providing mouse input or other input methods in addition to keyboard operation.",
                 },
               ],
+              ref_id: "2.1.1",
               references: [
                 {
                   title: "How to Meet 2.1.1",
@@ -980,21 +986,21 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html",
                 },
               ],
+              special_cases: null,
+              title: "Keyboard",
+              url: "https://www.w3.org/TR/WCAG21/#keyboard",
             },
             {
-              ref_id: "2.1.2",
-              title: "No Keyboard Trap",
               description:
                 "If keyboard focus can be moved to a component of the page using a keyboard interface, then focus can be moved away from that component using only a keyboard interface, and, if it requires more than unmodified arrow or tab keys or other standard exit methods, the user is advised of the method for moving focus away.",
-              url: "https://www.w3.org/TR/WCAG21/#no-keyboard-trap",
               level: "A",
-              special_cases: null,
               notes: [
                 {
                   content:
                     "Since any content that does not meet this success criterion can interfere with a user's ability to use the whole page, all content on the Web page (whether it is used to meet other success criteria or not) must meet this success criterion. See Conformance Requirement 5: Non-Interference. (https://www.w3.org/TR/WCAG21/#cc5)",
                 },
               ],
+              ref_id: "2.1.2",
               references: [
                 {
                   title: "How to Meet 2.1.2",
@@ -1005,16 +1011,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html",
                 },
               ],
+              special_cases: null,
+              title: "No Keyboard Trap",
+              url: "https://www.w3.org/TR/WCAG21/#no-keyboard-trap",
             },
             {
-              ref_id: "2.1.3",
-              title: "Keyboard (No Exception)",
               description:
                 "All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes.",
-              url: "https://www.w3.org/TR/WCAG21/#keyboard-no-exception",
               level: "AAA",
-              special_cases: null,
               notes: null,
+              ref_id: "2.1.3",
               references: [
                 {
                   title: "How to Meet 2.1.3",
@@ -1025,35 +1031,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/keyboard-no-exception.html",
                 },
               ],
+              special_cases: null,
+              title: "Keyboard (No Exception)",
+              url: "https://www.w3.org/TR/WCAG21/#keyboard-no-exception",
             },
             {
-              ref_id: "2.1.4",
-              title: "Character Key Shortcuts",
               description:
                 "If a keyboard shortcut is implemented in content using only letter (including upper- and lower-case letters), punctuation, number, or symbol characters, then at least one of the following is true:",
-              url: "https://www.w3.org/TR/WCAG21/#character-key-shortcuts",
               level: "A",
-              special_cases: [
-                {
-                  type: "at_least_one",
-                  title: "Turn off",
-                  description:
-                    "A mechanism is available to turn the shortcut off;",
-                },
-                {
-                  type: "at_least_one",
-                  title: "Remap",
-                  description:
-                    "A mechanism is available to remap the shortcut to use one or more non-printable keyboard characters (e.g. Ctrl, Alt, etc);",
-                },
-                {
-                  type: "at_least_one",
-                  title: "Active only on focus",
-                  description:
-                    "The keyboard shortcut for a user interface component is only active when that component has focus.",
-                },
-              ],
               notes: null,
+              ref_id: "2.1.4",
               references: [
                 {
                   title: "How to Meet 2.1.4",
@@ -1064,14 +1051,36 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html",
                 },
               ],
+              special_cases: [
+                {
+                  description:
+                    "A mechanism is available to turn the shortcut off;",
+                  title: "Turn off",
+                  type: "at_least_one",
+                },
+                {
+                  description:
+                    "A mechanism is available to remap the shortcut to use one or more non-printable keyboard characters (e.g. Ctrl, Alt, etc);",
+                  title: "Remap",
+                  type: "at_least_one",
+                },
+                {
+                  description:
+                    "The keyboard shortcut for a user interface component is only active when that component has focus.",
+                  title: "Active only on focus",
+                  type: "at_least_one",
+                },
+              ],
+              title: "Character Key Shortcuts",
+              url: "https://www.w3.org/TR/WCAG21/#character-key-shortcuts",
             },
           ],
+          title: "Keyboard Accessible",
+          url: "https://www.w3.org/TR/WCAG21/#keyboard-accessible",
         },
         {
-          ref_id: "2.2",
-          title: "Enough Time",
           description: "Provide users enough time to read and use content.",
-          url: "https://www.w3.org/TR/WCAG21/#enough-time",
+          ref_id: "2.2",
           references: [
             {
               title: "Understanding Guideline 2.2",
@@ -1080,55 +1089,16 @@ module.exports = {
           ],
           success_criteria: [
             {
-              ref_id: "2.2.1",
-              title: "Timing Adjustable",
               description:
                 "For each time limit that is set by the content, at least one of the following is true:",
-              url: "https://www.w3.org/TR/WCAG21/#timing-adjustable",
               level: "A",
-              special_cases: [
-                {
-                  type: "at_least_one",
-                  title: "Turn off",
-                  description:
-                    "The user is allowed to turn off the time limit before encountering it; or",
-                },
-                {
-                  type: "at_least_one",
-                  title: "Adjust",
-                  description:
-                    "The user is allowed to adjust the time limit before encountering it over a wide range that is at least ten times the length of the default setting; or",
-                },
-                {
-                  type: "at_least_one",
-                  title: "Extend",
-                  description:
-                    "The user is warned before time expires and given at least 20 seconds to extend the time limit with a simple action (for example, 'press the space bar'), and the user is allowed to extend the time limit at least ten times; or",
-                },
-                {
-                  type: "at_least_one",
-                  title: "Real-time Exception",
-                  description:
-                    "The time limit is a required part of a real-time event (for example, an auction), and no alternative to the time limit is possible; or",
-                },
-                {
-                  type: "at_least_one",
-                  title: "Essential Exception",
-                  description:
-                    "The time limit is essential and extending it would invalidate the activity; or",
-                },
-                {
-                  type: "at_least_one",
-                  title: "20 Hour Exception",
-                  description: "The time limit is longer than 20 hours.",
-                },
-              ],
               notes: [
                 {
                   content:
                     "This success criterion helps ensure that users can complete tasks without unexpected changes in content or context that are a result of a time limit. This success criterion should be considered in conjunction with Success Criterion 3.2.1 (https://www.w3.org/TR/WCAG21/#on-focus), which puts limits on changes of content or context as a result of user action.",
                 },
               ],
+              ref_id: "2.2.1",
               references: [
                 {
                   title: "How to Meet 2.2.1",
@@ -1139,28 +1109,50 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable.html",
                 },
               ],
-            },
-            {
-              ref_id: "2.2.2",
-              title: "Pause, Stop, Hide",
-              description:
-                "For moving, blinking, scrolling, or auto-updating information, all of the following are true:",
-              url: "https://www.w3.org/TR/WCAG21/#pause-stop-hide",
-              level: "A",
               special_cases: [
                 {
-                  type: "all_true",
-                  title: "Moving, blinking, scrolling",
                   description:
-                    "For any moving, blinking or scrolling information that (1) starts automatically, (2) lasts more than five seconds, and (3) is presented in parallel with other content, there is a mechanism for the user to pause, stop, or hide it unless the movement, blinking, or scrolling is part of an activity where it is essential; and",
+                    "The user is allowed to turn off the time limit before encountering it; or",
+                  title: "Turn off",
+                  type: "at_least_one",
                 },
                 {
-                  type: "all_true",
-                  title: "Auto-updating",
                   description:
-                    "For any auto-updating information that (1) starts automatically and (2) is presented in parallel with other content, there is a mechanism for the user to pause, stop, or hide it or to control the frequency of the update unless the auto-updating is part of an activity where it is essential.",
+                    "The user is allowed to adjust the time limit before encountering it over a wide range that is at least ten times the length of the default setting; or",
+                  title: "Adjust",
+                  type: "at_least_one",
+                },
+                {
+                  description:
+                    "The user is warned before time expires and given at least 20 seconds to extend the time limit with a simple action (for example, 'press the space bar'), and the user is allowed to extend the time limit at least ten times; or",
+                  title: "Extend",
+                  type: "at_least_one",
+                },
+                {
+                  description:
+                    "The time limit is a required part of a real-time event (for example, an auction), and no alternative to the time limit is possible; or",
+                  title: "Real-time Exception",
+                  type: "at_least_one",
+                },
+                {
+                  description:
+                    "The time limit is essential and extending it would invalidate the activity; or",
+                  title: "Essential Exception",
+                  type: "at_least_one",
+                },
+                {
+                  description: "The time limit is longer than 20 hours.",
+                  title: "20 Hour Exception",
+                  type: "at_least_one",
                 },
               ],
+              title: "Timing Adjustable",
+              url: "https://www.w3.org/TR/WCAG21/#timing-adjustable",
+            },
+            {
+              description:
+                "For moving, blinking, scrolling, or auto-updating information, all of the following are true:",
+              level: "A",
               notes: [
                 {
                   content:
@@ -1179,6 +1171,7 @@ module.exports = {
                     "An animation that occurs as part of a preload phase or similar situation can be considered essential if interaction cannot occur during that phase for all users and if not indicating progress could confuse users or cause them to think that content was frozen or broken.",
                 },
               ],
+              ref_id: "2.2.2",
               references: [
                 {
                   title: "How to Meet 2.2.2",
@@ -1189,16 +1182,29 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html",
                 },
               ],
+              special_cases: [
+                {
+                  description:
+                    "For any moving, blinking or scrolling information that (1) starts automatically, (2) lasts more than five seconds, and (3) is presented in parallel with other content, there is a mechanism for the user to pause, stop, or hide it unless the movement, blinking, or scrolling is part of an activity where it is essential; and",
+                  title: "Moving, blinking, scrolling",
+                  type: "all_true",
+                },
+                {
+                  description:
+                    "For any auto-updating information that (1) starts automatically and (2) is presented in parallel with other content, there is a mechanism for the user to pause, stop, or hide it or to control the frequency of the update unless the auto-updating is part of an activity where it is essential.",
+                  title: "Auto-updating",
+                  type: "all_true",
+                },
+              ],
+              title: "Pause, Stop, Hide",
+              url: "https://www.w3.org/TR/WCAG21/#pause-stop-hide",
             },
             {
-              ref_id: "2.2.3",
-              title: "No Timing",
               description:
                 "Timing is not an essential part of the event or activity presented by the content, except for non-interactive synchronized media and real-time events.",
-              url: "https://www.w3.org/TR/WCAG21/#no-timing",
               level: "AAA",
-              special_cases: null,
               notes: null,
+              ref_id: "2.2.3",
               references: [
                 {
                   title: "How to Meet 2.2.3",
@@ -1209,16 +1215,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/no-timing.html",
                 },
               ],
+              special_cases: null,
+              title: "No Timing",
+              url: "https://www.w3.org/TR/WCAG21/#no-timing",
             },
             {
-              ref_id: "2.2.4",
-              title: "Interruptions",
               description:
                 "Interruptions can be postponed or suppressed by the user, except interruptions involving an emergency.",
-              url: "https://www.w3.org/TR/WCAG21/#interruptions",
               level: "AAA",
-              special_cases: null,
               notes: null,
+              ref_id: "2.2.4",
               references: [
                 {
                   title: "How to Meet 2.2.4",
@@ -1229,16 +1235,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/interruptions.html",
                 },
               ],
+              special_cases: null,
+              title: "Interruptions",
+              url: "https://www.w3.org/TR/WCAG21/#interruptions",
             },
             {
-              ref_id: "2.2.5",
-              title: "Re-authenticating",
               description:
                 "When an authenticated session expires, the user can continue the activity without loss of data after re-authenticating.",
-              url: "https://www.w3.org/TR/WCAG21/#re-authenticating",
               level: "AAA",
-              special_cases: null,
               notes: null,
+              ref_id: "2.2.5",
               references: [
                 {
                   title: "How to Meet 2.2.5",
@@ -1249,21 +1255,21 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/re-authenticating.html",
                 },
               ],
+              special_cases: null,
+              title: "Re-authenticating",
+              url: "https://www.w3.org/TR/WCAG21/#re-authenticating",
             },
             {
-              ref_id: "2.2.6",
-              title: "Timeouts",
               description:
                 "Users are warned of the duration of any user inactivity that could cause data loss, unless the data is preserved for more than 20 hours when the user does not take any actions.",
-              url: "https://www.w3.org/TR/WCAG21/#timeouts",
               level: "AAA",
-              special_cases: null,
               notes: [
                 {
                   content:
                     "Privacy regulations may require explicit user consent before user identification has been authenticated and before user data is preserved. In cases where the user is a minor, explicit consent may not be solicited in most jurisdictions, countries or regions. Consultation with privacy professionals and legal counsel is advised when considering data preservation as an approach to satisfy this success criterion.",
                 },
               ],
+              ref_id: "2.2.6",
               references: [
                 {
                   title: "How to Meet 2.2.6",
@@ -1274,15 +1280,18 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/timeouts.html",
                 },
               ],
+              special_cases: null,
+              title: "Timeouts",
+              url: "https://www.w3.org/TR/WCAG21/#timeouts",
             },
           ],
+          title: "Enough Time",
+          url: "https://www.w3.org/TR/WCAG21/#enough-time",
         },
         {
-          ref_id: "2.3",
-          title: "Seizures",
           description:
             "Do not design content in a way that is known to cause seizures.",
-          url: "https://www.w3.org/TR/WCAG21/#seizures-and-physical-reactions",
+          ref_id: "2.3",
           references: [
             {
               title: "Understanding Guideline 2.3",
@@ -1291,19 +1300,16 @@ module.exports = {
           ],
           success_criteria: [
             {
-              ref_id: "2.3.1",
-              title: "Three Flashes or Below Threshold",
               description:
                 "Web pages do not contain anything that flashes more than three times in any one second period, or the flash is below the general flash and red flash thresholds.",
-              url: "https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold",
               level: "A",
-              special_cases: null,
               notes: [
                 {
                   content:
                     "Since any content that does not meet this success criterion can interfere with a user's ability to use the whole page, all content on the Web page (whether it is used to meet other success criteria or not) must meet this success criterion. See Conformance Requirement 5: Non-Interference. (https://www.w3.org/TR/WCAG21/#cc5)",
                 },
               ],
+              ref_id: "2.3.1",
               references: [
                 {
                   title: "How to Meet 2.3.1",
@@ -1314,16 +1320,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html",
                 },
               ],
+              special_cases: null,
+              title: "Three Flashes or Below Threshold",
+              url: "https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold",
             },
             {
-              ref_id: "2.3.2",
-              title: "Three Flashes",
               description:
                 "Web pages do not contain anything that flashes more than three times in any one second period.",
-              url: "https://www.w3.org/TR/WCAG21/#three-flashes",
               level: "AAA",
-              special_cases: null,
               notes: null,
+              ref_id: "2.3.2",
               references: [
                 {
                   title: "How to Meet 2.3.2",
@@ -1334,16 +1340,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/three-flashes.html",
                 },
               ],
+              special_cases: null,
+              title: "Three Flashes",
+              url: "https://www.w3.org/TR/WCAG21/#three-flashes",
             },
             {
-              ref_id: "2.3.3",
-              title: "Animation from Interactions",
               description:
                 "Motion animation triggered by interaction can be disabled, unless the animation is essential to the functionality or the information being conveyed.",
-              url: "https://www.w3.org/TR/WCAG21/#animation-from-interactions",
               level: "AAA",
-              special_cases: null,
               notes: null,
+              ref_id: "2.3.3",
               references: [
                 {
                   title: "How to Meet 2.3.3",
@@ -1354,15 +1360,18 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions.html",
                 },
               ],
+              special_cases: null,
+              title: "Animation from Interactions",
+              url: "https://www.w3.org/TR/WCAG21/#animation-from-interactions",
             },
           ],
+          title: "Seizures",
+          url: "https://www.w3.org/TR/WCAG21/#seizures-and-physical-reactions",
         },
         {
-          ref_id: "2.4",
-          title: "Navigable",
           description:
             "Provide ways to help users navigate, find content, and determine where they are.",
-          url: "https://www.w3.org/TR/WCAG21/#navigable",
+          ref_id: "2.4",
           references: [
             {
               title: "Understanding Guideline 2.4",
@@ -1371,14 +1380,11 @@ module.exports = {
           ],
           success_criteria: [
             {
-              ref_id: "2.4.1",
-              title: "Bypass Blocks",
               description:
                 "A mechanism is available to bypass blocks of content that are repeated on multiple Web pages.",
-              url: "https://www.w3.org/TR/WCAG21/#bypass-blocks",
               level: "A",
-              special_cases: null,
               notes: null,
+              ref_id: "2.4.1",
               references: [
                 {
                   title: "How to Meet 2.4.1",
@@ -1389,16 +1395,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html",
                 },
               ],
+              special_cases: null,
+              title: "Bypass Blocks",
+              url: "https://www.w3.org/TR/WCAG21/#bypass-blocks",
             },
             {
-              ref_id: "2.4.2",
-              title: "Page Titled",
               description:
                 "Web pages have titles that describe topic or purpose.",
-              url: "https://www.w3.org/TR/WCAG21/#page-titled",
               level: "A",
-              special_cases: null,
               notes: null,
+              ref_id: "2.4.2",
               references: [
                 {
                   title: "How to Meet 2.4.2",
@@ -1409,16 +1415,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html",
                 },
               ],
+              special_cases: null,
+              title: "Page Titled",
+              url: "https://www.w3.org/TR/WCAG21/#page-titled",
             },
             {
-              ref_id: "2.4.3",
-              title: "Focus Order",
               description:
                 "If a Web page can be navigated sequentially and the navigation sequences affect meaning or operation, focusable components receive focus in an order that preserves meaning and operability.",
-              url: "https://www.w3.org/TR/WCAG21/#focus-order",
               level: "A",
-              special_cases: null,
               notes: null,
+              ref_id: "2.4.3",
               references: [
                 {
                   title: "How to Meet 2.4.3",
@@ -1429,16 +1435,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html",
                 },
               ],
+              special_cases: null,
+              title: "Focus Order",
+              url: "https://www.w3.org/TR/WCAG21/#focus-order",
             },
             {
-              ref_id: "2.4.4",
-              title: "Link Purpose (In Context)",
               description:
                 "The purpose of each link can be determined from the link text alone or from the link text together with its programmatically determined link context, except where the purpose of the link would be ambiguous to users in general.",
-              url: "https://www.w3.org/TR/WCAG21/#link-purpose-in-context",
               level: "A",
-              special_cases: null,
               notes: null,
+              ref_id: "2.4.4",
               references: [
                 {
                   title: "How to Meet 2.4.4",
@@ -1449,16 +1455,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html",
                 },
               ],
+              special_cases: null,
+              title: "Link Purpose (In Context)",
+              url: "https://www.w3.org/TR/WCAG21/#link-purpose-in-context",
             },
             {
-              ref_id: "2.4.5",
-              title: "Multiple Ways",
               description:
                 "More than one way is available to locate a Web page within a set of Web pages except where the Web Page is the result of, or a step in, a process.",
-              url: "https://www.w3.org/TR/WCAG21/#link-purpose-in-context",
               level: "AA",
-              special_cases: null,
               notes: null,
+              ref_id: "2.4.5",
               references: [
                 {
                   title: "How to Meet 2.4.5",
@@ -1469,15 +1475,15 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/multiple-ways.html",
                 },
               ],
+              special_cases: null,
+              title: "Multiple Ways",
+              url: "https://www.w3.org/TR/WCAG21/#link-purpose-in-context",
             },
             {
-              ref_id: "2.4.6",
-              title: "Headings and Labels",
               description: "Headings and labels describe topic or purpose.",
-              url: "https://www.w3.org/TR/WCAG21/#headings-and-labels",
               level: "AA",
-              special_cases: null,
               notes: null,
+              ref_id: "2.4.6",
               references: [
                 {
                   title: "How to Meet 2.4.6",
@@ -1488,16 +1494,15 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html",
                 },
               ],
+              special_cases: null,
+              title: "Headings and Labels",
+              url: "https://www.w3.org/TR/WCAG21/#headings-and-labels",
             },
             {
-              ref_id: "2.4.7",
-              title: "Focus Visible",
-              description:
-                "Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible.",
-              url: "https://www.w3.org/TR/WCAG21/#focus-visible",
+              description: "Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible.",
               level: "AA",
-              special_cases: null,
               notes: null,
+              ref_id: "2.4.7",
               references: [
                 {
                   title: "How to Meet 2.4.7",
@@ -1508,16 +1513,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html",
                 },
               ],
+              special_cases: null,
+              title: "Focus Visible",
+              url: "https://www.w3.org/TR/WCAG21/#focus-visible",
             },
             {
-              ref_id: "2.4.8",
-              title: "Location",
               description:
                 "Information about the user's location within a set of Web pages is available.",
-              url: "https://www.w3.org/TR/WCAG21/#location",
               level: "AAA",
-              special_cases: null,
               notes: null,
+              ref_id: "2.4.8",
               references: [
                 {
                   title: "How to Meet 2.4.8",
@@ -1528,16 +1533,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/location.html",
                 },
               ],
+              special_cases: null,
+              title: "Location",
+              url: "https://www.w3.org/TR/WCAG21/#location",
             },
             {
-              ref_id: "2.4.9",
-              title: "Link Purpose (Link Only)",
               description:
                 "A mechanism is available to allow the purpose of each link to be identified from link text alone, except where the purpose of the link would be ambiguous to users in general.",
-              url: "https://www.w3.org/TR/WCAG21/#link-purpose-link-only",
               level: "AAA",
-              special_cases: null,
               notes: null,
+              ref_id: "2.4.9",
               references: [
                 {
                   title: "How to Meet 2.4.9",
@@ -1548,14 +1553,13 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html",
                 },
               ],
+              special_cases: null,
+              title: "Link Purpose (Link Only)",
+              url: "https://www.w3.org/TR/WCAG21/#link-purpose-link-only",
             },
             {
-              ref_id: "2.4.10",
-              title: "Section Headings",
               description: "Section headings are used to organize the content.",
-              url: "https://www.w3.org/TR/WCAG21/#section-headings",
               level: "AAA",
-              special_cases: null,
               notes: [
                 {
                   content:
@@ -1566,6 +1570,7 @@ module.exports = {
                     "This success criterion covers sections within writing, not user interface components. User Interface components are covered under Success Criterion 4.1.2. (https://www.w3.org/TR/WCAG21/#name-role-value)",
                 },
               ],
+              ref_id: "2.4.10",
               references: [
                 {
                   title: "How to Meet 2.4.10",
@@ -1576,15 +1581,18 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/section-headings.html",
                 },
               ],
+              special_cases: null,
+              title: "Section Headings",
+              url: "https://www.w3.org/TR/WCAG21/#section-headings",
             },
           ],
+          title: "Navigable",
+          url: "https://www.w3.org/TR/WCAG21/#navigable",
         },
         {
-          ref_id: "2.5",
-          title: "Input Modalities",
           description:
             "Make it easier for users to operate functionality through various inputs beyond keyboard.",
-          url: "https://www.w3.org/TR/WCAG21/#input-modalities",
+          ref_id: "2.5",
           references: [
             {
               title: "Understanding Guideline 2.5",
@@ -1593,19 +1601,16 @@ module.exports = {
           ],
           success_criteria: [
             {
-              ref_id: "2.5.1",
-              title: "Pointer Gestures",
               description:
                 "All functionality that uses multipoint or path-based gestures for operation can be operated with a single pointer without a path-based gesture, unless a multipoint or path-based gesture is essential.",
-              url: "https://www.w3.org/TR/WCAG21/#pointer-gestures",
               level: "A",
-              special_cases: null,
               notes: [
                 {
                   content:
                     "This requirement applies to web content that interprets pointer actions (i.e. this does not apply to actions that are required to operate the user agent or assistive technology).",
                 },
               ],
+              ref_id: "2.5.1",
               references: [
                 {
                   title: "How to Meet 2.5.1",
@@ -1616,40 +1621,14 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/pointer-gestures.html",
                 },
               ],
+              special_cases: null,
+              title: "Pointer Gestures",
+              url: "https://www.w3.org/TR/WCAG21/#pointer-gestures",
             },
             {
-              ref_id: "2.5.2",
-              title: "Pointer Cancellation",
               description:
                 "For functionality that can be operated using a single pointer, at least one of the following is true:",
-              url: "https://www.w3.org/TR/WCAG21/#pointer-cancellation",
               level: "A",
-              special_cases: [
-                {
-                  type: "at_least_one",
-                  title: "No Down-Event",
-                  description:
-                    "The down-event of the pointer is not used to execute any part of the function;",
-                },
-                {
-                  type: "at_least_one",
-                  title: "Abort or Undo",
-                  description:
-                    "Completion of the function is on the up-event, and a mechanism is available to abort the function before completion or to undo the function after completion;",
-                },
-                {
-                  type: "at_least_one",
-                  title: "Up Reversal",
-                  description:
-                    "The up-event reverses any outcome of the preceding down-event;",
-                },
-                {
-                  type: "at_least_one",
-                  title: "Essential",
-                  description:
-                    "Completing the function on the down-event is essential.",
-                },
-              ],
               notes: [
                 {
                   content:
@@ -1660,6 +1639,7 @@ module.exports = {
                     "This requirement applies to web content that interprets pointer actions (i.e. this does not apply to actions that are required to operate the user agent or assistive technology).",
                 },
               ],
+              ref_id: "2.5.2",
               references: [
                 {
                   title: "How to Meet 2.5.2",
@@ -1670,21 +1650,46 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html",
                 },
               ],
+              special_cases: [
+                {
+                  description:
+                    "The down-event of the pointer is not used to execute any part of the function;",
+                  title: "No Down-Event",
+                  type: "at_least_one",
+                },
+                {
+                  description:
+                    "Completion of the function is on the up-event, and a mechanism is available to abort the function before completion or to undo the function after completion;",
+                  title: "Abort or Undo",
+                  type: "at_least_one",
+                },
+                {
+                  description:
+                    "The up-event reverses any outcome of the preceding down-event;",
+                  title: "Up Reversal",
+                  type: "at_least_one",
+                },
+                {
+                  description:
+                    "Completing the function on the down-event is essential.",
+                  title: "Essential",
+                  type: "at_least_one",
+                },
+              ],
+              title: "Pointer Cancellation",
+              url: "https://www.w3.org/TR/WCAG21/#pointer-cancellation",
             },
             {
-              ref_id: "2.5.3",
-              title: "Label in Name",
               description:
                 "For user interface components with labels that include text or images of text, the name contains the text that is presented visually.",
-              url: "https://www.w3.org/TR/WCAG21/#label-in-name",
               level: "A",
-              special_cases: null,
               notes: [
                 {
                   content:
                     "A best practice is to have the text of the label at the start of the name.",
                 },
               ],
+              ref_id: "2.5.3",
               references: [
                 {
                   title: "How to Meet 2.5.3",
@@ -1695,29 +1700,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html",
                 },
               ],
+              special_cases: null,
+              title: "Label in Name",
+              url: "https://www.w3.org/TR/WCAG21/#label-in-name",
             },
             {
-              ref_id: "2.5.4",
-              title: "Motion Actuation",
               description:
                 "Functionality that can be operated by device motion or user motion can also be operated by user interface components and responding to the motion can be disabled to prevent accidental actuation, except when:",
-              url: "https://www.w3.org/TR/WCAG21/#motion-actuation",
               level: "A",
-              special_cases: [
-                {
-                  type: "exception",
-                  title: "Supported Interface",
-                  description:
-                    "The motion is used to operate functionality through an accessibility supported interface;",
-                },
-                {
-                  type: "exception",
-                  title: "Essential",
-                  description:
-                    "The motion is essential for the function and doing so would invalidate the activity.",
-                },
-              ],
               notes: null,
+              ref_id: "2.5.4",
               references: [
                 {
                   title: "How to Meet 2.5.4",
@@ -1728,40 +1720,29 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html",
                 },
               ],
-            },
-            {
-              ref_id: "2.5.5",
-              title: "Target Size",
-              description:
-                "The size of the target for pointer inputs is at least 44 by 44 CSS pixels except when:",
-              url: "https://www.w3.org/TR/WCAG21/#target-size",
-              level: "AAA",
               special_cases: [
                 {
-                  type: "exception",
-                  title: "Equivalent",
                   description:
-                    "The target is available through an equivalent link or control on the same page that is at least 44 by 44 CSS pixels;",
+                    "The motion is used to operate functionality through an accessibility supported interface;",
+                  title: "Supported Interface",
+                  type: "exception",
                 },
                 {
-                  type: "exception",
-                  title: "Inline",
-                  description: "The target is in a sentence or block of text;",
-                },
-                {
-                  type: "exception",
-                  title: "User Agent Control",
                   description:
-                    "The size of the target is determined by the user agent and is not modified by the author;",
-                },
-                {
-                  type: "exception",
+                    "The motion is essential for the function and doing so would invalidate the activity.",
                   title: "Essential",
-                  description:
-                    "A particular presentation of the target is essential to the information being conveyed.",
+                  type: "exception",
                 },
               ],
+              title: "Motion Actuation",
+              url: "https://www.w3.org/TR/WCAG21/#motion-actuation",
+            },
+            {
+              description:
+                "The size of the target for pointer inputs is at least 44 by 44 CSS pixels except when:",
+              level: "AAA",
               notes: null,
+              ref_id: "2.5.5",
               references: [
                 {
                   title: "How to Meet 2.5.5",
@@ -1772,16 +1753,40 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/target-size.html",
                 },
               ],
+              special_cases: [
+                {
+                  description:
+                    "The target is available through an equivalent link or control on the same page that is at least 44 by 44 CSS pixels;",
+                  title: "Equivalent",
+                  type: "exception",
+                },
+                {
+                  description: "The target is in a sentence or block of text;",
+                  title: "Inline",
+                  type: "exception",
+                },
+                {
+                  description:
+                    "The size of the target is determined by the user agent and is not modified by the author;",
+                  title: "User Agent Control",
+                  type: "exception",
+                },
+                {
+                  description:
+                    "A particular presentation of the target is essential to the information being conveyed.",
+                  title: "Essential",
+                  type: "exception",
+                },
+              ],
+              title: "Target Size",
+              url: "https://www.w3.org/TR/WCAG21/#target-size",
             },
             {
-              ref_id: "2.5.6",
-              title: "Concurrent Input Mechanisms",
               description:
                 "Web content does not restrict use of input modalities available on a platform except where the restriction is essential, required to ensure the security of the content, or required to respect user settings.",
-              url: "https://www.w3.org/TR/WCAG21/#concurrent-input-mechanisms",
               level: "AAA",
-              special_cases: null,
               notes: null,
+              ref_id: "2.5.6",
               references: [
                 {
                   title: "How to Meet 2.5.6",
@@ -1792,23 +1797,26 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/concurrent-input-mechanisms.html",
                 },
               ],
+              special_cases: null,
+              title: "Concurrent Input Mechanisms",
+              url: "https://www.w3.org/TR/WCAG21/#concurrent-input-mechanisms",
             },
           ],
+          title: "Input Modalities",
+          url: "https://www.w3.org/TR/WCAG21/#input-modalities",
         },
       ],
+      ref_id: "2",
+      title: "Operable",
+      url: "https://www.w3.org/TR/WCAG21/#operable",
     },
     {
-      ref_id: "3",
-      title: "Understandable",
       description:
         "Information and the operation of user interface must be understandable.",
-      url: "https://www.w3.org/TR/WCAG21/#understandable",
       guidelines: [
         {
-          ref_id: "3.1",
-          title: "Readable",
           description: "Make text content readable and understandable.",
-          url: "https://www.w3.org/TR/WCAG21/#readable",
+          ref_id: "3.1",
           references: [
             {
               title: "Understanding Guideline 3.1",
@@ -1817,14 +1825,11 @@ module.exports = {
           ],
           success_criteria: [
             {
-              ref_id: "3.1.1",
-              title: "Language of Page",
               description:
                 "The default human language of each Web page can be programmatically determined.",
-              url: "https://www.w3.org/TR/WCAG21/#language-of-page",
               level: "A",
-              special_cases: null,
               notes: null,
+              ref_id: "3.1.1",
               references: [
                 {
                   title: "How to Meet 3.1.1",
@@ -1835,16 +1840,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html",
                 },
               ],
+              special_cases: null,
+              title: "Language of Page",
+              url: "https://www.w3.org/TR/WCAG21/#language-of-page",
             },
             {
-              ref_id: "3.1.2",
-              title: "Language of Parts",
               description:
                 "The human language of each passage or phrase in the content can be programmatically determined except for proper names, technical terms, words of indeterminate language, and words or phrases that have become part of the vernacular of the immediately surrounding text.",
-              url: "https://www.w3.org/TR/WCAG21/#language-of-parts",
               level: "AA",
-              special_cases: null,
               notes: null,
+              ref_id: "3.1.2",
               references: [
                 {
                   title: "How to Meet 3.1.2",
@@ -1855,16 +1860,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html",
                 },
               ],
+              special_cases: null,
+              title: "Language of Parts",
+              url: "https://www.w3.org/TR/WCAG21/#language-of-parts",
             },
             {
-              ref_id: "3.1.3",
-              title: "Unusual Words",
               description:
                 "A mechanism is available for identifying specific definitions of words or phrases used in an unusual or restricted way, including idioms and jargon.",
-              url: "https://www.w3.org/TR/WCAG21/#unusual-words",
               level: "AAA",
-              special_cases: null,
               notes: null,
+              ref_id: "3.1.3",
               references: [
                 {
                   title: "How to Meet 3.1.3",
@@ -1875,16 +1880,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/unusual-words.html",
                 },
               ],
+              special_cases: null,
+              title: "Unusual Words",
+              url: "https://www.w3.org/TR/WCAG21/#unusual-words",
             },
             {
-              ref_id: "3.1.4",
-              title: "Abbreviations",
               description:
                 "A mechanism for identifying the expanded form or meaning of abbreviations is available.",
-              url: "https://www.w3.org/TR/WCAG21/#abbreviations",
               level: "AAA",
-              special_cases: null,
               notes: null,
+              ref_id: "3.1.4",
               references: [
                 {
                   title: "How to Meet 3.1.4",
@@ -1895,16 +1900,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/abbreviations.html",
                 },
               ],
+              special_cases: null,
+              title: "Abbreviations",
+              url: "https://www.w3.org/TR/WCAG21/#abbreviations",
             },
             {
-              ref_id: "3.1.5",
-              title: "Reading Level",
               description:
                 "When text requires reading ability more advanced than the lower secondary education level after removal of proper names and titles, supplemental content, or a version that does not require reading ability more advanced than the lower secondary education level, is available.",
-              url: "https://www.w3.org/TR/WCAG21/#reading-level",
               level: "AAA",
-              special_cases: null,
               notes: null,
+              ref_id: "3.1.5",
               references: [
                 {
                   title: "How to Meet 3.1.5",
@@ -1915,16 +1920,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/reading-level.html",
                 },
               ],
+              special_cases: null,
+              title: "Reading Level",
+              url: "https://www.w3.org/TR/WCAG21/#reading-level",
             },
             {
-              ref_id: "3.1.6",
-              title: "Pronunciation",
               description:
                 "A mechanism is available for identifying specific pronunciation of words where meaning of the words, in context, is ambiguous without knowing the pronunciation.",
-              url: "https://www.w3.org/TR/WCAG21/#pronunciation",
               level: "AAA",
-              special_cases: null,
               notes: null,
+              ref_id: "3.1.6",
               references: [
                 {
                   title: "How to Meet 3.1.6",
@@ -1935,14 +1940,17 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/pronunciation.html",
                 },
               ],
+              special_cases: null,
+              title: "Pronunciation",
+              url: "https://www.w3.org/TR/WCAG21/#pronunciation",
             },
           ],
+          title: "Readable",
+          url: "https://www.w3.org/TR/WCAG21/#readable",
         },
         {
-          ref_id: "3.2",
-          title: "Predictable",
           description: "Make Web pages appear and operate in predictable ways.",
-          url: "https://www.w3.org/TR/WCAG21/#predictable",
+          ref_id: "3.2",
           references: [
             {
               title: "Understanding Guideline 3.2",
@@ -1951,14 +1959,11 @@ module.exports = {
           ],
           success_criteria: [
             {
-              ref_id: "3.2.1",
-              title: "On Focus",
               description:
                 "When any component receives focus, it does not initiate a change of context.",
-              url: "https://www.w3.org/TR/WCAG21/#on-focus",
               level: "A",
-              special_cases: null,
               notes: null,
+              ref_id: "3.2.1",
               references: [
                 {
                   title: "How to Meet 3.2.1",
@@ -1969,16 +1974,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/on-focus.html",
                 },
               ],
+              special_cases: null,
+              title: "On Focus",
+              url: "https://www.w3.org/TR/WCAG21/#on-focus",
             },
             {
-              ref_id: "3.2.2",
-              title: "On Input",
               description:
                 "Changing the setting of any user interface component does not automatically cause a change of context unless the user has been advised of the behavior before using the component.",
-              url: "https://www.w3.org/TR/WCAG21/#on-input",
               level: "A",
-              special_cases: null,
               notes: null,
+              ref_id: "3.2.2",
               references: [
                 {
                   title: "How to Meet 3.2.2",
@@ -1989,16 +1994,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/on-input.html",
                 },
               ],
+              special_cases: null,
+              title: "On Input",
+              url: "https://www.w3.org/TR/WCAG21/#on-input",
             },
             {
-              ref_id: "3.2.3",
-              title: "Consistent Navigation",
               description:
                 "Navigational mechanisms that are repeated on multiple Web pages within a set of Web pages occur in the same relative order each time they are repeated, unless a change is initiated by the user.",
-              url: "https://www.w3.org/TR/WCAG21/#consistent-navigation",
               level: "AA",
-              special_cases: null,
               notes: null,
+              ref_id: "3.2.3",
               references: [
                 {
                   title: "How to Meet 3.2.3",
@@ -2009,16 +2014,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/consistent-navigation.html",
                 },
               ],
+              special_cases: null,
+              title: "Consistent Navigation",
+              url: "https://www.w3.org/TR/WCAG21/#consistent-navigation",
             },
             {
-              ref_id: "3.2.4",
-              title: "Consistent Identification",
               description:
                 "Components that have the same functionality within a set of Web pages are identified consistently.",
-              url: "https://www.w3.org/TR/WCAG21/#consistent-identification",
               level: "AA",
-              special_cases: null,
               notes: null,
+              ref_id: "3.2.4",
               references: [
                 {
                   title: "How to Meet 3.2.4",
@@ -2029,16 +2034,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/consistent-identification.html",
                 },
               ],
+              special_cases: null,
+              title: "Consistent Identification",
+              url: "https://www.w3.org/TR/WCAG21/#consistent-identification",
             },
             {
-              ref_id: "3.2.5",
-              title: "Change on Request",
               description:
                 "Changes of context are initiated only by user request or a mechanism is available to turn off such changes.",
-              url: "https://www.w3.org/TR/WCAG21/#change-on-request",
               level: "AAA",
-              special_cases: null,
               notes: null,
+              ref_id: "3.2.5",
               references: [
                 {
                   title: "How to Meet 3.2.5",
@@ -2049,14 +2054,17 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/change-on-request.html",
                 },
               ],
+              special_cases: null,
+              title: "Change on Request",
+              url: "https://www.w3.org/TR/WCAG21/#change-on-request",
             },
           ],
+          title: "Predictable",
+          url: "https://www.w3.org/TR/WCAG21/#predictable",
         },
         {
-          ref_id: "3.3",
-          title: "Input Assistance",
           description: "Help users avoid and correct mistakes.",
-          url: "https://www.w3.org/TR/WCAG21/#input-assistance",
+          ref_id: "3.3",
           references: [
             {
               title: "Understanding Guideline 3.3",
@@ -2065,14 +2073,11 @@ module.exports = {
           ],
           success_criteria: [
             {
-              ref_id: "3.3.1",
-              title: "Error Identification",
               description:
                 "If an input error is automatically detected, the item that is in error is identified and the error is described to the user in text.",
-              url: "https://www.w3.org/TR/WCAG21/#error-identification",
               level: "A",
-              special_cases: null,
               notes: null,
+              ref_id: "3.3.1",
               references: [
                 {
                   title: "How to Meet 3.3.1",
@@ -2083,16 +2088,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html",
                 },
               ],
+              special_cases: null,
+              title: "Error Identification",
+              url: "https://www.w3.org/TR/WCAG21/#error-identification",
             },
             {
-              ref_id: "3.3.2",
-              title: "Labels or Instructions",
               description:
                 "Labels or instructions are provided when content requires user input.",
-              url: "https://www.w3.org/TR/WCAG21/#labels-or-instructions",
               level: "A",
-              special_cases: null,
               notes: null,
+              ref_id: "3.3.2",
               references: [
                 {
                   title: "How to Meet 3.3.2",
@@ -2103,16 +2108,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html",
                 },
               ],
+              special_cases: null,
+              title: "Labels or Instructions",
+              url: "https://www.w3.org/TR/WCAG21/#labels-or-instructions",
             },
             {
-              ref_id: "3.3.3",
-              title: "Error Suggestion",
               description:
                 "If an input error is automatically detected and suggestions for correction are known, then the suggestions are provided to the user, unless it would jeopardize the security or purpose of the content.",
-              url: "https://www.w3.org/TR/WCAG21/#error-suggestion",
               level: "AA",
-              special_cases: null,
               notes: null,
+              ref_id: "3.3.3",
               references: [
                 {
                   title: "How to Meet 3.3.3",
@@ -2123,34 +2128,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html",
                 },
               ],
+              special_cases: null,
+              title: "Error Suggestion",
+              url: "https://www.w3.org/TR/WCAG21/#error-suggestion",
             },
             {
-              ref_id: "3.3.4",
-              title: "Error Prevention (Legal, Financial, Data)",
               description:
                 " For Web pages that cause legal commitments or financial transactions for the user to occur, that modify or delete user-controllable data in data storage systems, or that submit user test responses, at least one of the following is true:",
-              url: "https://www.w3.org/TR/WCAG21/#error-prevention-legal-financial-data",
               level: "AA",
-              special_cases: [
-                {
-                  type: "at_least_one",
-                  title: "Reversible",
-                  description: "Submissions are reversible.",
-                },
-                {
-                  type: "at_least_one",
-                  title: "Checked",
-                  description:
-                    "Data entered by the user is checked for input errors and the user is provided an opportunity to correct them.",
-                },
-                {
-                  type: "at_least_one",
-                  title: "Confirmed",
-                  description:
-                    "A mechanism is available for reviewing, confirming, and correcting information before finalizing the submission.",
-                },
-              ],
               notes: null,
+              ref_id: "3.3.4",
               references: [
                 {
                   title: "How to Meet 3.3.4",
@@ -2161,15 +2148,33 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/error-prevention-legal-financial-data.html",
                 },
               ],
+              special_cases: [
+                {
+                  description: "Submissions are reversible.",
+                  title: "Reversible",
+                  type: "at_least_one",
+                },
+                {
+                  description:
+                    "Data entered by the user is checked for input errors and the user is provided an opportunity to correct them.",
+                  title: "Checked",
+                  type: "at_least_one",
+                },
+                {
+                  description:
+                    "A mechanism is available for reviewing, confirming, and correcting information before finalizing the submission.",
+                  title: "Confirmed",
+                  type: "at_least_one",
+                },
+              ],
+              title: "Error Prevention (Legal, Financial, Data)",
+              url: "https://www.w3.org/TR/WCAG21/#error-prevention-legal-financial-data",
             },
             {
-              ref_id: "3.3.5",
-              title: "Help",
               description: "Context-sensitive help is available.",
-              url: "https://www.w3.org/TR/WCAG21/#help",
               level: "AAA",
-              special_cases: null,
               notes: null,
+              ref_id: "3.3.5",
               references: [
                 {
                   title: "How to Meet 3.3.5",
@@ -2180,34 +2185,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/help.html",
                 },
               ],
+              special_cases: null,
+              title: "Help",
+              url: "https://www.w3.org/TR/WCAG21/#help",
             },
             {
-              ref_id: "3.3.6",
-              title: "Error Prevention (All)",
               description:
                 "For Web pages that require the user to submit information, at least one of the following is true:",
-              url: "https://www.w3.org/TR/WCAG21/#error-prevention-all",
               level: "AAA",
-              special_cases: [
-                {
-                  type: "at_least_one",
-                  title: "Reversible",
-                  description: "Submissions are reversible.",
-                },
-                {
-                  type: "at_least_one",
-                  title: "Checked",
-                  description:
-                    "Data entered by the user is checked for input errors and the user is provided an opportunity to correct them.",
-                },
-                {
-                  type: "at_least_one",
-                  title: "Confirmed",
-                  description:
-                    "A mechanism is available for reviewing, confirming, and correcting information before finalizing the submission.",
-                },
-              ],
               notes: null,
+              ref_id: "3.3.6",
               references: [
                 {
                   title: "How to Meet 3.3.6",
@@ -2218,24 +2205,45 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/error-prevention-all.html",
                 },
               ],
+              special_cases: [
+                {
+                  description: "Submissions are reversible.",
+                  title: "Reversible",
+                  type: "at_least_one",
+                },
+                {
+                  description:
+                    "Data entered by the user is checked for input errors and the user is provided an opportunity to correct them.",
+                  title: "Checked",
+                  type: "at_least_one",
+                },
+                {
+                  description:
+                    "A mechanism is available for reviewing, confirming, and correcting information before finalizing the submission.",
+                  title: "Confirmed",
+                  type: "at_least_one",
+                },
+              ],
+              title: "Error Prevention (All)",
+              url: "https://www.w3.org/TR/WCAG21/#error-prevention-all",
             },
           ],
+          title: "Input Assistance",
+          url: "https://www.w3.org/TR/WCAG21/#input-assistance",
         },
       ],
+      ref_id: "3",
+      title: "Understandable",
+      url: "https://www.w3.org/TR/WCAG21/#understandable",
     },
     {
-      ref_id: "4",
-      title: "Robust",
       description:
         "Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies.",
-      url: "https://www.w3.org/TR/WCAG21/#robust",
       guidelines: [
         {
-          ref_id: "4.1",
-          title: "Compatible",
           description:
             "Maximize compatibility with current and future user agents, including assistive technologies.",
-          url: "https://www.w3.org/TR/WCAG21/#compatible",
+          ref_id: "4.1",
           references: [
             {
               title: "Understanding Guideline 4.1",
@@ -2244,19 +2252,16 @@ module.exports = {
           ],
           success_criteria: [
             {
-              ref_id: "4.1.1",
-              title: "Parsing",
               description:
                 "In content implemented using markup languages, elements have complete start and end tags, elements are nested according to their specifications, elements do not contain duplicate attributes, and any IDs are unique, except where the specifications allow these features.",
-              url: "https://www.w3.org/TR/WCAG21/#parsing",
               level: "A",
-              special_cases: null,
               notes: [
                 {
                   content:
                     "Start and end tags that are missing a critical character in their formation, such as a closing angle bracket or a mismatched attribute value quotation mark are not complete.",
                 },
               ],
+              ref_id: "4.1.1",
               references: [
                 {
                   title: "How to Meet 4.1.1",
@@ -2267,21 +2272,21 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/parsing.html",
                 },
               ],
+              special_cases: null,
+              title: "Parsing",
+              url: "https://www.w3.org/TR/WCAG21/#parsing",
             },
             {
-              ref_id: "4.1.2",
-              title: "Name, Role, Value",
               description:
                 "For all user interface components (including but not limited to: form elements, links and components generated by scripts), the name and role can be programmatically determined; states, properties, and values that can be set by the user can be programmatically set; and notification of changes to these items is available to user agents, including assistive technologies.",
-              url: "https://www.w3.org/TR/WCAG21/#name-role-value",
               level: "A",
-              special_cases: null,
               notes: [
                 {
                   content:
                     "This success criterion is primarily for Web authors who develop or script their own user interface components. For example, standard HTML controls already meet this success criterion when used according to specification.",
                 },
               ],
+              ref_id: "4.1.2",
               references: [
                 {
                   title: "How to Meet 4.1.2",
@@ -2292,16 +2297,16 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html",
                 },
               ],
+              special_cases: null,
+              title: "Name, Role, Value",
+              url: "https://www.w3.org/TR/WCAG21/#name-role-value",
             },
             {
-              ref_id: "4.1.3",
-              title: "Status Messages",
               description:
                 "In content implemented using markup languages, status messages can be programmatically determined through role or properties such that they can be presented to the user by assistive technologies without receiving focus.",
-              url: "https://www.w3.org/TR/WCAG21/#status-messages",
               level: "AA",
-              special_cases: null,
               notes: null,
+              ref_id: "4.1.3",
               references: [
                 {
                   title: "How to Meet 4.1.3",
@@ -2312,10 +2317,18 @@ module.exports = {
                   url: "https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html",
                 },
               ],
+              special_cases: null,
+              title: "Status Messages",
+              url: "https://www.w3.org/TR/WCAG21/#status-messages",
             },
           ],
+          title: "Compatible",
+          url: "https://www.w3.org/TR/WCAG21/#compatible",
         },
       ],
+      ref_id: "4",
+      title: "Robust",
+      url: "https://www.w3.org/TR/WCAG21/#robust",
     },
   ],
 };

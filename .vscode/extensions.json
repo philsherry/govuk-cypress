@@ -20,6 +20,7 @@
     "shelex.vscode-cy-helper",
     "shevtsov.qa-extension-pack",
     "simonwhatley.govuk-design-system-snippets",
-    "yzhang.markdown-all-in-one"
+    "yzhang.markdown-all-in-one",
+    "maxird.jinja-fold"
   ]
 }

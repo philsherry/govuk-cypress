@@ -25,8 +25,12 @@ const routes = require("./app/routes.js");
 const utils = require("./lib/utils.js");
 const extensions = require("./lib/extensions/extensions.js");
 const cats = require("./app/cats");
+const tags = require("./app/tags");
 const components = require("./app/components");
-const wcag = require("./app/wcag");
+const {
+  bestPracticeFunction,
+  wcagTagFunction,
+} = require("./app/views/macros/app-tagify/script.js");
 
 // Variables for v6 backwards compatibility
 // Set false by default, then turn on if we find /app/v6/routes.js
@@ -190,6 +194,7 @@ app.locals.serviceName = config.serviceName;
 // extensionConfig sets up variables used to add the scripts and stylesheets to each page.
 app.locals.extensionConfig = extensions.getAppConfig();
 app.locals.cat = cats;
+app.locals.tags = tags;
 app.locals.components = components;
 // Session uses service name to avoid clashes with other prototypes
 const sessionName =

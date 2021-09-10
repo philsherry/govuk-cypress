@@ -31,7 +31,8 @@
 {% from "govuk/components/textarea/macro.njk"            import govukTextarea %}
 {% from "govuk/components/warning-text/macro.njk"        import govukWarningText %}
 
-{% set localMacros = "./macros" %}
+{% set localMacros = "macros" %}
+{% from localMacros + "/app-tagify/macro.njk" import appTagify with context %}
 {% from localMacros + "/app-component-footer/macro.njk" import appComponentFooter with context %}
 {% from localMacros + "/app-component-section/macro.njk" import appComponentSection with context %}
 {% from localMacros + "/app-component-tests/macro.njk" import appComponentTests with context %}

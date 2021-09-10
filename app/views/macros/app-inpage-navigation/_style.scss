@@ -1,0 +1,34 @@
+@-webkit-keyframes target-fade {
+  0% { background-color: rgba(0,0,0,.1); }
+  100% { background-color: rgba(0, 0, 0, 0); }
+}
+
+@-moz-keyframes target-fade {
+  0% { background-color: rgba(0,0,0,.1); }
+  100% { background-color: rgba(0,0,0,0); }
+}
+
+:target {
+  -webkit-animation: target-fade 3s 1;
+  -moz-animation: target-fade 3s 1;
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    -webkit-animation: none;
+    -moz-animation: none;
+  }
+}
+
+nav {
+  a {
+    display: block;
+    padding: 5px;
+  }
+
+  li.active {
+    border-left: 3px solid #1d70b8;
+
+  a {
+    font-weight: 700;
+  }
+  }
+}

@@ -1,0 +1,16 @@
+.hmrc-figure {
+  margin: 0 0 2em;
+}
+
+.hmrc-figure__image {
+  outline: 2px solid #f47738; /* #f47738 is govuk-colour("orange") */
+  padding: 2px;
+}
+
+.hmrc-figure__caption {
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 19px;
+  font-size: 1.1875rem;
+  line-height: 1.31579;
+  margin: 1em 0 0;
+}

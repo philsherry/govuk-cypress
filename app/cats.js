@@ -18,6 +18,10 @@ module.exports = {
     "Components are reusable parts of the user interface that have been made to support a variety of applications.",
   govukHeading: "GOV.UK Design System",
 
+  wcagDescription:
+    "A quick look over the guidelines, understanding them, and how to meet them.",
+  wcagHeading: "Web Content Accessibility Guidelines",
+
   experimental:
     "This is currently experimental because more research is needed.",
 

@@ -24,6 +24,7 @@ Most of this has been my ADHD brain making things up as I go, so there are lots 
 - [x] In-page navigation
 - [x] `figure`/`figcaption`
 - [x] “What we are testing in this component” (driven by data from `components.js`)
+- [ ] Add WCAG tags to what we’re testing, so people know why they’re testing things.
 
 ## Cypress tests
 

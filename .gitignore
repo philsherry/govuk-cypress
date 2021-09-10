@@ -6,8 +6,6 @@ usage-data-config.json
 .sass-cache
 .start.pid
 .tmuxp.*
-# ignore extension SCSS because it's dynamically generated
-*.scss
 node_modules/
 package-lock.json
 public

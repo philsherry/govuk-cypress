@@ -1,0 +1,62 @@
+{# THIS CAN BE TIDIED-UP OR THROWN AWAY ONCE THIS FEATURE WORKS PROPERLy.
+
+  ## Example of the data for a tag, where this object is `item` in the nunjucks code below:
+
+  {
+    reason: "Focus colours must be the latest version.",
+    tags: {
+      best: ["focus-states"],
+      wcag: ["2.4.7"]
+    },
+  },
+
+  ## Call macro along these lines:
+
+  {% for item in params.testing %}
+  <div class="wcag-tags">
+  {% for tag in item.tags %}
+    {{ appTagify({ tag: tag | tagify }) }}
+  {% endfor %}
+  </div>
+  {% endfor %}
+
+{
+  tagWcag: {
+    level: 'AA',
+    ref_id: '2.4.7',
+    references: [ [How to…], [Understanding…] ],
+    url: 'https://www.w3.org/TR/WCAG21/#focus-visible'
+  }
+}
+
+This is how I suspect it should work:
+
+  1. tag is handled: appTagify(tag)
+  2. tagify filter checks what type it is: tag | tagify
+  3. tagify returns an object with the following properties:
+    - level
+    - ref_id
+    - references
+    - url
+  4. this macro returns the correct html (wcag || best)
+
+#}
+
+{% if params|length %}
+
+  {% set tag = params.tag %}
+  {% set level = tag.level %}
+  {% set ref_id = tag.ref_id %}
+  {% set title = tag.title %}
+
+  {% if tag.references|length %}
+    {% set url = tag.references[1].url %}
+  {% else %}
+    {% set url = tag.url %}
+  {% endif %}
+
+  <a href="{{ url }}" class="wcag-tag" data-wcag-tag="{{ level }}"{% if params.newTab -%} rel="nofollow noopener" target="_blank"{%- endif %}>
+    {{ ref_id }}{%- if params.type == wcag %} ({{ level }}){% endif -%}{% if params.newTab %} (opens in a new tab or window){%- endif %}
+  </a>
+
+{% endif %}

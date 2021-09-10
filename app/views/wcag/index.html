@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  {{ components.wcag.heading }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">{{ components.wcag.heading }}</h1>
+    <p class="govuk-body">{{ components.wcag.body }}</p>
+
+    <dl class="govuk-list">
+      {% for wcag in tags.wcag %}
+      <dt>
+        <h2 class="govuk-heading-l">
+          {{ wcag.ref_id }} <a class="govuk-link" href="{{ wcag.url }}">
+            {{ wcag.title }}
+          </a>
+        </h2>
+      </dt>
+      <dd class="govuk-body">{{ wcag.description }}
+        <ol class="govuk-list">
+          {% for guideline in wcag.guidelines %}
+          <li>
+            <h3 class="govuk-heading-m">
+              {{ guideline.ref_id }} <a class="govuk-link" href="{{ guideline.url }}">
+                {{ guideline.title }}
+              </a>
+            </h3>
+            <div class="govuk-body">{{ guideline.description }}</div>
+            <ol class="govuk-list">
+              {% for sc in guideline.success_criteria %}
+              <li>
+                <h3 class="govuk-heading-m">
+                  {{ sc.ref_id }}
+                  <a class="govuk-link" href="{{ sc.url }}">
+                    {{ sc.title }}
+                  </a>
+                  (Level&nbsp;{{ sc.level }})
+                </h3>
+                <div class="govuk-body">{{ sc.description }}</div>
+                <ul class="govuk-list govuk-list--bullet">
+                  {% for link in sc.references %}
+                  <li>
+                    <a class="govuk-link" href="{{ link.url }}">
+                      {{ link.title }}
+                    </a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </li>
+              {% else %}
+              <li>Data error</li>
+              {% endfor %}
+            </ol>
+          </li>
+          {% else %}
+          <li>Data error</li>
+          {% endfor %}
+        </ol>
+      </dd>
+      {% else %}
+      <dt class="govuk-heading-m">Data error</dt>
+      {% endfor %}
+    </dl>
+
+  </div>
+
+</div>
+
+{% endblock %}

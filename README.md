@@ -2,15 +2,19 @@
 
 A demonstration of how to use the [Cypress](https://www.cypress.io/) framework to test GOV.UK & HMRC components and patterns.
 
-Install instructions are further down.
+Install instructions are further down. Read about it first.
 
 ## What this is not
 
 This is **not** a replacement for the tests that come with the GOV.UK Prototype Kit—far, *far* from it.
 
+This is **not** something that you will have to install into your service to see results.
+
 ## What this is
 
-This is an educational project to promote better accessibility knowledge when using these components in your daily job.
+This is an **educational project** to promote better accessibility knowledge when using these components in your daily job.
+
+This repository includes working examples of Cypress tests based on components that you are familiar with. You can use these as a starter to get writing even more for your own services.
 
 ### The primary aim
 
@@ -20,9 +24,15 @@ I’ve added the examples of each component from the GOV.UK Design System and HM
 
 Not everyone knows **what** they should be testing, so it’s no surprise that so many services arrive at the accessibility team in the state they do and get sent back to the service team with a long list of issues to fix. So, my idea is that teams can read through this and have a better understanding of what they need to pay attention to, in order to put them in a better position to deliver a good service.
 
-This whole project started because I’d been using Cypress a fair bit lately, so I’d been looking at ways to reuse code. I’d also seen a large gap in how people are testing their work during my two years of auditing services on the accessibility team.
+### The secondary aim
 
-#### Example: HMRC’s “add to a list” component
+> ***“To try and target which tests can be pulled out into a plugin for people who regularly use these components.”***
+
+I’ve already written each test separately, but maybe there are some components or patterns where you think you could help out; or, even better, improve what’s here.
+
+Because I’m just one person, I’m hoping that there might be some traction here and others might pick up a few other components, or patterns. Besides, I’m rubbish at this.
+
+## Working example: HMRC’s “add to a list” component
 
 URL: `http://localhost:3000/hmrc/add-to-a-list`
 
@@ -38,6 +48,14 @@ Using the “Add to a list” component as an example, shown in the image below,
   </ul>
 </details>
 
+![Screenshot of “What we are testing in this component” as described above.](./docs/assets/images/readme--add-to-a-list.png)
+
+### Components
+
+Cypress is heavily based on [Mocha](https://mochajs.org/) and [Chai](https://www.chaijs.com/), so if you’ve used those before you’ve already got this.
+
+Use the `beforeEach()` block to set up [aliases](https://docs.cypress.io/guides/core-concepts/variables-and-aliases#Aliases) for the elements that you’re testing, which can be scoped to `describe()` blocks to keep things tidy and keep your cognitive load low.
+
 Written in clear English, these instructions are tucked away in [`components.js`](app/components.js) and pulled in for each component example.
 
 Because these are things that we have to do time and time again, I’ve made each one a separate Cypress Command that you can call:
@@ -47,32 +65,97 @@ Because these are things that we have to do time and time again, I’ve made eac
 - [`cy.get("@component").checkHeadings();`](./cypress/support/govuk-cypress/govuk--headings.js)
 - [`cy.get("@component").checkLinkContext();`](./cypress/support/govuk-cypress/govuk--link-context.js)
 
-![Screenshot of “What we are testing in this component” as described above.](./docs/assets/images/hmrc--add-to-a-list.png)
+These are called from within a Cypress spec file. I’ve chosen to split these up into three files to allow for the relevant viewport checks:
+- `desktop.spec.js`
+- `tablet.spec.js`
+- `mobile.spec.js`
 
-### The secondary aim
+The viewport variables are a built-in Cypress thing, which I’ve dumped into a small file ([`env.json`](./cypress/fixtures/env.json)), but you can find them all here: [viewport - Cypress documentation](https://docs.cypress.io/api/commands/viewport).
 
-> ***“To try and target which tests can be pulled out into a plugin for people who regularly use these components.”***
+```json
+{
+  "desktop": {
+    "viewport": ["macbook-15"]
+  },
+  "mobile": {
+    "viewport": ["iphone-6"]
+  },
+  "tablet": {
+    "viewport": ["ipad-2", "portrait"]
+  }
+}
+```
 
-I’ve already written each test separately, but maybe there are some components or patterns where you think you could help out; or, even better, improve what’s here.
+I’ve also put together an `example.user.json` file which will most likely come in handy for testing as the examples fill up. Rename to `user.json` and amend this as you see fit.
 
-Because I’m just one person, I’m hoping that there might be some traction here and others might pick up a few other components, or patterns. Besides, I’m rubbish at this.
+```json
+{
+  "username": {
+    "firstName": "",
+    "middleNames": "",
+    "lastNames": ""
+  },
+  "dateOfBirth": {
+    "year": "",
+    "month": "",
+    "day": ""
+  },
+  "address": {
+    "addressLine1": "",
+    "addressLine2": "",
+    "addressLine3": "",
+    "city": "",
+    "county": "",
+    "postcode": "",
+    "country": ""
+  },
+  "contactDetails": {
+    "emailAddress": "",
+    "phoneNumber": "",
+    "mobileNumber": "",
+    "voiceCall": "false"
+  },
+  "bankDetails": {
+    "bankName": "",
+    "branchName": "",
+    "branchCode": "",
+    "accountHolderName": "",
+    "accountNumber": "",
+    "sortCode": ""
+  },
+  "passportDetails": {
+    "passportNumber": "",
+    "expiryDate": ""
+  },
+  "taxCreditsDetails": {}
+}
+```
 
-## Install and run
+Once everything has been put together into the one file, it:
+- checks we’re on the right page
+- checks all visible elements are present and visible
+- checks any hidden elements are hidden but present
+- checks the heading is a legend for a fieldset
+- checks the focus colours are correct
+- checks the link context
+- screenshots the component for a diff state
+- runs axe against the component
 
-1. Clone the repo: `gh repo clone philsherry/govuk-cypress`
-   - [GitHub CLI](https://cli.github.com/)
-   - [GitHub Desktop](https://desktop.github.com/)
-2. Install the dependencies: `npm install`
-3. Install Cypress: `npm run cypress:install`
-4. Start the server: `npm start`
-5. Visit the page in your browser: `http://localhost:3000`
-6. Open Cypress to run some tests: `npm run cypress:open`
+Most of the output is shown in the Cypress browser.
 
-### Tools
+![Cypress browser showing the output of tests.](./docs/assets/images/readme--cypress-gui.png)
 
-- [Visual Studio Code](https://code.visualstudio.com/)
+The output from axe is currently configured to [log to the console](./cypress/plugins/hmrc.js), rather than cause things to stop dead. Here’s what you can expect from that:
+
+1 accessibility violation was detected
+
+| (index) | id                  | impact     | description                                                             | nodes |
+| ------- | ------------------- | ---------- | ----------------------------------------------------------------------- | ----- |
+| 0       | 'duplicate-id-aria' | 'critical' | 'Ensures every id attribute value used in ARIA and in labels is unique' | 3     |
 
 ## Custom Cypress Commands
+
+This whole project started because I’d been using Cypress a fair bit lately, so I’d been looking at ways to reuse code. I’d also seen a large gap in how people are testing their work during my two years of auditing services on the accessibility team.
 
 ### Scenario one
 
@@ -169,3 +252,23 @@ The components that will be tested are from [HMRC’s Design Patterns](https://d
 - Unique Taxpayer Reference
 - VAT registration number
 - Welsh language toggle
+
+## Install and run
+
+1. Clone the repo: `gh repo clone philsherry/govuk-cypress`
+   - [GitHub CLI](https://cli.github.com/)
+   - [GitHub Desktop](https://desktop.github.com/)
+2. Install the dependencies: `npm install`
+3. Install Cypress: `npm run cypress:install`
+4. Start the server: `npm start`
+5. Visit the page in your browser: `http://localhost:3000`
+6. Open Cypress to run some tests: `npm run cypress:open`
+
+### VS Code additions
+
+To help those in design and front-end who use [Visual Studio Code](https://code.visualstudio.com/) instead of IntelliJ, there are some additional files in this repository.
+
+- `extensions.json`: recommends a set of extensions to help with a Scala development environment, as well as debugging and linting tools, and things to generally help you commit more consistent code.
+  **Run these from in the Workspace Recommendations section of the Extensions sidebar.**
+- `launch.json`: a set of debug configurations to help debug your code with the help of various browsers and tools.
+  **Run these from in the Debug sidebar.**

@@ -1,10 +1,13 @@
 /**
- * @author: @philsherry
- * @function checkPageHeading
+ * @author:
+ * @function checkAccountHeader
  * @description Cypress function to check the HMRC Page Heading pattern.
- * @example cy.get("@component").checkPageHeading();
+ * @example cy.checkAccountHeader();
  * @link https://design.tax.service.gov.uk/hmrc-design-patterns/account-header
  **/
 
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
+// -- This is a parent command --
+Cypress.Commands.add('checkAccountHeader',
+  (subject, options) => {
+  //
+  })

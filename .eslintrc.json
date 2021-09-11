@@ -1,0 +1,22 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:chai-friendly/recommended",
+    "plugin:cypress/recommended",
+    "plugin:sonarjs/recommended"
+  ],
+  "plugins": [
+    "ie11",
+    "import",
+    "jsx-a11y",
+    "node",
+    "sonarjs",
+    "promise"
+  ],
+  "root": true
+}

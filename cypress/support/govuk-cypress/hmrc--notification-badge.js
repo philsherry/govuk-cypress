@@ -1,10 +1,13 @@
 /**
- * @author: @philsherry
- * @function checkPageHeading
- * @description Cypress function to check the HMRC Page Heading pattern.
- * @example cy.get("@component").checkPageHeading();
- * @link https://design.tax.service.gov.uk/hmrc-design-patterns/notification-badge
+ * @author:
+ * @function checkNotificationBadge
+ * @description Cypress function to CHECK THE THING DOES THE THING.
+ * @example cy.get("@component").checkNotificationBadge();
+ * @link
  **/
 
 // -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
+Cypress.Commands.add('checkNotificationBadge',
+  { prevSubject: 'element' }, (subject, options) => {
+  //
+  })

@@ -5,13 +5,13 @@ module.exports = function (env) {
    * gov.uk core filters by creating filter methods of the same name.
    * @type {Object}
    */
-  var filters = {};
-  const regex = /^([1-4]{1})\.([1-5]{1})\.([0-9]{1,2})$/g;
-  const tags = require("../app/tags.js");
+  const filters = {}
+  const regex = /^([1-4]{1})\.([1-5]{1})\.([0-9]{1,2})$/g
+  const tags = require('../app/tags.js')
   const {
     bestPractice,
-    wcagTag,
-  } = require("../app/views/macros/app-tagify/script.js");
+    wcagTag
+  } = require('../app/views/macros/app-tagify/script.js')
 
   /**
    * @description Takes a success criteria number (like 2.4.7) and returns a dashed tag for use in CSS.
@@ -20,8 +20,8 @@ module.exports = function (env) {
    * @returns {String}
    */
   filters.wcagDashes = function (str) {
-    return str.replace(/\./g, "-");
-  };
+    return str.replace(/\./g, '-')
+  }
 
   /**
    * @function tagify
@@ -33,11 +33,11 @@ module.exports = function (env) {
    */
   filters.tagify = (str) => {
     if (str.match(regex)) {
-      return wcagTag(str);
+      return wcagTag(str)
     } else {
-      return bestPractice(str);
+      return bestPractice(str)
     }
-  };
+  }
 
-  return filters;
-};
+  return filters
+}

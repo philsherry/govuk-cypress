@@ -1,5 +1,5 @@
 /**
- * @author: @philsherry
+ * @author:
  * @function checkGovukErrorMessage
  * @description Cypress function to check each error message on the page conforms to the standards set by the GOV.UK Design System.
  * @example cy.get("@component").checkGovukErrorMessage();
@@ -97,22 +97,21 @@
  * ```
  **/
 Cypress.Commands.add(
-  "checkGovukErrorMessage",
+  'checkGovukErrorMessage',
   {
-    prevSubject: "element",
+    prevSubject: 'element'
   },
   (subject, options) => {
     cy.get(subject).then(($el) => {
-
       // Error message should exist
-      expect($el).to.exist;
+      expect($el).to.exist
 
-      cy.get(subject).should("have.class", "govuk-form-group--error");
+      cy.get(subject).should('have.class', 'govuk-form-group--error')
 
       // Find `govuk-form-group--error` in the component and run `.checkAriaDescribedBy()` on it.
 
       // Expect to find the class `govuk-error-message` in the component.
       // Expect `govuk-error-message` to contain the visually-hidden text `Error:`
-    });
+    })
   }
-);
+)

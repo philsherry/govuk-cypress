@@ -1,4 +1,4 @@
-let pa11yConfig = {
+const pa11yConfig = {
   options: {
     chromeLaunchConfig: {
       args: ['--no-sandbox', '--disable-setuid-sandbox']

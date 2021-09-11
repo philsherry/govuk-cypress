@@ -1,5 +1,5 @@
 /**
- * @author: @philsherry
+ * @author:
  * @function checkDwpTimeline
  * @description Cypress function to check the DWP Timeline component.
  * @example cy.get("@component").checkDwpTimeline();
@@ -37,5 +37,8 @@
  *  DWP components can easily drop into these tests as well.
  **/
 
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
+// -- This is a parent command --
+Cypress.Commands.add('checkDwpTimeline',
+  (subject, options) => {
+  //
+  })

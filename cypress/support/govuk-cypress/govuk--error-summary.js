@@ -7,63 +7,60 @@
  **/
 
 Cypress.Commands.add(
-  "checkGovukErrorSummary",
+  'checkGovukErrorSummary',
   {
-    prevSubject: "element",
+    prevSubject: 'element'
   },
   (subject, options) => {
     cy.get(subject).then(($el) => {
       /**
        * @type {array}
        **/
-      const listItems = [];
+      const listItems = []
       /**
        * @type {string}
        **/
-      let listLength;
+      let listLength
 
       // Error summary component should exist
-      expect($el).to.exist;
+      expect($el).to.exist
 
       // Error summary component aria-labelledby should have a valid target
-      cy.get(subject).checkAriaLabelledby();
+      cy.get(subject).checkAriaLabelledby()
 
       // Error summary should have the right attributes
       cy.get(subject)
-        .should("have.attr", "tabindex", "-1")
-        .should("have.attr", "aria-labelledby", "error-summary-title")
-        .should("have.attr", "role", "alert")
-        .should("have.attr", "data-module", "govuk-error-summary");
+        .should('have.attr', 'tabindex', '-1')
+        .should('have.attr', 'aria-labelledby', 'error-summary-title')
+        .should('have.attr', 'role', 'alert')
+        .should('have.attr', 'data-module', 'govuk-error-summary')
 
       // Error summary title should exist
       cy.get(subject)
-        .find("h2")
-        .should("have.attr", "id", "error-summary-title")
-        .should("contain", "There is a problem");
+        .find('h2')
+        .should('have.attr', 'id', 'error-summary-title')
+        .should('contain', 'There is a problem')
 
-        // Each list item’s anchor’s href should map to a valid target in the `<main>` element, and each target should come in the same order as in the list.
-      cy.get(".govuk-error-summary__list > li").each(($list, index) => {
-
+      // Each list item’s anchor’s href should map to a valid target in the `<main>` element, and each target should come in the same order as in the list.
+      cy.get('.govuk-error-summary__list > li').each(($list, index) => {
         // Get length and order of error summary list items for later use
-        listLength = $list.length;
+        listLength = $list.length
         $list.each((index, item) => {
           // push # item href (minus hash) to array
-          listItems.push(item.querySelector("a").getAttribute("href").replace("#", ""));
-        });
+          listItems.push(item.querySelector('a').getAttribute('href').replace('#', ''))
+        })
 
         // 1. Expect href to match a valid id in the `<main>` element.
         // 2. Check the ordering of the target items is the same as the list items.
-        cy.get("main").within(() => {
-          cy.get($list.find("a").attr("href")).should("exist").then(($target) => {
+        cy.get('main').within(() => {
+          cy.get($list.find('a').attr('href')).should('exist').then(($target) => {
             cy.wrap($target)
-              .should("have.attr", "id")
-              .and("match", /^[a-z0-9-]+$/);
-            expect($target.attr("id")).to.equal(listItems[index]);
+              .should('have.attr', 'id')
+              .and('match', /^[a-z0-9-]+$/)
+            expect($target.attr('id')).to.equal(listItems[index])
           })
-        });
-
-      });
-
-    });
+        })
+      })
+    })
   }
-);
+)

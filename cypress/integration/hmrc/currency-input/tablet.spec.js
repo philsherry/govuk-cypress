@@ -1,17 +1,17 @@
 /* eslint-disable no-undef, no-unused-vars, cypress/no-unnecessary-waiting, sonarjs/no-duplicate-string */
-const page = "/hmrc/currency-input";
-const env = require("../../../fixtures/env.json");
-const user = require("../../../fixtures/user.json");
-const { terminalLog } = require("../../../plugins/hmrc");
+const page = '/hmrc/currency-input'
+const env = require('../../../fixtures/env.json')
+const user = require('../../../fixtures/user.json')
+const { terminalLog } = require('../../../plugins/hmrc')
 
 /**
  * @screenshotFormat png
  * @screenshotFileName `${service}--${component}--${viewport}--${state}`
  **/
-const service = "homepage";
-const journey = "tablet";
-let thing = "currency-input";
-let state = "default";
+const service = 'homepage'
+const journey = 'tablet'
+const thing = 'currency-input'
+let state = 'default'
 
 /**
  *
@@ -32,82 +32,82 @@ let state = "default";
  *
  **/
 beforeEach(() => {
-  cy.viewport(env.tablet.viewport[0]);
-  cy.visit(page);
-  cy.injectAxe();
+  cy.viewport(env.tablet.viewport[0])
+  cy.visit(page)
+  cy.injectAxe()
   // set up aliases here
-  cy.get(".govuk-form-group").as("component");
-  cy.get(".govuk-form-group .govuk-label").as("componentLabel");
-  cy.get(".govuk-form-group .govuk-hint").as("componentHint");
-  cy.get(".govuk-form-group .govuk-input__wrapper").as("componentInputWrapper");
-  cy.get(".govuk-form-group .govuk-input__prefix").as("componentInputPrefix");
-  cy.get(".govuk-form-group .govuk-input").as("componentInput");
-});
+  cy.get('.govuk-form-group').as('component')
+  cy.get('.govuk-form-group .govuk-label').as('componentLabel')
+  cy.get('.govuk-form-group .govuk-hint').as('componentHint')
+  cy.get('.govuk-form-group .govuk-input__wrapper').as('componentInputWrapper')
+  cy.get('.govuk-form-group .govuk-input__prefix').as('componentInputPrefix')
+  cy.get('.govuk-form-group .govuk-input').as('componentInput')
+})
 
 describe(`Component :: ${component}`, () => {
-  it("checks we’re on the right page", () => {
+  it('checks we’re on the right page', () => {
     cy.server().should((server) => {
-      expect(server.method).to.eq("GET");
-      expect(server.status).to.eq(200);
-    });
+      expect(server.method).to.eq('GET')
+      expect(server.status).to.eq(200)
+    })
 
     cy.location().should((location) => {
-      expect(location.pathname).to.eq(page);
-    });
-  });
+      expect(location.pathname).to.eq(page)
+    })
+  })
 
-  it("checks all visible elements are present and visible", () => {
-    cy.get("@component").should("be.visible");
-    cy.get("@componentLabel").should("be.visible");
-    cy.get("@componentHint").should("be.visible");
-    cy.get("@componentInputWrapper").should("be.visible");
-    cy.get("@componentInputPrefix").should("be.visible");
-    cy.get("@componentInput").should("be.visible");
-  });
+  it('checks all visible elements are present and visible', () => {
+    cy.get('@component').should('be.visible')
+    cy.get('@componentLabel').should('be.visible')
+    cy.get('@componentHint').should('be.visible')
+    cy.get('@componentInputWrapper').should('be.visible')
+    cy.get('@componentInputPrefix').should('be.visible')
+    cy.get('@componentInput').should('be.visible')
+  })
 
   // it checks all hidden elements are hidden but present
-  it("checks any hidden elements are hidden but present", () => {
-    cy.get("@componentInput").should("have.attr", "aria-describedby");
-  });
+  it('checks any hidden elements are hidden but present', () => {
+    cy.get('@componentInput').should('have.attr', 'aria-describedby')
+  })
 
-  it("screenshots the component for a diff state", () => {
-    cy.get("@component").screenshot(
+  it('screenshots the component for a diff state', () => {
+    cy.get('@component').screenshot(
       `${service}--${component}--${viewport}--${state}`,
       {
-        capture: "viewport",
+        capture: 'viewport'
       }
-    );
-  });
+    )
+  })
 
   // it checks the hint is associated with the input
 
   // it checks the focus colours are correct
-  it("checks the focus colours are correct", () => {
-    state = "label";
-    cy.get("@componentLabel").click().wait(1000);
+  it('checks the focus colours are correct', () => {
+    state = 'label'
+    cy.get('@componentLabel').click().wait(1000)
     cy.screenshot(`${service}--${component}--${viewport}--${state}`, {
-      capture: "viewport",
-    });
+      capture: 'viewport'
+    })
 
-    state = "focus";
-    cy.get("@componentInput")
+    state = 'focus'
+    cy.get('@componentInput')
       .focus()
       .wait(2500)
       .focused()
-      .should("have.css", "border-color", "rgb(11, 12, 12)")
-      .should("have.css", "border-width", "2px")
-      .should("have.css", "outline-color", "rgb(255, 221, 0)")
-      .should("have.css", "outline-width", "3px")
-      .type("13.37")
-      .wait(250);
+      .should('have.css', 'border-color', 'rgb(11, 12, 12)')
+      .should('have.css', 'border-width', '2px')
+      .should('have.css', 'outline-color', 'rgb(255, 221, 0)')
+      .should('have.css', 'outline-width', '3px')
+      .type('13.37')
+      .wait(250)
     cy.screenshot(`${service}--${component}--${viewport}--${state}`, {
-      capture: "viewport",
-    });
-  });
+      capture: 'viewport'
+    })
+  })
 
-  it("runs axe against the component", () => {
-    cy.get("@component").checkA11y(null, null, terminalLog, {
-      skipFailures: true,
-    });
-  });
-});
+  it('runs axe against the component', () => {
+    cy.get('@component').checkA11y(null, null, terminalLog, {
+      skipFailures: true
+    })
+  })
+})

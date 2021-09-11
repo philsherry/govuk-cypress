@@ -1,5 +1,5 @@
 /**
- * @author: @philsherry
+ * @author:
  * @function hmrcCurrencyInput
  * @description Cypress function to check the HMRC Currency Input pattern.
  * @example cy.get("@component").hmrcCurrencyInput();
@@ -7,4 +7,7 @@
  **/
 
 // -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
+Cypress.Commands.add('hmrcCurrencyInput',
+  { prevSubject: 'element' }, (subject, options) => {
+  //
+  })

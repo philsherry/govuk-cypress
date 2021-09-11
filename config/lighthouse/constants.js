@@ -3,7 +3,7 @@
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
  * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
  */
-'use strict';
+'use strict'
 
 /**
  * Adjustments needed for DevTools network throttling to simulate
@@ -11,8 +11,8 @@
  * @see https://crbug.com/721112
  * @see https://docs.google.com/document/d/10lfVdS1iDWCRKQXPfbxEn4Or99D64mvNlugP1AQuFlE/edit
  */
-const DEVTOOLS_RTT_ADJUSTMENT_FACTOR = 3.75;
-const DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR = 0.9;
+const DEVTOOLS_RTT_ADJUSTMENT_FACTOR = 3.75
+const DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR = 0.9
 
 const throttling = {
   DEVTOOLS_RTT_ADJUSTMENT_FACTOR,
@@ -26,7 +26,7 @@ const throttling = {
     downloadThroughputKbps:
       1.6 * 1024 * DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR,
     uploadThroughputKbps: 750 * DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR,
-    cpuSlowdownMultiplier: 4,
+    cpuSlowdownMultiplier: 4
   },
   // These values partially align with WebPageTest's definition of "Regular 3G".
   // These values are meant to roughly align with Chrome UX report's 3G definition which are based
@@ -37,7 +37,7 @@ const throttling = {
     requestLatencyMs: 300 * DEVTOOLS_RTT_ADJUSTMENT_FACTOR,
     downloadThroughputKbps: 700 * DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR,
     uploadThroughputKbps: 700 * DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR,
-    cpuSlowdownMultiplier: 4,
+    cpuSlowdownMultiplier: 4
   },
   // Using a "broadband" connection type
   // Corresponds to "Dense 4G 25th percentile" in https://docs.google.com/document/d/1Ft1Bnq9-t4jK5egLSOc28IL4TvR-Tt0se_1faTA4KTY/edit#heading=h.bb7nfy2x9e5v
@@ -47,9 +47,9 @@ const throttling = {
     cpuSlowdownMultiplier: 1,
     requestLatencyMs: 0, // 0 means unset
     downloadThroughputKbps: 0,
-    uploadThroughputKbps: 0,
-  },
-};
+    uploadThroughputKbps: 0
+  }
+}
 
 /**
  * @type {Required<LH.SharedFlagsSettings['screenEmulation']>}
@@ -62,8 +62,8 @@ const MOTOG4_EMULATION_METRICS = {
   // our perf recommendations.
   // https://github.com/GoogleChrome/lighthouse/issues/10741#issuecomment-626903508
   deviceScaleFactor: 2.625,
-  disabled: false,
-};
+  disabled: false
+}
 
 /**
  * Desktop metrics adapted from emulated_devices/module.json
@@ -74,25 +74,25 @@ const DESKTOP_EMULATION_METRICS = {
   width: 1350,
   height: 940,
   deviceScaleFactor: 1,
-  disabled: false,
-};
+  disabled: false
+}
 
 const screenEmulationMetrics = {
   mobile: MOTOG4_EMULATION_METRICS,
-  desktop: DESKTOP_EMULATION_METRICS,
-};
+  desktop: DESKTOP_EMULATION_METRICS
+}
 
 // eslint-disable-next-line max-len
 const MOTOG4_USERAGENT =
-  'Mozilla/5.0 (Linux; Android 7.0; Moto G (4)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4590.2 Mobile Safari/537.36 Chrome-Lighthouse';
+  'Mozilla/5.0 (Linux; Android 7.0; Moto G (4)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4590.2 Mobile Safari/537.36 Chrome-Lighthouse'
 // eslint-disable-next-line max-len
 const DESKTOP_USERAGENT =
-  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4590.2 Safari/537.36 Chrome-Lighthouse';
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4590.2 Safari/537.36 Chrome-Lighthouse'
 
 const userAgents = {
   mobile: MOTOG4_USERAGENT,
-  desktop: DESKTOP_USERAGENT,
-};
+  desktop: DESKTOP_USERAGENT
+}
 
 /** @type {LH.Config.Settings} */
 const defaultSettings = {
@@ -121,8 +121,8 @@ const defaultSettings = {
   precomputedLanternData: null,
   onlyAudits: null,
   onlyCategories: null,
-  skipAudits: null,
-};
+  skipAudits: null
+}
 
 /** @type {LH.Config.Pass} */
 const defaultPassConfig = {
@@ -136,8 +136,8 @@ const defaultPassConfig = {
   cpuQuietThresholdMs: 0,
   blockedUrlPatterns: [],
   blankPage: 'about:blank',
-  gatherers: [],
-};
+  gatherers: []
+}
 
 /** @type {Required<LH.Config.NavigationJson>} */
 const defaultNavigationConfig = {
@@ -151,15 +151,15 @@ const defaultNavigationConfig = {
   cpuQuietThresholdMs: 0,
   blockedUrlPatterns: [],
   blankPage: 'about:blank',
-  artifacts: [],
-};
+  artifacts: []
+}
 
 const nonSimulatedPassConfigOverrides = {
   pauseAfterFcpMs: 5250,
   pauseAfterLoadMs: 5250,
   networkQuietThresholdMs: 5250,
-  cpuQuietThresholdMs: 5250,
-};
+  cpuQuietThresholdMs: 5250
+}
 
 module.exports = {
   throttling,
@@ -168,5 +168,5 @@ module.exports = {
   defaultSettings,
   defaultPassConfig,
   defaultNavigationConfig,
-  nonSimulatedPassConfigOverrides,
-};
+  nonSimulatedPassConfigOverrides
+}

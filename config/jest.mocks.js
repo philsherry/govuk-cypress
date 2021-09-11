@@ -4,23 +4,23 @@
 
 // https://stackoverflow.com/a/41434763/6246995
 class LocalStorageMock {
-  constructor() {
+  constructor () {
     this.store = {}
   }
 
-  clear() {
+  clear () {
     this.store = {}
   }
 
-  getItem(key) {
+  getItem (key) {
     return this.store[key] || null
   }
 
-  setItem(key, value) {
+  setItem (key, value) {
     this.store[key] = value.toString()
   }
 
-  removeItem(key) {
+  removeItem (key) {
     delete this.store[key]
   }
 }
@@ -34,12 +34,12 @@ window.matchMedia = jest.fn().mockImplementation((query) => {
     media: query,
     onchange: null,
     addListener: jest.fn(),
-    removeListener: jest.fn(),
+    removeListener: jest.fn()
   }
 })
 
 window.getComputedStyle =
   window.getComputedStyle ||
-  function() {
+  function () {
     return { getPropertyValue: () => {} }
   }

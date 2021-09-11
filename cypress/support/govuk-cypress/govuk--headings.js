@@ -1,5 +1,5 @@
 /**
- * @author: @philsherry
+ * @author:
  * @function checkHeadings
  * @description Cypress function to check whether `h1` (and `h2` where applicable) headings are being nested with `label` and `legend` elements. If there is a paragraph of content between the heading and the first form element, then the heading should remain as a `h1` heading, followed by the `p`, and then a visually-hidden `label` and `legend` to mirror the `h1`. This is because the user is expected to read the heading and then the content that follows, which means they may forget the question by the time they get to the first form element.
  * @example cy.get("@component").checkHeadings();
@@ -45,21 +45,20 @@
  **/
 
 Cypress.Commands.add(
-  "checkHeadings",
+  'checkHeadings',
   {
-    prevSubject: "element",
+    prevSubject: 'element'
   },
   (subject, options) => {
     cy.get(subject).then(($el) => {
-
       // If ($el) is not a heading then exit.
-      if (!$el.is("h1, h2, legend")) {
-        throw new Error(`${$el} is not a heading.`);
+      if (!$el.is('h1, h2, legend')) {
+        throw new Error(`${$el} is not a heading.`)
       }
 
       // Is this a `<h1>` nested inside a `<legend>` element?
-      if ($el.is("legend")) {
-        cy.get($el).children("h1");
+      if ($el.is('legend')) {
+        cy.get($el).children('h1')
       }
 
       // Is this the first heading on the page?
@@ -73,7 +72,6 @@ Cypress.Commands.add(
       // If it's a heading, and it's not the first heading on the page, then it should be a `h2` heading.
 
       // If it's a heading, and it's not the first heading on the page, and it's nested inside a `<legend>` element, then it should be a `h2` heading.
-
-    });
+    })
   }
-);
+)

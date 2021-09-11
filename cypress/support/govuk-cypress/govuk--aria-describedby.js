@@ -7,17 +7,17 @@
  **/
 
 Cypress.Commands.add(
-  "checkAriaDescribedBy",
+  'checkAriaDescribedBy',
   {
-    prevSubject: "element",
+    prevSubject: 'element'
   },
   (subject, options) => {
     cy.get(subject)
       .then(($el) => {
-        const ariaDescribedBy = $el.attr("aria-describedby");
+        const ariaDescribedBy = $el.attr('aria-describedby')
         if (ariaDescribedBy) {
-          cy.get(`#${ariaDescribedBy}`).should("exist");
+          cy.get(`#${ariaDescribedBy}`).should('exist')
         }
       })
   }
-);
+)

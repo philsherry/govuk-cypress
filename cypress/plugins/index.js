@@ -21,55 +21,55 @@
  **/
 const {
   beforeRunHook,
-  afterRunHook,
-} = require("cypress-mochawesome-reporter/lib");
+  afterRunHook
+} = require('cypress-mochawesome-reporter/lib')
 
 /**
  * @link https://github.com/mfrachet/cypress-audit
  **/
-const { lighthouse, pa11y, prepareAudit } = require("cypress-audit");
+const { lighthouse, pa11y, prepareAudit } = require('cypress-audit')
 
 module.exports = (on, config) => {
   // require('cypress-log-to-output').install(on);
   // or, if there is already a before:browser:launch handler, use .browserLaunchHandler inside of it
   // @see https://github.com/flotwig/cypress-log-to-output/issues/5
-  on("before:browser:launch", (browser = {}, launchOptions) => {
-    prepareAudit(launchOptions);
-    launchOptions.args = require("cypress-log-to-output").browserLaunchHandler(
+  on('before:browser:launch', (browser = {}, launchOptions) => {
+    prepareAudit(launchOptions)
+    launchOptions.args = require('cypress-log-to-output').browserLaunchHandler(
       browser,
       launchOptions.args
-    );
-  });
+    )
+  })
 
-  on("before:run", async (details) => {
-    console.log("override before:run");
-    await beforeRunHook(details);
-  });
+  on('before:run', async (details) => {
+    console.log('override before:run')
+    await beforeRunHook(details)
+  })
 
-  on("after:run", async () => {
-    console.log("override after:run");
-    await afterRunHook();
-  });
+  on('after:run', async () => {
+    console.log('override after:run')
+    await afterRunHook()
+  })
 
   // Log things to the console
-  on("task", {
-    log(message) {
-      console.log(message);
+  on('task', {
+    log (message) {
+      console.log(message)
 
-      return null;
+      return null
     },
-    table(message) {
-      console.table(message);
+    table (message) {
+      console.table(message)
 
-      return null;
+      return null
     },
     lighthouse: lighthouse((lighthouseReport) => {
-      console.log(lighthouseReport); // raw lighthouse reports
+      console.log(lighthouseReport) // raw lighthouse reports
     }),
     pa11y: pa11y((pa11yReport) => {
-      console.log(pa11yReport); // raw pa11y reports
-    }),
-  });
+      console.log(pa11yReport) // raw pa11y reports
+    })
+  })
 
-  return config;
-};
+  return config
+}

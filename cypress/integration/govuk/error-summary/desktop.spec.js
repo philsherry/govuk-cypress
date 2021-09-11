@@ -1,44 +1,44 @@
 /* eslint-disable no-undef, no-unused-vars, cypress/no-unnecessary-waiting, sonarjs/no-duplicate-string */
-const page = "/govuk/error-summary";
-const env = require("../../../fixtures/env.json");
-const user = require("../../../fixtures/user.json");
-const { terminalLog } = require("../../../plugins/hmrc");
+const page = '/govuk/error-summary'
+const env = require('../../../fixtures/env.json')
+const user = require('../../../fixtures/user.json')
+const { terminalLog } = require('../../../plugins/hmrc')
 
 /**
  * @screenshotFormat png
  * @screenshotFileName `${service}--${component}--${viewport}--${state}`
  **/
-const service = "govuk";
-const component = "error-summary";
-const viewport = "desktop";
-let state = "default";
+const service = 'govuk'
+const component = 'error-summary'
+const viewport = 'desktop'
+const state = 'default'
 
 beforeEach(() => {
-  cy.viewport(env.desktop.viewport[0]);
-  cy.visit(page);
-  cy.injectAxe();
+  cy.viewport(env.desktop.viewport[0])
+  cy.visit(page)
+  cy.injectAxe()
   // set up example aliases here;
   // component aliases are defined further down.
-  cy.get("#component-1").as("component-1");
-  cy.get("#component-2").as("component-2");
-  cy.get("#component-3").as("component-3");
-  cy.get("#component-4").as("component-4");
-  cy.get("#component-5").as("component-5");
-  cy.get("#component-1 .component-section__example").as("example-1");
-  cy.get("#component-2 .component-section__example").as("example-2");
-  cy.get("#component-3 .component-section__example").as("example-3");
-  cy.get("#component-4 .component-section__example").as("example-4");
-  cy.get("#component-5 .component-section__example").as("example-5");
-});
+  cy.get('#component-1').as('component-1')
+  cy.get('#component-2').as('component-2')
+  cy.get('#component-3').as('component-3')
+  cy.get('#component-4').as('component-4')
+  cy.get('#component-5').as('component-5')
+  cy.get('#component-1 .component-section__example').as('example-1')
+  cy.get('#component-2 .component-section__example').as('example-2')
+  cy.get('#component-3 .component-section__example').as('example-3')
+  cy.get('#component-4 .component-section__example').as('example-4')
+  cy.get('#component-5 .component-section__example').as('example-5')
+})
 
-describe("checking page things", () => {
-  it("should have the correct page title", () => {
-    cy.checkPageTitle();
-  });
-  it("should have an incorrect page title", () => {
-    cy.checkPageTitle("hasId");
-  });
-});
+describe('checking page things', () => {
+  it('should have the correct page title', () => {
+    cy.checkPageTitle()
+  })
+  it('should have an incorrect page title', () => {
+    cy.checkPageTitle('hasId')
+  })
+})
 
 /**
  * @example Default view

@@ -21,6 +21,7 @@
     "shevtsov.qa-extension-pack",
     "simonwhatley.govuk-design-system-snippets",
     "yzhang.markdown-all-in-one",
-    "maxird.jinja-fold"
+    "maxird.jinja-fold",
+    "standard.vscode-standard"
   ]
 }

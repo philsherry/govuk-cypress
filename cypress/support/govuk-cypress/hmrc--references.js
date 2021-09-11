@@ -1,8 +1,11 @@
 /**
- * @author: @philsherry
- * @function hmrcReferences
+ * @author:
+ * @function checkHmrcReferences
  * @description Cypress function to check the HMRC Page Heading pattern.
- * @example cy.get("@component").hmrcReferences();
+ * @example cy.get("@component").checkHmrcReferences("AOR");
+ * @example cy.get("@component").checkHmrcReferences("PAYE");
+ * @example cy.get("@component").checkHmrcReferences("UTR");
+ * @example cy.get("@component").checkHmrcReferences("VAT");
  *
  * @description Accounts Office reference
  * @example This is 13 characters, like 123PX00123456 or 123PX0012345X.
@@ -22,4 +25,15 @@
  **/
 
 // -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
+Cypress.Commands.add(
+  'checkHmrcReferences',
+  {
+    prevSubject: 'element'
+  },
+  (subject, options) => {
+    //
+  }
+)
+
+// This one is clearly just a thought at this stage;
+// not sure if we even need it in here.

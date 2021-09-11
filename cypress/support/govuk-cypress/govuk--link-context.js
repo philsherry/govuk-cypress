@@ -13,9 +13,9 @@
  **/
 
 Cypress.Commands.add(
-  "checkLinkContext",
+  'checkLinkContext',
   {
-    prevSubject: "element",
+    prevSubject: 'element'
   },
   (subject, options) => {
     cy.get(subject).then(($el) => {
@@ -25,14 +25,14 @@ Cypress.Commands.add(
        * text with spaces and different capitalization.
        * @param {string} s Text to normalize
        **/
-      const normalizeText = (s) => s.replace(/\s/g, "").toLowerCase();
+      const normalizeText = (s) => s.replace(/\s/g, '').toLowerCase()
 
       /**
        * @type {string}
        **/
-      let visibleText;
-      let hiddenText;
-      let parentContext;
+      let visibleText
+      let hiddenText
+      let parentContext
 
       /**
        * @function checkVisibleText
@@ -40,13 +40,13 @@ Cypress.Commands.add(
        * @return {boolean}
        **/
       const checkVisibleText = () => {
-        if (visibleText === "") {
-          throw new Error(`Link ${$el.attr("href")} has no visible text.`);
+        if (visibleText === '') {
+          throw new Error(`Link ${$el.attr('href')} has no visible text.`)
         }
 
-        visibleText = normalizeText($el.text());
-        expect(visibleText).to.be.true;
-      };
+        visibleText = normalizeText($el.text())
+        expect(visibleText).to.be.true
+      }
 
       /**
        * @function checkHiddenText
@@ -54,13 +54,13 @@ Cypress.Commands.add(
        * @return {boolean}
        **/
       const checkHiddenText = () => {
-        if (hiddenText === "") {
-          throw new Error(`Link ${$el.attr("href")} has no hidden text.`);
+        if (hiddenText === '') {
+          throw new Error(`Link ${$el.attr('href')} has no hidden text.`)
         }
 
-        hiddenText = normalizeText($el.attr("aria-label"));
-        expect(hiddenText).to.be.true;
-      };
+        hiddenText = normalizeText($el.attr('aria-label'))
+        expect(hiddenText).to.be.true
+      }
 
       /**
        * @function checkParentContext
@@ -68,23 +68,23 @@ Cypress.Commands.add(
        * @return {boolean}
        **/
       const checkParentContext = () => {
-        if (parentContext === "") {
-          throw new Error(`Link ${$el.attr("href")} has no parent context.`);
+        if (parentContext === '') {
+          throw new Error(`Link ${$el.attr('href')} has no parent context.`)
         }
 
-        parentContext = normalizeText($el.parent().parent().text());
-        expect(parentContext).to.contain(visibleText);
-      };
+        parentContext = normalizeText($el.parent().parent().text())
+        expect(parentContext).to.contain(visibleText)
+      }
 
       // Log the variables to the Cypress console.
-      cy.task("log", {
+      cy.task('log', {
         visibleText,
         hiddenText,
         parentContext,
         checkVisibleText,
         checkHiddenText,
-        checkParentContext,
-      });
-    });
+        checkParentContext
+      })
+    })
   }
-);
+)

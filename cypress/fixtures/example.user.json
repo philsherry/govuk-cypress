@@ -1,0 +1,40 @@
+{
+  "username": {
+    "firstName": "",
+    "middleNames": "",
+    "lastNames": ""
+  },
+  "dateOfBirth": {
+    "year": "",
+    "month": "",
+    "day": ""
+  },
+  "address": {
+    "addressLine1": "",
+    "addressLine2": "",
+    "addressLine3": "",
+    "city": "",
+    "county": "",
+    "postcode": "",
+    "country": ""
+  },
+  "contactDetails": {
+    "emailAddress": "",
+    "phoneNumber": "",
+    "mobileNumber": "",
+    "voiceCall": "false"
+  },
+  "bankDetails": {
+    "bankName": "",
+    "branchName": "",
+    "branchCode": "",
+    "accountHolderName": "",
+    "accountNumber": "",
+    "sortCode": ""
+  },
+  "passportDetails": {
+    "passportNumber": "",
+    "expiryDate": ""
+  },
+  "taxCreditsDetails": {}
+}

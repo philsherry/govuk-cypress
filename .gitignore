@@ -4,6 +4,7 @@
 .sass-cache/
 .start.pid
 .tmuxp.*
+coverage/
 node_modules/
 package-lock.json
 public/

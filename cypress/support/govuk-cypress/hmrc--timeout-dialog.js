@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * @author:
  * @function checkServiceTimeout
@@ -7,7 +8,10 @@
  **/
 
 // -- This is a child command --
-Cypress.Commands.add('checkServiceTimeout',
-  { prevSubject: 'element' }, (subject, options) => {
-  //
-  })
+Cypress.Commands.add(
+  'checkServiceTimeout',
+  { prevSubject: 'element' },
+  (subject, options) => {
+    //
+  }
+);

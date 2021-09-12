@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * @author:
  * @function checkFormValidation
@@ -7,7 +8,10 @@
  **/
 
 // -- This is a child command --
-Cypress.Commands.add('checkFormValidation',
-  { prevSubject: 'element' }, (subject, options) => {
-  //
-  })
+Cypress.Commands.add(
+  'checkFormValidation',
+  { prevSubject: 'element' },
+  (subject, options) => {
+    //
+  }
+);

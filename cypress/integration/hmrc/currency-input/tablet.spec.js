@@ -9,8 +9,8 @@ const { terminalLog } = require('../../../plugins/hmrc')
  * @screenshotFileName `${service}--${component}--${viewport}--${state}`
  **/
 const service = 'homepage'
-const journey = 'tablet'
-const thing = 'currency-input'
+const component = 'tablet';
+const viewport = 'currency-input';
 let state = 'default'
 
 /**

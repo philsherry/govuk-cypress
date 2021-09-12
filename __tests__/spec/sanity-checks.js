@@ -6,7 +6,7 @@ const util = require('util')
 
 const glob = require('glob')
 const request = require('supertest')
-const sass = require('node-sass')
+const sass = require('gulp-sass')(require('sass'));
 
 const app = require('../../server.js')
 const gulpConfig = require('../../gulp/config.json')

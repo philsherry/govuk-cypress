@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * @author:
  * @function checkConditionallyRevealingContent
@@ -8,9 +9,12 @@
  **/
 
 // -- This is a child command --
-Cypress.Commands.add('checkConditionallyRevealingContent',
+Cypress.Commands.add(
+  'checkConditionallyRevealingContent',
   {
-    prevSubject: 'element'
-  }, (subject, options) => {
-  //
-  })
+    prevSubject: 'element',
+  },
+  (subject, options) => {
+    //
+  }
+);

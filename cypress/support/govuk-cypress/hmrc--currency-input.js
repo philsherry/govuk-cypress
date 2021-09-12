@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * @author:
  * @function hmrcCurrencyInput
@@ -7,7 +8,10 @@
  **/
 
 // -- This is a child command --
-Cypress.Commands.add('hmrcCurrencyInput',
-  { prevSubject: 'element' }, (subject, options) => {
-  //
-  })
+Cypress.Commands.add(
+  'hmrcCurrencyInput',
+  { prevSubject: 'element' },
+  (subject, options) => {
+    //
+  }
+);

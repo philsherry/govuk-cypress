@@ -10,11 +10,11 @@ const { terminalLog } = require('../../../plugins/hmrc');
  **/
 const service = 'hmrc';
 const component = 'add-to-a-list';
-const viewport = 'tablet';
+const viewport = 'mobile';
 let state = 'default';
 
 beforeEach(() => {
-  cy.viewport(env.tablet.viewport[0]);
+  cy.viewport(env.mobile.viewport[0]);
   cy.visit(page);
   cy.injectAxe();
 

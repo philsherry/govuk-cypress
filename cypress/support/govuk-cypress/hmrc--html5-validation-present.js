@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * @author:
  * @function checkHtml5ValidationPresent
@@ -7,9 +8,12 @@
  **/
 
 // -- This is a child command --
-Cypress.Commands.add('checkHtml5ValidationPresent',
+Cypress.Commands.add(
+  'checkHtml5ValidationPresent',
   {
-    prevSubject: 'element'
-  }, (subject, options) => {
-  //
-  })
+    prevSubject: 'element',
+  },
+  (subject, options) => {
+    //
+  }
+);

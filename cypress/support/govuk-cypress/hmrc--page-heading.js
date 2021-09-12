@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * @author: @philsherry
  * @function hmrcPageHeading
@@ -7,7 +8,10 @@
  **/
 
 // -- This is a child command --
-Cypress.Commands.add('someFunctionName',
-  { prevSubject: 'element' }, (subject, options) => {
-  //
-  })
+Cypress.Commands.add(
+  'someFunctionName',
+  { prevSubject: 'element' },
+  (subject, options) => {
+    //
+  }
+);

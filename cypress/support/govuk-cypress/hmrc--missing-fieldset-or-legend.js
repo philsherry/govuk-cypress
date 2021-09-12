@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * @author:
  * @function checkForMissingFieldsetOrLegend
@@ -10,12 +11,12 @@
 Cypress.Commands.add(
   'checkForMissingFieldsetOrLegend',
   {
-    prevSubject: 'element'
+    prevSubject: 'element',
   },
   (subject, options) => {
     //
   }
-)
+);
 
 // Note: I started .checkHeadings() with similar intentions but didn't finish it.
 // See also: `labels-legends-headings` in tags.js

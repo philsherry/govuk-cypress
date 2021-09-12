@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string  */
 module.exports = {
   // This one accommodates the things we find in the Design System.
   best: [
@@ -7,7 +8,7 @@ module.exports = {
       level: 'best-practice',
       ref_id: 'conditionally-revealing-content',
       title: 'Conditionally revealing content',
-      url: ''
+      url: '',
     },
     {
       description:
@@ -15,7 +16,7 @@ module.exports = {
       level: 'best-practice',
       ref_id: 'default-browser-link-style',
       title: 'Using default browser link styles',
-      url: ''
+      url: '',
     },
     {
       description:
@@ -23,7 +24,7 @@ module.exports = {
       level: 'best-practice',
       ref_id: 'error-message',
       title: 'Error message text',
-      url: ''
+      url: '',
     },
     {
       description:
@@ -31,7 +32,7 @@ module.exports = {
       level: 'best-practice',
       ref_id: 'error-not-associated',
       title: 'Error not associated with input',
-      url: ''
+      url: '',
     },
     {
       description:
@@ -39,7 +40,7 @@ module.exports = {
       level: 'best-practice',
       ref_id: 'error-page-title',
       title: 'Page title not prefixed with the word ‘Error’',
-      url: ''
+      url: '',
     },
     {
       description:
@@ -47,7 +48,7 @@ module.exports = {
       level: 'best-practice',
       ref_id: 'error-summary-links',
       title: 'Error summary contains invalid links',
-      url: ''
+      url: '',
     },
     {
       description:
@@ -55,7 +56,7 @@ module.exports = {
       level: 'best-practice',
       ref_id: 'error-summary-missing',
       title: 'Error summary missing',
-      url: ''
+      url: '',
     },
     {
       description:
@@ -63,7 +64,7 @@ module.exports = {
       level: 'best-practice',
       ref_id: 'hint-error-in-label',
       title: 'Hint or error message nested inside label or legend',
-      url: ''
+      url: '',
     },
     {
       description:
@@ -71,7 +72,7 @@ module.exports = {
       level: 'best-practice',
       ref_id: 'hint-not-associated',
       title: 'Hint not associated with input',
-      url: 'https://design-system.service.gov.uk/components/text-input/#hint-text'
+      url: 'https://design-system.service.gov.uk/components/text-input/#hint-text',
     },
     {
       description:
@@ -79,7 +80,7 @@ module.exports = {
       level: 'best-practice',
       ref_id: 'html-validation-wcag',
       title: 'HTML validation (WCAG)',
-      url: ''
+      url: '',
     },
     {
       description:
@@ -87,7 +88,7 @@ module.exports = {
       level: 'best-practice',
       ref_id: 'html5-validation-present',
       title: 'HTML5 form field validation present',
-      url: ''
+      url: '',
     },
     {
       description:
@@ -95,7 +96,7 @@ module.exports = {
       level: 'best-practice',
       ref_id: 'missing-autocomplete',
       title: 'Missing/incorrect autocomplete attribute',
-      url: ''
+      url: '',
     },
     {
       description:
@@ -103,7 +104,7 @@ module.exports = {
       level: 'best-practice',
       ref_id: 'missing-fieldset-or-legend',
       title: 'Missing fieldset or legend',
-      url: ''
+      url: '',
     },
     {
       description:
@@ -111,7 +112,7 @@ module.exports = {
       level: 'best-practice',
       ref_id: 'missing-inputmode',
       title: 'Missing inputmode',
-      url: ''
+      url: '',
     },
     {
       description:
@@ -119,7 +120,7 @@ module.exports = {
       level: 'best-practice',
       ref_id: 'missing-instructions',
       title: 'Missing instructions',
-      url: ''
+      url: '',
     },
     {
       description:
@@ -127,7 +128,7 @@ module.exports = {
       level: 'best-practice',
       ref_id: 'missing-label',
       title: 'Missing label',
-      url: ''
+      url: '',
     },
     {
       description:
@@ -135,7 +136,7 @@ module.exports = {
       level: 'best-practice',
       ref_id: 'nested-fieldsets',
       title: 'Nested fieldsets',
-      url: ''
+      url: '',
     },
     {
       description:
@@ -143,7 +144,7 @@ module.exports = {
       level: 'best-practice',
       ref_id: 'open-in-new-window-links',
       title: 'Opening content in a new tab',
-      url: ''
+      url: '',
     },
     {
       description:
@@ -151,7 +152,7 @@ module.exports = {
       level: 'best-practice',
       ref_id: 'page-title-incomplete',
       title: 'Page title incomplete',
-      url: ''
+      url: '',
     },
     {
       description:
@@ -159,7 +160,7 @@ module.exports = {
       level: 'best-practice',
       ref_id: 'timeout-dialog-cannot-extend-session',
       title: 'Timeout dialog - cannot extend session',
-      url: ''
+      url: '',
     },
     {
       description:
@@ -167,7 +168,7 @@ module.exports = {
       level: 'best-practice',
       ref_id: 'timeout-dialog',
       title: 'No timeout dialog',
-      url: ''
+      url: '',
     },
     {
       description:
@@ -175,7 +176,7 @@ module.exports = {
       level: 'best-practice',
       ref_id: 'type-attribute-incorrect',
       title: 'Type attribute incorrect',
-      url: ''
+      url: '',
     },
     {
       description:
@@ -183,7 +184,7 @@ module.exports = {
       level: 'best-practice',
       ref_id: 'unassociated-label',
       title: 'Unassociated label',
-      url: ''
+      url: '',
     },
     {
       description:
@@ -191,7 +192,7 @@ module.exports = {
       level: 'best-practice',
       ref_id: 'validation',
       title: 'Validation',
-      url: ''
+      url: '',
     },
     {
       description:
@@ -199,14 +200,14 @@ module.exports = {
       level: 'best-practice',
       ref_id: 'welsh-translations',
       title: 'Content not translated to Welsh',
-      url: ''
+      url: '',
     },
     {
       description: 'How to markup and style labels, legends and headings.',
       level: 'best-practice',
       ref_id: 'labels-legends-headings',
       title: 'Making labels and legends headings',
-      url: 'https://design-system.service.gov.uk/get-started/labels-legends-headings/'
+      url: 'https://design-system.service.gov.uk/get-started/labels-legends-headings/',
     },
     {
       description:
@@ -214,8 +215,8 @@ module.exports = {
       level: 'best-practice',
       ref_id: 'focus-states',
       title: 'Understanding focus state styles',
-      url: 'https://design-system.service.gov.uk/get-started/focus-states/'
-    }
+      url: 'https://design-system.service.gov.uk/get-started/focus-states/',
+    },
   ],
   wcag: [
     {
@@ -229,8 +230,8 @@ module.exports = {
           references: [
             {
               title: 'Understanding Guideline 1.1',
-              url: 'https://www.w3.org/WAI/WCAG21/Understanding/text-alternatives.html'
-            }
+              url: 'https://www.w3.org/WAI/WCAG21/Understanding/text-alternatives.html',
+            },
           ],
           success_criteria: [
             {
@@ -242,57 +243,57 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 1.1.1',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#non-text-content'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#non-text-content',
                 },
                 {
                   title: 'Understanding 1.1.1',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html',
+                },
               ],
               special_cases: [
                 {
                   description:
                     'If non-text content is a control or accepts user input, then it has a name that describes its purpose. (Refer to Guideline 4.1 for additional requirements for controls and content that accepts user input.)',
                   title: 'Controls, Input',
-                  type: 'exception'
+                  type: 'exception',
                 },
                 {
                   description:
                     'If non-text content is time-based media, then text alternatives at least provide descriptive identification of the non-text content. (Refer to Guideline 1.2 for additional requirements for media.)',
                   title: 'Time-based Media',
-                  type: 'exception'
+                  type: 'exception',
                 },
                 {
                   description:
                     'If non-text content is a test or exercise that would be invalid if presented in text, then text alternatives at least provide descriptive identification of the non-text content.',
                   title: 'Test',
-                  type: 'exception'
+                  type: 'exception',
                 },
                 {
                   description:
                     'If non-text content is primarily intended to create a specific sensory experience, then text alternatives at least provide descriptive identification of the non-text content.',
                   title: 'Sensory',
-                  type: 'exception'
+                  type: 'exception',
                 },
                 {
                   description:
                     'If the purpose of non-text content is to confirm that content is being accessed by a person rather than a computer, then text alternatives that identify and describe the purpose of the non-text content are provided, and alternative forms of CAPTCHA using output modes for different types of sensory perception are provided to accommodate different disabilities.',
                   title: 'CAPTCHA',
-                  type: 'exception'
+                  type: 'exception',
                 },
                 {
                   description:
                     'If non-text content is pure decoration, is used only for visual formatting, or is not presented to users, then it is implemented in a way that it can be ignored by assistive technology.',
                   title: 'Decoration, Formatting, Invisible',
-                  type: 'exception'
-                }
+                  type: 'exception',
+                },
               ],
               title: 'Non-text Content',
-              url: 'https://www.w3.org/TR/WCAG21/#non-text-content'
-            }
+              url: 'https://www.w3.org/TR/WCAG21/#non-text-content',
+            },
           ],
           title: 'Text Alternatives',
-          url: 'https://www.w3.org/TR/WCAG21/#text-alternatives'
+          url: 'https://www.w3.org/TR/WCAG21/#text-alternatives',
         },
         {
           description: 'Provide alternatives for time-based media.',
@@ -300,8 +301,8 @@ module.exports = {
           references: [
             {
               title: 'Understanding Guideline 1.2',
-              url: 'https://www.w3.org/WAI/WCAG21/Understanding/time-based-media.html'
-            }
+              url: 'https://www.w3.org/WAI/WCAG21/Understanding/time-based-media.html',
+            },
           ],
           success_criteria: [
             {
@@ -313,29 +314,29 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 1.2.1',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#audio-only-and-video-only-prerecorded'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#audio-only-and-video-only-prerecorded',
                 },
                 {
                   title: 'Understanding 1.2.1',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded.html',
+                },
               ],
               special_cases: [
                 {
                   description:
                     'An alternative for time-based media is provided that presents equivalent information for prerecorded audio-only content.',
                   title: 'Prerecorded Audio-only',
-                  type: 'all_true'
+                  type: 'all_true',
                 },
                 {
                   description:
                     'Either an alternative for time-based media or an audio track is provided that presents equivalent information for prerecorded video-only content.',
                   title: 'Prerecorded Video-only',
-                  type: 'all_true'
-                }
+                  type: 'all_true',
+                },
               ],
               title: 'Audio-only and Video-only (Prerecorded)',
-              url: 'https://www.w3.org/TR/WCAG21/#audio-only-and-video-only-prerecorded'
+              url: 'https://www.w3.org/TR/WCAG21/#audio-only-and-video-only-prerecorded',
             },
             {
               description:
@@ -346,16 +347,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 1.2.2',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#captions-prerecorded'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#captions-prerecorded',
                 },
                 {
                   title: 'Understanding 1.2.2',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/captions-prerecorded.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/captions-prerecorded.html',
+                },
               ],
               special_cases: null,
               title: 'Captions (Prerecorded)',
-              url: 'https://www.w3.org/TR/WCAG21/#captions-prerecorded'
+              url: 'https://www.w3.org/TR/WCAG21/#captions-prerecorded',
             },
             {
               description:
@@ -366,16 +367,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 1.2.3',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#audio-description-or-media-alternative-prerecorded'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#audio-description-or-media-alternative-prerecorded',
                 },
                 {
                   title: 'Understanding 1.2.3',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/audio-description-or-media-alternative-prerecorded.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/audio-description-or-media-alternative-prerecorded.html',
+                },
               ],
               special_cases: null,
               title: 'Audio Description or Media Alternative (Prerecorded)',
-              url: 'https://www.w3.org/TR/WCAG21/#audio-description-or-media-alternative-prerecorded'
+              url: 'https://www.w3.org/TR/WCAG21/#audio-description-or-media-alternative-prerecorded',
             },
             {
               description:
@@ -386,16 +387,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 1.2.4',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/captions-live.html'
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/captions-live.html',
                 },
                 {
                   title: 'Understanding 1.2.4',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/captions-live.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/captions-live.html',
+                },
               ],
               special_cases: null,
               title: 'Captions (Live)',
-              url: 'https://www.w3.org/TR/WCAG21/#captions-live'
+              url: 'https://www.w3.org/TR/WCAG21/#captions-live',
             },
             {
               description:
@@ -406,16 +407,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 1.2.5',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#audio-description-prerecorded'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#audio-description-prerecorded',
                 },
                 {
                   title: 'Understanding 1.2.5',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded.html',
+                },
               ],
               special_cases: null,
               title: 'Audio Description (Prerecorded)',
-              url: 'https://www.w3.org/TR/WCAG21/#audio-description-prerecorded'
+              url: 'https://www.w3.org/TR/WCAG21/#audio-description-prerecorded',
             },
             {
               description:
@@ -426,16 +427,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 1.2.6',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#sign-language-prerecorded'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#sign-language-prerecorded',
                 },
                 {
                   title: 'Understanding 1.2.6',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/sign-language-prerecorded.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/sign-language-prerecorded.html',
+                },
               ],
               special_cases: null,
               title: 'Sign Language (Prerecorded)',
-              url: 'https://www.w3.org/TR/WCAG21/#sign-language-prerecorded'
+              url: 'https://www.w3.org/TR/WCAG21/#sign-language-prerecorded',
             },
             {
               description:
@@ -446,16 +447,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 1.2.7',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#extended-audio-description-prerecorded'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#extended-audio-description-prerecorded',
                 },
                 {
                   title: 'Understanding 1.2.7',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/extended-audio-description-prerecorded.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/extended-audio-description-prerecorded.html',
+                },
               ],
               special_cases: null,
               title: 'Extended Audio Description (Prerecorded)',
-              url: 'https://www.w3.org/TR/WCAG21/#extended-audio-description-prerecorded'
+              url: 'https://www.w3.org/TR/WCAG21/#extended-audio-description-prerecorded',
             },
             {
               description:
@@ -466,16 +467,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 1.2.8',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#media-alternative-prerecorded'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#media-alternative-prerecorded',
                 },
                 {
                   title: 'Understanding 1.2.8',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/media-alternative-prerecorded.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/media-alternative-prerecorded.html',
+                },
               ],
               special_cases: null,
               title: 'Media Alternative (Prerecorded)',
-              url: 'https://www.w3.org/TR/WCAG21/#media-alternative-prerecorded'
+              url: 'https://www.w3.org/TR/WCAG21/#media-alternative-prerecorded',
             },
             {
               description:
@@ -486,20 +487,20 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 1.2.9',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#audio-only-live'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#audio-only-live',
                 },
                 {
                   title: 'Understanding 1.2.9',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/audio-only-live.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/audio-only-live.html',
+                },
               ],
               special_cases: null,
               title: 'Audio-only (Live)',
-              url: 'https://www.w3.org/TR/WCAG21/#audio-only-live'
-            }
+              url: 'https://www.w3.org/TR/WCAG21/#audio-only-live',
+            },
           ],
           title: 'Time-based Media',
-          url: 'https://www.w3.org/TR/WCAG21/#time-based-media'
+          url: 'https://www.w3.org/TR/WCAG21/#time-based-media',
         },
         {
           description:
@@ -508,8 +509,8 @@ module.exports = {
           references: [
             {
               title: 'Understanding Guideline 1.3',
-              url: 'https://www.w3.org/WAI/WCAG21/Understanding/adaptable.html'
-            }
+              url: 'https://www.w3.org/WAI/WCAG21/Understanding/adaptable.html',
+            },
           ],
           success_criteria: [
             {
@@ -521,16 +522,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 1.3.1',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#info-and-relationships'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#info-and-relationships',
                 },
                 {
                   title: 'Understanding 1.3.1',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html',
+                },
               ],
               special_cases: null,
               title: 'Info and Relationships',
-              url: 'https://www.w3.org/TR/WCAG21/#info-and-relationships'
+              url: 'https://www.w3.org/TR/WCAG21/#info-and-relationships',
             },
             {
               description:
@@ -541,16 +542,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 1.3.2',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#meaningful-sequence'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#meaningful-sequence',
                 },
                 {
                   title: 'Understanding 1.3.2',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence.html',
+                },
               ],
               special_cases: null,
               title: 'Meaningful Sequence',
-              url: 'https://www.w3.org/TR/WCAG21/#meaningful-sequence'
+              url: 'https://www.w3.org/TR/WCAG21/#meaningful-sequence',
             },
             {
               description:
@@ -559,23 +560,23 @@ module.exports = {
               notes: [
                 {
                   content:
-                    'For requirements related to color, refer to Guideline 1.4.'
-                }
+                    'For requirements related to color, refer to Guideline 1.4.',
+                },
               ],
               ref_id: '1.3.3',
               references: [
                 {
                   title: 'How to Meet 1.3.3',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#sensory-characteristics'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#sensory-characteristics',
                 },
                 {
                   title: 'Understanding 1.3.3',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html',
+                },
               ],
               special_cases: null,
               title: 'Sensory Characteristics',
-              url: 'https://www.w3.org/TR/WCAG21/#sensory-characteristics'
+              url: 'https://www.w3.org/TR/WCAG21/#sensory-characteristics',
             },
             {
               description:
@@ -584,23 +585,23 @@ module.exports = {
               notes: [
                 {
                   content:
-                    'Examples where a particular display orientation may be essential are a bank check, a piano application, slides for a projector or television, or virtual reality content where binary display orientation is not applicable.'
-                }
+                    'Examples where a particular display orientation may be essential are a bank check, a piano application, slides for a projector or television, or virtual reality content where binary display orientation is not applicable.',
+                },
               ],
               ref_id: '1.3.4',
               references: [
                 {
                   title: 'How to Meet 1.3.4',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#orientation'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#orientation',
                 },
                 {
                   title: 'Understanding 1.3.4',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/orientation.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/orientation.html',
+                },
               ],
               special_cases: null,
               title: 'Orientation',
-              url: 'https://www.w3.org/TR/WCAG21/#orientation'
+              url: 'https://www.w3.org/TR/WCAG21/#orientation',
             },
             {
               description:
@@ -611,27 +612,27 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 1.3.5',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#identify-input-purpose'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#identify-input-purpose',
                 },
                 {
                   title: 'Understanding 1.3.5',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html',
+                },
               ],
               special_cases: [
                 {
                   title:
                     'The input field serves a purpose identified in the Input Purposes for User Interface Components section; and',
-                  type: 'all_true'
+                  type: 'all_true',
                 },
                 {
                   title:
                     'The content is implemented using technologies with support for identifying the expected meaning for form input data.',
-                  type: 'all_true'
-                }
+                  type: 'all_true',
+                },
               ],
               title: 'Identify Input Purpose',
-              url: 'https://www.w3.org/TR/WCAG21/#identify-input-purpose'
+              url: 'https://www.w3.org/TR/WCAG21/#identify-input-purpose',
             },
             {
               description:
@@ -642,20 +643,20 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 1.3.6',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#identify-purpose'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#identify-purpose',
                 },
                 {
                   title: 'Understanding 1.3.6',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/identify-purpose.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/identify-purpose.html',
+                },
               ],
               special_cases: null,
               title: 'Identify Purpose',
-              url: 'https://www.w3.org/TR/WCAG21/#identify-purpose'
-            }
+              url: 'https://www.w3.org/TR/WCAG21/#identify-purpose',
+            },
           ],
           title: 'Adaptable',
-          url: 'https://www.w3.org/TR/WCAG21/#adaptable'
+          url: 'https://www.w3.org/TR/WCAG21/#adaptable',
         },
         {
           description:
@@ -664,8 +665,8 @@ module.exports = {
           references: [
             {
               title: 'Understanding Guideline 1.4',
-              url: 'https://www.w3.org/WAI/WCAG21/Understanding/distinguishable.html'
-            }
+              url: 'https://www.w3.org/WAI/WCAG21/Understanding/distinguishable.html',
+            },
           ],
           success_criteria: [
             {
@@ -675,23 +676,23 @@ module.exports = {
               notes: [
                 {
                   content:
-                    'This success criterion addresses color perception specifically. Other forms of perception are covered in Guideline 1.3 including programmatic access to color and other visual presentation coding.'
-                }
+                    'This success criterion addresses color perception specifically. Other forms of perception are covered in Guideline 1.3 including programmatic access to color and other visual presentation coding.',
+                },
               ],
               ref_id: '1.4.1',
               references: [
                 {
                   title: 'How to Meet 1.4.1',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#use-of-color'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#use-of-color',
                 },
                 {
                   title: 'Understanding 1.4.1',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html',
+                },
               ],
               special_cases: null,
               title: 'Use of Color',
-              url: 'https://www.w3.org/TR/WCAG21/#use-of-color'
+              url: 'https://www.w3.org/TR/WCAG21/#use-of-color',
             },
             {
               description:
@@ -700,23 +701,23 @@ module.exports = {
               notes: [
                 {
                   content:
-                    'Since any content that does not meet this success criterion can interfere with a user’s ability to use the whole page, all content on the Web page (whether or not it is used to meet other success criteria) must meet this success criterion. See Conformance Requirement 5: Non-Interference. (https://www.w3.org/TR/WCAG21/#cc5)'
-                }
+                    'Since any content that does not meet this success criterion can interfere with a user’s ability to use the whole page, all content on the Web page (whether or not it is used to meet other success criteria) must meet this success criterion. See Conformance Requirement 5: Non-Interference. (https://www.w3.org/TR/WCAG21/#cc5)',
+                },
               ],
               ref_id: '1.4.2',
               references: [
                 {
                   title: 'How to Meet 1.4.2',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#audio-control'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#audio-control',
                 },
                 {
                   title: 'Understanding 1.4.2',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/audio-control.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/audio-control.html',
+                },
               ],
               special_cases: null,
               title: 'Audio Control',
-              url: 'https://www.w3.org/TR/WCAG21/#audio-control'
+              url: 'https://www.w3.org/TR/WCAG21/#audio-control',
             },
             {
               description:
@@ -727,35 +728,35 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 1.4.3',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#contrast-minimum'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#contrast-minimum',
                 },
                 {
                   title: 'Understanding 1.4.3',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html',
+                },
               ],
               special_cases: [
                 {
                   description:
                     'Large-scale text and images of large-scale text have a contrast ratio of at least 3:1;',
                   title: 'Large Text',
-                  type: 'exception'
+                  type: 'exception',
                 },
                 {
                   description:
                     'Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement.',
                   title: 'Incidental',
-                  type: 'exception'
+                  type: 'exception',
                 },
                 {
                   description:
                     'Text that is part of a logo or brand name has no minimum contrast requirement.',
                   title: 'Logotypes',
-                  type: 'exception'
-                }
+                  type: 'exception',
+                },
               ],
               title: 'Contrast (Minimum)',
-              url: 'https://www.w3.org/TR/WCAG21/#contrast-minimum'
+              url: 'https://www.w3.org/TR/WCAG21/#contrast-minimum',
             },
             {
               description:
@@ -766,16 +767,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 1.4.4',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#resize-text'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#resize-text',
                 },
                 {
                   title: 'Understanding 1.4.4',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html',
+                },
               ],
               special_cases: null,
               title: 'Resize text',
-              url: 'https://www.w3.org/TR/WCAG21/#resize-text'
+              url: 'https://www.w3.org/TR/WCAG21/#resize-text',
             },
             {
               description:
@@ -784,36 +785,36 @@ module.exports = {
               notes: [
                 {
                   content:
-                    'Logotypes (text that is part of a logo or brand name) are considered essential.'
-                }
+                    'Logotypes (text that is part of a logo or brand name) are considered essential.',
+                },
               ],
               ref_id: '1.4.5',
               references: [
                 {
                   title: 'How to Meet 1.4.5',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#images-of-text'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#images-of-text',
                 },
                 {
                   title: 'Understanding 1.4.5',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html',
+                },
               ],
               special_cases: [
                 {
                   description:
                     'The image of text can be visually customized to the user’s requirements;',
                   title: 'Customizable',
-                  type: 'exception'
+                  type: 'exception',
                 },
                 {
                   description:
                     'A particular presentation of text is essential to the information being conveyed.',
                   title: 'Essential',
-                  type: 'exception'
-                }
+                  type: 'exception',
+                },
               ],
               title: 'Images of Text',
-              url: 'https://www.w3.org/TR/WCAG21/#images-of-text'
+              url: 'https://www.w3.org/TR/WCAG21/#images-of-text',
             },
             {
               description:
@@ -824,35 +825,35 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 1.4.6',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#contrast-enhanced'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#contrast-enhanced',
                 },
                 {
                   title: 'Understanding 1.4.6',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced.html',
+                },
               ],
               special_cases: [
                 {
                   description:
                     'Large-scale text and images of large-scale text have a contrast ratio of at least 4.5:1;',
                   title: 'Large Text',
-                  type: 'exception'
+                  type: 'exception',
                 },
                 {
                   description:
                     'Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement.',
                   title: 'Incidental',
-                  type: 'exception'
+                  type: 'exception',
                 },
                 {
                   description:
                     'Text that is part of a logo or brand name has no minimum contrast requirement.',
                   title: 'Logotypes',
-                  type: 'exception'
-                }
+                  type: 'exception',
+                },
               ],
               title: 'Contrast (Enhanced)',
-              url: 'https://www.w3.org/TR/WCAG21/#contrast-enhanced'
+              url: 'https://www.w3.org/TR/WCAG21/#contrast-enhanced',
             },
             {
               description:
@@ -861,40 +862,41 @@ module.exports = {
               notes: [
                 {
                   content:
-                    'Per the definition of ‘decibel’, background sound that meets this requirement will be approximately four times quieter than the foreground speech content.'
-                }
+                    'Per the definition of ‘decibel’, background sound that meets this requirement will be approximately four times quieter than the foreground speech content.',
+                },
               ],
               ref_id: '1.4.7',
               references: [
                 {
                   title: 'How to Meet 1.4.7',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#low-or-no-background-audio'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#low-or-no-background-audio',
                 },
                 {
                   title: 'Understanding 1.4.7',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/low-or-no-background-audio.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/low-or-no-background-audio.html',
+                },
               ],
               special_cases: [
                 {
-                  description: 'The audio does not contain background sounds.',
+                  description:
+                    'The audio does not contain background sounds.',
                   title: 'No Background',
-                  type: 'at_least_one'
+                  type: 'at_least_one',
                 },
                 {
                   description: 'The background sounds can be turned off.',
                   title: 'Turn Off',
-                  type: 'at_least_one'
+                  type: 'at_least_one',
                 },
                 {
                   description:
                     'The background sounds are at least 20 decibels lower than the foreground speech content, with the exception of occasional sounds that last for only one or two seconds.',
                   title: '20 dB',
-                  type: 'at_least_one'
-                }
+                  type: 'at_least_one',
+                },
               ],
               title: 'Low or No Background Audio',
-              url: 'https://www.w3.org/TR/WCAG21/#low-or-no-background-audio'
+              url: 'https://www.w3.org/TR/WCAG21/#low-or-no-background-audio',
             },
             {
               description:
@@ -905,42 +907,42 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 1.4.8',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#visual-presentation'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#visual-presentation',
                 },
                 {
                   title: 'Understanding 1.4.8',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/visual-presentation.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/visual-presentation.html',
+                },
               ],
               special_cases: [
                 {
                   title:
                     'Foreground and background colors can be selected by the user.',
-                  type: 'all_true'
+                  type: 'all_true',
                 },
                 {
                   title:
                     'Width is no more than 80 characters or glyphs (40 if CJK).',
-                  type: 'all_true'
+                  type: 'all_true',
                 },
                 {
                   title:
                     'Text is not justified (aligned to both the left and the right margins).',
-                  type: 'all_true'
+                  type: 'all_true',
                 },
                 {
                   title:
                     'Line spacing (leading) is at least space-and-a-half within paragraphs, and paragraph spacing is at least 1.5 times larger than the line spacing.',
-                  type: 'all_true'
+                  type: 'all_true',
                 },
                 {
                   title:
                     'Text can be resized without assistive technology up to 200 percent in a way that does not require the user to scroll horizontally to read a line of text on a full-screen window.',
-                  type: 'all_true'
-                }
+                  type: 'all_true',
+                },
               ],
               title: 'Visual Presentation',
-              url: 'https://www.w3.org/TR/WCAG21/#visual-presentation'
+              url: 'https://www.w3.org/TR/WCAG21/#visual-presentation',
             },
             {
               description:
@@ -949,23 +951,23 @@ module.exports = {
               notes: [
                 {
                   content:
-                    'Logotypes (text that is part of a logo or brand name) are considered essential.'
-                }
+                    'Logotypes (text that is part of a logo or brand name) are considered essential.',
+                },
               ],
               ref_id: '1.4.9',
               references: [
                 {
                   title: 'How to Meet 1.4.9',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#images-of-text-no-exception'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#images-of-text-no-exception',
                 },
                 {
                   title: 'Understanding 1.4.9',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/images-of-text-no-exception.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/images-of-text-no-exception.html',
+                },
               ],
               special_cases: null,
               title: 'Images of Text (No Exception)',
-              url: 'https://www.w3.org/TR/WCAG21/#images-of-text-no-exception'
+              url: 'https://www.w3.org/TR/WCAG21/#images-of-text-no-exception',
             },
             {
               description:
@@ -974,43 +976,43 @@ module.exports = {
               notes: [
                 {
                   content:
-                    'Note: 320 CSS pixels is equivalent to a starting viewport width of 1280 CSS pixels wide at 400% zoom. For web content which are designed to scroll horizontally (e.g. with vertical text), the 256 CSS pixels is equivalent to a starting viewport height of 1024px at 400% zoom.'
+                    'Note: 320 CSS pixels is equivalent to a starting viewport width of 1280 CSS pixels wide at 400% zoom. For web content which are designed to scroll horizontally (e.g. with vertical text), the 256 CSS pixels is equivalent to a starting viewport height of 1024px at 400% zoom.',
                 },
                 {
                   content:
-                    'Examples of content which require two-dimensional layout are images, maps, diagrams, video, games, presentations, data tables, and interfaces where it is necessary to keep toolbars in view while manipulating content.'
-                }
+                    'Examples of content which require two-dimensional layout are images, maps, diagrams, video, games, presentations, data tables, and interfaces where it is necessary to keep toolbars in view while manipulating content.',
+                },
               ],
               ref_id: '1.4.10',
               references: [
                 {
                   title: 'How to Meet 1.4.10',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#reflow'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#reflow',
                 },
                 {
                   title: 'Understanding 1.4.10',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/reflow.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/reflow.html',
+                },
               ],
               special_cases: [
                 {
                   title:
                     'Vertical scrolling content at a width equivalent to 320 CSS pixels;',
-                  type: 'all_true'
+                  type: 'all_true',
                 },
                 {
                   title:
                     'Horizontal scrolling content at a height equivalent to 256 CSS pixels.',
-                  type: 'all_true'
+                  type: 'all_true',
                 },
                 {
                   title:
                     'Except for parts of the content which require two-dimensional layout for usage or meaning.',
-                  type: 'exception'
-                }
+                  type: 'exception',
+                },
               ],
               title: 'Reflow',
-              url: 'https://www.w3.org/TR/WCAG21/#reflow'
+              url: 'https://www.w3.org/TR/WCAG21/#reflow',
             },
             {
               description:
@@ -1021,29 +1023,29 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 1.4.11',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#non-text-contrast'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#non-text-contrast',
                 },
                 {
                   title: 'Understanding 1.4.11',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html',
+                },
               ],
               special_cases: [
                 {
                   description:
                     'Visual information required to identify user interface components and states, except for inactive components or where the appearance of the component is determined by the user agent and not modified by the author;',
                   title: 'User Interface Components',
-                  type: 'all_true'
+                  type: 'all_true',
                 },
                 {
                   description:
                     'Parts of graphics required to understand the content, except when a particular presentation of graphics is essential to the information being conveyed.',
                   title: 'Graphical Objects',
-                  type: 'all_true'
-                }
+                  type: 'all_true',
+                },
               ],
               title: 'Non-text Contrast',
-              url: 'https://www.w3.org/TR/WCAG21/#non-text-contrast'
+              url: 'https://www.w3.org/TR/WCAG21/#non-text-contrast',
             },
             {
               description:
@@ -1054,41 +1056,41 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 1.4.12',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#text-spacing'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#text-spacing',
                 },
                 {
                   title: 'Understanding 1.4.12',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html',
+                },
               ],
               special_cases: [
                 {
                   title:
                     'Line height (line spacing) to at least 1.5 times the font size;',
-                  type: 'all_true'
+                  type: 'all_true',
                 },
                 {
                   title:
                     'Spacing following paragraphs to at least 2 times the font size;',
-                  type: 'all_true'
+                  type: 'all_true',
                 },
                 {
                   title:
                     'Letter spacing (tracking) to at least 0.12 times the font size;',
-                  type: 'all_true'
+                  type: 'all_true',
                 },
                 {
                   title: 'Word spacing to at least 0.16 times the font size.',
-                  type: 'all_true'
+                  type: 'all_true',
                 },
                 {
                   title:
                     'Exception: Human languages and scripts that do not make use of one or more of these text style properties in written text can conform using only the properties that exist for that combination of language and script.',
-                  type: 'exception'
-                }
+                  type: 'exception',
+                },
               ],
               title: 'Text Spacing',
-              url: 'https://www.w3.org/TR/WCAG21/#text-spacing'
+              url: 'https://www.w3.org/TR/WCAG21/#text-spacing',
             },
             {
               description:
@@ -1097,63 +1099,64 @@ module.exports = {
               notes: [
                 {
                   content:
-                    'Examples of additional content controlled by the user agent include browser tooltips created through use of the HTML title attribute.'
+                    'Examples of additional content controlled by the user agent include browser tooltips created through use of the HTML title attribute.',
                 },
                 {
                   content:
-                    'Custom tooltips, sub-menus, and other nonmodal popups that display on hover and focus are examples of additional content covered by this criterion.'
-                }
+                    'Custom tooltips, sub-menus, and other nonmodal popups that display on hover and focus are examples of additional content covered by this criterion.',
+                },
               ],
               ref_id: '1.4.13',
               references: [
                 {
                   title: 'How to Meet 1.4.13',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#content-on-hover-or-focus'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#content-on-hover-or-focus',
                 },
                 {
                   title: 'Understanding 1.4.13',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html',
+                },
               ],
               special_cases: [
                 {
                   description:
                     'A mechanism is available to dismiss the additional content without moving pointer hover or keyboard focus, unless the additional content communicates an input error or does not obscure or replace other content;',
                   title: 'Dismissable',
-                  type: 'all_true'
+                  type: 'all_true',
                 },
                 {
                   description:
                     'If pointer hover can trigger the additional content, then the pointer can be moved over the additional content without the additional content disappearing;',
                   title: 'Hoverable',
-                  type: 'all_true'
+                  type: 'all_true',
                 },
                 {
                   description:
                     'The additional content remains visible until the hover or focus trigger is removed, the user dismisses it, or its information is no longer valid.',
                   title: 'Persistent',
-                  type: 'all_true'
+                  type: 'all_true',
                 },
                 {
                   title:
                     'Exception: The visual presentation of the additional content is controlled by the user agent and is not modified by the author.',
-                  type: 'exception'
-                }
+                  type: 'exception',
+                },
               ],
               title: 'Content on Hover or Focus',
-              url: 'https://www.w3.org/TR/WCAG21/#content-on-hover-or-focus'
-            }
+              url: 'https://www.w3.org/TR/WCAG21/#content-on-hover-or-focus',
+            },
           ],
           title: 'Distinguishable',
-          url: 'https://www.w3.org/TR/WCAG21/#distinguishable'
-        }
+          url: 'https://www.w3.org/TR/WCAG21/#distinguishable',
+        },
       ],
       ref_id: '1',
       title: 'Perceivable',
-      url: 'https://www.w3.org/TR/WCAG21/#perceivable'
+      url: 'https://www.w3.org/TR/WCAG21/#perceivable',
     },
     {
-      description: 'User interface components and navigation must be operable.',
+      description:
+        'User interface components and navigation must be operable.',
       guidelines: [
         {
           description: 'Make all functionality available from a keyboard.',
@@ -1161,8 +1164,8 @@ module.exports = {
           references: [
             {
               title: 'Understanding Guideline 2.1',
-              url: 'https://www.w3.org/WAI/WCAG21/Understanding/keyboard-accessible.html'
-            }
+              url: 'https://www.w3.org/WAI/WCAG21/Understanding/keyboard-accessible.html',
+            },
           ],
           success_criteria: [
             {
@@ -1172,27 +1175,27 @@ module.exports = {
               notes: [
                 {
                   content:
-                    'This exception relates to the underlying function, not the input technique. For example, if using handwriting to enter text, the input technique (handwriting) requires path-dependent input but the underlying function (text input) does not.'
+                    'This exception relates to the underlying function, not the input technique. For example, if using handwriting to enter text, the input technique (handwriting) requires path-dependent input but the underlying function (text input) does not.',
                 },
                 {
                   content:
-                    'This does not forbid and should not discourage providing mouse input or other input methods in addition to keyboard operation.'
-                }
+                    'This does not forbid and should not discourage providing mouse input or other input methods in addition to keyboard operation.',
+                },
               ],
               ref_id: '2.1.1',
               references: [
                 {
                   title: 'How to Meet 2.1.1',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#keyboard'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#keyboard',
                 },
                 {
                   title: 'Understanding 2.1.1',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html',
+                },
               ],
               special_cases: null,
               title: 'Keyboard',
-              url: 'https://www.w3.org/TR/WCAG21/#keyboard'
+              url: 'https://www.w3.org/TR/WCAG21/#keyboard',
             },
             {
               description:
@@ -1201,23 +1204,23 @@ module.exports = {
               notes: [
                 {
                   content:
-                    'Since any content that does not meet this success criterion can interfere with a user’s ability to use the whole page, all content on the Web page (whether it is used to meet other success criteria or not) must meet this success criterion. See Conformance Requirement 5: Non-Interference. (https://www.w3.org/TR/WCAG21/#cc5)'
-                }
+                    'Since any content that does not meet this success criterion can interfere with a user’s ability to use the whole page, all content on the Web page (whether it is used to meet other success criteria or not) must meet this success criterion. See Conformance Requirement 5: Non-Interference. (https://www.w3.org/TR/WCAG21/#cc5)',
+                },
               ],
               ref_id: '2.1.2',
               references: [
                 {
                   title: 'How to Meet 2.1.2',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#no-keyboard-trap'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#no-keyboard-trap',
                 },
                 {
                   title: 'Understanding 2.1.2',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html',
+                },
               ],
               special_cases: null,
               title: 'No Keyboard Trap',
-              url: 'https://www.w3.org/TR/WCAG21/#no-keyboard-trap'
+              url: 'https://www.w3.org/TR/WCAG21/#no-keyboard-trap',
             },
             {
               description:
@@ -1228,16 +1231,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 2.1.3',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#keyboard-no-exception'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#keyboard-no-exception',
                 },
                 {
                   title: 'Understanding 2.1.3',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/keyboard-no-exception.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/keyboard-no-exception.html',
+                },
               ],
               special_cases: null,
               title: 'Keyboard (No Exception)',
-              url: 'https://www.w3.org/TR/WCAG21/#keyboard-no-exception'
+              url: 'https://www.w3.org/TR/WCAG21/#keyboard-no-exception',
             },
             {
               description:
@@ -1248,39 +1251,39 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 2.1.4',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#character-key-shortcuts'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#character-key-shortcuts',
                 },
                 {
                   title: 'Understanding 2.1.4',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html',
+                },
               ],
               special_cases: [
                 {
                   description:
                     'A mechanism is available to turn the shortcut off;',
                   title: 'Turn off',
-                  type: 'at_least_one'
+                  type: 'at_least_one',
                 },
                 {
                   description:
                     'A mechanism is available to remap the shortcut to use one or more non-printable keyboard characters (e.g. Ctrl, Alt, etc);',
                   title: 'Remap',
-                  type: 'at_least_one'
+                  type: 'at_least_one',
                 },
                 {
                   description:
                     'The keyboard shortcut for a user interface component is only active when that component has focus.',
                   title: 'Active only on focus',
-                  type: 'at_least_one'
-                }
+                  type: 'at_least_one',
+                },
               ],
               title: 'Character Key Shortcuts',
-              url: 'https://www.w3.org/TR/WCAG21/#character-key-shortcuts'
-            }
+              url: 'https://www.w3.org/TR/WCAG21/#character-key-shortcuts',
+            },
           ],
           title: 'Keyboard Accessible',
-          url: 'https://www.w3.org/TR/WCAG21/#keyboard-accessible'
+          url: 'https://www.w3.org/TR/WCAG21/#keyboard-accessible',
         },
         {
           description: 'Provide users enough time to read and use content.',
@@ -1288,8 +1291,8 @@ module.exports = {
           references: [
             {
               title: 'Understanding Guideline 2.2',
-              url: 'https://www.w3.org/WAI/WCAG21/Understanding/enough-time.html'
-            }
+              url: 'https://www.w3.org/WAI/WCAG21/Understanding/enough-time.html',
+            },
           ],
           success_criteria: [
             {
@@ -1299,59 +1302,59 @@ module.exports = {
               notes: [
                 {
                   content:
-                    'This success criterion helps ensure that users can complete tasks without unexpected changes in content or context that are a result of a time limit. This success criterion should be considered in conjunction with Success Criterion 3.2.1 (https://www.w3.org/TR/WCAG21/#on-focus), which puts limits on changes of content or context as a result of user action.'
-                }
+                    'This success criterion helps ensure that users can complete tasks without unexpected changes in content or context that are a result of a time limit. This success criterion should be considered in conjunction with Success Criterion 3.2.1 (https://www.w3.org/TR/WCAG21/#on-focus), which puts limits on changes of content or context as a result of user action.',
+                },
               ],
               ref_id: '2.2.1',
               references: [
                 {
                   title: 'How to Meet 2.2.1',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#timing-adjustable'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#timing-adjustable',
                 },
                 {
                   title: 'Understanding 2.2.1',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable.html',
+                },
               ],
               special_cases: [
                 {
                   description:
                     'The user is allowed to turn off the time limit before encountering it; or',
                   title: 'Turn off',
-                  type: 'at_least_one'
+                  type: 'at_least_one',
                 },
                 {
                   description:
                     'The user is allowed to adjust the time limit before encountering it over a wide range that is at least ten times the length of the default setting; or',
                   title: 'Adjust',
-                  type: 'at_least_one'
+                  type: 'at_least_one',
                 },
                 {
                   description:
                     'The user is warned before time expires and given at least 20 seconds to extend the time limit with a simple action (for example, ‘press the space bar’), and the user is allowed to extend the time limit at least ten times; or',
                   title: 'Extend',
-                  type: 'at_least_one'
+                  type: 'at_least_one',
                 },
                 {
                   description:
                     'The time limit is a required part of a real-time event (for example, an auction), and no alternative to the time limit is possible; or',
                   title: 'Real-time Exception',
-                  type: 'at_least_one'
+                  type: 'at_least_one',
                 },
                 {
                   description:
                     'The time limit is essential and extending it would invalidate the activity; or',
                   title: 'Essential Exception',
-                  type: 'at_least_one'
+                  type: 'at_least_one',
                 },
                 {
                   description: 'The time limit is longer than 20 hours.',
                   title: '20 Hour Exception',
-                  type: 'at_least_one'
-                }
+                  type: 'at_least_one',
+                },
               ],
               title: 'Timing Adjustable',
-              url: 'https://www.w3.org/TR/WCAG21/#timing-adjustable'
+              url: 'https://www.w3.org/TR/WCAG21/#timing-adjustable',
             },
             {
               description:
@@ -1360,48 +1363,48 @@ module.exports = {
               notes: [
                 {
                   content:
-                    'For requirements related to flickering or flashing content, refer to Guideline 2.3. (https://www.w3.org/TR/WCAG21/#seizures-and-physical-reactions)'
+                    'For requirements related to flickering or flashing content, refer to Guideline 2.3. (https://www.w3.org/TR/WCAG21/#seizures-and-physical-reactions)',
                 },
                 {
                   content:
-                    'Since any content that does not meet this success criterion can interfere with a user’s ability to use the whole page, all content on the Web page (whether it is used to meet other success criteria or not) must meet this success criterion. See Conformance Requirement 5: Non-Interference (https://www.w3.org/TR/WCAG21/#cc5)'
+                    'Since any content that does not meet this success criterion can interfere with a user’s ability to use the whole page, all content on the Web page (whether it is used to meet other success criteria or not) must meet this success criterion. See Conformance Requirement 5: Non-Interference (https://www.w3.org/TR/WCAG21/#cc5)',
                 },
                 {
                   content:
-                    'Content that is updated periodically by software or that is streamed to the user agent is not required to preserve or present information that is generated or received between the initiation of the pause and resuming presentation, as this may not be technically possible, and in many situations could be misleading to do so.'
+                    'Content that is updated periodically by software or that is streamed to the user agent is not required to preserve or present information that is generated or received between the initiation of the pause and resuming presentation, as this may not be technically possible, and in many situations could be misleading to do so.',
                 },
                 {
                   content:
-                    'An animation that occurs as part of a preload phase or similar situation can be considered essential if interaction cannot occur during that phase for all users and if not indicating progress could confuse users or cause them to think that content was frozen or broken.'
-                }
+                    'An animation that occurs as part of a preload phase or similar situation can be considered essential if interaction cannot occur during that phase for all users and if not indicating progress could confuse users or cause them to think that content was frozen or broken.',
+                },
               ],
               ref_id: '2.2.2',
               references: [
                 {
                   title: 'How to Meet 2.2.2',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#pause-stop-hide'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#pause-stop-hide',
                 },
                 {
                   title: 'Understanding 2.2.2',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html',
+                },
               ],
               special_cases: [
                 {
                   description:
                     'For any moving, blinking or scrolling information that (1) starts automatically, (2) lasts more than five seconds, and (3) is presented in parallel with other content, there is a mechanism for the user to pause, stop, or hide it unless the movement, blinking, or scrolling is part of an activity where it is essential; and',
                   title: 'Moving, blinking, scrolling',
-                  type: 'all_true'
+                  type: 'all_true',
                 },
                 {
                   description:
                     'For any auto-updating information that (1) starts automatically and (2) is presented in parallel with other content, there is a mechanism for the user to pause, stop, or hide it or to control the frequency of the update unless the auto-updating is part of an activity where it is essential.',
                   title: 'Auto-updating',
-                  type: 'all_true'
-                }
+                  type: 'all_true',
+                },
               ],
               title: 'Pause, Stop, Hide',
-              url: 'https://www.w3.org/TR/WCAG21/#pause-stop-hide'
+              url: 'https://www.w3.org/TR/WCAG21/#pause-stop-hide',
             },
             {
               description:
@@ -1412,16 +1415,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 2.2.3',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#no-timing'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#no-timing',
                 },
                 {
                   title: 'Understanding 2.2.3',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/no-timing.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/no-timing.html',
+                },
               ],
               special_cases: null,
               title: 'No Timing',
-              url: 'https://www.w3.org/TR/WCAG21/#no-timing'
+              url: 'https://www.w3.org/TR/WCAG21/#no-timing',
             },
             {
               description:
@@ -1432,16 +1435,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 2.2.4',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#interruptions'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#interruptions',
                 },
                 {
                   title: 'Understanding 2.2.4',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/interruptions.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/interruptions.html',
+                },
               ],
               special_cases: null,
               title: 'Interruptions',
-              url: 'https://www.w3.org/TR/WCAG21/#interruptions'
+              url: 'https://www.w3.org/TR/WCAG21/#interruptions',
             },
             {
               description:
@@ -1452,16 +1455,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 2.2.5',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#re-authenticating'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#re-authenticating',
                 },
                 {
                   title: 'Understanding 2.2.5',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/re-authenticating.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/re-authenticating.html',
+                },
               ],
               special_cases: null,
               title: 'Re-authenticating',
-              url: 'https://www.w3.org/TR/WCAG21/#re-authenticating'
+              url: 'https://www.w3.org/TR/WCAG21/#re-authenticating',
             },
             {
               description:
@@ -1470,27 +1473,27 @@ module.exports = {
               notes: [
                 {
                   content:
-                    'Privacy regulations may require explicit user consent before user identification has been authenticated and before user data is preserved. In cases where the user is a minor, explicit consent may not be solicited in most jurisdictions, countries or regions. Consultation with privacy professionals and legal counsel is advised when considering data preservation as an approach to satisfy this success criterion.'
-                }
+                    'Privacy regulations may require explicit user consent before user identification has been authenticated and before user data is preserved. In cases where the user is a minor, explicit consent may not be solicited in most jurisdictions, countries or regions. Consultation with privacy professionals and legal counsel is advised when considering data preservation as an approach to satisfy this success criterion.',
+                },
               ],
               ref_id: '2.2.6',
               references: [
                 {
                   title: 'How to Meet 2.2.6',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#timeouts'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#timeouts',
                 },
                 {
                   title: 'Understanding 2.2.6',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/timeouts.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/timeouts.html',
+                },
               ],
               special_cases: null,
               title: 'Timeouts',
-              url: 'https://www.w3.org/TR/WCAG21/#timeouts'
-            }
+              url: 'https://www.w3.org/TR/WCAG21/#timeouts',
+            },
           ],
           title: 'Enough Time',
-          url: 'https://www.w3.org/TR/WCAG21/#enough-time'
+          url: 'https://www.w3.org/TR/WCAG21/#enough-time',
         },
         {
           description:
@@ -1499,8 +1502,8 @@ module.exports = {
           references: [
             {
               title: 'Understanding Guideline 2.3',
-              url: 'https://www.w3.org/WAI/WCAG21/Understanding/seizures-and-physical-reactions.html'
-            }
+              url: 'https://www.w3.org/WAI/WCAG21/Understanding/seizures-and-physical-reactions.html',
+            },
           ],
           success_criteria: [
             {
@@ -1510,23 +1513,23 @@ module.exports = {
               notes: [
                 {
                   content:
-                    'Since any content that does not meet this success criterion can interfere with a user’s ability to use the whole page, all content on the Web page (whether it is used to meet other success criteria or not) must meet this success criterion. See Conformance Requirement 5: Non-Interference. (https://www.w3.org/TR/WCAG21/#cc5)'
-                }
+                    'Since any content that does not meet this success criterion can interfere with a user’s ability to use the whole page, all content on the Web page (whether it is used to meet other success criteria or not) must meet this success criterion. See Conformance Requirement 5: Non-Interference. (https://www.w3.org/TR/WCAG21/#cc5)',
+                },
               ],
               ref_id: '2.3.1',
               references: [
                 {
                   title: 'How to Meet 2.3.1',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#three-flashes-or-below-threshold'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#three-flashes-or-below-threshold',
                 },
                 {
                   title: 'Understanding 2.3.1',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html',
+                },
               ],
               special_cases: null,
               title: 'Three Flashes or Below Threshold',
-              url: 'https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold'
+              url: 'https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold',
             },
             {
               description:
@@ -1537,16 +1540,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 2.3.2',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#three-flashes'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#three-flashes',
                 },
                 {
                   title: 'Understanding 2.3.2',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/three-flashes.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/three-flashes.html',
+                },
               ],
               special_cases: null,
               title: 'Three Flashes',
-              url: 'https://www.w3.org/TR/WCAG21/#three-flashes'
+              url: 'https://www.w3.org/TR/WCAG21/#three-flashes',
             },
             {
               description:
@@ -1557,20 +1560,20 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 2.3.3',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#animation-from-interactions'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#animation-from-interactions',
                 },
                 {
                   title: 'Understanding 2.3.3',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions.html',
+                },
               ],
               special_cases: null,
               title: 'Animation from Interactions',
-              url: 'https://www.w3.org/TR/WCAG21/#animation-from-interactions'
-            }
+              url: 'https://www.w3.org/TR/WCAG21/#animation-from-interactions',
+            },
           ],
           title: 'Seizures',
-          url: 'https://www.w3.org/TR/WCAG21/#seizures-and-physical-reactions'
+          url: 'https://www.w3.org/TR/WCAG21/#seizures-and-physical-reactions',
         },
         {
           description:
@@ -1579,8 +1582,8 @@ module.exports = {
           references: [
             {
               title: 'Understanding Guideline 2.4',
-              url: 'https://www.w3.org/WAI/WCAG21/Understanding/navigable.html'
-            }
+              url: 'https://www.w3.org/WAI/WCAG21/Understanding/navigable.html',
+            },
           ],
           success_criteria: [
             {
@@ -1592,16 +1595,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 2.4.1',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#bypass-blocks'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#bypass-blocks',
                 },
                 {
                   title: 'Understanding 2.4.1',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html',
+                },
               ],
               special_cases: null,
               title: 'Bypass Blocks',
-              url: 'https://www.w3.org/TR/WCAG21/#bypass-blocks'
+              url: 'https://www.w3.org/TR/WCAG21/#bypass-blocks',
             },
             {
               description:
@@ -1612,16 +1615,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 2.4.2',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#page-titled'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#page-titled',
                 },
                 {
                   title: 'Understanding 2.4.2',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html',
+                },
               ],
               special_cases: null,
               title: 'Page Titled',
-              url: 'https://www.w3.org/TR/WCAG21/#page-titled'
+              url: 'https://www.w3.org/TR/WCAG21/#page-titled',
             },
             {
               description:
@@ -1632,16 +1635,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 2.4.3',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#focus-order'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#focus-order',
                 },
                 {
                   title: 'Understanding 2.4.3',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html',
+                },
               ],
               special_cases: null,
               title: 'Focus Order',
-              url: 'https://www.w3.org/TR/WCAG21/#focus-order'
+              url: 'https://www.w3.org/TR/WCAG21/#focus-order',
             },
             {
               description:
@@ -1652,16 +1655,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 2.4.4',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#link-purpose-in-context'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#link-purpose-in-context',
                 },
                 {
                   title: 'Understanding 2.4.4',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html',
+                },
               ],
               special_cases: null,
               title: 'Link Purpose (In Context)',
-              url: 'https://www.w3.org/TR/WCAG21/#link-purpose-in-context'
+              url: 'https://www.w3.org/TR/WCAG21/#link-purpose-in-context',
             },
             {
               description:
@@ -1672,16 +1675,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 2.4.5',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#multiple-ways'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#multiple-ways',
                 },
                 {
                   title: 'Understanding 2.4.5',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/multiple-ways.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/multiple-ways.html',
+                },
               ],
               special_cases: null,
               title: 'Multiple Ways',
-              url: 'https://www.w3.org/TR/WCAG21/#link-purpose-in-context'
+              url: 'https://www.w3.org/TR/WCAG21/#link-purpose-in-context',
             },
             {
               description: 'Headings and labels describe topic or purpose.',
@@ -1691,16 +1694,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 2.4.6',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#headings-and-labels'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#headings-and-labels',
                 },
                 {
                   title: 'Understanding 2.4.6',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html',
+                },
               ],
               special_cases: null,
               title: 'Headings and Labels',
-              url: 'https://www.w3.org/TR/WCAG21/#headings-and-labels'
+              url: 'https://www.w3.org/TR/WCAG21/#headings-and-labels',
             },
             {
               description:
@@ -1711,16 +1714,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 2.4.7',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#focus-visible'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#focus-visible',
                 },
                 {
                   title: 'Understanding 2.4.7',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html',
+                },
               ],
               special_cases: null,
               title: 'Focus Visible',
-              url: 'https://www.w3.org/TR/WCAG21/#focus-visible'
+              url: 'https://www.w3.org/TR/WCAG21/#focus-visible',
             },
             {
               description:
@@ -1731,16 +1734,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 2.4.8',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#location'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#location',
                 },
                 {
                   title: 'Understanding 2.4.8',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/location.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/location.html',
+                },
               ],
               special_cases: null,
               title: 'Location',
-              url: 'https://www.w3.org/TR/WCAG21/#location'
+              url: 'https://www.w3.org/TR/WCAG21/#location',
             },
             {
               description:
@@ -1751,48 +1754,49 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 2.4.9',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#link-purpose-link-only'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#link-purpose-link-only',
                 },
                 {
                   title: 'Understanding 2.4.9',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html',
+                },
               ],
               special_cases: null,
               title: 'Link Purpose (Link Only)',
-              url: 'https://www.w3.org/TR/WCAG21/#link-purpose-link-only'
+              url: 'https://www.w3.org/TR/WCAG21/#link-purpose-link-only',
             },
             {
-              description: 'Section headings are used to organize the content.',
+              description:
+                'Section headings are used to organize the content.',
               level: 'AAA',
               notes: [
                 {
                   content:
-                    '‘Heading’ is used in its general sense and includes titles and other ways to add a heading to different types of content.'
+                    '‘Heading’ is used in its general sense and includes titles and other ways to add a heading to different types of content.',
                 },
                 {
                   content:
-                    'This success criterion covers sections within writing, not user interface components. User Interface components are covered under Success Criterion 4.1.2. (https://www.w3.org/TR/WCAG21/#name-role-value)'
-                }
+                    'This success criterion covers sections within writing, not user interface components. User Interface components are covered under Success Criterion 4.1.2. (https://www.w3.org/TR/WCAG21/#name-role-value)',
+                },
               ],
               ref_id: '2.4.10',
               references: [
                 {
                   title: 'How to Meet 2.4.10',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#section-headings'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#section-headings',
                 },
                 {
                   title: 'Understanding 2.4.10',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/section-headings.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/section-headings.html',
+                },
               ],
               special_cases: null,
               title: 'Section Headings',
-              url: 'https://www.w3.org/TR/WCAG21/#section-headings'
-            }
+              url: 'https://www.w3.org/TR/WCAG21/#section-headings',
+            },
           ],
           title: 'Navigable',
-          url: 'https://www.w3.org/TR/WCAG21/#navigable'
+          url: 'https://www.w3.org/TR/WCAG21/#navigable',
         },
         {
           description:
@@ -1801,8 +1805,8 @@ module.exports = {
           references: [
             {
               title: 'Understanding Guideline 2.5',
-              url: 'https://www.w3.org/WAI/WCAG21/Understanding/input-modalities.html'
-            }
+              url: 'https://www.w3.org/WAI/WCAG21/Understanding/input-modalities.html',
+            },
           ],
           success_criteria: [
             {
@@ -1812,23 +1816,23 @@ module.exports = {
               notes: [
                 {
                   content:
-                    'This requirement applies to web content that interprets pointer actions (i.e. this does not apply to actions that are required to operate the user agent or assistive technology).'
-                }
+                    'This requirement applies to web content that interprets pointer actions (i.e. this does not apply to actions that are required to operate the user agent or assistive technology).',
+                },
               ],
               ref_id: '2.5.1',
               references: [
                 {
                   title: 'How to Meet 2.5.1',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#pointer-gestures'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#pointer-gestures',
                 },
                 {
                   title: 'Understanding 2.5.1',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/pointer-gestures.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/pointer-gestures.html',
+                },
               ],
               special_cases: null,
               title: 'Pointer Gestures',
-              url: 'https://www.w3.org/TR/WCAG21/#pointer-gestures'
+              url: 'https://www.w3.org/TR/WCAG21/#pointer-gestures',
             },
             {
               description:
@@ -1837,52 +1841,52 @@ module.exports = {
               notes: [
                 {
                   content:
-                    'Functions that emulate a keyboard or numeric keypad key press are considered essential.'
+                    'Functions that emulate a keyboard or numeric keypad key press are considered essential.',
                 },
                 {
                   content:
-                    'This requirement applies to web content that interprets pointer actions (i.e. this does not apply to actions that are required to operate the user agent or assistive technology).'
-                }
+                    'This requirement applies to web content that interprets pointer actions (i.e. this does not apply to actions that are required to operate the user agent or assistive technology).',
+                },
               ],
               ref_id: '2.5.2',
               references: [
                 {
                   title: 'How to Meet 2.5.2',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#pointer-cancellation'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#pointer-cancellation',
                 },
                 {
                   title: 'Understanding 2.5.2',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html',
+                },
               ],
               special_cases: [
                 {
                   description:
                     'The down-event of the pointer is not used to execute any part of the function;',
                   title: 'No Down-Event',
-                  type: 'at_least_one'
+                  type: 'at_least_one',
                 },
                 {
                   description:
                     'Completion of the function is on the up-event, and a mechanism is available to abort the function before completion or to undo the function after completion;',
                   title: 'Abort or Undo',
-                  type: 'at_least_one'
+                  type: 'at_least_one',
                 },
                 {
                   description:
                     'The up-event reverses any outcome of the preceding down-event;',
                   title: 'Up Reversal',
-                  type: 'at_least_one'
+                  type: 'at_least_one',
                 },
                 {
                   description:
                     'Completing the function on the down-event is essential.',
                   title: 'Essential',
-                  type: 'at_least_one'
-                }
+                  type: 'at_least_one',
+                },
               ],
               title: 'Pointer Cancellation',
-              url: 'https://www.w3.org/TR/WCAG21/#pointer-cancellation'
+              url: 'https://www.w3.org/TR/WCAG21/#pointer-cancellation',
             },
             {
               description:
@@ -1891,23 +1895,23 @@ module.exports = {
               notes: [
                 {
                   content:
-                    'A best practice is to have the text of the label at the start of the name.'
-                }
+                    'A best practice is to have the text of the label at the start of the name.',
+                },
               ],
               ref_id: '2.5.3',
               references: [
                 {
                   title: 'How to Meet 2.5.3',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#label-in-name'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#label-in-name',
                 },
                 {
                   title: 'Understanding 2.5.3',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html',
+                },
               ],
               special_cases: null,
               title: 'Label in Name',
-              url: 'https://www.w3.org/TR/WCAG21/#label-in-name'
+              url: 'https://www.w3.org/TR/WCAG21/#label-in-name',
             },
             {
               description:
@@ -1918,29 +1922,29 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 2.5.4',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#motion-actuation'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#motion-actuation',
                 },
                 {
                   title: 'Understanding 2.5.4',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html',
+                },
               ],
               special_cases: [
                 {
                   description:
                     'The motion is used to operate functionality through an accessibility supported interface;',
                   title: 'Supported Interface',
-                  type: 'exception'
+                  type: 'exception',
                 },
                 {
                   description:
                     'The motion is essential for the function and doing so would invalidate the activity.',
                   title: 'Essential',
-                  type: 'exception'
-                }
+                  type: 'exception',
+                },
               ],
               title: 'Motion Actuation',
-              url: 'https://www.w3.org/TR/WCAG21/#motion-actuation'
+              url: 'https://www.w3.org/TR/WCAG21/#motion-actuation',
             },
             {
               description:
@@ -1951,40 +1955,41 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 2.5.5',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#target-size'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#target-size',
                 },
                 {
                   title: 'Understanding 2.5.5',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/target-size.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/target-size.html',
+                },
               ],
               special_cases: [
                 {
                   description:
                     'The target is available through an equivalent link or control on the same page that is at least 44 by 44 CSS pixels;',
                   title: 'Equivalent',
-                  type: 'exception'
+                  type: 'exception',
                 },
                 {
-                  description: 'The target is in a sentence or block of text;',
+                  description:
+                    'The target is in a sentence or block of text;',
                   title: 'Inline',
-                  type: 'exception'
+                  type: 'exception',
                 },
                 {
                   description:
                     'The size of the target is determined by the user agent and is not modified by the author;',
                   title: 'User Agent Control',
-                  type: 'exception'
+                  type: 'exception',
                 },
                 {
                   description:
                     'A particular presentation of the target is essential to the information being conveyed.',
                   title: 'Essential',
-                  type: 'exception'
-                }
+                  type: 'exception',
+                },
               ],
               title: 'Target Size',
-              url: 'https://www.w3.org/TR/WCAG21/#target-size'
+              url: 'https://www.w3.org/TR/WCAG21/#target-size',
             },
             {
               description:
@@ -1995,25 +2000,25 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 2.5.6',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#concurrent-input-mechanisms'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#concurrent-input-mechanisms',
                 },
                 {
                   title: 'Understanding 2.5.6',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/concurrent-input-mechanisms.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/concurrent-input-mechanisms.html',
+                },
               ],
               special_cases: null,
               title: 'Concurrent Input Mechanisms',
-              url: 'https://www.w3.org/TR/WCAG21/#concurrent-input-mechanisms'
-            }
+              url: 'https://www.w3.org/TR/WCAG21/#concurrent-input-mechanisms',
+            },
           ],
           title: 'Input Modalities',
-          url: 'https://www.w3.org/TR/WCAG21/#input-modalities'
-        }
+          url: 'https://www.w3.org/TR/WCAG21/#input-modalities',
+        },
       ],
       ref_id: '2',
       title: 'Operable',
-      url: 'https://www.w3.org/TR/WCAG21/#operable'
+      url: 'https://www.w3.org/TR/WCAG21/#operable',
     },
     {
       description:
@@ -2025,8 +2030,8 @@ module.exports = {
           references: [
             {
               title: 'Understanding Guideline 3.1',
-              url: 'https://www.w3.org/WAI/WCAG21/Understanding/readable.html'
-            }
+              url: 'https://www.w3.org/WAI/WCAG21/Understanding/readable.html',
+            },
           ],
           success_criteria: [
             {
@@ -2038,16 +2043,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 3.1.1',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#language-of-page'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#language-of-page',
                 },
                 {
                   title: 'Understanding 3.1.1',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html',
+                },
               ],
               special_cases: null,
               title: 'Language of Page',
-              url: 'https://www.w3.org/TR/WCAG21/#language-of-page'
+              url: 'https://www.w3.org/TR/WCAG21/#language-of-page',
             },
             {
               description:
@@ -2058,16 +2063,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 3.1.2',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#language-of-parts'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#language-of-parts',
                 },
                 {
                   title: 'Understanding 3.1.2',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html',
+                },
               ],
               special_cases: null,
               title: 'Language of Parts',
-              url: 'https://www.w3.org/TR/WCAG21/#language-of-parts'
+              url: 'https://www.w3.org/TR/WCAG21/#language-of-parts',
             },
             {
               description:
@@ -2078,16 +2083,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 3.1.3',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#unusual-words'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#unusual-words',
                 },
                 {
                   title: 'Understanding 3.1.3',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/unusual-words.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/unusual-words.html',
+                },
               ],
               special_cases: null,
               title: 'Unusual Words',
-              url: 'https://www.w3.org/TR/WCAG21/#unusual-words'
+              url: 'https://www.w3.org/TR/WCAG21/#unusual-words',
             },
             {
               description:
@@ -2098,16 +2103,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 3.1.4',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#abbreviations'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#abbreviations',
                 },
                 {
                   title: 'Understanding 3.1.4',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/abbreviations.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/abbreviations.html',
+                },
               ],
               special_cases: null,
               title: 'Abbreviations',
-              url: 'https://www.w3.org/TR/WCAG21/#abbreviations'
+              url: 'https://www.w3.org/TR/WCAG21/#abbreviations',
             },
             {
               description:
@@ -2118,16 +2123,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 3.1.5',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#reading-level'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#reading-level',
                 },
                 {
                   title: 'Understanding 3.1.5',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/reading-level.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/reading-level.html',
+                },
               ],
               special_cases: null,
               title: 'Reading Level',
-              url: 'https://www.w3.org/TR/WCAG21/#reading-level'
+              url: 'https://www.w3.org/TR/WCAG21/#reading-level',
             },
             {
               description:
@@ -2138,29 +2143,30 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 3.1.6',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#pronunciation'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#pronunciation',
                 },
                 {
                   title: 'Understanding 3.1.6',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/pronunciation.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/pronunciation.html',
+                },
               ],
               special_cases: null,
               title: 'Pronunciation',
-              url: 'https://www.w3.org/TR/WCAG21/#pronunciation'
-            }
+              url: 'https://www.w3.org/TR/WCAG21/#pronunciation',
+            },
           ],
           title: 'Readable',
-          url: 'https://www.w3.org/TR/WCAG21/#readable'
+          url: 'https://www.w3.org/TR/WCAG21/#readable',
         },
         {
-          description: 'Make Web pages appear and operate in predictable ways.',
+          description:
+            'Make Web pages appear and operate in predictable ways.',
           ref_id: '3.2',
           references: [
             {
               title: 'Understanding Guideline 3.2',
-              url: 'https://www.w3.org/WAI/WCAG21/Understanding/predictable.html'
-            }
+              url: 'https://www.w3.org/WAI/WCAG21/Understanding/predictable.html',
+            },
           ],
           success_criteria: [
             {
@@ -2172,16 +2178,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 3.2.1',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#on-focus'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#on-focus',
                 },
                 {
                   title: 'Understanding 3.2.1',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/on-focus.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/on-focus.html',
+                },
               ],
               special_cases: null,
               title: 'On Focus',
-              url: 'https://www.w3.org/TR/WCAG21/#on-focus'
+              url: 'https://www.w3.org/TR/WCAG21/#on-focus',
             },
             {
               description:
@@ -2192,16 +2198,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 3.2.2',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#on-input'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#on-input',
                 },
                 {
                   title: 'Understanding 3.2.2',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/on-input.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/on-input.html',
+                },
               ],
               special_cases: null,
               title: 'On Input',
-              url: 'https://www.w3.org/TR/WCAG21/#on-input'
+              url: 'https://www.w3.org/TR/WCAG21/#on-input',
             },
             {
               description:
@@ -2212,16 +2218,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 3.2.3',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#consistent-navigation'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#consistent-navigation',
                 },
                 {
                   title: 'Understanding 3.2.3',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/consistent-navigation.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/consistent-navigation.html',
+                },
               ],
               special_cases: null,
               title: 'Consistent Navigation',
-              url: 'https://www.w3.org/TR/WCAG21/#consistent-navigation'
+              url: 'https://www.w3.org/TR/WCAG21/#consistent-navigation',
             },
             {
               description:
@@ -2232,16 +2238,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 3.2.4',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#consistent-identification'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#consistent-identification',
                 },
                 {
                   title: 'Understanding 3.2.4',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/consistent-identification.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/consistent-identification.html',
+                },
               ],
               special_cases: null,
               title: 'Consistent Identification',
-              url: 'https://www.w3.org/TR/WCAG21/#consistent-identification'
+              url: 'https://www.w3.org/TR/WCAG21/#consistent-identification',
             },
             {
               description:
@@ -2252,20 +2258,20 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 3.2.5',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#change-on-request'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#change-on-request',
                 },
                 {
                   title: 'Understanding 3.2.5',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/change-on-request.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/change-on-request.html',
+                },
               ],
               special_cases: null,
               title: 'Change on Request',
-              url: 'https://www.w3.org/TR/WCAG21/#change-on-request'
-            }
+              url: 'https://www.w3.org/TR/WCAG21/#change-on-request',
+            },
           ],
           title: 'Predictable',
-          url: 'https://www.w3.org/TR/WCAG21/#predictable'
+          url: 'https://www.w3.org/TR/WCAG21/#predictable',
         },
         {
           description: 'Help users avoid and correct mistakes.',
@@ -2273,8 +2279,8 @@ module.exports = {
           references: [
             {
               title: 'Understanding Guideline 3.3',
-              url: 'https://www.w3.org/WAI/WCAG21/Understanding/input-assistance.html'
-            }
+              url: 'https://www.w3.org/WAI/WCAG21/Understanding/input-assistance.html',
+            },
           ],
           success_criteria: [
             {
@@ -2286,16 +2292,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 3.3.1',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#error-identification'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#error-identification',
                 },
                 {
                   title: 'Understanding 3.3.1',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html',
+                },
               ],
               special_cases: null,
               title: 'Error Identification',
-              url: 'https://www.w3.org/TR/WCAG21/#error-identification'
+              url: 'https://www.w3.org/TR/WCAG21/#error-identification',
             },
             {
               description:
@@ -2306,16 +2312,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 3.3.2',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#labels-or-instructions'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#labels-or-instructions',
                 },
                 {
                   title: 'Understanding 3.3.2',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html',
+                },
               ],
               special_cases: null,
               title: 'Labels or Instructions',
-              url: 'https://www.w3.org/TR/WCAG21/#labels-or-instructions'
+              url: 'https://www.w3.org/TR/WCAG21/#labels-or-instructions',
             },
             {
               description:
@@ -2326,16 +2332,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 3.3.3',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#error-suggestion'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#error-suggestion',
                 },
                 {
                   title: 'Understanding 3.3.3',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html',
+                },
               ],
               special_cases: null,
               title: 'Error Suggestion',
-              url: 'https://www.w3.org/TR/WCAG21/#error-suggestion'
+              url: 'https://www.w3.org/TR/WCAG21/#error-suggestion',
             },
             {
               description:
@@ -2346,34 +2352,34 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 3.3.4',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#error-prevention-legal-financial-data'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#error-prevention-legal-financial-data',
                 },
                 {
                   title: 'Understanding 3.3.4',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/error-prevention-legal-financial-data.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/error-prevention-legal-financial-data.html',
+                },
               ],
               special_cases: [
                 {
                   description: 'Submissions are reversible.',
                   title: 'Reversible',
-                  type: 'at_least_one'
+                  type: 'at_least_one',
                 },
                 {
                   description:
                     'Data entered by the user is checked for input errors and the user is provided an opportunity to correct them.',
                   title: 'Checked',
-                  type: 'at_least_one'
+                  type: 'at_least_one',
                 },
                 {
                   description:
                     'A mechanism is available for reviewing, confirming, and correcting information before finalizing the submission.',
                   title: 'Confirmed',
-                  type: 'at_least_one'
-                }
+                  type: 'at_least_one',
+                },
               ],
               title: 'Error Prevention (Legal, Financial, Data)',
-              url: 'https://www.w3.org/TR/WCAG21/#error-prevention-legal-financial-data'
+              url: 'https://www.w3.org/TR/WCAG21/#error-prevention-legal-financial-data',
             },
             {
               description: 'Context-sensitive help is available.',
@@ -2383,16 +2389,16 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 3.3.5',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#help'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#help',
                 },
                 {
                   title: 'Understanding 3.3.5',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/help.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/help.html',
+                },
               ],
               special_cases: null,
               title: 'Help',
-              url: 'https://www.w3.org/TR/WCAG21/#help'
+              url: 'https://www.w3.org/TR/WCAG21/#help',
             },
             {
               description:
@@ -2403,43 +2409,43 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 3.3.6',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#error-prevention-all'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#error-prevention-all',
                 },
                 {
                   title: 'Understanding 3.3.6',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/error-prevention-all.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/error-prevention-all.html',
+                },
               ],
               special_cases: [
                 {
                   description: 'Submissions are reversible.',
                   title: 'Reversible',
-                  type: 'at_least_one'
+                  type: 'at_least_one',
                 },
                 {
                   description:
                     'Data entered by the user is checked for input errors and the user is provided an opportunity to correct them.',
                   title: 'Checked',
-                  type: 'at_least_one'
+                  type: 'at_least_one',
                 },
                 {
                   description:
                     'A mechanism is available for reviewing, confirming, and correcting information before finalizing the submission.',
                   title: 'Confirmed',
-                  type: 'at_least_one'
-                }
+                  type: 'at_least_one',
+                },
               ],
               title: 'Error Prevention (All)',
-              url: 'https://www.w3.org/TR/WCAG21/#error-prevention-all'
-            }
+              url: 'https://www.w3.org/TR/WCAG21/#error-prevention-all',
+            },
           ],
           title: 'Input Assistance',
-          url: 'https://www.w3.org/TR/WCAG21/#input-assistance'
-        }
+          url: 'https://www.w3.org/TR/WCAG21/#input-assistance',
+        },
       ],
       ref_id: '3',
       title: 'Understandable',
-      url: 'https://www.w3.org/TR/WCAG21/#understandable'
+      url: 'https://www.w3.org/TR/WCAG21/#understandable',
     },
     {
       description:
@@ -2452,8 +2458,8 @@ module.exports = {
           references: [
             {
               title: 'Understanding Guideline 4.1',
-              url: 'https://www.w3.org/WAI/WCAG21/Understanding/compatible.html'
-            }
+              url: 'https://www.w3.org/WAI/WCAG21/Understanding/compatible.html',
+            },
           ],
           success_criteria: [
             {
@@ -2463,23 +2469,23 @@ module.exports = {
               notes: [
                 {
                   content:
-                    'Start and end tags that are missing a critical character in their formation, such as a closing angle bracket or a mismatched attribute value quotation mark are not complete.'
-                }
+                    'Start and end tags that are missing a critical character in their formation, such as a closing angle bracket or a mismatched attribute value quotation mark are not complete.',
+                },
               ],
               ref_id: '4.1.1',
               references: [
                 {
                   title: 'How to Meet 4.1.1',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#parsing'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#parsing',
                 },
                 {
                   title: 'Understanding 4.1.1',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/parsing.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/parsing.html',
+                },
               ],
               special_cases: null,
               title: 'Parsing',
-              url: 'https://www.w3.org/TR/WCAG21/#parsing'
+              url: 'https://www.w3.org/TR/WCAG21/#parsing',
             },
             {
               description:
@@ -2488,23 +2494,23 @@ module.exports = {
               notes: [
                 {
                   content:
-                    'This success criterion is primarily for Web authors who develop or script their own user interface components. For example, standard HTML controls already meet this success criterion when used according to specification.'
-                }
+                    'This success criterion is primarily for Web authors who develop or script their own user interface components. For example, standard HTML controls already meet this success criterion when used according to specification.',
+                },
               ],
               ref_id: '4.1.2',
               references: [
                 {
                   title: 'How to Meet 4.1.2',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#name-role-value'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#name-role-value',
                 },
                 {
                   title: 'Understanding 4.1.2',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html',
+                },
               ],
               special_cases: null,
               title: 'Name, Role, Value',
-              url: 'https://www.w3.org/TR/WCAG21/#name-role-value'
+              url: 'https://www.w3.org/TR/WCAG21/#name-role-value',
             },
             {
               description:
@@ -2515,25 +2521,25 @@ module.exports = {
               references: [
                 {
                   title: 'How to Meet 4.1.3',
-                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#status-messages'
+                  url: 'https://www.w3.org/WAI/WCAG21/quickref/#status-messages',
                 },
                 {
                   title: 'Understanding 4.1.3',
-                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html'
-                }
+                  url: 'https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html',
+                },
               ],
               special_cases: null,
               title: 'Status Messages',
-              url: 'https://www.w3.org/TR/WCAG21/#status-messages'
-            }
+              url: 'https://www.w3.org/TR/WCAG21/#status-messages',
+            },
           ],
           title: 'Compatible',
-          url: 'https://www.w3.org/TR/WCAG21/#compatible'
-        }
+          url: 'https://www.w3.org/TR/WCAG21/#compatible',
+        },
       ],
       ref_id: '4',
       title: 'Robust',
-      url: 'https://www.w3.org/TR/WCAG21/#robust'
-    }
-  ]
-}
+      url: 'https://www.w3.org/TR/WCAG21/#robust',
+    },
+  ],
+};

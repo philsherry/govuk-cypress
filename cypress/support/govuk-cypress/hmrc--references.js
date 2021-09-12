@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * @author:
  * @function checkHmrcReferences
@@ -28,12 +29,12 @@
 Cypress.Commands.add(
   'checkHmrcReferences',
   {
-    prevSubject: 'element'
+    prevSubject: 'element',
   },
   (subject, options) => {
     //
   }
-)
+);
 
 // This one is clearly just a thought at this stage;
 // not sure if we even need it in here.

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * @author:
  * @function checkDwpTimeline
@@ -38,7 +39,6 @@
  **/
 
 // -- This is a parent command --
-Cypress.Commands.add('checkDwpTimeline',
-  (subject, options) => {
+Cypress.Commands.add('checkDwpTimeline', (subject, options) => {
   //
-  })
+});

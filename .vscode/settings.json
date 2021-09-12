@@ -21,8 +21,5 @@
     "MD041": false
   },
   "spellright.documentTypes": ["markdown", "plaintext"],
-  "spellright.language": ["en_GB"],
-  "standard.autoFixOnSave": true,
-  "standard.enable": true,
-  "standard.run": "onSave"
+  "spellright.language": ["en_GB"]
 }

@@ -17,6 +17,7 @@ const state = 'default'
 beforeEach(() => {
   cy.viewport(env.desktop.viewport[0])
   cy.visit(page)
+  cy.injectAxe();
 })
 
 describe('testing the extend', () => {

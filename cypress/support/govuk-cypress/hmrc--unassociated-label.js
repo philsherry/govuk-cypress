@@ -1,5 +1,5 @@
+/* eslint-disable no-unused-vars */
 /**
- * @author:
  * @function checkUnassociatedLabel
  * @description Cypress function to CHECK THE THING DOES THE THING.
  * @example cy.get("@component").checkUnassociatedLabel();
@@ -7,7 +7,10 @@
  **/
 
 // -- This is a child command --
-Cypress.Commands.add('checkUnassociatedLabel',
-  { prevSubject: 'element' }, (subject, options) => {
-  //
-  })
+Cypress.Commands.add(
+  'checkUnassociatedLabel',
+  { prevSubject: 'element' },
+  (subject, options) => {
+    //
+  }
+);

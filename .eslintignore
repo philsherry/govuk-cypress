@@ -1,2 +1,6 @@
-.*md
-app/assets/javascripts
+*.md
+app/assets/javascripts/
+app/routes.js
+cypress/advanced-examples/
+lib
+server.js

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * @author:
  * @function checkHintErrorInLabel
@@ -7,12 +8,15 @@
  **/
 
 // -- This is a child command --
-Cypress.Commands.add('checkHintErrorInLabel',
+Cypress.Commands.add(
+  'checkHintErrorInLabel',
   {
-    prevSubject: 'element'
-  }, (subject, options) => {
-  //
-  })
+    prevSubject: 'element',
+  },
+  (subject, options) => {
+    //
+  }
+);
 
 // Does this functionality already exist in either
 // .checkGovukErrorMessage() or .checkGovukErrorSummary()?

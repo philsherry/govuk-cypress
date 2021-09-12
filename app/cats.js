@@ -28,15 +28,15 @@ module.exports = {
   env: [
     {
       heading: 'Desktop',
-      viewport: ['macbook-15']
+      viewport: ['macbook-15'],
     },
     {
       heading: 'Mobile',
-      viewport: ['iphone-6']
+      viewport: ['iphone-6'],
     },
     {
       heading: 'Tablet',
-      viewport: ['ipad-2', 'portrait']
-    }
-  ]
-}
+      viewport: ['ipad-2', 'portrait'],
+    },
+  ],
+};

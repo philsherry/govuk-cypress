@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * @author:
  * @function checkHintNotAssociated
@@ -10,11 +11,11 @@
 Cypress.Commands.add(
   'checkHintNotAssociated',
   {
-    prevSubject: 'element'
+    prevSubject: 'element',
   },
   (subject, options) => {
     //
   }
-)
+);
 
 // NOTE: use .checkAriaDescribedBy() here.

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * @author:
  * @function checkErrorSummaryLinks
@@ -10,11 +11,11 @@
 Cypress.Commands.add(
   'checkErrorSummaryLinks',
   {
-    prevSubject: 'element'
+    prevSubject: 'element',
   },
   (subject, options) => {
     //
   }
-)
+);
 
 // Does this functionality already exist in .checkGovukErrorSummary()?

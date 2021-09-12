@@ -9,19 +9,19 @@ iframe {
 }
 
 .app-example__frame {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  border: none;
-  border-right: 1px solid #b1b4b6;
   background: #fff;
+  border: 0;
+  border-right: 1px solid #b1b4b6;
+  display: block;
+  max-width: 100%;
+  width: 100%;
 }
 
 .app-example__frame--resizable {
-  min-width: 230px;
   min-height: 60px;
+  min-width: 230px;
   overflow: auto;
-  transform: translateZ(0);
+  transform: translateZ( 0 );
 
   @media (min-width: 48.0625em) {
     resize: both;

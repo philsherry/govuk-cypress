@@ -1,20 +1,21 @@
-
 // NPM dependencies
-const browserSync = require('browser-sync')
+const browserSync = require('browser-sync');
 
 // Local dependencies
-const server = require('./server.js')
-const config = require('./app/config.js')
-const utils = require('./lib/utils.js')
+const server = require('./server.js');
+const config = require('./app/config.js');
+const utils = require('./lib/utils.js');
 
 // Set up configuration variables
-const useBrowserSync = config.useBrowserSync.toLowerCase()
-const env = (process.env.NODE_ENV || 'development').toLowerCase()
+const useBrowserSync = config.useBrowserSync.toLowerCase();
+const env = (process.env.NODE_ENV || 'development').toLowerCase();
 
 utils.findAvailablePort(server, function (port) {
-  console.log('Listening on port ' + port + '   url: http://localhost:' + port)
+  console.log(
+    'Listening on port ' + port + '   url: http://localhost:' + port
+  );
   if (env === 'production' || useBrowserSync === 'false') {
-    server.listen(port)
+    server.listen(port);
   } else {
     server.listen(port - 50, function () {
       browserSync({
@@ -25,8 +26,8 @@ utils.findAvailablePort(server, function (port) {
         ghostMode: false,
         open: false,
         notify: false,
-        logLevel: 'error'
-      })
-    })
+        logLevel: 'error',
+      });
+    });
   }
-})
+});

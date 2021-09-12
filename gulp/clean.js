@@ -5,12 +5,11 @@
     - public
 */
 
-const del = require('del')
-const gulp = require('gulp')
+const del = require('del');
+const gulp = require('gulp');
 
-const config = require('./config.json')
+const config = require('./config.json');
 
 gulp.task('clean', function (done) {
-  return del([config.paths.public + '/*',
-    '.port.tmp'])
-})
+  return del([config.paths.public + '/*', '.port.tmp']);
+});

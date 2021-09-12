@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * @author:
  * @function checkHeadings
@@ -47,18 +48,18 @@
 Cypress.Commands.add(
   'checkHeadings',
   {
-    prevSubject: 'element'
+    prevSubject: 'element',
   },
   (subject, options) => {
     cy.get(subject).then(($el) => {
       // If ($el) is not a heading then exit.
       if (!$el.is('h1, h2, legend')) {
-        throw new Error(`${$el} is not a heading.`)
+        throw new Error(`${$el} is not a heading.`);
       }
 
       // Is this a `<h1>` nested inside a `<legend>` element?
       if ($el.is('legend')) {
-        cy.get($el).children('h1')
+        cy.get($el).children('h1');
       }
 
       // Is this the first heading on the page?
@@ -72,6 +73,6 @@ Cypress.Commands.add(
       // If it's a heading, and it's not the first heading on the page, then it should be a `h2` heading.
 
       // If it's a heading, and it's not the first heading on the page, and it's nested inside a `<legend>` element, then it should be a `h2` heading.
-    })
+    });
   }
-)
+);

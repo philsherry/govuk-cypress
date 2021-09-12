@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * @author:
  * @function checkPageTitleError
@@ -7,9 +8,12 @@
  **/
 
 // -- This is a child command --
-Cypress.Commands.add('checkPageTitleError',
-  { prevSubject: 'element' }, (subject, options) => {
-  //
-  })
+Cypress.Commands.add(
+  'checkPageTitleError',
+  { prevSubject: 'element' },
+  (subject, options) => {
+    //
+  }
+);
 
 // Can this functionality be rolled into .checkPageTitle()?

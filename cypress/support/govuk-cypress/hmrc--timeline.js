@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * @author:
  * @function checkHmrcTimeline
@@ -7,7 +8,6 @@
  **/
 
 // -- This is a parent command --
-Cypress.Commands.add('checkHmrcTimeline',
-  (subject, options) => {
+Cypress.Commands.add('checkHmrcTimeline', (subject, options) => {
   //
-  })
+});

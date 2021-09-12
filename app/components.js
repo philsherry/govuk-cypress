@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string  */
 module.exports = {
   cypress: {
     body: 'Cypress is most often compared to Selenium; however Cypress is both fundamentally and architecturally different. Cypress is not constrained by the same restrictions as Selenium.',
@@ -7,82 +8,82 @@ module.exports = {
         body: 'Set up these things to run before each test.',
         name: 'Test: beforeEach',
         slug: '00-before-each',
-        url: ''
+        url: '',
       },
       {
         // components.cypress.component[1]
         body: 'A quick test to make sure we’re on the correct page.',
         name: 'Test: My name is URL',
         slug: '01-my-name-is-url',
-        url: ''
+        url: '',
       },
       {
         // components.cypress.component[2]
         body: 'Check the visibility of things is as it should be.',
         name: 'Test: Visibility checks',
         slug: '02-visibility-checks',
-        url: ''
+        url: '',
       },
       {
         // components.cypress.component[3]
         body: 'Take screenshots.',
         name: 'Test: Take screenshots',
         slug: '03-take-screenshots',
-        url: ''
+        url: '',
       },
       {
         // components.cypress.component[4]
         body: 'Run Lighthouse audit directly in your E2E test suites.',
         name: 'Plugin: cypress-audit',
         slug: '04-cypress-audit',
-        url: 'https://github.com/mfrachet/cypress-audit'
+        url: 'https://github.com/mfrachet/cypress-audit',
       },
       {
         // components.cypress.component[5]
         body: 'Test accessibility with axe-core in Cypress.',
         name: 'Plugin: cypress-axe',
         slug: '05-cypress-axe',
-        url: 'https://github.com/component-driven/cypress-axe'
+        url: 'https://github.com/component-driven/cypress-axe',
       },
       {
         // components.cypress.component[6]
         body: 'Visual regression test with cypress.',
         name: 'Plugin: cypress-image-diff-js',
         slug: '06-cypress-image-diff-js',
-        url: 'https://github.com/uktrade/cypress-image-diff'
+        url: 'https://github.com/uktrade/cypress-image-diff',
       },
       {
         // components.cypress.component[7]
         body: 'A Cypress plugin that sends all logs that occur in the browser to stdout in the terminal.',
         name: 'Plugin: cypress-log-to-output',
         slug: '07-cypress-log-to-output',
-        url: 'https://github.com/flotwig/cypress-log-to-output'
+        url: 'https://github.com/flotwig/cypress-log-to-output',
       },
       {
         // components.cypress.component[8]
         body: 'Zero config Mochawesome reporter for Cypress with screenshots.',
         name: 'Plugin: cypress-mochawesome-reporter',
         slug: '08-cypress-mochawesome-reporter',
-        url: 'https://github.com/LironEr/cypress-mochawesome-reporter'
-      }
+        url: 'https://github.com/LironEr/cypress-mochawesome-reporter',
+      },
     ],
     env: [
       {
         // components.cypress.env[0].heading
         heading: 'Desktop',
-        viewport: ['macbook-15']
+        viewport: ['macbook-15'],
       },
       {
         heading: 'Mobile',
-        viewport: ['iphone-6']
+        viewport: ['iphone-6'],
       },
       {
         heading: 'Tablet',
-        viewport: ['ipad-2', 'portrait']
-      }
+        viewport: ['ipad-2', 'portrait'],
+      },
     ],
     heading: 'Cypress Test Runner',
-    url: 'https://www.cypress.io/'
+    url: 'https://www.cypress.io/',
   },
   govuk: {
     body: 'Components are reusable parts of the user interface that have been made to support a variety of applications.',
@@ -100,10 +101,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Each link has content to explain the context.',
@@ -113,16 +114,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: true,
         name: 'Accordion',
         slug: 'accordion',
-        url: 'https://design-system.service.gov.uk/components/accordion/'
+        url: 'https://design-system.service.gov.uk/components/accordion/',
       },
       {
         // components.govuk.component[1]
@@ -137,16 +138,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Back link',
         slug: 'back-link',
-        url: 'https://design-system.service.gov.uk/components/back-link/'
+        url: 'https://design-system.service.gov.uk/components/back-link/',
       },
       {
         // components.govuk.component[2]
@@ -161,10 +162,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'If you have long breadcrumbs you can configure the component to only show the first and last items on mobile devices.',
@@ -174,16 +175,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Breadcrumbs',
         slug: 'breadcrumbs',
-        url: 'https://design-system.service.gov.uk/components/breadcrumbs/'
+        url: 'https://design-system.service.gov.uk/components/breadcrumbs/',
       },
       {
         // components.govuk.component[3]
@@ -198,10 +199,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Use a start button for the main call to action on your service’s start page. Start buttons do not submit form data, so they use a link tag rather than a button tag.',
@@ -211,10 +212,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Use secondary buttons for secondary calls to action on a page.',
@@ -224,10 +225,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Warning buttons are designed to make users think carefully before they use them. They only work if used very sparingly. Most services should not need one.',
@@ -237,10 +238,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Disabled buttons have poor contrast and can confuse some users, so avoid them if possible.',
@@ -250,10 +251,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Use a button group when two or more buttons are placed together.',
@@ -263,10 +264,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Any links within a button group will automatically align with the buttons.',
@@ -276,10 +277,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'If you are working in production and research shows that users are frequently sending information twice, you can configure the button to ignore the second click.',
@@ -290,16 +291,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Button',
         slug: 'breadcrumbs',
-        url: 'https://design-system.service.gov.uk/components/button/'
+        url: 'https://design-system.service.gov.uk/components/button/',
       },
       {
         // components.govuk.component[4]
@@ -314,10 +315,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'If you’re asking more than one question on the page, do not set the contents of the `<label>` as the page heading. Read more about asking multiple questions on question pages.',
@@ -327,10 +328,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'In some cases it may be more helpful to show a word count. For example, if your question requires a longer answer.',
@@ -340,10 +341,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'When using a character count, try to set the limit higher than most users will need. Find out what this is by doing user research and data analysis.',
@@ -353,10 +354,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Error messages should be styled like this:',
@@ -366,16 +367,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Character count',
         slug: 'character-count',
-        url: 'https://design-system.service.gov.uk/components/character-count/'
+        url: 'https://design-system.service.gov.uk/components/character-count/',
       },
       {
         // components.govuk.component[5]
@@ -390,10 +391,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'If you’re asking just one question per page as recommended, you can set the contents of the `<legend>` as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.',
@@ -403,10 +404,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'If you’re asking more than one question on the page, do not set the contents of the `<legend>` as the page heading. Read more about asking multiple questions on question pages.',
@@ -416,10 +417,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'You can add hints to checkbox items to provide additional information about the options.',
@@ -429,10 +430,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'When ‘none’ would be a valid answer, give users the option to check a box to say none of the other options apply to them — without this option, users would have to leave all of the boxes unchecked. Giving users this option also makes sure they do not skip the question by accident.',
@@ -442,10 +443,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'If JavaScript is unavailable, and a user selects both the ‘none’ checkbox and another checkbox, display an error message.',
@@ -455,10 +456,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'You can ask the user a related question when they select a particular checkbox, so they only see the question when it’s relevant to them.',
@@ -468,10 +469,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Use standard-sized checkboxes in most cases. However, smaller checkboxes work well on pages where it’s helpful to make them less visually prominent.',
@@ -481,10 +482,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Error messages should be styled like this:',
@@ -494,16 +495,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Checkboxes',
         slug: 'character-count',
-        url: 'https://design-system.service.gov.uk/components/checkboxes/'
+        url: 'https://design-system.service.gov.uk/components/checkboxes/',
       },
       {
         // components.govuk.component[6]
@@ -518,10 +519,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'You can choose this option if your service sets non-essential cookies on the server — your service may also set non-essential cookies on the client.',
@@ -531,10 +532,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Once the user has accepted or rejected cookies and set their cookie preferences, reload the page to show a confirmation message.',
@@ -544,10 +545,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'To help users running JavaScript on their device, you can write some JavaScript code to let them submit their choice and prevent the page from reloading.',
@@ -557,10 +558,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Here’s the same example of a progressively enhanced cookie banner, with the confirmation message shown instead.',
@@ -570,10 +571,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Use JavaScript to show cookie banner messages to users that have not accepted or rejected cookies by removing the `hidden` attribute as needed.',
@@ -583,10 +584,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Show a confirmation message confirming that the user has either accepted or rejected cookies by removing the `hidden` attribute.',
@@ -596,10 +597,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Show a confirmation message confirming that the user has either accepted or rejected cookies by removing the `hidden` attribute.',
@@ -609,10 +610,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'You can use this example text for a service which sets essential and analytics cookies. Analytics cookies are those set by your organisation to collect information about how people are using your digital service.',
@@ -622,10 +623,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'You can use this example text for a service that sets essential cookies, analytics cookies, or functional cookies to remember the user’s settings but are not essential.',
@@ -635,16 +636,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: true,
         name: 'Cookie banner',
         slug: 'cookie-banner',
-        url: 'https://design-system.service.gov.uk/components/cookie-banner/'
+        url: 'https://design-system.service.gov.uk/components/cookie-banner/',
       },
       {
         // components.govuk.component[7]
@@ -659,10 +660,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'If you’re asking more than one question on the page, do not set the contents of the `<legend>` as the page heading. Read more about asking multiple questions on question pages.',
@@ -672,10 +673,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Use the `autocomplete` attribute on the date input component when you’re asking for a date of birth. This lets browsers autofill the information on a user’s behalf if they’ve entered it previously.',
@@ -685,10 +686,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'If you’re highlighting the whole date, style all the fields like this:',
@@ -698,10 +699,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'If you’re highlighting just one field - either the day, month or year - only style the field that has an error. The error message must say which field has an error, like this:',
@@ -711,16 +712,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Date input',
         slug: 'date-input',
-        url: 'https://design-system.service.gov.uk/components/date-input/'
+        url: 'https://design-system.service.gov.uk/components/date-input/',
       },
       {
         // components.govuk.component[8]
@@ -735,16 +736,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Details',
         slug: 'details',
-        url: 'https://design-system.service.gov.uk/components/details/'
+        url: 'https://design-system.service.gov.uk/components/details/',
       },
       {
         // components.govuk.component[9]
@@ -759,10 +760,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: '',
@@ -772,10 +773,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: '',
@@ -785,16 +786,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Error message',
         slug: 'error-message',
-        url: 'https://design-system.service.gov.uk/components/error-message/'
+        url: 'https://design-system.service.gov.uk/components/error-message/',
       },
       {
         // components.govuk.component[10]
@@ -809,11 +810,11 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
+                  wcag: [],
+                },
+              },
             ],
-            url: 'example-1.html'
+            url: 'example-1.html',
           },
           {
             body: 'You must link the errors in the error summary to the answer they relate to.',
@@ -823,11 +824,11 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
+                  wcag: [],
+                },
+              },
             ],
-            url: 'example-2.html'
+            url: 'example-2.html',
           },
           {
             body: 'When a user has to enter their answer into multiple fields, such as the day, month and year fields in the date input component, link to the first field that contains an error.',
@@ -837,11 +838,11 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
+                  wcag: [],
+                },
+              },
             ],
-            url: 'example-3.html'
+            url: 'example-3.html',
           },
           {
             body: 'For questions that require a user to select one or more options from a list using radios or checkboxes, link to the first radio or checkbox.',
@@ -851,11 +852,11 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
+                  wcag: [],
+                },
+              },
             ],
-            url: 'example-4.html'
+            url: 'example-4.html',
           },
           {
             body: 'Put the error summary at the top of the `main` container. If your page includes breadcrumbs or a back link, place it below these, but above the `<h1>`.',
@@ -865,17 +866,17 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
+                  wcag: [],
+                },
+              },
             ],
-            url: 'example-5.html'
-          }
+            url: 'example-5.html',
+          },
         ],
         experimental: false,
         name: 'Error summary',
         slug: 'error-summary',
-        url: 'https://design-system.service.gov.uk/components/error-summary/'
+        url: 'https://design-system.service.gov.uk/components/error-summary/',
       },
       {
         // components.govuk.component[11]
@@ -890,10 +891,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'If you’re asking just one question per page as recommended, you can set the contents of the `<legend>` as the page heading, as shown in the example below. This is good practice as it means that users of screen readers will only hear the contents once.',
@@ -903,16 +904,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Fieldset',
         slug: 'fieldset',
-        url: 'https://design-system.service.gov.uk/components/fieldset/'
+        url: 'https://design-system.service.gov.uk/components/fieldset/',
       },
       {
         // components.govuk.component[12]
@@ -927,10 +928,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Error messages should be styled like this:',
@@ -940,16 +941,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'File upload',
         slug: 'file-upload',
-        url: 'https://design-system.service.gov.uk/components/file-upload/'
+        url: 'https://design-system.service.gov.uk/components/file-upload/',
       },
       {
         // components.govuk.component[13]
@@ -964,10 +965,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: '',
@@ -977,10 +978,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'You can also include links to meta information about a site, like cookies and contact details in the footer.',
@@ -990,10 +991,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: '',
@@ -1004,16 +1005,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Footer',
         slug: 'footer',
-        url: 'https://design-system.service.gov.uk/components/footer/'
+        url: 'https://design-system.service.gov.uk/components/footer/',
       },
       {
         // components.govuk.component[14]
@@ -1028,10 +1029,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Use the header with a service name if your service is more than 5 pages long - this can help users understand which service they are using.',
@@ -1041,10 +1042,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Use the header with navigation if you need to include basic navigation, contact or account management links.',
@@ -1054,16 +1055,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Header',
         slug: 'header',
-        url: 'https://design-system.service.gov.uk/components/header/'
+        url: 'https://design-system.service.gov.uk/components/header/',
       },
       {
         // components.govuk.component[15]
@@ -1078,16 +1079,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Inset text',
         slug: 'inset-text',
-        url: 'https://design-system.service.gov.uk/components/inset-text/'
+        url: 'https://design-system.service.gov.uk/components/inset-text/',
       },
       {
         // components.govuk.component[16]
@@ -1103,10 +1104,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Use a ‘neutral’ blue notification banner if the user needs to know about a problem with the service as a whole.',
@@ -1117,10 +1118,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'You can also use a notification banner to tell the user about the outcome of something they’ve just done - but they have not finished using the service, so it does not make sense to use a confirmation page.',
@@ -1130,16 +1131,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: true,
         name: 'Notification banner',
         slug: 'notification-banner',
-        url: 'https://design-system.service.gov.uk/components/notification-banner/'
+        url: 'https://design-system.service.gov.uk/components/notification-banner/',
       },
       {
         // components.govuk.component[17]
@@ -1154,16 +1155,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Panel',
         slug: 'panel',
-        url: 'https://design-system.service.gov.uk/components/panel/'
+        url: 'https://design-system.service.gov.uk/components/panel/',
       },
       {
         // components.govuk.component[18]
@@ -1178,10 +1179,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Use a beta banner when your service is in private or public beta.',
@@ -1191,16 +1192,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Phase banner',
         slug: 'phase-banner',
-        url: 'https://design-system.service.gov.uk/components/'
+        url: 'https://design-system.service.gov.uk/components/',
       },
       {
         // components.govuk.component[19]
@@ -1215,10 +1216,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'If you’re asking more than one question on the page, do not set the contents of the `<legend>` as the page heading. Read more about asking multiple questions on question pages.',
@@ -1228,10 +1229,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'In some cases, you can choose to display radios ‘inline’ beside one another (horizontally).',
@@ -1241,10 +1242,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'You can add hints to radio items to provide additional information about the options.',
@@ -1254,10 +1255,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'If one or more of your radio options is different from the others, it can help users if you separate them using a text divider. The text is usually the word ‘or’.',
@@ -1267,10 +1268,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'You can ask the user a related question when they select a particular radio option, so they only see the question when it’s relevant to them.',
@@ -1280,10 +1281,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Use standard-sized radios in nearly all cases. However, smaller versions work well on pages where it’s helpful to make them less visually prominent.',
@@ -1293,10 +1294,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Display an error message if none of the radios are selected.',
@@ -1306,16 +1307,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Radios',
         slug: 'radios',
-        url: 'https://design-system.service.gov.uk/components/radios/'
+        url: 'https://design-system.service.gov.uk/components/radios/',
       },
       {
         // components.govuk.component[20]
@@ -1330,16 +1331,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Select',
         slug: 'select',
-        url: 'https://design-system.service.gov.uk/components/select/'
+        url: 'https://design-system.service.gov.uk/components/select/',
       },
       {
         // components.govuk.component[21]
@@ -1354,16 +1355,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Skip link',
         slug: 'skip-link',
-        url: 'https://design-system.service.gov.uk/components/skip-link/'
+        url: 'https://design-system.service.gov.uk/components/skip-link/',
       },
       {
         // components.govuk.component[22]
@@ -1378,10 +1379,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Sometimes you do not allow the user to change their answers to specific questions.',
@@ -1391,10 +1392,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'If you do not include actions in your summary list and it would be better for your design to remove the separating borders, use the `govuk-summary-list--no-border` class.',
@@ -1404,16 +1405,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Summary list',
         slug: 'summary-list',
-        url: 'https://design-system.service.gov.uk/components/summary-list/'
+        url: 'https://design-system.service.gov.uk/components/summary-list/',
       },
       {
         // components.govuk.component[23]
@@ -1428,10 +1429,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Use table headers to tell users what the rows and columns represent. Use the scope attribute to help users of assistive technology distinguish between row and column headers.',
@@ -1441,10 +1442,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'When comparing columns of numbers, align the numbers to the right in table cells.',
@@ -1454,10 +1455,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'You can use the width override classes to set the width of table columns.',
@@ -1467,10 +1468,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'If the width override classes do not meet your needs you can create your own width classes and apply them to the cells in the table head. These can be added using the classes option in the Nunjucks macro or adding the class directly to the individual cells within `govuk-table__head` as below.',
@@ -1480,16 +1481,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Table',
         slug: 'table',
-        url: 'https://design-system.service.gov.uk/components/table/'
+        url: 'https://design-system.service.gov.uk/components/table/',
       },
       {
         // components.govuk.component[24]
@@ -1504,16 +1505,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: true,
         name: 'Tabs',
         slug: 'tabs',
-        url: 'https://design-system.service.gov.uk/components/tabs/'
+        url: 'https://design-system.service.gov.uk/components/tabs/',
       },
       {
         // components.govuk.component[25]
@@ -1528,10 +1529,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Sometimes a single status is enough. For example if you need to tell users which parts of an application they’ve finished and which they have not, you may only need a ‘Completed’ tag. Because the user understands that if something does not have a tag, that means it’s incomplete.',
@@ -1541,10 +1542,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Tags should be helpful to users. The more you add, the harder it is for users to remember them. So start with the smallest number of statuses you think might work, then add more if your user research shows there’s a need for them.',
@@ -1554,16 +1555,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Tag',
         slug: 'tag',
-        url: 'https://design-system.service.gov.uk/components/tag/'
+        url: 'https://design-system.service.gov.uk/components/tag/',
       },
       {
         // components.govuk.component[26]
@@ -1578,10 +1579,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'If you’re asking more than one question on the page, do not set the contents of the `<label>` as the page heading. Read more about asking multiple questions on question pages.',
@@ -1591,10 +1592,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Use fixed width inputs for content that has a specific, known length. Postcode inputs should be postcode-sized, telephone number inputs should be telephone number-sized.',
@@ -1604,10 +1605,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Use the width override classes to reduce the width of an input in relation to its parent container, for example, to two-thirds.',
@@ -1617,10 +1618,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Use hint text for help that’s relevant to the majority of users, like how their information will be used, or where to find it.',
@@ -1630,10 +1631,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'If you’re asking the user to enter a whole number and you want to bring up the numeric keypad on a mobile device, set the `inputmode` attribute to `numeric` and the `pattern` attribute to `[0-9]*`. See how to do this in the HTML and Nunjucks tabs in the following example.',
@@ -1643,10 +1644,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: "If you’re asking the user to enter a number that might include decimal places, use `input type='text'` without `inputmode` or `pattern` attributes. Do not set the `inputmode` attribute to `decimal` as it causes some devices to bring up a keypad without a key for the decimal separator.",
@@ -1656,10 +1657,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Use prefixes and suffixes to help users enter things like currencies and measurements.',
@@ -1669,10 +1670,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: '',
@@ -1682,10 +1683,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: '',
@@ -1695,10 +1696,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: '',
@@ -1708,10 +1709,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: '',
@@ -1721,10 +1722,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Error messages should be styled like this:',
@@ -1734,10 +1735,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: '',
@@ -1747,16 +1748,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Text input',
         slug: 'text-input',
-        url: 'https://design-system.service.gov.uk/components/text-input/'
+        url: 'https://design-system.service.gov.uk/components/text-input/',
       },
       {
         // components.govuk.component[27]
@@ -1771,10 +1772,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Make the height of a textarea proportional to the amount of text you expect users to enter. You can set the height of a textarea by by specifying the `rows` attribute.',
@@ -1784,10 +1785,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'If you’re asking more than one question on the page, do not set the contents of the `<label> `as the page heading. Read more about asking multiple questions on question pages.',
@@ -1797,10 +1798,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Error messages should be styled like this:',
@@ -1810,16 +1811,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Textarea',
         slug: 'textarea',
-        url: 'https://design-system.service.gov.uk/components/textarea/'
+        url: 'https://design-system.service.gov.uk/components/textarea/',
       },
       {
         // components.govuk.component[28]
@@ -1834,20 +1835,20 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Warning text',
         slug: 'warning-text',
-        url: 'https://design-system.service.gov.uk/components/warning-text/'
-      }
+        url: 'https://design-system.service.gov.uk/components/warning-text/',
+      },
     ],
     heading: 'GOV.UK Design System',
-    url: 'https://design-system.service.gov.uk/'
+    url: 'https://design-system.service.gov.uk/',
   },
   hmrc: {
     body: 'These are patterns designed specifically for the needs of HMRC users and patterns that are not yet in the GOV.UK Design System.',
@@ -1865,15 +1866,15 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Account header',
-        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/account-header/'
+        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/account-header/',
       },
       {
         // components.hmrc.component[1]
@@ -1888,16 +1889,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: true,
         name: 'Accounts office reference',
         slug: 'accounts-office-reference',
-        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/accounts-office-reference/'
+        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/accounts-office-reference/',
       },
       {
         // components.hmrc.component[2]
@@ -1912,34 +1913,34 @@ module.exports = {
                 reason: 'Focus colours must be the latest version.',
                 tags: {
                   best: ['focus-states'],
-                  wcag: ['1.4.3', '1.4.11', '2.4.7']
-                }
+                  wcag: ['1.4.3', '1.4.11', '2.4.7'],
+                },
               },
               {
                 reason:
                   'Hint text must be associated correctly with the checkboxes.',
                 tags: {
                   best: ['hint-not-associated'],
-                  wcag: ['1.3.1']
-                }
+                  wcag: ['1.3.1'],
+                },
               },
               {
                 reason:
                   '“Do you need to add another director?” should be a &lt;legend&gt; for a &lt;fieldset&gt; around the checkboxes; potential for a nested heading in there.',
                 tags: {
                   best: ['labels-legends-headings'],
-                  wcag: []
-                }
+                  wcag: [],
+                },
               },
               {
                 reason:
                   'The links must have unique, hidden context for screen reader users.',
                 tags: {
                   best: [],
-                  wcag: ['2.4.4', '2.4.9']
-                }
-              }
-            ]
+                  wcag: ['2.4.4', '2.4.9'],
+                },
+              },
+            ],
           },
           {
             body: '',
@@ -1949,34 +1950,34 @@ module.exports = {
                 reason: 'Focus colours must be the latest version.',
                 tags: {
                   best: ['focus-states'],
-                  wcag: ['1.4.3', '1.4.11', '2.4.7']
-                }
+                  wcag: ['1.4.3', '1.4.11', '2.4.7'],
+                },
               },
               {
                 reason:
                   'Hint text must be associated correctly with the checkboxes.',
                 tags: {
                   best: [],
-                  wcag: ['1.3.1']
-                }
+                  wcag: ['1.3.1'],
+                },
               },
               {
                 reason:
                   '“Do you need to add another director?” should be a &lt;legend&gt; for a &lt;fieldset&gt; around the checkboxes; potential for a nested heading in there.',
                 tags: {
                   best: ['labels-legends-headings'],
-                  wcag: []
-                }
+                  wcag: [],
+                },
               },
               {
                 reason:
                   'The links must have unique, hidden context for screen reader users.',
                 tags: {
                   best: [],
-                  wcag: ['2.4.4', '2.4.9']
-                }
-              }
-            ]
+                  wcag: ['2.4.4', '2.4.9'],
+                },
+              },
+            ],
           },
           {
             body: '',
@@ -1986,18 +1987,18 @@ module.exports = {
                 reason: 'The focus colours must be the updated version.',
                 tags: {
                   best: [],
-                  wcag: []
-                }
+                  wcag: [],
+                },
               },
               {
                 reason:
                   'The links must have unique, hidden context for screen reader users.',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Show all the information about the entry and let the user make a change.',
@@ -2007,18 +2008,18 @@ module.exports = {
                 reason: 'The focus colours must be the updated version.',
                 tags: {
                   best: [],
-                  wcag: []
-                }
+                  wcag: [],
+                },
               },
               {
                 reason:
                   'The links must have unique, hidden context for screen reader users.',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Ask the user to confirm they want to remove something from the list.',
@@ -2028,23 +2029,23 @@ module.exports = {
                 reason: 'The heading should be nested in a `legend`.',
                 tags: {
                   best: [],
-                  wcag: []
-                }
+                  wcag: [],
+                },
               },
               {
                 reason: 'The focus colours must be the updated version.',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Add to a list',
         slug: 'add-to-a-list',
-        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/add-to-a-list/'
+        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/add-to-a-list/',
       },
       {
         // components.hmrc.component[3]
@@ -2059,10 +2060,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: '',
@@ -2072,10 +2073,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'For when there is more than one type of consent or consent must be separate from other terms and conditions.',
@@ -2085,16 +2086,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Ask the user for their consent',
         slug: 'ask-the-user-for-their-consent',
-        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/ask-the-user-for-their-consent/'
+        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/ask-the-user-for-their-consent/',
       },
       {
         // components.hmrc.component[4]
@@ -2109,16 +2110,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Confirmed identity',
         slug: 'confirmed-identity',
-        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/confirmed-identity/'
+        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/confirmed-identity/',
       },
       {
         // components.hmrc.component[5]
@@ -2133,16 +2134,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Could not confirm identity',
         slug: 'could-not-confirm-identity',
-        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/could-not-confirm-identity/'
+        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/could-not-confirm-identity/',
       },
       {
         // components.hmrc.component[6]
@@ -2157,16 +2158,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Currency input',
         slug: 'currency-input',
-        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/currency-input/'
+        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/currency-input/',
       },
       {
         // components.hmrc.component[7]
@@ -2181,10 +2182,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Or you can ask for the employer PAYE reference as a normal form label, separate from the `<h1>`.',
@@ -2194,10 +2195,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Error messages should be styled like this:',
@@ -2207,16 +2208,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: true,
         name: 'Employer PAYE reference',
         slug: 'employer-paye-reference',
-        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/employer-paye-reference/'
+        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/employer-paye-reference/',
       },
       {
         // components.hmrc.component[8]
@@ -2231,16 +2232,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'HMRC banner',
         slug: 'hmrc-banner',
-        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/hmrc-banner/'
+        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/hmrc-banner/',
       },
       {
         // components.hmrc.component[9]
@@ -2255,16 +2256,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Internal header',
         slug: 'internal-header',
-        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/internal-header/'
+        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/internal-header/',
       },
       {
         // components.hmrc.component[10]
@@ -2279,10 +2280,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: '',
@@ -2292,10 +2293,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: '',
@@ -2305,10 +2306,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: '',
@@ -2319,10 +2320,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: '',
@@ -2332,16 +2333,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Match an organisation to HMRC records',
         slug: 'match-an-organisation-to-hmrc-records',
-        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/match-an-organisation-to-hmrc-records/'
+        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/match-an-organisation-to-hmrc-records/',
       },
       {
         // components.hmrc.component[11]
@@ -2356,16 +2357,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Notification badge',
         slug: 'notification-badge',
-        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/notification-badge/'
+        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/notification-badge/',
       },
       {
         // components.hmrc.component[12]
@@ -2380,16 +2381,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Page heading',
         slug: 'page-heading',
-        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/page-heading/'
+        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/page-heading/',
       },
       {
         // components.hmrc.component[13]
@@ -2404,16 +2405,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Page not found',
         slug: 'page-not-found',
-        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/page-not-found/'
+        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/page-not-found/',
       },
       {
         // components.hmrc.component[14]
@@ -2428,16 +2429,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Page title',
         slug: 'page-title',
-        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/page-title/'
+        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/page-title/',
       },
       {
         // components.hmrc.component[15]
@@ -2452,10 +2453,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'If they do nothing, take them to a ‘We signed you out’ page that uses similar content as the warning box.',
@@ -2465,10 +2466,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: '“We saved your answers.”',
@@ -2478,10 +2479,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: '“We did not save your answers.”',
@@ -2491,10 +2492,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: '“Continue checking what help you can get with childcare costs”',
@@ -2504,10 +2505,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: '“You deleted your answers”',
@@ -2517,10 +2518,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: '“For your security, we deleted your answers”',
@@ -2530,16 +2531,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: true,
         name: 'Service timeout',
         slug: 'service-timeout',
-        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/service-timeout/'
+        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/service-timeout/',
       },
       {
         // components.hmrc.component[16]
@@ -2554,10 +2555,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: '',
@@ -2567,10 +2568,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: '',
@@ -2580,10 +2581,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'After a service closes.',
@@ -2593,10 +2594,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Before a service opens.',
@@ -2606,10 +2607,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: '',
@@ -2619,10 +2620,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: '',
@@ -2632,16 +2633,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Service unavailable',
         slug: 'service-unavailable',
-        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/service-unavailable/'
+        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/service-unavailable/',
       },
       {
         // components.hmrc.component[17]
@@ -2656,16 +2657,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Sign out',
         slug: 'sign-out',
-        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/sign-out/'
+        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/sign-out/',
       },
       {
         // components.hmrc.component[18]
@@ -2680,16 +2681,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Status tags in Task list pages',
         slug: 'status-tags-in-task-list-pages',
-        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/status-tags-in-task-list-pages/'
+        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/status-tags-in-task-list-pages/',
       },
       {
         // components.hmrc.component[19]
@@ -2704,10 +2705,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: '',
@@ -2718,10 +2719,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: '',
@@ -2731,16 +2732,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'There is a problem with the service',
         slug: 'there-is-a-problem-with-the-service',
-        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/there-is-a-problem-with-the-service/'
+        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/there-is-a-problem-with-the-service/',
       },
       {
         // components.hmrc.component[20]
@@ -2755,16 +2756,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: true,
         name: 'Timeline',
         slug: 'timeline',
-        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/timeline/'
+        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/timeline/',
       },
       {
         // components.hmrc.component[21]
@@ -2779,10 +2780,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Or you can ask for the UTR as a normal form label, separate from the `<h1>`.',
@@ -2792,10 +2793,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Error messages should be styled like this:',
@@ -2805,16 +2806,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: true,
         name: 'Unique Taxpayer Reference',
         slug: 'unique-taxpayer-reference',
-        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/unique-taxpayer-reference/'
+        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/unique-taxpayer-reference/',
       },
       {
         // components.hmrc.component[22]
@@ -2829,10 +2830,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Or you can ask for the VAT registration number as a normal form label, separate from the `<h1>`.',
@@ -2842,10 +2843,10 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
+                  wcag: [],
+                },
+              },
+            ],
           },
           {
             body: 'Error messages should be styled like this:',
@@ -2855,16 +2856,16 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: true,
         name: 'VAT registration number',
         slug: 'vat-registration-number',
-        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/vat-registration-number/'
+        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/vat-registration-number/',
       },
       {
         // components.hmrc.component[23]
@@ -2879,23 +2880,23 @@ module.exports = {
                 reason: '',
                 tags: {
                   best: [],
-                  wcag: []
-                }
-              }
-            ]
-          }
+                  wcag: [],
+                },
+              },
+            ],
+          },
         ],
         experimental: false,
         name: 'Welsh language toggle',
         slug: 'welsh-language-toggle',
-        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/welsh-language-toggle/'
-      }
+        url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/welsh-language-toggle/',
+      },
     ],
     heading: 'HMRC Design Patterns',
-    url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/'
+    url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/',
   },
   wcag: {
     body: 'A quick look over the guidelines, understanding them, and how to meet them.',
-    heading: 'Web Content Accessibility Guidelines'
-  }
-}
+    heading: 'Web Content Accessibility Guidelines',
+  },
+};

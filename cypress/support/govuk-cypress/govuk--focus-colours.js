@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * @author: @philsherry
  * @function checkFocusColours
@@ -9,7 +10,7 @@
 Cypress.Commands.add(
   'checkFocusColours',
   {
-    prevSubject: 'element'
+    prevSubject: 'element',
   },
   (subject, options) => {
     cy.get(subject)
@@ -17,6 +18,6 @@ Cypress.Commands.add(
       .should('have.css', 'border-color', 'rgb(11, 12, 12)')
       .should('have.css', 'border-width', '2px')
       .should('have.css', 'outline-color', 'rgb(255, 221, 0)')
-      .should('have.css', 'outline-width', '3px')
+      .should('have.css', 'outline-width', '3px');
   }
-)
+);

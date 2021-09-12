@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * @author:
  * @function checkMissingInstructions
@@ -7,11 +8,14 @@
  **/
 
 // -- This is a child command --
-Cypress.Commands.add('checkMissingInstructions',
+Cypress.Commands.add(
+  'checkMissingInstructions',
   {
-    prevSubject: 'element'
-  }, (subject, options) => {
-  //
-  })
+    prevSubject: 'element',
+  },
+  (subject, options) => {
+    //
+  }
+);
 
 // Note: see .checkAriaDescribedBy() for more details

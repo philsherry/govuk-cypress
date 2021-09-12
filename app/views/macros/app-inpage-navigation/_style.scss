@@ -1,20 +1,22 @@
-@-webkit-keyframes target-fade {
-  0% { background-color: rgba(0,0,0,.1); }
-  100% { background-color: rgba(0, 0, 0, 0); }
+@keyframes target-fade {
+  0% { background-color: rgba( 0, 0, 0, 0.1 ); }
+
+  100% { background-color: rgba( 0, 0, 0, 0 ); }
 }
 
-@-moz-keyframes target-fade {
-  0% { background-color: rgba(0,0,0,.1); }
-  100% { background-color: rgba(0,0,0,0); }
+@keyframes target-fade {
+  0% { background-color: rgba( 0, 0, 0, 0.1 ); }
+
+  100% { background-color: rgba( 0, 0, 0, 0 ); }
 }
 
 :target {
-  -webkit-animation: target-fade 3s 1;
-  -moz-animation: target-fade 3s 1;
+  animation: target-fade 3s 1;
+  animation: target-fade 3s 1;
 
   @media screen and (prefers-reduced-motion: reduce) {
-    -webkit-animation: none;
-    -moz-animation: none;
+    animation: none;
+    animation: none;
   }
 }
 
@@ -27,8 +29,8 @@ nav {
   li.active {
     border-left: 3px solid #1d70b8;
 
-  a {
-    font-weight: 700;
-  }
+    a {
+      font-weight: 700;
+    }
   }
 }

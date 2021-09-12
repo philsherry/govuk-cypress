@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * @author:
  * @function checkAutocompleteAttributes
@@ -7,9 +8,12 @@
  **/
 
 // -- This is a child command --
-Cypress.Commands.add('checkAutocompleteAttributes',
+Cypress.Commands.add(
+  'checkAutocompleteAttributes',
   {
-    prevSubject: 'element'
-  }, (subject, options) => {
-  //
-  })
+    prevSubject: 'element',
+  },
+  (subject, options) => {
+    //
+  }
+);

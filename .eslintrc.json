@@ -1,22 +1,27 @@
 {
   "env": {
     "browser": true,
+    "cypress/globals": true,
     "es6": true,
+    "jest/globals": true,
     "node": true
   },
   "extends": [
     "eslint:recommended",
     "plugin:chai-friendly/recommended",
     "plugin:cypress/recommended",
-    "plugin:sonarjs/recommended"
+    "plugin:sonarjs/recommended",
+    "plugin:jest-formatting/recommended"
   ],
   "plugins": [
+    "cypress",
     "ie11",
     "import",
+    "jest",
     "jsx-a11y",
     "node",
-    "sonarjs",
-    "promise"
+    "promise",
+    "sonarjs"
   ],
   "root": true
 }

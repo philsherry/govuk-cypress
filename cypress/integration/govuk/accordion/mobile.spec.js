@@ -10,8 +10,8 @@ const { terminalLog } = require('../../../plugins/hmrc')
  * @screenshotFileName `${service}--${component}--${viewport}--${state}`
  **/
 const service = 'homepage'
-const journey = 'mobile'
-const thing = 'accordion'
+const component = 'mobile';
+const viewport = 'accordion';
 const state = 'default'
 
 beforeEach(() => {

@@ -6,6 +6,8 @@ module.exports = {
   // Service name used in header. Eg: 'Renew your passport'
   serviceName: 'Test with Cypress',
 
+  titleSuffix: 'GOV.UK',
+
   // Default port that prototype runs on
   port: '3000',
 
@@ -26,5 +28,6 @@ module.exports = {
   useHttps: 'true',
 
   // Enable or disable Browser Sync
-  useBrowserSync: 'false'
-}
+  useBrowserSync: 'false',
+  // CYPRESS DOES NOT LIKE BROWSERSYNC
+};

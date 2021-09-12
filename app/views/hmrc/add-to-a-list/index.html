@@ -6,7 +6,10 @@
 {% set sectionHeading = components.hmrc.heading %}
 
 {% block pageTitle %}
-{{ appPageTitle() }}
+{{ appPageTitle({
+  componentHeading: componentHeading,
+  sectionHeading: sectionHeading
+}) }}
 {% endblock %}
 
 {% block content %}

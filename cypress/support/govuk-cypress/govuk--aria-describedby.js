@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * @author: @philsherry
  * @function checkAriaDescribedBy
@@ -9,15 +10,14 @@
 Cypress.Commands.add(
   'checkAriaDescribedBy',
   {
-    prevSubject: 'element'
+    prevSubject: 'element',
   },
   (subject, options) => {
-    cy.get(subject)
-      .then(($el) => {
-        const ariaDescribedBy = $el.attr('aria-describedby')
-        if (ariaDescribedBy) {
-          cy.get(`#${ariaDescribedBy}`).should('exist')
-        }
-      })
+    cy.get(subject).then(($el) => {
+      const ariaDescribedBy = $el.attr('aria-describedby');
+      if (ariaDescribedBy) {
+        cy.get(`#${ariaDescribedBy}`).should('exist');
+      }
+    });
   }
-)
+);

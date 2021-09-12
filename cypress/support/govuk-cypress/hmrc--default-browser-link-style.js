@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * @author:
  * @function checkDefaultBrowserLinkStyle
@@ -7,9 +8,12 @@
  **/
 
 // -- This is a child command --
-Cypress.Commands.add('checkDefaultBrowserLinkStyle',
+Cypress.Commands.add(
+  'checkDefaultBrowserLinkStyle',
   {
-    prevSubject: 'element'
-  }, (subject, options) => {
-  //
-  })
+    prevSubject: 'element',
+  },
+  (subject, options) => {
+    //
+  }
+);

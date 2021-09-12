@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * @author:
  * @function checkMissingLabel
@@ -10,9 +11,9 @@
 Cypress.Commands.add(
   'checkMissingLabel',
   {
-    prevSubject: 'element'
+    prevSubject: 'element',
   },
   (subject, options) => {
     //
   }
-)
+);

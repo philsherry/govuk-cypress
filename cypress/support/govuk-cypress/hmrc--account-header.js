@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * @author:
  * @function checkAccountHeader
@@ -7,7 +8,6 @@
  **/
 
 // -- This is a parent command --
-Cypress.Commands.add('checkAccountHeader',
-  (subject, options) => {
+Cypress.Commands.add('checkAccountHeader', (subject, options) => {
   //
-  })
+});

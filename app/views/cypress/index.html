@@ -1,7 +1,11 @@
 {% extends "layout.html" %}
 
+{% set componentHeading = components.cypress.heading %}
+
 {% block pageTitle %}
-  {{ components.cypress.heading }}
+{{ appPageTitle({
+  componentHeading: componentHeading
+}) }}
 {% endblock %}
 
 {% block content %}

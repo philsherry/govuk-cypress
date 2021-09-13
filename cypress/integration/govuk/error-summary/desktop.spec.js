@@ -35,6 +35,7 @@ describe('checking page things', () => {
   it('should have the correct page title', () => {
     cy.checkPageTitle()
   })
+
   it('should have an incorrect page title', () => {
     cy.checkPageTitle('hasId')
   })

@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+/// <reference types="cypress" />
 /**
  * @function checkUnassociatedLabel
  * @description Cypress function to CHECK THE THING DOES THE THING.

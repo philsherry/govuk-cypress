@@ -2995,6 +2995,66 @@ module.exports = {
           },
         ],
       },
+      articles: {
+        body: 'A bunch of articles that contain some good stuff.',
+        heading: 'Sites and articles',
+        resource: [
+          {
+            body: 'A list of known validation errors and warnings in the `govuk-frontend` repository.',
+            name: 'Known validation errors / warnings in govuk-frontend',
+            type: 'article',
+            url: 'https://github.com/alphagov/govuk-frontend/issues/1280#issuecomment-509588851',
+          },
+          {
+            body: 'Part 1 of this series focuses on the way screen readers read (or don’t read) punctuation and typographic symbols.',
+            name: 'Screen Readers: A Guide to Punctuation and Typographic Symbols',
+            type: 'article',
+            url: 'https://www.deque.com/blog/dont-screen-readers-read-whats-screen-part-1-punctuation-typographic-symbols/',
+          },
+          {
+            body: 'Shows how different WAI-ARIA attributes behave in commonly used screen readers.',
+            name: 'WAI-ARIA - Screen reader compatibility · PowerMapper Software',
+            type: 'article',
+            url: 'https://www.powermapper.com/tests/screen-readers/aria/',
+          },
+          {
+            body: 'Many websites have an accessibility feature called skip links that help some users navigate the site. However, there’s a problem with basically all skip links on mobile devices, which hurts your site’s accessibility instead of improving it.',
+            name: 'Your skip links are broken - Axess Lab',
+            type: 'article',
+            url: 'https://axesslab.com/skip-links/',
+          },
+          {
+            body: 'TL;DR: for standard HTML controls and standard ARIA patterns (widgets), you do not need to add instructions for screen readers on how to use them nor what they are.',
+            name: 'Stop Giving Control Hints to Screen Readers',
+            type: 'article',
+            url: 'https://adrianroselli.com/2019/10/stop-giving-control-hints-to-screen-readers.html',
+          },
+          {
+            body: 'Will your code work with assistive technologies? This a community driven effort. Please run some tests to help keep this project going and to learn about assistive technologies along the way.',
+            name: 'Accessibility Support',
+            type: 'article',
+            url: 'https://a11ysupport.io',
+          },
+          {
+            body: 'A community-driven resource to both find and share information on the accessibility of tools, services, platforms, and so on.',
+            name: 'Accessibility Reviews',
+            type: 'article',
+            url: 'https://a11y.reviews',
+          },
+          {
+            body: 'The A11Y Project is a community-driven effort to make digital accessibility easier.',
+            name: 'The A11Y Project',
+            type: 'article',
+            url: 'https://a11yproject.com',
+          },
+          {
+            body: 'How to review your site for accessibility issues, on Google’s Web Fundamentals.',
+            name: 'How To Do an Accessibility Review',
+            type: 'article',
+            url: 'https://developers.google.com/web/fundamentals/accessibility/how-to-review',
+          },
+        ],
+      },
     },
   },
   wcag: {

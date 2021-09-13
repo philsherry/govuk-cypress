@@ -1,3 +1,6 @@
+/**
+ * This lot will eventually form a standalone plugin.
+ */
 import './dwp--timeline';
 import './govuk--aria-describedby';
 import './govuk--aria-labelledby';

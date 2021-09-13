@@ -1,8 +1,10 @@
 {% extends "layout.html" %}
+{% set componentHeading = cat.serviceHeading %}
 
 {% block pageTitle %}
-{{ serviceName }}
-{% endblock %}
+{{ appPageTitle({
+  componentHeading: componentHeading
+}) }}{% endblock %}
 
 {% block content %}
 
@@ -10,23 +12,36 @@
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">
       {{ cat.serviceHeading }} {{ serviceHeading }}
-      <span class="govuk-caption-xl">{{releaseVersion}}</span>
+      <span class="govuk-caption-xl">Prototype Kit {{releaseVersion}}</span>
     </h1>{{releaseVersion | log }}
     <p>
       {{ cat.serviceDescription }}
     </p>
 
-    <h2 class="govuk-heading-m"><a href="/cypress">{{ cat.cypressHeading }}</a></h2>
+    <h2 class="govuk-heading-m">
+      <a href="/cypress">{{ cat.cypressHeading }}</a>
+    </h2>
     <p class="govuk-body">{{ cat.cypressDescription }}</p>
 
-    <h2 class="govuk-heading-m"><a href="/hmrc">{{ cat.hmrcHeading }}</a></h2>
+    <h2 class="govuk-heading-m">
+      <a href="/hmrc">{{ cat.hmrcHeading }}</a>
+    </h2>
     <p class="govuk-body">{{ cat.hmrcDescription }}</p>
 
-    <h2 class="govuk-heading-m"><a href="/govuk">{{ cat.govukHeading }}</a></h2>
+    <h2 class="govuk-heading-m">
+      <a href="/govuk">{{ cat.govukHeading }}</a>
+    </h2>
     <p class="govuk-body">{{ cat.govukDescription }}</p>
 
-    <h2 class="govuk-heading-m"><a href="/wcag">{{ cat.wcagHeading }}</a></h2>
+    <h2 class="govuk-heading-m">
+      <a href="/wcag">{{ cat.wcagHeading }}</a>
+    </h2>
     <p class="govuk-body">{{ cat.wcagDescription }}</p>
+
+    <h2 class="govuk-heading-m">
+      <a href="/resources">{{ cat.resourcesHeading }}</a>
+    </h2>
+    <p class="govuk-body">{{ cat.resourcesDescription }}</p>
 
   </div>
 </div>

@@ -2,9 +2,9 @@
  * Naming things is hard, which is why this file is called cats.js
  **/
 module.exports = {
+  serviceHeading: 'GOV.UK Cypress framework',
   serviceDescription:
     'A demonstration of how to use the Cypress framework to test HMRC services.',
-  serviceHeading: 'GOV.UK Cypress framework',
 
   cypressHeading: 'Cypress Test Runner',
   cypressDescription:
@@ -14,13 +14,16 @@ module.exports = {
   hmrcDescription:
     'These are patterns designed specifically for the needs of HMRC users and patterns that are not yet in the GOV.UK Design System.',
 
+  govukHeading: 'GOV.UK Design System',
   govukDescription:
     'Components are reusable parts of the user interface that have been made to support a variety of applications.',
-  govukHeading: 'GOV.UK Design System',
 
+  wcagHeading: 'Web Content Accessibility Guidelines',
   wcagDescription:
     'A quick look over the guidelines, understanding them, and how to meet them.',
-  wcagHeading: 'Web Content Accessibility Guidelines',
+
+  resourcesHeading: 'Resources',
+  resourcesDescription: 'A page of handy resources to help you because a better person.',
 
   experimental:
     'This is currently experimental because more research is needed.',

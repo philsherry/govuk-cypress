@@ -1,7 +1,11 @@
 {% extends "layout.html" %}
 
+{% set componentHeading = components.hmrc.heading %}
+
 {% block pageTitle %}
-  {{ components.hmrc.heading }}
+{{ appPageTitle({
+  componentHeading: componentHeading
+}) }}
 {% endblock %}
 
 {% block content %}

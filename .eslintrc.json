@@ -10,10 +10,17 @@
     "eslint:recommended",
     "plugin:chai-friendly/recommended",
     "plugin:cypress/recommended",
-    "plugin:sonarjs/recommended",
-    "plugin:jest-formatting/recommended"
+    "plugin:jest-formatting/recommended",
+    "plugin:sonarjs/recommended"
   ],
+  "globals": {
+    "cy": true
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
   "plugins": [
+    "chai-friendly",
     "cypress",
     "ie11",
     "import",

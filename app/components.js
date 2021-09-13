@@ -2895,6 +2895,168 @@ module.exports = {
     heading: 'HMRC Design Patterns',
     url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/',
   },
+  resources: {
+    body: 'A page of handy resources to help you because a better person.',
+    heading: 'Resources',
+    types: {
+      'browser-plugin': {
+        body: 'These are tools that any member of the team can use at their desk while they’re testing the service. While there are many plugins listed here, you don’t have to use all of them. With the exception of Toggle JavaScript, they do a lot of the same things but there is some overlap. Take them all for a spin, see which ones you prefer.',
+        heading: 'Browser plugins',
+        resource: [
+          {
+            body: 'The ARC Toolkit is a set of accessibility tools which aids developers in identifying accessibility problems and features for WCAG 2.0, WCAG 2.1, EN 301 549, and Section 508.',
+            name: 'ARC Toolkit',
+            type: 'browser-plugin',
+            url: 'https://chrome.google.com/webstore/detail/arc-toolkit/chdkkkccnlfncngelccgbgfmjebmkmce',
+          },
+          {
+            body: 'Accessibility checker for WCAG 2 and Section 508 accessibility. Find accessibility defects on your website or web application by using the axe Chrome extension. Drop the axe on your accessibility defects!',
+            name: 'axe - Web Accessibility Testing',
+            type: 'browser-plugin',
+            url: 'https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd',
+          },
+          {
+            body: 'The Siteimprove Accessibility Checker is your tool to evaluate any web page for accessibility issues at any given time.',
+            name: 'Siteimprove Accessibility Checker',
+            type: 'browser-plugin',
+            url: 'https://chrome.google.com/webstore/detail/siteimprove-accessibility/efcfolpjihicnikpmhnmphjhhpiclljc',
+          },
+          {
+            body: 'WAVE is a web accessibility evaluation tool developed by WebAIM.org. It provides visual feedback about the accessibility of your web content by injecting icons and indicators into your page. No automated tool can tell you if your page is accessible, but WAVE facilitates human evaluation and educates about accessibility issues.',
+            name: 'WAVE Evaluation Tool',
+            type: 'browser-plugin',
+            url: 'https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh',
+          },
+          {
+            body: 'The Web Developer extension adds a toolbar button to the browser with various web developer tools.',
+            name: 'Web Developer',
+            type: 'browser-plugin',
+            url: 'https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm',
+          },
+          {
+            body: 'Quickly test your website to see if there are any issues with accessibility, browser compatibility, security, performance and more.',
+            name: 'Webhint',
+            type: 'browser-plugin',
+            url: 'https://chrome.google.com/webstore/detail/webhint/gccemnpihkbgkdmoogenkbkckppadcag',
+          },
+          {
+            body: 'Handy for quickly turning JavaScript off and on again.',
+            name: 'Easily disable JavaScript',
+            type: 'browser-plugin',
+            url: 'https://chrome.google.com/webstore/detail/toggle-javascript/cidlcjdalomndpeagkjpnefhljffbnlo',
+          },
+          {
+            body: 'Automated pattern and accessibility checks for government services. Provides guidance and indicates potential improvements for services using the Gov UK and HMRC design patterns.',
+            name: 'Pattern checker',
+            type: 'browser-plugin',
+            url: 'https://chrome.google.com/webstore/detail/pattern-checker/amjjliajblignodfdjalnfkekkeflkph',
+          },
+        ],
+      },
+      'prototyping-tools': {
+        body: 'It’s good practice to write good, error-free code. And once you’re out testing your prototype with users who have access needs, you’re going to be wanting well-formed HTML with zero errors, and as few accessibility problems as possible. While these tools won’t make your prototype bulletproof, they’ll go a long way towards fixing your mistakes and guiding you in the right direction.',
+        heading: 'Prototyping tools',
+        resource: [
+          {
+            body: 'The static code analysis tool you need for your HTML.',
+            name: 'HTMLHint',
+            type: 'prototyping-tools',
+            url: 'https://github.com/htmlhint/HTMLHint',
+          },
+          {
+            body: 'A fully pluggable tool for identifying and reporting on patterns in JavaScript.',
+            name: 'ESLint',
+            type: 'prototyping-tools',
+            url: 'https://github.com/eslint/eslint',
+          },
+          {
+            body: 'A mighty, modern linter that helps you avoid errors and enforce conventions in your styles.',
+            name: 'Stylelint',
+            type: 'prototyping-tools',
+            url: 'https://github.com/stylelint/stylelint',
+          },
+          {
+            body: 'Plugin for Stylelint with a11y rules.',
+            name: 'Stylelint-a11y',
+            type: 'prototyping-tools',
+            url: 'https://github.com/YozhikM/stylelint-a11y',
+          },
+          {
+            body: 'Git hooks made easy.',
+            name: 'Husky',
+            type: 'prototyping-tools',
+            url: 'https://github.com/typicode/husky',
+          },
+          {
+            body: 'Prettier is an opinionated code formatter.',
+            name: 'Prettier',
+            type: 'prototyping-tools',
+            url: 'https://github.com/prettier/prettier',
+          },
+        ],
+      },
+      articles: {
+        body: 'A bunch of articles that contain some good stuff.',
+        heading: 'Sites and articles',
+        resource: [
+          {
+            body: 'A list of known validation errors and warnings in the `govuk-frontend` repository.',
+            name: 'Known validation errors / warnings in govuk-frontend',
+            type: 'article',
+            url: 'https://github.com/alphagov/govuk-frontend/issues/1280#issuecomment-509588851',
+          },
+          {
+            body: 'Part 1 of this series focuses on the way screen readers read (or don’t read) punctuation and typographic symbols.',
+            name: 'Screen Readers: A Guide to Punctuation and Typographic Symbols',
+            type: 'article',
+            url: 'https://www.deque.com/blog/dont-screen-readers-read-whats-screen-part-1-punctuation-typographic-symbols/',
+          },
+          {
+            body: 'Shows how different WAI-ARIA attributes behave in commonly used screen readers.',
+            name: 'WAI-ARIA - Screen reader compatibility · PowerMapper Software',
+            type: 'article',
+            url: 'https://www.powermapper.com/tests/screen-readers/aria/',
+          },
+          {
+            body: 'Many websites have an accessibility feature called skip links that help some users navigate the site. However, there’s a problem with basically all skip links on mobile devices, which hurts your site’s accessibility instead of improving it.',
+            name: 'Your skip links are broken - Axess Lab',
+            type: 'article',
+            url: 'https://axesslab.com/skip-links/',
+          },
+          {
+            body: 'TL;DR: for standard HTML controls and standard ARIA patterns (widgets), you do not need to add instructions for screen readers on how to use them nor what they are.',
+            name: 'Stop Giving Control Hints to Screen Readers',
+            type: 'article',
+            url: 'https://adrianroselli.com/2019/10/stop-giving-control-hints-to-screen-readers.html',
+          },
+          {
+            body: 'Will your code work with assistive technologies? This a community driven effort. Please run some tests to help keep this project going and to learn about assistive technologies along the way.',
+            name: 'Accessibility Support',
+            type: 'article',
+            url: 'https://a11ysupport.io',
+          },
+          {
+            body: 'A community-driven resource to both find and share information on the accessibility of tools, services, platforms, and so on.',
+            name: 'Accessibility Reviews',
+            type: 'article',
+            url: 'https://a11y.reviews',
+          },
+          {
+            body: 'The A11Y Project is a community-driven effort to make digital accessibility easier.',
+            name: 'The A11Y Project',
+            type: 'article',
+            url: 'https://a11yproject.com',
+          },
+          {
+            body: 'How to review your site for accessibility issues, on Google’s Web Fundamentals.',
+            name: 'How To Do an Accessibility Review',
+            type: 'article',
+            url: 'https://developers.google.com/web/fundamentals/accessibility/how-to-review',
+          },
+        ],
+      },
+    },
+  },
   wcag: {
     body: 'A quick look over the guidelines, understanding them, and how to meet them.',
     heading: 'Web Content Accessibility Guidelines',

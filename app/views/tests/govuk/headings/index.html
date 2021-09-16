@@ -1,0 +1,166 @@
+{% extends "layout.html" %}
+{% from "hmrc/components/page-heading/macro.njk" import hmrcPageHeading %}
+
+{% set component = components.tests.component[6] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.tests.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+{{ appPageHeader() }}
+
+<div class="govuk-grid-row main-section">
+  {% include "includes/skip-links.html" %}
+
+  <div class="govuk-grid-column-one-third">
+    {{ appInpageNavigation() }}
+    {% include "includes/nav-tests.html" %}
+  </div>
+
+  <div id="component-section" class="govuk-grid-column-two-thirds">
+    <p class="govuk-body">{{ component.body }}</p>
+
+    {% call appComponentSection({
+      componentIndex: 1,
+      heading: component.example[0].heading,
+      body: component.example[0].body,
+      testing: component.example[0].testing
+    }) -%}
+      {{ hmrcPageHeading({
+        text: "How much more black could it be?"
+      }) }}
+    {%-endcall %}
+
+    {% call appComponentSection({
+      componentIndex: 2,
+      heading: component.example[1].heading,
+      body: component.example[1].body,
+      testing: component.example[1].testing
+    }) -%}
+      {{ hmrcPageHeading({
+        text: "How much more black could it be?",
+        section: "Album cover details"
+      }) }}
+    {%-endcall %}
+
+    {% call appComponentSection({
+      componentIndex: 3,
+      heading: component.example[2].heading,
+      body: component.example[2].body,
+      testing: component.example[2].testing
+    }) -%}
+      {{ govukInput({
+        label: {
+          text: "How much more black could it be?",
+          classes: "govuk-label--l",
+          isPageHeading: true
+        },
+        hint: {
+          text: "This example shows an <h1> around a <label> with the class of govuk-label--l"
+        },
+        id: "example",
+        name: "example"
+      }) }}
+    {%-endcall %}
+
+    {% call appComponentSection({
+      componentIndex: 4,
+      heading: component.example[3].heading,
+      body: component.example[3].body,
+      testing: component.example[3].testing
+    }) -%}
+      {{ govukCheckboxes({
+        idPrefix: "checkbox",
+        name: "checkbox",
+        fieldset: {
+          legend: {
+            text: "How much more black could it be?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          text: "This example shows an <h1> inside a <legend> with the class of govuk-fieldset__legend--l."
+        },
+        items: [
+          {
+            value: "checkbox",
+            text: "None"
+          },
+          {
+            value: "checkbox",
+            text: "None more Black"
+          },
+          {
+            value: "checkbox",
+            text: "It looks like Death"
+          }
+        ]
+      }) }}
+    {%-endcall %}
+
+    {% call appComponentSection({
+      componentIndex: 5,
+      heading: component.example[4].heading,
+      body: component.example[4].body,
+      testing: component.example[4].testing
+    }) -%}
+      <h1 class="govuk-heading-xl">Are you sure you want to remove Nigel Tufnel?</h1>
+      <p class="govuk-body">Well, I don’t really think that the end can be assessed as of itself as being the end because what
+        does the end feel like? It’s like saying when you try to extrapolate the end of the universe, you say, if the universe
+        is indeed infinite, then how - what does that mean? How far is all the way, and then if it stops, what’s stopping it,
+        and what’s behind what’s stopping it?</p>
+      {{ govukRadios({
+        classes: "govuk-radios--inline",
+        idPrefix: "remove-nigel",
+        name: "remove-nigel",
+        fieldset: {
+          legend: {
+            text: "Are you sure you want to remove Nigel Tufnel?",
+            isPageHeading: false,
+            classes: "govuk-visually-hidden"
+          }
+        },
+        hint: {
+          text: "So, what’s the end, you know, is my question to you."
+        },
+        items: [
+          {
+            value: "yes",
+            text: "Yes"
+          },
+          {
+            value: "no",
+            text: "No"
+          }
+        ]
+      }) }}
+    {%-endcall %}
+
+  </div>
+
+  <div id="cypress-section" class="govuk-grid-column-two-thirds cypress-section">
+    <h2 class="govuk-heading-l">Cypress tests</h2>
+    <div class="cypress-section__output">
+      <h3 class="govuk-heading-m" id="cypress-1">{{components.cypress.env[0].heading}}</h3>
+    </div>
+
+    <div class="cypress-section__output">
+      <h3 class="govuk-heading-m" id="cypress-2">{{components.cypress.env[1].heading}}</h3>
+    </div>
+
+    <div class="cypress-section__output">
+      <h3 class="govuk-heading-m" id="cypress-3">{{components.cypress.env[2].heading}}</h3>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

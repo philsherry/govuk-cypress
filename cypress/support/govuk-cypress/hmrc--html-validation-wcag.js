@@ -2,15 +2,15 @@
 /// <reference types="cypress" />
 /**
  * @author:
- * @function checkHtml5ValidationWcag
+ * @function checkHtmlValidationWcag
  * @description Cypress function to CHECK THE THING DOES THE THING.
- * @example cy.get("@component").checkHtml5ValidationWcag();
+ * @example cy.get("@component").checkHtmlValidationWcag();
  * @link
  **/
 
 // -- This is a child command --
 Cypress.Commands.add(
-  'checkHtml5ValidationWcag',
+  'checkHtmlValidationWcag',
   {
     prevSubject: 'element',
   },

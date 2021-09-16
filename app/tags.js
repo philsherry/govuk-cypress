@@ -140,6 +140,14 @@ module.exports = {
     },
     {
       description:
+        'Adding extra markup is announced by screen readers as extra items in the heading, which can cause confusion.',
+      level: 'best-practice',
+      ref_id: 'no-markup-in-headings',
+      title: 'No markup in headings',
+      url: '',
+    },
+    {
+      description:
         'Links that open in a new tab should contain text informing the user that they will be taken to a new browser tab and include the appropriate `rel` attributes for the type of content being accessed.',
       level: 'best-practice',
       ref_id: 'open-in-new-window-links',

@@ -11,6 +11,7 @@ import './govuk--headings';
 import './govuk--link-context';
 import './hmrc--account-header';
 import './hmrc--ask-the-user-for-their-consent';
+import './hmrc--check-tax-years.js';
 import './hmrc--conditionally-revealing-content';
 import './hmrc--currency-input';
 import './hmrc--default-browser-link-style';

@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% set component = components.tests.component[10] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.tests.heading %}
+
+{% block pageTitle %}
+{{ appPageTitle({
+  componentHeading: componentHeading,
+  sectionHeading: sectionHeading
+}) }}
+{% endblock %}
+
+{% block content %}
+
+{{ appPageHeader() }}
+
+<div class="govuk-grid-row main-section">
+  {% include "includes/skip-links.html" %}
+
+  <div class="govuk-grid-column-one-third">
+    {{ appInpageNavigation() }}
+    {% include "includes/nav-tests.html" %}
+  </div>
+
+  <div id="component-section" class="govuk-grid-column-two-thirds">
+    <p class="govuk-body">{{ component.body }}</p>
+
+    {% call appComponentSection({
+      componentIndex: 1,
+      heading: component.example[0].heading,
+      body: component.example[0].body,
+      testing: component.example[0].testing
+    }) -%}
+    <div id="component-1" class="example--tax-years">
+      <h2 class="govuk-heading-l">
+        How much
+        <span class="one-liner">self-employed</span>
+        profit do you expect to make between
+        <span class="one-liner">6&nbsp;April&nbsp;2020</span> and
+        <span class="one-liner">5&nbsp;April&nbsp;2021</span>?</span>
+      </h2>
+    </div>
+    {%-endcall %}
+
+  </div>
+
+  <div id="cypress-section" class="govuk-grid-column-two-thirds cypress-section">
+    <h2 class="govuk-heading-l">Cypress tests</h2>
+    <div class="cypress-section__output">
+      <h3 class="govuk-heading-m" id="cypress-1">{{components.cypress.env[0].heading}}</h3>
+    </div>
+
+    <div class="cypress-section__output">
+      <h3 class="govuk-heading-m" id="cypress-2">{{components.cypress.env[1].heading}}</h3>
+    </div>
+
+    <div class="cypress-section__output">
+      <h3 class="govuk-heading-m" id="cypress-3">{{components.cypress.env[2].heading}}</h3>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

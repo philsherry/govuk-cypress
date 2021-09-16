@@ -2,15 +2,15 @@
 /// <reference types="cypress" />
 /**
  * @author: @philsherry
- * @function hmrcPageHeading
+ * @function checkHmrcPageHeading
  * @description Cypress function to check the HMRC Page Heading pattern.
- * @example cy.get("@component").hmrcPageHeading();
+ * @example cy.get("@component").checkHmrcPageHeading();
  * @link https://design.tax.service.gov.uk/hmrc-design-patterns/page-heading
  **/
 
 // -- This is a child command --
 Cypress.Commands.add(
-  'someFunctionName',
+  'checkHmrcPageHeading',
   { prevSubject: 'element' },
   (subject, options) => {
     //

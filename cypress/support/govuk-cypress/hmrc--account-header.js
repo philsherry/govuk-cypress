@@ -3,7 +3,7 @@
 /**
  * @author:
  * @function checkAccountHeader
- * @description Cypress function to check the HMRC Page Heading pattern.
+ * @description Cypress function to check the HMRC Account Header pattern.
  * @example cy.checkAccountHeader();
  * @link https://design.tax.service.gov.uk/hmrc-design-patterns/account-header
  **/

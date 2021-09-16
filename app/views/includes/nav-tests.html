@@ -1,0 +1,14 @@
+<nav aria-label="Section: Tests">
+  <h2 class="govuk-heading-m" id="section-navigation__components">Section navigation</h2>
+  <ul class="govuk-list" role="list" aria-describedby="section-navigation__components">
+    {% for item in components.tests.component %}
+    <li>
+      <a class="govuk-link" href="/tests/{{ item.dept }}/{{ item.slug }}">
+        {{ item.name }}
+      </a>
+    </li>
+    {% else %}
+    <li>Data error</li>
+    {% endfor %}
+  </ul>
+</nav>

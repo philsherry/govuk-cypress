@@ -2899,6 +2899,66 @@ module.exports = {
     body: 'A page of handy resources to help you because a better person.',
     heading: 'Resources',
     types: {
+      articles: {
+        body: 'A bunch of articles that contain some good stuff.',
+        heading: 'Sites and articles',
+        resource: [
+          {
+            body: 'A list of known validation errors and warnings in the `govuk-frontend` repository.',
+            name: 'Known validation errors / warnings in govuk-frontend',
+            type: 'article',
+            url: 'https://github.com/alphagov/govuk-frontend/issues/1280#issuecomment-509588851',
+          },
+          {
+            body: 'Part 1 of this series focuses on the way screen readers read (or don’t read) punctuation and typographic symbols.',
+            name: 'Screen Readers: A Guide to Punctuation and Typographic Symbols',
+            type: 'article',
+            url: 'https://www.deque.com/blog/dont-screen-readers-read-whats-screen-part-1-punctuation-typographic-symbols/',
+          },
+          {
+            body: 'Shows how different WAI-ARIA attributes behave in commonly used screen readers.',
+            name: 'WAI-ARIA - Screen reader compatibility · PowerMapper Software',
+            type: 'article',
+            url: 'https://www.powermapper.com/tests/screen-readers/aria/',
+          },
+          {
+            body: 'Many websites have an accessibility feature called skip links that help some users navigate the site. However, there’s a problem with basically all skip links on mobile devices, which hurts your site’s accessibility instead of improving it.',
+            name: 'Your skip links are broken - Axess Lab',
+            type: 'article',
+            url: 'https://axesslab.com/skip-links/',
+          },
+          {
+            body: 'TL;DR: for standard HTML controls and standard ARIA patterns (widgets), you do not need to add instructions for screen readers on how to use them nor what they are.',
+            name: 'Stop Giving Control Hints to Screen Readers',
+            type: 'article',
+            url: 'https://adrianroselli.com/2019/10/stop-giving-control-hints-to-screen-readers.html',
+          },
+          {
+            body: 'Will your code work with assistive technologies? This a community driven effort. Please run some tests to help keep this project going and to learn about assistive technologies along the way.',
+            name: 'Accessibility Support',
+            type: 'article',
+            url: 'https://a11ysupport.io',
+          },
+          {
+            body: 'A community-driven resource to both find and share information on the accessibility of tools, services, platforms, and so on.',
+            name: 'Accessibility Reviews',
+            type: 'article',
+            url: 'https://a11y.reviews',
+          },
+          {
+            body: 'The A11Y Project is a community-driven effort to make digital accessibility easier.',
+            name: 'The A11Y Project',
+            type: 'article',
+            url: 'https://a11yproject.com',
+          },
+          {
+            body: 'How to review your site for accessibility issues, on Google’s Web Fundamentals.',
+            name: 'How To Do an Accessibility Review',
+            type: 'article',
+            url: 'https://developers.google.com/web/fundamentals/accessibility/how-to-review',
+          },
+        ],
+      },
       'browser-plugin': {
         body: 'These are tools that any member of the team can use at their desk while they’re testing the service. While there are many plugins listed here, you don’t have to use all of them. With the exception of Toggle JavaScript, they do a lot of the same things but there is some overlap. Take them all for a spin, see which ones you prefer.',
         heading: 'Browser plugins',
@@ -2995,67 +3055,986 @@ module.exports = {
           },
         ],
       },
-      articles: {
-        body: 'A bunch of articles that contain some good stuff.',
-        heading: 'Sites and articles',
-        resource: [
+    },
+  },
+  tests: {
+    body: 'Fixtures for common failings and usability issues that the accessibility team see a lot.',
+    component: [
+      {
+        // components.tests.component[0]
+        body: 'Cypress function to check the DWP Timeline component.',
+        dept: 'dwp',
+        example: [
           {
-            body: 'A list of known validation errors and warnings in the `govuk-frontend` repository.',
-            name: 'Known validation errors / warnings in govuk-frontend',
-            type: 'article',
-            url: 'https://github.com/alphagov/govuk-frontend/issues/1280#issuecomment-509588851',
-          },
-          {
-            body: 'Part 1 of this series focuses on the way screen readers read (or don’t read) punctuation and typographic symbols.',
-            name: 'Screen Readers: A Guide to Punctuation and Typographic Symbols',
-            type: 'article',
-            url: 'https://www.deque.com/blog/dont-screen-readers-read-whats-screen-part-1-punctuation-typographic-symbols/',
-          },
-          {
-            body: 'Shows how different WAI-ARIA attributes behave in commonly used screen readers.',
-            name: 'WAI-ARIA - Screen reader compatibility · PowerMapper Software',
-            type: 'article',
-            url: 'https://www.powermapper.com/tests/screen-readers/aria/',
-          },
-          {
-            body: 'Many websites have an accessibility feature called skip links that help some users navigate the site. However, there’s a problem with basically all skip links on mobile devices, which hurts your site’s accessibility instead of improving it.',
-            name: 'Your skip links are broken - Axess Lab',
-            type: 'article',
-            url: 'https://axesslab.com/skip-links/',
-          },
-          {
-            body: 'TL;DR: for standard HTML controls and standard ARIA patterns (widgets), you do not need to add instructions for screen readers on how to use them nor what they are.',
-            name: 'Stop Giving Control Hints to Screen Readers',
-            type: 'article',
-            url: 'https://adrianroselli.com/2019/10/stop-giving-control-hints-to-screen-readers.html',
-          },
-          {
-            body: 'Will your code work with assistive technologies? This a community driven effort. Please run some tests to help keep this project going and to learn about assistive technologies along the way.',
-            name: 'Accessibility Support',
-            type: 'article',
-            url: 'https://a11ysupport.io',
-          },
-          {
-            body: 'A community-driven resource to both find and share information on the accessibility of tools, services, platforms, and so on.',
-            name: 'Accessibility Reviews',
-            type: 'article',
-            url: 'https://a11y.reviews',
-          },
-          {
-            body: 'The A11Y Project is a community-driven effort to make digital accessibility easier.',
-            name: 'The A11Y Project',
-            type: 'article',
-            url: 'https://a11yproject.com',
-          },
-          {
-            body: 'How to review your site for accessibility issues, on Google’s Web Fundamentals.',
-            name: 'How To Do an Accessibility Review',
-            type: 'article',
-            url: 'https://developers.google.com/web/fundamentals/accessibility/how-to-review',
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
           },
         ],
+        name: 'checkDwpTimeline',
+        slug: 'dwp--timeline',
       },
-    },
+      {
+        // components.tests.component[1]
+        body: 'Cypress function to check any `aria-describedby` value has a valid target in the page.',
+        dept: 'govuk',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkAriaDescribedBy',
+        slug: 'govuk--aria-describedby',
+      },
+      {
+        // components.tests.component[2]
+        body: 'Cypress function to check any `aria-labelledby` value has a valid target in the page.',
+        dept: 'govuk',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkAriaLabelledby',
+        slug: 'govuk--aria-labelledby',
+      },
+      {
+        // components.tests.component[3]
+        body: 'Cypress function to check each error message on the page conforms to the standards set by the GOV.UK Design System.',
+        dept: 'govuk',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkGovukErrorMessage',
+        slug: 'govuk--error-message',
+      },
+      {
+        // components.tests.component[4]
+        body: 'Cypress function to check each error summary link has a valid target in the page.',
+        dept: 'govuk',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkGovukErrorSummary',
+        slug: 'govuk--error-summary',
+      },
+      {
+        // components.tests.component[5]
+        body: 'Cypress function to check the focus colours match the latest GOV.UK Design System.',
+        dept: 'govuk',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkFocusColours',
+        slug: 'govuk--focus-colours',
+      },
+      {
+        // components.tests.component[6]
+        body: 'Cypress function to check heading levels, including nested `legend` and `label` elements.',
+        dept: 'govuk',
+        example: [
+          {
+            body: 'Regular page heading with no section heading.',
+            heading: 'Regular page heading',
+            testing: [
+              {
+                reason:
+                  'Adding in extra markup to make this work is a bad idea because it is announced by screen readers as extra items in the heading.',
+                tags: {
+                  best: ['no-markup-in-headings'],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+          {
+            body: 'Regular page heading with section heading',
+            heading: 'Has section heading',
+            testing: [
+              {
+                reason:
+                  'Adding in extra markup to make this work is a bad idea because it is announced by screen readers as extra items in the heading.',
+                tags: {
+                  best: ['no-markup-in-headings'],
+                  wcag: [],
+                },
+              },
+            ],
+            url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/page-heading/',
+          },
+          {
+            body: 'Heading with nested label, to stop duplication for screen readers.',
+            heading: 'Labels as page headings',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: ['labels-legends-headings'],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+          {
+            body: 'Legend with nested H1, to stop duplication for screen readers.',
+            heading: 'Legends as page headings',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: ['labels-legends-headings'],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+          {
+            body: 'Regular page heading with visually-hidden legend, as there is a lot of content in between the two.',
+            heading: 'Heading with additional content',
+            testing: [
+              {
+                reason: 'User might forget the question after reading the additional content, so give them the question again as a regular `legend`.',
+                tags: {
+                  best: ['labels-legends-headings'],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+          {
+            body: 'Heading followed by a lot of content, so it’s best to have a regular `h1` and a visually-hidden `legend`.',
+            heading: 'Heading with content',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: ['labels-legends-headings'],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        experimental: false,
+        name: 'checkHeadings',
+        slug: 'headings',
+      },
+      {
+        // components.tests.component[7]
+        body: 'Cypress function to check each link has enough unique context for screen reader users to understand its purpose.',
+        dept: 'govuk',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkLinkContext',
+        slug: 'govuk--link-context',
+      },
+      {
+        body: 'Cypress function to check the HMRC Account Header pattern.',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkAccountHeader',
+        // components.tests.component[8]
+        slug: 'hmrc--account-header',
+      },
+      {
+        // components.tests.component[9]
+        body: 'Cypress function to check the HMRC Page Heading pattern.',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkUserConsent',
+        slug: 'hmrc--ask-the-user-for-their-consent',
+      },
+      {
+        // components.tests.component[10]
+        body: 'Cypress function to check tax years are formatted correctly, but also not wrapped in a span.',
+        dept: 'hmrc',
+        example: [
+          {
+            body: 'The heading contains three span-wrapped elements, causing the heading to be announced as having four items.',
+            heading: 'Three span-wrapped elements',
+            testing: [
+              {
+                reason:
+                  'Adding in extra markup to make this work is a bad idea because it is announced by screen readers as extra items in the heading.',
+                tags: {
+                  best: ['no-markup-in-headings'],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        experimental: false,
+        name: 'checkTaxYears',
+        slug: 'check-tax-years',
+      },
+      {
+        // components.tests.component[11]
+        body: 'Cypress function to CHECK THE THING DOES THE THING TO THE THINGS.',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkConditionallyRevealingContent',
+        slug: 'hmrc--conditionally-revealing-content',
+      },
+      {
+        // components.tests.component[12]
+        body: 'Cypress function to check the HMRC Currency Input pattern.',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'hmrcCurrencyInput',
+        slug: 'hmrc--currency-input',
+      },
+      {
+        // components.tests.component[13]
+        body: 'Cypress function to CHECK THE THING DOES THE THING.',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkDefaultBrowserLinkStyle',
+        slug: 'hmrc--default-browser-link-style',
+      },
+      {
+        body: '____',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkErrorMessage',
+        // components.tests.component[14]
+        slug: 'hmrc--error-message',
+      },
+      {
+        // components.tests.component[15]
+        body: '____',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: '____',
+        slug: 'hmrc--error-not-associated',
+      },
+      {
+        // components.tests.component[16]
+        body: '____',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkPageTitleError',
+        slug: 'hmrc--error-page-title',
+      },
+      {
+        // components.tests.component[17]
+        body: '____',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkErrorSummaryLinks',
+        slug: 'hmrc--error-summary-links',
+      },
+      {
+        // components.tests.component[18]
+        body: '____',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: '____',
+        slug: 'hmrc--error-summary-missing',
+      },
+      {
+        // components.tests.component[19]
+        body: '____',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkHintErrorInLabel',
+        slug: 'hmrc--hint-error-in-label',
+      },
+      {
+        // components.tests.component[20]
+        body: '____',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkHintNotAssociated',
+        slug: 'hmrc--hint-not-associated',
+      },
+      {
+        // components.tests.component[21]
+        body: '____',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkHtmlValidationWcag',
+        slug: 'hmrc--html-validation-wcag',
+      },
+      {
+        // components.tests.component[22]
+        body: '____',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkHtml5ValidationPresent',
+        slug: 'hmrc--html5-validation-present',
+      },
+      {
+        // components.tests.component[23]
+        body: '____',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkAutocompleteAttributes',
+        slug: 'hmrc--missing-autocomplete',
+      },
+      {
+        // components.tests.component[24]
+        body: '____',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkForMissingFieldsetOrLegend',
+        slug: 'hmrc--missing-fieldset-or-legend',
+      },
+      {
+        // components.tests.component[25]
+        body: '____',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkInputMode',
+        slug: 'hmrc--missing-inputmode',
+      },
+      {
+        // components.tests.component[26]
+        body: '____',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkMissingInstructions',
+        slug: 'hmrc--missing-instructions',
+      },
+      {
+        // components.tests.component[27]
+        body: '____',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkMissingLabel',
+        slug: 'hmrc--missing-label',
+      },
+      {
+        // components.tests.component[28]
+        body: '____',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkNestedFieldsets',
+        slug: 'hmrc--nested-fieldsets',
+      },
+      {
+        // components.tests.component[29]
+        body: '____',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkNotificationBadge',
+        slug: 'hmrc--notification-badge',
+      },
+      {
+        // components.tests.component[30]
+        body: '____',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkNewTarget',
+        slug: 'hmrc--open-in-new-window-links',
+      },
+      {
+        // components.tests.component[31]
+        body: '____',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkHmrcPageHeading',
+        slug: 'hmrc--page-heading',
+      },
+      {
+        // components.tests.component[32]
+        body: '____',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkPageTitle',
+        slug: 'hmrc--page-title',
+      },
+      {
+        // components.tests.component[33]
+        body: '____',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkHmrcReferences',
+        slug: 'hmrc--references',
+      },
+      {
+        // components.tests.component[34]
+        body: '____',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkHmrcTimeline',
+        slug: 'hmrc--timeline',
+      },
+      {
+        // components.tests.component[35]
+        body: '____',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkSessionTimeoutExtends',
+        slug: 'hmrc--timeout-dialog-cannot-extend-session',
+      },
+      {
+        // components.tests.component[36]
+        body: '____',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkServiceTimeout',
+        slug: 'hmrc--timeout-dialog',
+      },
+      {
+        // components.tests.component[37]
+        body: '____',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkTypeAttribute',
+        slug: 'hmrc--type-attribute-incorrect',
+      },
+      {
+        // components.tests.component[38]
+        body: '____',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkUnassociatedLabel',
+        slug: 'hmrc--unassociated-label',
+      },
+      {
+        // components.tests.component[39]
+        body: '____',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkFormValidation',
+        slug: 'hmrc--validation',
+      },
+      {
+        // components.tests.component[40]
+        body: '____',
+        dept: 'hmrc',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkWelshTranslations',
+        slug: 'hmrc--welsh-translations',
+      },
+    ],
+    heading: 'Cypress tests for common issues',
   },
   wcag: {
     body: 'A quick look over the guidelines, understanding them, and how to meet them.',

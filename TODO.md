@@ -32,6 +32,7 @@ Most of this has been my ADHD brain making things up as I go, so there are lots 
 - [ ] Error message: “Error:” prefix should exist.
 - [x] Page title: First section should match the page heading.
 - [ ] UTR: Does Cypress trigger the telephone helper?
+- [ ] Cypress Warning: `cy.server()` has been deprecated and will be moved to a plugin in a future release. Consider migrating to using `cy.intercept()` instead.
 
 ## Project
 

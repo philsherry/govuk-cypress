@@ -18,12 +18,17 @@ module.exports = {
   govukDescription:
     'Components are reusable parts of the user interface that have been made to support a variety of applications.',
 
+  testsHeading: 'Cypress tests for common issues',
+  testsDescription:
+    'Fixtures for common failings and usability issues that the accessibility team see a lot.',
+
   wcagHeading: 'Web Content Accessibility Guidelines',
   wcagDescription:
     'A quick look over the guidelines, understanding them, and how to meet them.',
 
   resourcesHeading: 'Resources',
-  resourcesDescription: 'A page of handy resources to help you because a better person.',
+  resourcesDescription:
+    'A page of handy resources to help you because a better person.',
 
   experimental:
     'This is currently experimental because more research is needed.',

@@ -43,7 +43,8 @@ Cypress.Commands.add(
         .should('have.attr', 'id', 'error-summary-title')
         .should('contain', 'There is a problem');
 
-      // Each list item’s anchor’s href should map to a valid target in the `<main>` element, and each target should come in the same order as in the list.
+      // Each list item’s anchor’s href should map to a valid target in the `<main>`
+      // element, and each target should come in the same order as in the list.
       cy.get('.govuk-error-summary__list > li').each(($list, index) => {
         // Get length and order of error summary list items for later use
         listLength = $list.length;

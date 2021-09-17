@@ -3,7 +3,7 @@
   <ul class="govuk-list" role="list" aria-describedby="section-navigation__components">
     {% for item in components.govuk.component %}
     <li>
-      <a class="govuk-link" href="/govuk/{{ item.slug }}">
+      <a class="govuk-link" href="/{{ item.dept }}/{{ item.slug }}">
         {{ item.name }}
       </a>
     </li>

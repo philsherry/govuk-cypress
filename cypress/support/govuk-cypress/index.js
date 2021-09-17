@@ -4,10 +4,10 @@
 import './dwp--timeline';
 import './govuk--aria-describedby';
 import './govuk--aria-labelledby';
+import './govuk--check-headings';
 import './govuk--error-message';
 import './govuk--error-summary';
 import './govuk--focus-colours';
-import './govuk--headings';
 import './govuk--link-context';
 import './hmrc--account-header';
 import './hmrc--ask-the-user-for-their-consent';

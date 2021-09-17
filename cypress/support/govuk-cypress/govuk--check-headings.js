@@ -82,29 +82,28 @@ Cypress.Commands.add(
 
       /**
        * @description
-       * @param {*} $el
-       * @param {*} legendAsHeading
+       * @param {Object} $el
+       * @param {Boolean} legendAsHeading
        */
       const fnLegendAsHeading = ($el) => {
-        cy.get($el).children('h1');
-        legendAsHeading = expect($el.find('h1').length).to.equal(1);
+        legendAsHeading = expect($el.children('h1').length).to.equal(1);
       };
 
       /**
        * @description
-       * @param {*} $el
-       * @param {*} labelAsHeading
+       * @param {Object} $el
+       * @param {Boolean} labelAsHeading
        */
       const fnLabelAsHeading = ($el) => {
         labelAsHeading =
-          expect($el.find('label').length).to.equal(1) &&
-          expect($el.find('h1').length).to.equal(0);
+          expect($el.find('h1').is(':visible')).to.be.true &&
+          expect($el.find('h1').children('label').length).to.equal(1);
       };
 
       /**
        * @description
-       * @param {*} $el
-       * @param {*} headingWithContent
+       * @param {Object} $el
+       * @param {Boolean} headingWithContent
        */
       const fnHeadingWithContent = ($el) => {
         headingWithContent =
@@ -122,8 +121,8 @@ Cypress.Commands.add(
 
       /**
        * @description
-       * @param {*} $el
-       * @param {*} hmrcPageHeading
+       * @param {Object} $el
+       * @param {Boolean} hmrcPageHeading
        */
       const fnHmrcPageHeading = ($el) => {
         hmrcPageHeading = true;
@@ -155,20 +154,23 @@ Cypress.Commands.add(
       }
 
       /**
-       * Try and catch all other heading types.
+       * Try and catch all other possible heading types,
+       * in case people don’t pass them in as arguments.
        */
 
       // This H1||h2 should not have any children, unless it’s a label.
-      cy.get('h1').children('span').should('have.length', 0);
-      cy.get('h2').children('span').should('have.length', 0);
+      cy.get(/h([1|2])/gi)
+        .children('span')
+        .should('have.length', 0);
 
-      // Is this a `<h1>` nested inside a `<legend>` element?
-      if ($el.find('legend')) {
-        fnLegendAsHeading($el);
-      }
+      // Is this a `<h1-2>` nested inside a `<legend>` element?
+      // We never go deeper than that.
+      // if ($el.find('legend') && $el.find('legend').contains(/h([1|2])/gi, /\w/i)) {
+      //   fnLegendAsHeading($el);
+      // }
 
       // Is this the first heading on the page? It should be a `<h1>` and be govuk-heading-xl
-      if ($el.find('h1:first')) {
+      if ($el.find('h1').first()) {
         cy.get($el).should('have.class', 'govuk-heading-xl');
       }
 

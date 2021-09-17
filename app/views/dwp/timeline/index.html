@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+{% from "timeline/macro.njk" import dwpTimeline %}
+
+{% set component = components.dwp.component[0] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block deptStyles %}
+<link rel="stylesheet" href="{{ asset_path }}stylesheets/nhsuk-5.1.0.min.css" />
+{% endblock %}
+
+{% block pageTitle %}
+{{ appPageTitle({
+  componentHeading: componentHeading,
+  sectionHeading: sectionHeading
+}) }}
+{% endblock %}
+
+{% block content %}
+
+{{ appPageHeader() }}
+
+<div class="govuk-grid-row main-section">
+  {% include "includes/skip-links.html" %}
+
+  <div class="govuk-grid-column-one-third">
+    {{ appInpageNavigation() }}
+    {% include "includes/nav-hmrc.html" %}
+  </div>
+
+  <div id="component-section" class="govuk-grid-column-two-thirds">
+    <p class="govuk-body">{{ component.body }}</p>
+
+    {% call appComponentSection({
+      componentIndex: 1,
+      heading: component.example[0].heading,
+      body: component.example[0].body,
+      testing: component.example[0].testing
+    }) -%}
+      <div class="govuk-width-container">
+        <div class="grid-row app-content">
+          <div class="column-one-third">
+            <h1 class="govuk-heading-m">Appointments</h1>
+
+            <ol class="dwp-timeline">
+
+              <li class="dwp-timeline__entry">
+                <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Appointment Accepted</h2>
+                <p class="govuk-caption-m govuk-!-margin-bottom-1">by John Smith</p>
+
+                <p class="govuk-caption-m">
+                  11 Aug 2021
+                </p>
+              </li>
+
+              <li class="dwp-timeline__entry">
+                <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Appointment Declined</h2>
+                <p class="govuk-caption-m govuk-!-margin-bottom-1">by John Smith</p>
+
+                <p class="govuk-caption-m">
+                  10 Aug 2021
+                </p>
+              </li>
+
+            </ol>
+
+          </div>
+        </div>
+
+      </div>
+    {%-endcall %}
+
+  </div>
+
+  <div id="cypress-section" class="govuk-grid-column-two-thirds cypress-section">
+    <h2 class="govuk-heading-l">Cypress tests</h2>
+    <div class="cypress-section__output">
+      <h3 class="govuk-heading-m" id="cypress-1">{{components.cypress.env[0].heading}}</h3>
+    </div>
+
+    <div class="cypress-section__output">
+      <h3 class="govuk-heading-m" id="cypress-2">{{components.cypress.env[1].heading}}</h3>
+    </div>
+
+    <div class="cypress-section__output">
+      <h3 class="govuk-heading-m" id="cypress-3">{{components.cypress.env[2].heading}}</h3>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

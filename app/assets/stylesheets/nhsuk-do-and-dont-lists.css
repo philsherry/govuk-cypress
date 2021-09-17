@@ -1,0 +1,285 @@
+@font-face {
+  font-display: swap;
+  font-family: "Frutiger W01";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.eot?#iefix");
+  src: url("https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.eot?#iefix")
+      format("eot"),
+    url("https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2")
+      format("woff2"),
+    url("https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff") format("woff"),
+    url("https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.ttf")
+      format("truetype"),
+    url("https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.svg#7def0e34-f28d-434f-b2ec-472bde847115")
+      format("svg");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Frutiger W01";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.eot?#iefix");
+  src: url("https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.eot?#iefix")
+      format("eot"),
+    url("https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2")
+      format("woff2"),
+    url("https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff") format("woff"),
+    url("https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.ttf")
+      format("truetype"),
+    url("https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.svg#eae74276-dd78-47e4-9b27-dac81c3411ca")
+      format("svg");
+}
+
+.nhsuk-heading-m,
+.nhsuk-do-dont-list__label {
+  display: block;
+  font-family: Frutiger W01, Arial, Sans-serif;
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+@media (min-width: 40.0625em) {
+  .nhsuk-heading-m {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.33333;
+  }
+}
+
+@media print {
+  .nhsuk-heading-m {
+    font-size: 18pt;
+    line-height: 1.15;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .nhsuk-heading-m {
+    margin-bottom: 24px;
+  }
+}
+
+.nhsuk-icon {
+  height: 34px;
+  width: 34px;
+}
+
+.nhsuk-icon__search {
+  fill: #005eb8;
+}
+
+.nhsuk-icon__chevron-left {
+  fill: #005eb8;
+}
+
+.nhsuk-icon__chevron-right {
+  fill: #005eb8;
+}
+
+.nhsuk-icon__close {
+  fill: #005eb8;
+}
+
+.nhsuk-icon__cross {
+  fill: #d5281b;
+}
+
+.nhsuk-icon__tick {
+  stroke: #007f3b;
+}
+
+.nhsuk-icon__arrow-right {
+  fill: #005eb8;
+}
+
+.nhsuk-icon__arrow-left {
+  fill: #005eb8;
+}
+
+.nhsuk-icon__arrow-right-circle {
+  fill: #007f3b;
+}
+
+.nhsuk-icon__chevron-down {
+  fill: #005eb8;
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.nhsuk-icon__chevron-down path {
+  fill: #fff;
+}
+
+.nhsuk-icon__chevron-up {
+  fill: #005eb8;
+}
+
+.nhsuk-icon__chevron-up path {
+  fill: #fff;
+}
+
+.nhsuk-icon__emdash path {
+  fill: #aeb7bd;
+}
+
+.nhsuk-icon__plus {
+  fill: #005eb8;
+}
+
+.nhsuk-icon__minus {
+  fill: #005eb8;
+}
+
+.nhsuk-icon--size-25 {
+  height: 42.5px;
+  width: 42.5px;
+}
+
+.nhsuk-icon--size-50 {
+  height: 51px;
+  width: 51px;
+}
+
+.nhsuk-icon--size-75 {
+  height: 59.5px;
+  width: 59.5px;
+}
+
+.nhsuk-icon--size-100 {
+  height: 68px;
+  width: 68px;
+}
+
+.nhsuk-list,
+ul,
+ol {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  list-style-type: none;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+@media (min-width: 40.0625em) {
+  .nhsuk-list,
+  ul,
+  ol {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.47368;
+  }
+}
+
+.nhsuk-do-dont-list {
+  background-color: #fff;
+  border: 1px solid #d8dde0;
+  color: #212b32;
+  font-family: Frutiger W01, Arial, Sans-serif;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  padding: 24px;
+  padding-top: 0 !important;
+}
+
+.nhsuk-do-dont-list > :first-child {
+  margin-top: 0;
+}
+
+.nhsuk-do-dont-list > :last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 40.0625em) {
+  .nhsuk-do-dont-list {
+    margin-bottom: 48px;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .nhsuk-do-dont-list {
+    margin-top: 48px;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .nhsuk-do-dont-list {
+    padding: 32px;
+  }
+}
+
+@media print {
+  .nhsuk-do-dont-list {
+    border: 1px solid #212b32;
+    page-break-inside: avoid;
+  }
+}
+
+.nhsuk-do-dont-list__label {
+  background-color: #005eb8;
+  color: #fff;
+  display: inline-block;
+  font-family: Frutiger W01, Arial, Sans-serif;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin: 0 0 8px -33px;
+  padding: 8px 32px;
+  position: relative;
+  top: -16px;
+}
+
+@media (min-width: 40.0625em) {
+  .nhsuk-do-dont-list__label {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.33333;
+  }
+}
+
+@media print {
+  .nhsuk-do-dont-list__label {
+    font-size: 18pt;
+    line-height: 1.15;
+  }
+}
+
+@media (max-width: 40.0525em) {
+  .nhsuk-do-dont-list__label {
+    margin-left: -25px;
+    margin-right: 0;
+    padding: 8px 24px;
+    top: -8px;
+  }
+}
+
+@media print {
+  .nhsuk-do-dont-list__label {
+    background: 0 0;
+    color: #212b32;
+    top: 0;
+  }
+}
+
+@media print {
+  .nhsuk-do-dont-list__label {
+    color: #212b32;
+    fill: #212b32;
+  }
+
+  .nhsuk-do-dont-list__label:active,
+  .nhsuk-do-dont-list__label:focus,
+  .nhsuk-do-dont-list__label:visited {
+    color: #212b32;
+  }
+}

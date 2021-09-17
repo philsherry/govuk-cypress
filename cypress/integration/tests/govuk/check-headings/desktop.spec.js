@@ -57,15 +57,6 @@ describe(`Component :: ${component} :: example 1`, () => {
     cy.get('@component').should('be.visible');
   });
 
-  it('screenshots the component for a diff state', () => {
-    cy.get('@example-1').screenshot(
-      `${service}--${component}--${viewport}--${state}`,
-      {
-        capture: 'viewport',
-      }
-    );
-  });
-
   it('checks the component', () => {
     cy.get('@component').checkHeadings();
   });
@@ -82,15 +73,6 @@ describe(`Component :: ${component} :: example 2`, () => {
     cy.get('@component').should('be.visible');
   });
 
-  it('screenshots the component for a diff state', () => {
-    cy.get('@example-2').screenshot(
-      `${service}--${component}--${viewport}--${state}`,
-      {
-        capture: 'viewport',
-      }
-    );
-  });
-
   it('checks the component', () => {
     cy.get('@component').checkHeadings('labelAsHeading');
   });
@@ -105,15 +87,6 @@ describe(`Component :: ${component} :: example 2`, () => {
 describe(`Component :: ${component} :: example 3`, () => {
   it('checks all visible elements are present and visible', () => {
     cy.get('@component').should('be.visible');
-  });
-
-  it('screenshots the component for a diff state', () => {
-    cy.get('@example-2').screenshot(
-      `${service}--${component}--${viewport}--${state}`,
-      {
-        capture: 'viewport',
-      }
-    );
   });
 
   it('checks the component', () => {
@@ -133,15 +106,6 @@ describe(`Component :: ${component} :: example 4`, () => {
     cy.get('@component').should('be.visible');
   });
 
-  it('screenshots the component for a diff state', () => {
-    cy.get('@example-4').screenshot(
-      `${service}--${component}--${viewport}--${state}`,
-      {
-        capture: 'viewport',
-      }
-    );
-  });
-
   it('checks the component', () => {
     cy.get('@component').checkHeadings('legendAsHeading');
   });
@@ -156,15 +120,6 @@ describe(`Component :: ${component} :: example 4`, () => {
 describe(`Component :: ${component} :: example 5`, () => {
   it('checks all visible elements are present and visible', () => {
     cy.get('@component').should('be.visible');
-  });
-
-  it('screenshots the component for a diff state', () => {
-    cy.get('@component-5').screenshot(
-      `${service}--${component}--${viewport}--${state}`,
-      {
-        capture: 'viewport',
-      }
-    );
   });
 
   it('checks the component', () => {

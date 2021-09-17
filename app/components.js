@@ -85,6 +85,36 @@ module.exports = {
     heading: 'Cypress Test Runner',
     url: 'https://www.cypress.io/',
   },
+  dwp: {
+    body: 'Use this design system to make your service consistent with DWP services. Learn from the research and experience of other service teams and avoid repeating work that’s already been done.',
+    component: [
+      {
+        body: 'Use the timeline component to show a linear record of what has happened.',
+        dept: 'dwp',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        experimental: false,
+        name: 'Timeline',
+        slug: 'timeline',
+        url: 'https://design-system.dwp.gov.uk/components/timeline',
+      },
+    ],
+    heading: 'DWP Design System',
+    url: '',
+  },
   govuk: {
     body: 'Components are reusable parts of the user interface that have been made to support a variety of applications.',
     component: [
@@ -1874,6 +1904,7 @@ module.exports = {
         ],
         experimental: false,
         name: 'Account header',
+        slug: 'account-header',
         url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/account-header/',
       },
       {
@@ -2895,6 +2926,36 @@ module.exports = {
     heading: 'HMRC Design Patterns',
     url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/',
   },
+  nhsuk: {
+    body: 'Build consistent, accessible user interfaces. Learn from the research and experience of other NHS digital teams.',
+    component: [
+      {
+        body: 'Use Do and Don’t lists to help users understand more easily what they should and shouldn’t do.',
+        dept: 'nhsuk',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        experimental: false,
+        name: 'Do and Don’t lists',
+        slug: 'do-and-dont-lists',
+        url: 'https://service-manual.nhs.uk/design-system/components/do-and-dont-lists',
+      },
+    ],
+    heading: 'NHS Digital Design System',
+    url: 'https://service-manual.nhs.uk/design-system/',
+  },
   resources: {
     body: 'A page of handy resources to help you because a better person.',
     heading: 'Resources',
@@ -3257,7 +3318,8 @@ module.exports = {
             heading: 'Heading with additional content',
             testing: [
               {
-                reason: 'User might forget the question after reading the additional content, so give them the question again as a regular `legend`.',
+                reason:
+                  'User might forget the question after reading the additional content, so give them the question again as a regular `legend`.',
                 tags: {
                   best: ['labels-legends-headings'],
                   wcag: [],

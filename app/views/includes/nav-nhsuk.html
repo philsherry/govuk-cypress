@@ -1,7 +1,7 @@
-<nav aria-label="Section: HMRC">
+<nav aria-label="Section: NHS">
   <h2 class="govuk-heading-m" id="section-navigation__components">Section navigation</h2>
   <ul class="govuk-list" role="list" aria-describedby="section-navigation__components">
-    {% for item in components.hmrc.component %}
+    {% for item in components.nhsuk.component %}
     <li>
       <a class="govuk-link" href="/{{ item.dept }}/{{ item.slug }}">
         {{ item.name }}

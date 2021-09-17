@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% set componentHeading = components.dwp.heading %}
+
+{% block pageTitle %}
+{{ appPageTitle({
+  componentHeading: componentHeading
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">{{ components.dwp.heading }}</h1>
+    <p class="govuk-body">{{ components.dwp.body }}</p>
+
+    <dl class="govuk-list">
+      {% for item in components.dwp.component %}
+      <dt class="govuk-heading-m">
+        <a class="govuk-link" href="/{{ item.dept }}/{{ item.slug }}">
+          {{ item.name }}
+        </a>
+      </dt>
+      <dd class="govuk-body">{{ item.body }}</dd>
+      {% else %}
+      <dt class="govuk-heading-m">Data error</dt>
+      {% endfor %}
+    </dl>
+
+  </div>
+</div>
+
+{% endblock %}

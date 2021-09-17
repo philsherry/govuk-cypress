@@ -2,6 +2,8 @@
   "baseUrl": "http://localhost:3000",
   "chromeWebSecurity": false,
   "env": {
+    "FAIL_FAST_ENABLED": false,
+    "FAIL_FAST_STRATEGY": "run",
     "browserPermissions": {
       "camera": "block",
       "cookies": "allow",
@@ -12,10 +14,9 @@
       "notifications": "allow",
       "plugins": "ask",
       "popups": "ask"
-    },
-    "FAIL_FAST_ENABLED": false,
-    "FAIL_FAST_STRATEGY": "run"
+    }
   },
+  "projectId": "do2p9s",
   "reporter": "mocha-multi-reporters",
   "reporterOptions": {
     "configFile": "cypress-reporters.json",

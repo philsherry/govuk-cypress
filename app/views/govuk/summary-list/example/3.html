@@ -1,0 +1,56 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[22] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukSummaryList({
+      classes: 'govuk-summary-list--no-border',
+      rows: [
+        {
+          key: {
+            text: "Name"
+          },
+          value: {
+            text: "Sarah Philips"
+          }
+        },
+        {
+          key: {
+            text: "Date of birth"
+          },
+          value: {
+            text: "5 January 1978"
+          }
+        },
+        {
+          key: {
+            text: "Contact information"
+          },
+          value: {
+            html: "72 Guild Street<br>London<br>SE23 6FH"
+          }
+        },
+        {
+          key: {
+            text: "Contact details"
+          },
+          value: {
+            html: '<p class="govuk-body">07700 900457</p><p class="govuk-body">sarah.phillips@example.com</p>'
+          }
+        }
+      ]
+    }) }}
+  </div>
+</div>
+{% endblock %}

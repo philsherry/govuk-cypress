@@ -299,7 +299,7 @@ module.exports = {
         ],
         experimental: false,
         name: 'Button',
-        slug: 'breadcrumbs',
+        slug: 'button',
         url: 'https://design-system.service.gov.uk/components/button/',
       },
       {
@@ -1702,7 +1702,7 @@ module.exports = {
             ],
           },
           {
-            body: '',
+            body: 'Use the `autocomplete` attribute on text inputs to help users complete forms more quickly. This lets you specify an input’s purpose so browsers can autofill the information on a user’s behalf if they’ve entered it previously.',
             heading: 'Use the autocomplete attribute',
             testing: [
               {
@@ -1715,7 +1715,7 @@ module.exports = {
             ],
           },
           {
-            body: '',
+            body: 'Sometimes, browsers will spellcheck the information a user puts into a text input. If a user enters something which is recognised as a spelling error, sighted users will see a red line under the word.',
             heading: 'How and when to spellcheck a user’s input',
             testing: [
               {
@@ -1874,6 +1874,7 @@ module.exports = {
         ],
         experimental: false,
         name: 'Account header',
+        slug: 'account-header',
         url: 'https://design.tax.service.gov.uk/hmrc-design-patterns/account-header/',
       },
       {
@@ -1882,7 +1883,7 @@ module.exports = {
         dept: 'hmrc',
         example: [
           {
-            body: '',
+            body: 'You can ask for the Accounts Office reference as the main heading or `<h1> `of the screen. It can be a question or statement.',
             heading: 'Default view',
             testing: [
               {
@@ -2103,7 +2104,7 @@ module.exports = {
         dept: 'hmrc',
         example: [
           {
-            body: '',
+            body: 'Use this pattern when we can confirm the user’s identity.',
             heading: 'Default view',
             testing: [
               {
@@ -2151,7 +2152,7 @@ module.exports = {
         dept: 'hmrc',
         example: [
           {
-            body: '',
+            body: 'The user enters the amount of money.',
             heading: 'Default view',
             testing: [
               {
@@ -2422,8 +2423,47 @@ module.exports = {
         dept: 'hmrc',
         example: [
           {
-            body: '',
-            heading: 'Default view',
+            body: 'Change your page title by updating the default page_title block on each page.',
+            heading: 'Default view (Nunjucks)',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+          {
+            body: 'For pages that use HTML, edit the `<title>` on each page.',
+            heading: 'Default view (HTML)',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+          {
+            body: 'If the user makes an error, add ‘Error: ’ to the beginning of the title so screen readers read it out as soon as possible.',
+            heading: 'Error states',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+          {
+            body: 'If there is personally identifiable information in the `<h1>`, you must make sure it is not recorded in your analytics package.',
+            heading: 'Personally identifiable information',
             testing: [
               {
                 reason: '',
@@ -3257,7 +3297,8 @@ module.exports = {
             heading: 'Heading with additional content',
             testing: [
               {
-                reason: 'User might forget the question after reading the additional content, so give them the question again as a regular `legend`.',
+                reason:
+                  'User might forget the question after reading the additional content, so give them the question again as a regular `legend`.',
                 tags: {
                   best: ['labels-legends-headings'],
                   wcag: [],

@@ -1,0 +1,27 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[4] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukCharacterCount({
+      id: "label-as-page-heading",
+      name: "label-as-page-heading",
+      maxlength: 200,
+      label: {
+        text: "Describe the nature of your event"
+      }
+    }) }}
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[9] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukDateInput({
+      fieldset: {
+        legend: {
+          text: "When was your passport issued?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      hint: {
+        text: "For example, 12 11 2007"
+      },
+      errorMessage: {
+        text: "The date your passport was issued must be in the past"
+      },
+      id: "passport-issued",
+      namePrefix: "passport-issued",
+      items: [
+        {
+          classes: "govuk-input--width-2 govuk-input--error",
+          name: "day",
+          value: "6"
+        },
+        {
+          classes: "govuk-input--width-2 govuk-input--error",
+          name: "month",
+          value: "3"
+        },
+        {
+          classes: "govuk-input--width-4 govuk-input--error",
+          name: "year",
+          value: "2076"
+        }
+      ]
+    }) }}
+  </div>
+</div>
+{% endblock %}

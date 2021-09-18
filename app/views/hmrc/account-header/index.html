@@ -1,88 +1,46 @@
 {% extends "layout.html" %}
 
+{% set component = components.hmrc.component[0] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
 {% block pageTitle %}
-{{ components.hmrc.component[0].name }} -
-{{ components.hmrc.heading }} -
-{{ serviceName }}
+{{ appPageTitle({
+  componentHeading: componentHeading,
+  sectionHeading: sectionHeading
+}) }}
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <header class="hmrc-page-heading">
-      <h1 class="govuk-heading-xl">
-        {{ components.hmrc.component[0].name }}
-      </h1>
-      <p class="govuk-caption-xl hmrc-caption-xl"><span class="govuk-visually-hidden">This section is </span>{{
-        components.hmrc.heading }}</p>
-    </header>
-  </div>
-</div>
+{{ appPageHeader() }}
 
 <div class="govuk-grid-row main-section">
   {% include "includes/skip-links.html" %}
 
   <div class="govuk-grid-column-one-third">
-    <nav aria-label="In-page">
-      <h2 class="govuk-heading-m">In-page navigation</h2>
-      <h3 class="govuk-heading-s" id="in-page-navigation__components">Components</h3>
-      <ol class="govuk-list" role="list" aria-describedby="in-page-navigation__components">
-        <li><a class="govuk-link" href="#component-1">{{ components.hmrc.component[2].example[0].heading }}</a></li>
-      </ol>
-      <h3 class="govuk-heading-s" id="in-page-navigation__cypress">Cypress tests</h3>
-      <ol class="govuk-list" role="list" aria-describedby="in-page-navigation__cypress">
-        <li><a class="govuk-link" href="#cypress-1">{{components.cypress.env[0].heading}}</a></li>
-        <li><a class="govuk-link" href="#cypress-2">{{components.cypress.env[1].heading}}</a></li>
-        <li><a class="govuk-link" href="#cypress-3">{{components.cypress.env[2].heading}}</a></li>
-      </ol>
-    </nav>
+    {{ appInpageNavigation() }}
     {% include "includes/nav-hmrc.html" %}
   </div>
 
-  <div id="component-section" class="govuk-grid-column-two-thirds component-section">
-    <p class="govuk-body">{{ components.hmrc.component[0].body }}</p>
+  <div id="component-section" class="govuk-grid-column-two-thirds">
+    <p class="govuk-body">{{ component.body }}</p>
 
-    <h2 class="govuk-heading-m" id="component-1">Example one</h2>
+    {% call appComponentSection({
+      componentIndex: 1,
+      heading: component.example[0].heading,
+      body: component.example[0].body,
+      testing: component.example[0].testing
+    }) -%}
+      {{ appExampleFrame({
+        dept: component.dept,
+        example: 1,
+        height: 600,
+        slug: component.slug,
+        title: component.name
+      }) }}
+    {%-endcall %}
 
-    {%
-      set hmrcAccountHeader = {
-        language: "en",
-        serviceName: "Service Name",
-        serviceUrl: "/",
-        homepageUrl: "/",
-        containerClasses: "govuk-width-container",
-        classes: "",
-        languageToggle: {
-          en: {
-            href: "/hmrc-design-patterns/account-header/example/"
-          },
-          cy: {
-            href: "/hmrc-design-patterns/account-header/example-welsh/"
-          }
-        },
-        accountHome: {
-          href: "#home",
-          active: true
-        },
-        messages: {
-          href: "#messages",
-          messageCount: "30"
-        },
-        checkProgress: {
-          href: "#check-progress"
-        },
-        paperlessSettings: {
-          href: "#paperless-settings"
-        },
-        personalDetails: {
-          href: "#personal-details"
-        },
-        signOut: {
-          href: "#sign-out"
-        }
-      }
-    %}
   </div>
 
   <div id="cypress-section" class="govuk-grid-column-two-thirds cypress-section">

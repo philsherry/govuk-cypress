@@ -33,33 +33,12 @@
       body: component.example[0].body,
       testing: component.example[0].testing
     }) -%}
-      {{
-        hmrcAddToAList({
-          itemList: [
-            {
-              name: 'David St. Hubbins',
-              changeUrl: '#',
-              removeUrl: '#'
-            },
-            {
-              name: 'Nigel Tufnel',
-              changeUrl: '#',
-              removeUrl: '#'
-            },
-            {
-              name: 'Derek Smalls',
-              changeUrl: '#',
-              removeUrl: '#'
-            }
-          ],
-          itemType: {
-            singular: 'director',
-            plural: 'directors',
-            formAction: '#'
-          },
-          hintText: 'You must tell us about all your directors.'
-        })
-      }}
+      {{ appExampleFrame({
+        dept: component.dept,
+        example: 1,
+        slug: component.slug,
+        title: component.name
+      }) }}
     {%-endcall %}
 
     {% call appComponentSection({
@@ -68,42 +47,12 @@
       body: component.example[1].body,
       testing: component.example[1].testing
     }) -%}
-      {{
-        hmrcAddToAList({
-          itemList: [
-            {
-              name: 'David St. Hubbins',
-              changeUrl: '#',
-              removeUrl: '#'
-            },
-            {
-              name: 'Nigel Tufnel',
-              changeUrl: '#',
-              removeUrl: '#'
-            },
-            {
-              name: 'Derek Smalls',
-              changeUrl: '#',
-              removeUrl: '#'
-            },
-            {
-              name: 'Mick Shrimpton',
-              changeUrl: '#',
-              removeUrl: '#'
-            }
-          ],
-          itemType: {
-            singular: 'director',
-            plural: 'directors',
-            formAction: '#'
-          },
-          hintText: 'You must tell us about all your directors.',
-          messages: {
-            yes: 'Yes',
-            no: 'No'
-          }
-        })
-      }}
+      {{ appExampleFrame({
+        dept: component.dept,
+        example: 2,
+        slug: component.slug,
+        title: component.name
+      }) }}
     {%-endcall %}
 
     {% call appComponentSection({
@@ -112,92 +61,12 @@
       body: component.example[2].body,
       testing: component.example[2].testing
     }) -%}
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds-from-desktop">
-          <h1 class="govuk-heading-l">Check your answers</h1>
-
-          {{ govukSummaryList({
-            classes: 'govuk-!-margin-bottom-9',
-            rows: [
-              {
-                key: {
-                  text: "What is the director’s name?"
-                },
-                value: {
-                  text: "Mick Shrimpton"
-                },
-                actions: {
-                  items: [
-                    {
-                      href: "#",
-                      text: "Change",
-                      visuallyHiddenText: "name"
-                    }
-                  ]
-                }
-              },
-              {
-                key: {
-                  text: "What is Mick Shrimpton’s date of birth?"
-                },
-                value: {
-                  text: "12 October 1953"
-                },
-                actions: {
-                  items: [
-                    {
-                      href: "#",
-                      text: "Change",
-                      visuallyHiddenText: "date of birth"
-                    }
-                  ]
-                }
-              },
-              {
-                key: {
-                  text: "Does Mick Shrimpton have a National Insurance number?"
-                },
-                value: {
-                  html: "Yes"
-                },
-                actions: {
-                  items: [
-                    {
-                      href: "#",
-                      text: "Change",
-                      visuallyHiddenText: "if they have National Insurance number"
-                    }
-                  ]
-                }
-              },
-              {
-                key: {
-                  text: "National Insurance number"
-                },
-                value: {
-                  text: 'QQ 12 34 56 C'
-                },
-                actions: {
-                  items: [
-                    {
-                      href: "#",
-                      text: "Change",
-                      visuallyHiddenText: "National Insurance number"
-                    }
-                  ]
-                }
-              }
-            ]
-          }) }}
-
-          <form action="/form-handler" method="post" novalidate>
-            <input type="hidden" name="answers-checked" value="true">
-            {{ govukButton({
-              text: "Continue"
-            }) }}
-          </form>
-        </div>
-      </div>
+      {{ appExampleFrame({
+        dept: component.dept,
+        example: 3,
+        slug: component.slug,
+        title: component.name
+      }) }}
     {%-endcall %}
 
     {% call appComponentSection({
@@ -206,91 +75,12 @@
       body: component.example[3].body,
       testing: component.example[3].testing
     }) -%}
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds-from-desktop">
-          <h1 class="govuk-heading-xl">Change Mick Shrimpton’s details</h1>
-          {{ govukSummaryList({
-            classes: 'govuk-!-margin-bottom-9',
-            rows: [
-              {
-                key: {
-                  text: "What is the director’s name?"
-                },
-                value: {
-                  text: "Mick Shrimpton"
-                },
-                actions: {
-                  items: [
-                    {
-                      href: "#",
-                      text: "Change",
-                      visuallyHiddenText: "name"
-                    }
-                  ]
-                }
-              },
-              {
-                key: {
-                  text: "What is Mick Shrimpton’s date of birth?"
-                },
-                value: {
-                  text: "12 October 1953"
-                },
-                actions: {
-                  items: [
-                    {
-                      href: "#",
-                      text: "Change",
-                      visuallyHiddenText: "date of birth"
-                    }
-                  ]
-                }
-              },
-              {
-                key: {
-                  text: "Does Mick Shrimpton have a National Insurance number?"
-                },
-                value: {
-                  html: "Yes"
-                },
-                actions: {
-                  items: [
-                    {
-                      href: "#",
-                      text: "Change",
-                      visuallyHiddenText: "if they have National Insurance number"
-                    }
-                  ]
-                }
-              },
-              {
-                key: {
-                  text: "National Insurance number"
-                },
-                value: {
-                  text: 'QQ 12 34 56 C'
-                },
-                actions: {
-                  items: [
-                    {
-                      href: "#",
-                      text: "Change",
-                      visuallyHiddenText: "National Insurance number"
-                    }
-                  ]
-                }
-              }
-            ]
-          }) }}
-
-          <form action="/form-handler" method="post" novalidate>
-            <input type="hidden" name="answers-checked" value="true">
-            {{ govukButton({
-              text: "Continue"
-            }) }}
-          </form>
-        </div>
-      </div>
+      {{ appExampleFrame({
+        dept: component.dept,
+        example: 4,
+        slug: component.slug,
+        title: component.name
+      }) }}
     {%-endcall %}
 
     {% call appComponentSection({
@@ -299,26 +89,12 @@
       body: component.example[4].body,
       testing: component.example[4].testing
     }) -%}
-      <form>
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-              <h1 class="govuk-fieldset__heading">Are you sure you want to remove Nigel Tufnel?</h1>
-            </legend>
-            <div class="govuk-radios">
-              <div class="govuk-radios__item">
-                <input id="yes" type="radio" name="delete" class="govuk-radios__input" value="Yes">
-                <label class="govuk-radios__label" for="yes">Yes</label>
-              </div>
-              <div class="govuk-radios__item">
-                <input id="no" type="radio" name="delete" class="govuk-radios__input" value="No">
-                <label class="govuk-radios__label" for="no">No</label>
-              </div>
-            </div>
-          </fieldset>
-        </div>
-        <button type="submit" class="govuk-button">Continue</button>
-      </form>
+      {{ appExampleFrame({
+        dept: component.dept,
+        example: 5,
+        slug: component.slug,
+        title: component.name
+      }) }}
     {%-endcall %}
 
   </div>

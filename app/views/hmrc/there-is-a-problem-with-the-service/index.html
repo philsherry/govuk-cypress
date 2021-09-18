@@ -1,183 +1,72 @@
 {% extends "layout.html" %}
-{% from "hmrc/components/page-heading/macro.njk" import hmrcPageHeading %}
+
+{% set component = components.hmrc.component[19] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
 
 {% block pageTitle %}
-{{ components.hmrc.component[19].name }} -
-{{ components.hmrc.heading }} -
-{{ serviceName }}
+{{ appPageTitle({
+  componentHeading: componentHeading,
+  sectionHeading: sectionHeading
+}) }}
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <header class="hmrc-page-heading">
-      <h1 class="govuk-heading-xl">
-        {{ components.hmrc.component[19].name }}
-      </h1>
-      <p class="govuk-caption-xl hmrc-caption-xl"><span class="govuk-visually-hidden">This section is </span>{{
-        components.hmrc.heading }}</p>
-    </header>
-  </div>
-</div>
+{{ appPageHeader() }}
 
 <div class="govuk-grid-row main-section">
   {% include "includes/skip-links.html" %}
 
   <div class="govuk-grid-column-one-third">
-    <nav aria-label="In-page">
-      <h2 class="govuk-heading-m">In-page navigation</h2>
-      <h3 class="govuk-heading-s" id="in-page-navigation__components">Components</h3>
-      <ol class="govuk-list" role="list" aria-describedby="in-page-navigation__components">
-        <li><a class="govuk-link" href="#component-1">{{ components.hmrc.component[19].example[0].heading }}</a></li>
-        <li><a class="govuk-link" href="#component-2">{{ components.hmrc.component[19].example[1].heading }}</a></li>
-        <li><a class="govuk-link" href="#component-3">{{ components.hmrc.component[19].example[2].heading }}</a></li>
-      </ol>
-      <h3 class="govuk-heading-s" id="in-page-navigation__cypress">Cypress tests</h3>
-      <ol class="govuk-list" role="list" aria-describedby="in-page-navigation__cypress">
-        <li><a class="govuk-link" href="#cypress-1">{{components.cypress.env[0].heading}}</a></li>
-        <li><a class="govuk-link" href="#cypress-2">{{components.cypress.env[1].heading}}</a></li>
-        <li><a class="govuk-link" href="#cypress-3">{{components.cypress.env[2].heading}}</a></li>
-      </ol>
-    </nav>
+    {{ appInpageNavigation() }}
     {% include "includes/nav-hmrc.html" %}
   </div>
 
   <div id="component-section" class="govuk-grid-column-two-thirds component-section">
-    <p class="govuk-body">{{ components.hmrc.component[19].body }}</p>
+    <p class="govuk-body">{{ component.body }}</p>
 
-    <div class="component-section" id="component-1">
-      <h2 class="govuk-heading-m">
-        {{ components.hmrc.component[19].example[0].heading }}
-      </h2>
-      <p class="govuk-body">
-        {{ components.hmrc.component[19].example[0].body }}
-      </p>
+    {% call appComponentSection({
+      componentIndex: 1,
+      heading: component.example[0].heading,
+      body: component.example[0].body,
+      testing: component.example[0].testing
+    }) -%}
+      {{ appExampleFrame({
+        dept: component.dept,
+        example: 1,
+        slug: component.slug,
+        title: component.name
+      }) }}
+    {%-endcall %}
 
-      <div class="component-section__example" role="region" aria-label="Component example: {{  }}">
-        {{ hmrcPageHeading({
-          text: 'Sorry, there is a problem with the service'
-        }) }}
+    {% call appComponentSection({
+      componentIndex: 2,
+      heading: component.example[1].heading,
+      body: component.example[1].body,
+      testing: component.example[1].testing
+    }) -%}
+      {{ appExampleFrame({
+        dept: component.dept,
+        example: 2,
+        slug: component.slug,
+        title: component.name
+      }) }}
+    {%-endcall %}
 
-        <p class="govuk-body">Try again later.</p>
-
-        <p class="govuk-body">We saved your answers. They will be available for 30 days.</p>
-
-        <p class="govuk-body">
-          <a href="#" class="govuk-link">Contact the Tax Credits Helpline</a> if you need to make changes to your claim or speak to someone about your tax credits.
-        </p>
-      </div>
-
-      <footer class="component-section__footer">
-        {{ govukDetails({
-        summaryText: "What we are testing in this component",
-        html: "<ul class='govuk-list govuk-list--bullet'>
-          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
-          <li>The hint text must be associated correctly with the checkboxes.</li>
-          <li>The focus colours must be the updated version.</li>
-        </ul>"
-        }) }}
-      </footer>
-    </div>
-
-    <div class="component-section" id="component-2">
-      <h2 class="govuk-heading-m">
-        {{ components.hmrc.component[19].example[1].heading }}
-      </h2>
-      <p class="govuk-body">
-        {{ components.hmrc.component[19].example[1].body }}
-      </p>
-
-      <div class="component-section__example" role="region" aria-label="Component example: {{  }}">
-        {{ hmrcPageHeading({
-          text: 'Sorry, there is a problem with the service'
-        }) }}
-
-        <p class="govuk-body">Try again later.</p>
-
-        <p class="govuk-body">
-          We have not saved your answers. When the service is available, you will have to start again.
-        </p>
-
-        <p class="govuk-body">
-          Contact the Tax Credits Helpline if you need to make changes to your claim or speak to someone about your tax credits.
-        </p>
-
-        <p class="govuk-body">
-          Telephone:<br/>
-          <strong class="govuk-!-font-weight-bold">0345 300 3900</strong>
-        </p>
-
-        <p class="govuk-body">
-          Textphone:<br/>
-          <strong class="govuk-!-font-weight-bold">0345 300 3909</strong>
-        </p>
-
-        <p class="govuk-body">
-          Outside UK:<br/>
-          <strong class="govuk-!-font-weight-bold">+44 2890 538 192</strong>
-        </p>
-
-        <p class="govuk-body">
-          Opening times:<br/>
-          <strong class="govuk-!-font-weight-bold">Monday to Friday: 8am to 8pm
-
-          Saturday: 8am to 4pm<br/>
-          Sunday: 9am to 5pm</strong>
-        </p>
-
-        <p class="govuk-body">
-          Closed Easter Sunday, Christmas Day, Boxing Day and New Year’s Day.
-        </p>
-      </div>
-
-      <footer class="component-section__footer">
-        {{ govukDetails({
-        summaryText: "What we are testing in this component",
-        html: "<ul class='govuk-list govuk-list--bullet'>
-          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
-          <li>The hint text must be associated correctly with the checkboxes.</li>
-          <li>The focus colours must be the updated version.</li>
-        </ul>"
-        }) }}
-      </footer>
-    </div>
-
-    <div class="component-section" id="component-3">
-      <h2 class="govuk-heading-m">
-        {{ components.hmrc.component[19].example[2].heading }}
-      </h2>
-      <p class="govuk-body">
-        {{ components.hmrc.component[19].example[2].body }}
-      </p>
-
-      <div class="component-section__example" role="region" aria-label="Component example: {{  }}">
-        {{ hmrcPageHeading({
-          text: 'Sorry, there is a problem with the service'
-        }) }}
-
-        <p class="govuk-body">Try again later.</p>
-
-        <p class="govuk-body">
-          You can <a class="govuk-link" href="#">change other VAT details</a>.
-        </p>
-
-        <p class="govuk-body">
-          <a class="govuk-link" href="#">Contact the Income Tax Helpline</a> if you need to speak to someone about your tax calculation.
-        </p>
-      </div>
-
-      <footer class="component-section__footer">
-        {{ govukDetails({
-        summaryText: "What we are testing in this component",
-        html: "<ul class='govuk-list govuk-list--bullet'>
-          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
-          <li>The hint text must be associated correctly with the checkboxes.</li>
-          <li>The focus colours must be the updated version.</li>
-        </ul>"
-        }) }}
-      </footer>
-    </div>
+    {% call appComponentSection({
+      componentIndex: 3,
+      heading: component.example[2].heading,
+      body: component.example[2].body,
+      testing: component.example[2].testing
+    }) -%}
+      {{ appExampleFrame({
+        dept: component.dept,
+        example: 3,
+        slug: component.slug,
+        title: component.name
+      }) }}
+    {%-endcall %}
 
   </div>
 

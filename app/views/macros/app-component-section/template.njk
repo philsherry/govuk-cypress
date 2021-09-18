@@ -1,4 +1,4 @@
-<div class="component-section"{%- if params.componentIndex %} id="component-{{params.componentIndex}}"{% endif %}>
+<div class="component-section app-example-wrapper"{%- if params.componentIndex %} id="component-{{params.componentIndex}}"{% endif %}>
   <h2 class="govuk-heading-m">
     {{ params.heading }}
   </h2>
@@ -7,7 +7,7 @@
     {{ params.body }}
   </p>
   {%- endif %}
-  <div class="component-section__example" role="region" aria-label="Component example: {{ params.heading }}">
+  <div class="component-section__example app-example" role="region" aria-label="Component example: {{ params.heading }}">
     {# Nunjucks example snippet gets dropped in here: #}
     {{ caller() | safe }}
   </div>

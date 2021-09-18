@@ -1,0 +1,75 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[6] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {% set html %}
+      <p>We use some essential cookies to make this service work.</p>
+      <p>We’d also like to use analytics cookies so we can understand how you use the service and make improvements.</p>
+    {% endset %}
+
+    {% set acceptHtml %}
+      <p>You’ve accepted analytics cookies. You can <a class="govuk-link" href="#">change your cookie settings</a> at any time.</p>
+    {% endset %}
+
+    {% set rejectHtml %}
+      <p>You’ve rejected analytics cookies. You can <a class="govuk-link" href="#">change your cookie settings</a> at any time.</p>
+    {% endset %}
+
+    {{ govukCookieBanner({
+      ariaLabel: "Cookies on [name of service]",
+      messages: [
+        {
+          headingText: "Cookies on [name of service]",
+          html: html,
+          hidden: true,
+          actions: [
+            {
+              text: "Accept analytics cookies",
+              type: "button"
+            },
+            {
+              text: "Reject analytics cookies",
+              type: "button"
+            },
+            {
+              text: "View cookies",
+              href: "#"
+            }
+          ]
+        },
+        {
+          html: acceptHtml,
+          role: "alert",
+          actions: [
+            {
+              text: "Hide this message"
+            }
+          ]
+        },
+        {
+          html: rejectHtml,
+          role: "alert",
+          hidden: true,
+          actions: [
+            {
+              text: "Hide this message"
+            }
+          ]
+        }
+      ]
+    }) }}
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[3] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-button-group">
+      {{ govukButton({
+      text: "Continue"
+      }) }}
+
+      <a class="govuk-link" href="#">Cancel</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

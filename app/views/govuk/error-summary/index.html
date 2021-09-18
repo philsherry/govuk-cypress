@@ -1,339 +1,100 @@
 {% extends "layout.html" %}
 
+{% set component = components.govuk.component[10] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
 {% block pageTitle %}
-{{ components.govuk.component[10].name }} -
-{{ components.govuk.heading }} -
-{{ serviceName }}
+{{ appPageTitle({
+  componentHeading: componentHeading,
+  sectionHeading: sectionHeading
+}) }}
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <header class="hmrc-page-heading">
-      <h1 class="govuk-heading-xl">
-        {{ components.govuk.component[10].name }}
-      </h1>
-      <p class="govuk-caption-xl hmrc-caption-xl"><span class="govuk-visually-hidden">This section is </span>{{
-        components.govuk.heading }}</p>
-    </header>
-  </div>
-</div>
+{{ appPageHeader() }}
 
 <div class="govuk-grid-row main-section">
   {% include "includes/skip-links.html" %}
 
   <div class="govuk-grid-column-one-third">
-    <nav aria-label="In-page">
-      <h2 class="govuk-heading-m">In-page navigation</h2>
-      <h3 class="govuk-heading-s" id="in-page-navigation__components">Components</h3>
-      <ol class="govuk-list" role="list" aria-describedby="in-page-navigation__components">
-        <li><a class="govuk-link" href="#component-1">{{ components.govuk.component[10].example[0].heading }}</a></li>
-        <li><a class="govuk-link" href="#component-2">{{ components.govuk.component[10].example[1].heading }}</a></li>
-        <li><a class="govuk-link" href="#component-3">{{ components.govuk.component[10].example[2].heading }}</a></li>
-        <li><a class="govuk-link" href="#component-4">{{ components.govuk.component[10].example[3].heading }}</a></li>
-        <li><a class="govuk-link" href="#component-5">{{ components.govuk.component[10].example[4].heading }}</a></li>
-      </ol>
-      <h3 class="govuk-heading-s" id="in-page-navigation__cypress">Cypress tests</h3>
-      <ol class="govuk-list" role="list" aria-describedby="in-page-navigation__cypress">
-        <li><a class="govuk-link" href="#cypress-1">{{components.cypress.env[0].heading}}</a></li>
-        <li><a class="govuk-link" href="#cypress-2">{{components.cypress.env[1].heading}}</a></li>
-        <li><a class="govuk-link" href="#cypress-3">{{components.cypress.env[2].heading}}</a></li>
-      </ol>
-    </nav>
+    {{ appInpageNavigation() }}
     {% include "includes/nav-govuk.html" %}
   </div>
 
   <div id="component-section" class="govuk-grid-column-two-thirds">
-    <p class="govuk-body">{{ components.govuk.component[10].body }}</p>
+    <p class="govuk-body">{{ component.body }}</p>
 
-    <div class="component-section" id="component-1">
-      <h2 class="govuk-heading-m">
-        {{ components.govuk.component[10].example[0].heading }}
-      </h2>
-      <p class="govuk-body">
-        {{ components.govuk.component[10].example[0].body }}
-      </p>
+    {% call appComponentSection({
+      componentIndex: 1,
+      heading: component.example[0].heading,
+      body: component.example[0].body,
+      testing: component.example[0].testing
+    }) -%}
+      {{ appExampleFrame({
+        dept: component.dept,
+        example: 1,
+        slug: component.slug,
+        title: component.name
+      }) }}
+    {%-endcall %}
 
-      <div class="component-section__example" role="region" aria-label="Component example: {{ components.govuk.component[10].example[0].heading }}">
-        {{ govukErrorSummary({
-          titleText: "There is a problem",
-          errorList: [
-            {
-              text: "The date your passport was issued must be in the past",
-              href: "#passport-issued-day"
-            },
-            {
-              text: "Enter a postcode, like AA1 1AA",
-              href: "#postcode-input"
-            }
-          ]
-        }) }}
-      </div>
+    {% call appComponentSection({
+      componentIndex: 2,
+      heading: component.example[1].heading,
+      body: component.example[1].body,
+      testing: component.example[1].testing
+    }) -%}
+      {{ appExampleFrame({
+        dept: component.dept,
+        example: 2,
+        slug: component.slug,
+        title: component.name
+      }) }}
+    {%-endcall %}
 
-      <footer class="component-section__footer">
-        {{ govukDetails({
-        summaryText: "What we are testing in this component",
-        html: "<ul class='govuk-list govuk-list--bullet'>
-          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
-          <li>The hint text must be associated correctly with the checkboxes.</li>
-          <li>The focus colours must be the updated version.</li>
-        </ul>"
-        }) }}
-      </footer>
-    </div>
+    {% call appComponentSection({
+      componentIndex: 3,
+      heading: component.example[2].heading,
+      body: component.example[2].body,
+      testing: component.example[2].testing
+    }) -%}
+      {{ appExampleFrame({
+        dept: component.dept,
+        example: 3,
+        slug: component.slug,
+        title: component.name
+      }) }}
+    {%-endcall %}
 
-    <div class="component-section" id="component-2">
-      <h2 class="govuk-heading-m">
-        {{ components.govuk.component[10].example[1].heading }}
-      </h2>
-      <p class="govuk-body">
-        {{ components.govuk.component[10].example[1].body }}
-      </p>
+    {% call appComponentSection({
+      componentIndex: 4,
+      heading: component.example[3].heading,
+      body: component.example[3].body,
+      testing: component.example[3].testing
+    }) -%}
+      {{ appExampleFrame({
+        dept: component.dept,
+        example: 4,
+        slug: component.slug,
+        title: component.name
+      }) }}
+    {%-endcall %}
 
-      <div class="component-section__example" role="region" aria-label="Component example: {{ components.govuk.component[10].example[1].heading }}">
-        {{ govukErrorSummary({
-          "titleText": "There is a problem",
-          "errorList": [
-            {
-              "text": "Enter your full name",
-              "href": "#full-name-input"
-            }
-          ]
-        }) }}
-
-        <h1 class="govuk-heading-l">Your details</h1>
-
-        {{ govukInput({
-          label: {
-            "text": 'Full name'
-          },
-          id: "full-name-input",
-          name: "name",
-          autocomplete: "name",
-          errorMessage: {
-            "text": "Enter your full name"
-          }
-        }) }}
-      </div>
-
-      <footer class="component-section__footer">
-        {{ govukDetails({
-        summaryText: "What we are testing in this component",
-        html: "<ul class='govuk-list govuk-list--bullet'>
-          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
-          <li>The hint text must be associated correctly with the checkboxes.</li>
-          <li>The focus colours must be the updated version.</li>
-        </ul>"
-        }) }}
-      </footer>
-    </div>
-
-    <div class="component-section" id="component-3">
-      <h2 class="govuk-heading-m">
-        {{ components.govuk.component[10].example[2].heading }}
-      </h2>
-      <p class="govuk-body">
-        {{ components.govuk.component[10].example[2].body }}
-      </p>
-
-      <div class="component-section__example" role="region" aria-label="Component example: {{ components.govuk.component[10].example[2].heading }}">
-        {{ govukErrorSummary({
-          "titleText": "There is a problem",
-          "errorList": [
-            {
-              "text": "Passport issue date must include a year",
-              "href": "#passport-issued-year"
-            }
-          ]
-        }) }}
-
-        {{ govukDateInput({
-          fieldset: {
-            legend: {
-              isPageHeading: true,
-              text: 'When was your passport issued?',
-              classes: 'govuk-fieldset__legend--l'
-            }
-          },
-          id: 'passport-issued',
-          namePrefix: 'passport-issued',
-          errorMessage: {
-            text: "Passport issue date must include a year"
-          },
-          items: [
-            {
-              name: "day",
-              classes: "govuk-input--width-2",
-              value: 5
-            },
-            {
-              name: "month",
-              classes: "govuk-input--width-2",
-              value: 12
-            },
-            {
-              name: "year",
-              classes: "govuk-input--width-4 govuk-input--error"
-            }
-          ]
-          })
-        }}
-      </div>
-
-      <footer class="component-section__footer">
-        {{ govukDetails({
-        summaryText: "What we are testing in this component",
-        html: "<ul class='govuk-list govuk-list--bullet'>
-          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
-          <li>The hint text must be associated correctly with the checkboxes.</li>
-          <li>The focus colours must be the updated version.</li>
-        </ul>"
-        }) }}
-      </footer>
-    </div>
-
-    <div class="component-section" id="component-4">
-      <h2 class="govuk-heading-m">
-        {{ components.govuk.component[10].example[3].heading }}
-      </h2>
-      <p class="govuk-body">
-        {{ components.govuk.component[10].example[3].body }}
-      </p>
-
-      <div class="component-section__example" role="region" aria-label="Component example: {{ components.govuk.component[10].example[3].heading }}">
-        {{ govukErrorSummary({
-          "titleText": "There is a problem",
-          "errorList": [
-            {
-              "text": "Select if you are British, Irish or a citizen of a different country",
-              "href": "#nationality"
-            }
-          ]
-        }) }}
-
-        {{ govukCheckboxes({
-          idPrefix: "nationality",
-          name: "nationality",
-          fieldset: {
-            legend: {
-              text: "What is your nationality?",
-              isPageHeading: true,
-              classes: "govuk-fieldset__legend--l"
-            }
-          },
-          hint: {
-            text: "If you have dual nationality, select all options that are relevant to you."
-          },
-          errorMessage: {
-            text: "Select if you are British, Irish or a citizen of a different country"
-          },
-          items: [
-            {
-              value: "british",
-              text: "British",
-              hint: {
-                text: "including English, Scottish, Welsh and Northern Irish"
-              }
-            },
-            {
-              value: "irish",
-              text: "Irish"
-            },
-            {
-              value: "other",
-              text: "Citizen of another country"
-            }
-          ]
-        }) }}
-      </div>
-
-      <footer class="component-section__footer">
-        {{ govukDetails({
-        summaryText: "What we are testing in this component",
-        html: "<ul class='govuk-list govuk-list--bullet'>
-          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
-          <li>The hint text must be associated correctly with the checkboxes.</li>
-          <li>The focus colours must be the updated version.</li>
-        </ul>"
-        }) }}
-      </footer>
-    </div>
-
-    <div class="component-section" id="component-5">
-      <h2 class="govuk-heading-m">
-        {{ components.govuk.component[10].example[4].heading }}
-      </h2>
-      <p class="govuk-body">
-        {{ components.govuk.component[10].example[4].body }}
-      </p>
-
-      <div class="component-section__example" role="region" aria-label="Component example: {{ components.govuk.component[10].example[4].heading }}">
-
-        <div class="govuk-grid-row">
-          <form action="/form-handler" method="post" novalidate>
-            {{ govukErrorSummary({
-              "titleText": "There is a problem",
-              "errorList": [
-                {
-                  "text": "Passport issue date must include a year",
-                  "href": "#passport-issued-year"
-                }
-              ]
-            }) }}
-
-            {{ govukDateInput({
-              fieldset: {
-                legend: {
-                  isPageHeading: true,
-                  text: 'When was your passport issued?',
-                  classes: 'govuk-fieldset__legend--l'
-                }
-              },
-              id: 'passport-issued',
-              namePrefix: 'passport-issued',
-              errorMessage: {
-                text: "Passport issue date must include a year"
-              },
-              items: [
-                {
-                  name: "day",
-                  classes: "govuk-input--width-2",
-                  value: 5
-                },
-                {
-                  name: "month",
-                  classes: "govuk-input--width-2",
-                  value: 12
-                },
-                {
-                  name: "year",
-                  classes: "govuk-input--width-4 govuk-input--error"
-                }
-              ]
-              })
-            }}
-
-            {{ govukButton({
-              text: "Continue"
-            }) }}
-
-          </form>
-        </div>
-
-      </div>
-
-      <footer class="component-section__footer">
-        {{ govukDetails({
-        summaryText: "What we are testing in this component",
-        html: "<ul class='govuk-list govuk-list--bullet'>
-          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
-          <li>The hint text must be associated correctly with the checkboxes.</li>
-          <li>The focus colours must be the updated version.</li>
-        </ul>"
-        }) }}
-      </footer>
-    </div>
+    {% call appComponentSection({
+      componentIndex: 5,
+      heading: component.example[4].heading,
+      body: component.example[4].body,
+      testing: component.example[4].testing
+    }) -%}
+      {{ appExampleFrame({
+        dept: component.dept,
+        example: 5,
+        slug: component.slug,
+        title: component.name
+      }) }}
+    {%-endcall %}
 
   </div>
 

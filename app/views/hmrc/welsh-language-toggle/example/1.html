@@ -1,0 +1,31 @@
+{% extends "layout_example.html" %}
+{%- from "hmrc/components/language-select/macro.njk" import hmrcLanguageSelect -%}
+
+{% set component = components.hmrc.component[23] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+{{ appPageTitle({
+  componentHeading: componentHeading,
+  sectionHeading: sectionHeading
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{
+      hmrcLanguageSelect({
+        language: 'en',
+        en: {
+          href: '?en'
+        },
+        cy: {
+          href: '?cy'
+        }
+      })
+    }}
+  </div>
+</div>
+{% endblock %}

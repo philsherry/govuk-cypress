@@ -1,0 +1,48 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[10] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+{{ appPageTitle({
+  componentHeading: componentHeading,
+  sectionHeading: sectionHeading
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Is this your business?</h1>
+    <p class="govuk-body">ABC limited</p>
+
+    {{ govukRadios({
+      classes: "govuk-radios--inline",
+      idPrefix: "is-business",
+      name: "is-business",
+      fieldset: {
+        legend: {
+          text: "Is this your business?",
+          isPageHeading: false,
+          classes: "govuk-visually-hidden"
+        }
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Yes"
+        },
+        {
+          value: "no",
+          text: "No"
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+  </div>
+</div>
+{% endblock %}

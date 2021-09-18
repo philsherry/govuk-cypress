@@ -1,0 +1,28 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[21] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-body">There are multiple skip link components on the main component page:</p>
+    <p class="govuk-body">To view all of the skip link components, tab to this example, or click inside this example and press tab.</p>
+
+    <ol class="govuk-list govuk-list--number" id="content">
+      <li>Skip to main content</li>
+      <li>Skip to the component section</li>
+      <li>Skip to the cypress section</li>
+    </ol>
+
+  </div>
+</div>
+{% endblock %}

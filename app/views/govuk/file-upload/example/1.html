@@ -1,0 +1,26 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[12] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukFileUpload({
+      id: "file-upload-1",
+      name: "file-upload-1",
+      label: {
+        text: "Upload a file"
+      }
+    }) }}
+  </div>
+</div>
+{% endblock %}

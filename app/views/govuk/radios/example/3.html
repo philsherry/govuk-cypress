@@ -1,0 +1,44 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[19] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukRadios({
+      classes: "govuk-radios--inline",
+      idPrefix: "changed-name",
+      name: "changed-name",
+      fieldset: {
+        legend: {
+          text: "Have you changed your name?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      hint: {
+        text: "This includes changing your last name or spelling your name differently."
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Yes"
+        },
+        {
+          value: "no",
+          text: "No"
+        }
+      ]
+    }) }}
+  </div>
+</div>
+{% endblock %}

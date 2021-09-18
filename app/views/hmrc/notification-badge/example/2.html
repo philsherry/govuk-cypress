@@ -1,0 +1,21 @@
+{% extends "layout_example.html" %}
+{%- from "hmrc/components/notification-badge/macro.njk" import hmrcNotificationBadge -%}
+
+{% set component = components.hmrc.component[11] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+{{ appPageTitle({
+  componentHeading: componentHeading,
+  sectionHeading: sectionHeading
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a class="govuk-link" href="#">Messages {{ hmrcNotificationBadge() }}</a>
+  </div>
+</div>
+{% endblock %}

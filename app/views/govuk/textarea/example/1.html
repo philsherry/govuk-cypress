@@ -1,0 +1,31 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[27] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukTextarea({
+      name: "more-detail",
+      id: "more-detail",
+      label: {
+        text: "Can you provide more detail?",
+        classes: "govuk-label--l",
+        isPageHeading: true
+      },
+      hint: {
+        text: "Do not include personal or financial information, like your National Insurance number or credit card details."
+      }
+    }) }}
+  </div>
+</div>
+{% endblock %}

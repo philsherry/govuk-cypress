@@ -1,0 +1,102 @@
+{% extends "layout_example.html" %}
+{%- from "hmrc/components/add-to-a-list/macro.njk" import hmrcAddToAList -%}
+
+{% set component = components.hmrc.component[2] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+{{ appPageTitle({
+  componentHeading: componentHeading,
+  sectionHeading: sectionHeading
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Check your answers</h1>
+
+      {{ govukSummaryList({
+        classes: 'govuk-!-margin-bottom-9',
+        rows: [
+          {
+            key: {
+              text: "What is the director’s name?"
+            },
+            value: {
+              text: "Mick Shrimpton"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "name"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "What is Mick Shrimpton’s date of birth?"
+            },
+            value: {
+              text: "12 October 1953"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "date of birth"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Does Mick Shrimpton have a National Insurance number?"
+            },
+            value: {
+              html: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "if they have National Insurance number"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "National Insurance number"
+            },
+            value: {
+              text: 'QQ 12 34 56 C'
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "National Insurance number"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <form action="/form-handler" method="post" novalidate>
+        <input type="hidden" name="answers-checked" value="true">
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

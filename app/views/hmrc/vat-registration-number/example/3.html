@@ -1,0 +1,35 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[22] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+{{ appPageTitle({
+  componentHeading: componentHeading,
+  sectionHeading: sectionHeading
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{
+      govukInput({
+        label: {
+          text: 'VAT registration number'
+        },
+        hint: {
+          text: 'This is 9 numbers, sometimes with ‘GB’ at the start, for example 123456789 or GB123456789. You can find it on your VAT registration certificate.'
+        },
+        errorMessage: {
+          text: 'Enter your VAT registration number'
+        },
+        id: 'vat-registration-number',
+        name: 'vat-registration-number',
+        classes: 'govuk-input--width-10'
+      })
+    }}
+  </div>
+</div>
+{% endblock %}

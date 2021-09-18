@@ -1,0 +1,44 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[2] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukBreadcrumbs({
+      collapseOnMobile: true,
+      items: [
+        {
+          text: "Home",
+          href: "#"
+        },
+        {
+          text: "Environment",
+          href: "#"
+        },
+        {
+          text: "Rural and countryside",
+          href: '#'
+        },
+        {
+          text: "Rural development and land management",
+          href: '#'
+        },
+        {
+          text: "Economic growth in rural areas",
+          href: '#'
+        }
+      ]
+    }) }}
+  </div>
+</div>
+{% endblock %}

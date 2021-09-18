@@ -3,7 +3,7 @@
   <ul class="govuk-list" role="list" aria-describedby="section-navigation__components">
     {% for item in components.hmrc.component %}
     <li>
-      <a class="govuk-link" href="/hmrc/{{ item.slug }}">
+      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/hmrc/{{ item.slug }}">
         {{ item.name }}
       </a>
     </li>

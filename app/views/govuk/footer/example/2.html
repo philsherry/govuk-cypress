@@ -1,0 +1,70 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[13] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukFooter({
+      navigation: [
+        {
+          title: "Two column list",
+          columns: 2,
+          items: [
+            {
+              href: "#1",
+              text: "Navigation item 1"
+            },
+            {
+              href: "#2",
+              text: "Navigation item 2"
+            },
+            {
+              href: "#3",
+              text: "Navigation item 3"
+            },
+            {
+              href: "#4",
+              text: "Navigation item 4"
+            },
+            {
+              href: "#5",
+              text: "Navigation item 5"
+            },
+            {
+              href: "#6",
+              text: "Navigation item 6"
+            }
+          ]
+        },
+        {
+          title: "Single column list",
+          items: [
+            {
+              href: "#1",
+              text: "Navigation item 1"
+            },
+            {
+              href: "#2",
+              text: "Navigation item 2"
+            },
+            {
+              href: "#3",
+              text: "Navigation item 3"
+            }
+          ]
+        }
+      ]
+    }) }}
+  </div>
+</div>
+{% endblock %}

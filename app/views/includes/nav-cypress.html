@@ -3,7 +3,7 @@
   <ul class="govuk-list" role="list" aria-describedby="section-navigation__components">
     {% for item in components.cypress.component %}
     <li>
-      <a class="govuk-link" href="/cypress/{{ item.slug }}">
+      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/cypress/{{ item.slug }}">
         {{ item.name }}
       </a>
     </li>

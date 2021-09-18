@@ -1,0 +1,39 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[26] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukInput({
+      id: "cost-per-item-error",
+      name: "cost-per-item-error",
+      label: {
+        text: "What is the cost per item, in pounds?",
+        classes: "govuk-label--l",
+        isPageHeading: true
+      },
+      prefix: {
+        text: "£"
+      },
+      suffix: {
+        text: "per item"
+      },
+      errorMessage: {
+        text: "Enter a cost per item, in pounds"
+      },
+      classes: "govuk-input--width-5",
+      spellcheck: false
+    }) }}
+  </div>
+</div>
+{% endblock %}

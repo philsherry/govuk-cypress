@@ -1,0 +1,35 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[26] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukInput({
+      label: {
+        text: "What is your account number?",
+        classes: "govuk-label--l",
+        isPageHeading: true
+      },
+      classes: "govuk-input--width-10",
+      hint: {
+        text: "Must be between 6 and 8 digits long"
+      },
+      id: "account-number",
+      name: "account-number",
+      inputmode: "numeric",
+      pattern: "[0-9]*",
+      spellcheck: false
+    }) }}
+  </div>
+</div>
+{% endblock %}

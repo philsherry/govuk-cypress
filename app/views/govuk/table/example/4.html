@@ -1,0 +1,78 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[23] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukTable({
+      caption: "Months and rates",
+      captionClasses: "govuk-table__caption--m",
+      firstCellIsHeader: true,
+      head: [
+        {
+          text: "Month you apply"
+        },
+        {
+          text: "Rate for bicycles",
+          format: "numeric"
+        },
+        {
+          text: "Rate for vehicles",
+          format: "numeric"
+        }
+      ],
+      rows: [
+        [
+          {
+            text: "January"
+          },
+          {
+            text: "£85",
+            format: "numeric"
+          },
+          {
+            text: "£95",
+            format: "numeric"
+          }
+        ],
+        [
+          {
+            text: "February"
+          },
+          {
+            text: "£75",
+            format: "numeric"
+          },
+          {
+            text: "£55",
+            format: "numeric"
+          }
+        ],
+        [
+          {
+            text: "March"
+          },
+          {
+            text: "£165",
+            format: "numeric"
+          },
+          {
+            text: "£125",
+            format: "numeric"
+          }
+        ]
+      ]
+    }) }}
+  </div>
+</div>
+{% endblock %}

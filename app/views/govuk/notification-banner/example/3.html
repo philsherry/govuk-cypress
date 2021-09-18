@@ -1,0 +1,29 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[16] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+{% set html %}
+  <h3 class="govuk-notification-banner__heading">
+    Training outcome recorded and trainee withdrawn
+  </h3>
+  <p class="govuk-body">Contact <a class="govuk-notification-banner__link" href="#">example@department.gov.uk</a> if you think there's a problem.</p>
+{% endset %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukNotificationBanner({
+      html: html,
+      type: 'success'
+    }) }}
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[3] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-button-group">
+      {{ govukButton({
+        text: "Save and continue"
+      }) }}
+
+      {{ govukButton({
+        text: "Save as draft",
+        classes: "govuk-button--secondary"
+      }) }}
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[26] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukInput({
+      id: "weight",
+      name: "weight",
+      label: {
+        text: "What is the weight in kilograms?",
+        classes: "govuk-label--l",
+        isPageHeading: true
+      },
+      suffix: {
+        text: "kg"
+      },
+      classes: "govuk-input--width-5",
+      spellcheck: false
+    }) }}
+  </div>
+</div>
+{% endblock %}

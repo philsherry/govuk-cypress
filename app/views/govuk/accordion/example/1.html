@@ -1,0 +1,56 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[0] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukAccordion({
+      id: "accordion-default",
+      items: [
+        {
+          heading: {
+            text: "Writing well for the web"
+          },
+          content: {
+            html: "<p class='govuk-body'>This is the content for Writing well for the web.</p>"
+          }
+        },
+        {
+          heading: {
+            text: "Writing well for specialists"
+          },
+          content: {
+            html: "<p class='govuk-body'>This is the content for Writing well for specialists.</p>"
+          }
+        },
+          {
+          heading: {
+            text: "Know your audience"
+          },
+          content: {
+            html: "<p class='govuk-body'>This is the content for Know your audience.</p>"
+          }
+        },
+          {
+          heading: {
+            text: "How people read"
+          },
+          content: {
+            html: "<p class='govuk-body'>This is the content for How people read.</p>"
+          }
+        }
+      ]
+    }) }}
+  </div>
+</div>
+{% endblock %}

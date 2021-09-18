@@ -1,0 +1,48 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[19] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukRadios({
+      idPrefix: "where-do-you-live",
+      name: "where-do-you-live",
+      fieldset: {
+        legend: {
+          text: "Where do you live?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      items: [
+        {
+          value: "england",
+          text: "England"
+        },
+        {
+          value: "scotland",
+          text: "Scotland"
+        },
+        {
+          value: "wales",
+          text: "Wales"
+        },
+        {
+          value: "northern-ireland",
+          text: "Northern Ireland"
+        }
+      ]
+    }) }}
+  </div>
+</div>
+{% endblock %}

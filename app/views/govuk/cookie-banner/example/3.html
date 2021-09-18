@@ -1,0 +1,40 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[6] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {% set acceptHtml %}
+      <p>You’ve accepted additional cookies. You can <a class="govuk-link" href="#">change your cookie settings</a> at any time.</p>
+    {% endset %}
+
+    <form method="POST">
+      {{ govukCookieBanner({
+        ariaLabel: "Cookies on [name of service]",
+        messages: [
+          {
+            html: acceptHtml,
+            actions: [
+            {
+              text: "Hide this message",
+              href: "#",
+              type: "button"
+            }
+            ]
+          }
+        ]
+      }) }}
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[9] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukInput({
+      label: {
+        text: "National Insurance number"
+      },
+      hint: {
+        text: "It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
+      },
+      id: "national-insurance-number",
+      name: "national-insurance-number",
+      errorMessage: {
+        text: "Enter a National Insurance number in the correct format"
+      }
+    }) }}
+  </div>
+</div>
+{% endblock %}

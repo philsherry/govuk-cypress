@@ -1,0 +1,31 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[4] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukCharacterCount({
+      name: "word-count",
+      id: "word-count",
+      maxlength: 112,
+      threshold: 75,
+      value: "Type another letter into this field after this message to see the threshold feature",
+      label: {
+        text: "Can you provide more detail?",
+        classes: "govuk-label--l",
+        isPageHeading: true
+      }
+    }) }}
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[26] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukInput({
+      label: {
+        text: "Reference number"
+      },
+      id: "name",
+      name: "name",
+      spellcheck: false
+    }) }}
+  </div>
+</div>
+{% endblock %}

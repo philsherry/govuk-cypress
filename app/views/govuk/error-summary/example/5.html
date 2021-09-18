@@ -1,0 +1,73 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[10] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/form-handler" method="post" novalidate>
+        {{ govukErrorSummary({
+          "titleText": "There is a problem",
+          "errorList": [
+            {
+              "text": "Passport issue date must include a year",
+              "href": "#passport-issued-year"
+            }
+          ]
+        }) }}
+
+        {{ govukDateInput({
+          fieldset: {
+            legend: {
+              isPageHeading: true,
+              text: 'When was your passport issued?',
+              classes: 'govuk-fieldset__legend--l'
+            }
+          },
+          id: 'passport-issued',
+          namePrefix: 'passport-issued',
+          errorMessage: {
+            text: "Passport issue date must include a year"
+          },
+          items: [
+            {
+              name: "day",
+              classes: "govuk-input--width-2",
+              value: 5
+            },
+            {
+              name: "month",
+              classes: "govuk-input--width-2",
+              value: 12
+            },
+            {
+              name: "year",
+              classes: "govuk-input--width-4 govuk-input--error"
+            }
+          ]
+          })
+        }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+{% endblock %}

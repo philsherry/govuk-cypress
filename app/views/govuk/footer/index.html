@@ -1,345 +1,86 @@
 {% extends "layout.html" %}
 
+{% set component = components.govuk.component[13] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
 {% block pageTitle %}
-{{ components.govuk.component[13].name }} -
-{{ components.govuk.heading }} -
-{{ serviceName }}
+{{ appPageTitle({
+  componentHeading: componentHeading,
+  sectionHeading: sectionHeading
+}) }}
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <header class="hmrc-page-heading">
-      <h1 class="govuk-heading-xl">
-        {{ components.govuk.component[13].name }}
-      </h1>
-      <p class="govuk-caption-xl hmrc-caption-xl"><span class="govuk-visually-hidden">This section is </span>{{
-        components.govuk.heading }}</p>
-    </header>
-  </div>
-</div>
+{{ appPageHeader() }}
 
 <div class="govuk-grid-row main-section">
   {% include "includes/skip-links.html" %}
 
   <div class="govuk-grid-column-one-third">
-    <nav aria-label="In-page">
-      <h2 class="govuk-heading-m">In-page navigation</h2>
-      <h3 class="govuk-heading-s" id="in-page-navigation__components">Components</h3>
-      <ol class="govuk-list" role="list" aria-describedby="in-page-navigation__components">
-        <li><a class="govuk-link" href="#component-1">{{ components.govuk.component[13].example[0].heading }}</a></li>
-        <li><a class="govuk-link" href="#component-2">{{ components.govuk.component[13].example[1].heading }}</a></li>
-        <li><a class="govuk-link" href="#component-3">{{ components.govuk.component[13].example[2].heading }}</a></li>
-        <li><a class="govuk-link" href="#component-4">{{ components.govuk.component[13].example[3].heading }}</a></li>
-      </ol>
-      <h3 class="govuk-heading-s" id="in-page-navigation__cypress">Cypress tests</h3>
-      <ol class="govuk-list" role="list" aria-describedby="in-page-navigation__cypress">
-        <li><a class="govuk-link" href="#cypress-1">{{components.cypress.env[0].heading}}</a></li>
-        <li><a class="govuk-link" href="#cypress-2">{{components.cypress.env[1].heading}}</a></li>
-        <li><a class="govuk-link" href="#cypress-3">{{components.cypress.env[2].heading}}</a></li>
-      </ol>
-    </nav>
+    {{ appInpageNavigation() }}
     {% include "includes/nav-govuk.html" %}
   </div>
 
   <div id="component-section" class="govuk-grid-column-two-thirds">
-    <p class="govuk-body">{{ components.govuk.component[13].body }}</p>
+    <p class="govuk-body">{{ component.body }}</p>
 
-    <div class="component-section" id="component-1">
-      <h2 class="govuk-heading-m">
-        {{ components.govuk.component[13].example[0].heading }}
-      </h2>
-      <p class="govuk-body">
-        {{ components.govuk.component[13].example[0].body }}
-      </p>
+    {% call appComponentSection({
+      componentIndex: 1,
+      heading: component.example[0].heading,
+      body: component.example[0].body,
+      testing: component.example[0].testing
+    }) -%}
+      {{ appExampleFrame({
+        dept: component.dept,
+        example: 1,
+        slug: component.slug,
+        title: component.name
+      }) }}
+    {%-endcall %}
 
-      <div class="component-section__example" role="region" aria-label="Component example: {{ components.govuk.component[13].example[0].heading }}">
-        {{ govukFooter({}) }}
-      </div>
+    {% call appComponentSection({
+      componentIndex: 2,
+      heading: component.example[1].heading,
+      body: component.example[1].body,
+      testing: component.example[1].testing
+    }) -%}
+      {{ appExampleFrame({
+        dept: component.dept,
+        example: 2,
+        slug: component.slug,
+        title: component.name
+      }) }}
+    {%-endcall %}
 
-      <footer class="component-section__footer">
-        {{ govukDetails({
-        summaryText: "What we are testing in this component",
-        html: "<ul class='govuk-list govuk-list--bullet'>
-          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
-          <li>The hint text must be associated correctly with the checkboxes.</li>
-          <li>The focus colours must be the updated version.</li>
-        </ul>"
-        }) }}
-      </footer>
-    </div>
+    {% call appComponentSection({
+      componentIndex: 3,
+      heading: component.example[2].heading,
+      body: component.example[2].body,
+      testing: component.example[2].testing
+    }) -%}
+      {{ appExampleFrame({
+        dept: component.dept,
+        example: 3,
+        slug: component.slug,
+        title: component.name
+      }) }}
+    {%-endcall %}
 
-    <div class="component-section" id="component-2">
-      <h2 class="govuk-heading-m">
-        {{ components.govuk.component[13].example[1].heading }}
-      </h2>
-      <p class="govuk-body">
-        {{ components.govuk.component[13].example[1].body }}
-      </p>
-
-      <div class="component-section__example" role="region" aria-label="Component example: {{ components.govuk.component[13].example[1].heading }}">
-        {{ govukFooter({
-          navigation: [
-            {
-              title: "Two column list",
-              columns: 2,
-              items: [
-                {
-                  href: "#1",
-                  text: "Navigation item 1"
-                },
-                {
-                  href: "#2",
-                  text: "Navigation item 2"
-                },
-                {
-                  href: "#3",
-                  text: "Navigation item 3"
-                },
-                {
-                  href: "#4",
-                  text: "Navigation item 4"
-                },
-                {
-                  href: "#5",
-                  text: "Navigation item 5"
-                },
-                {
-                  href: "#6",
-                  text: "Navigation item 6"
-                }
-              ]
-            },
-            {
-              title: "Single column list",
-              items: [
-                {
-                  href: "#1",
-                  text: "Navigation item 1"
-                },
-                {
-                  href: "#2",
-                  text: "Navigation item 2"
-                },
-                {
-                  href: "#3",
-                  text: "Navigation item 3"
-                }
-              ]
-            }
-          ]
-        }) }}
-      </div>
-
-      <footer class="component-section__footer">
-        {{ govukDetails({
-        summaryText: "What we are testing in this component",
-        html: "<ul class='govuk-list govuk-list--bullet'>
-          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
-          <li>The hint text must be associated correctly with the checkboxes.</li>
-          <li>The focus colours must be the updated version.</li>
-        </ul>"
-        }) }}
-      </footer>
-    </div>
-
-    <div class="component-section" id="component-3">
-      <h2 class="govuk-heading-m">
-        {{ components.govuk.component[13].example[2].heading }}
-      </h2>
-      <p class="govuk-body">
-        {{ components.govuk.component[13].example[2].body }}
-      </p>
-
-      <div class="component-section__example" role="region" aria-label="Component example: {{ components.govuk.component[13].example[2].heading }}">
-        {{ govukFooter({
-          meta: {
-            items: [
-              {
-                href: "#1",
-                text: "Item 1"
-              },
-              {
-                href: "#2",
-                text: "Item 2"
-              },
-              {
-                href: "#3",
-                text: "Item 3"
-              }
-            ]
-          }
-        }) }}
-      </div>
-
-      <footer class="component-section__footer">
-        {{ govukDetails({
-        summaryText: "What we are testing in this component",
-        html: "<ul class='govuk-list govuk-list--bullet'>
-          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
-          <li>The hint text must be associated correctly with the checkboxes.</li>
-          <li>The focus colours must be the updated version.</li>
-        </ul>"
-        }) }}
-      </footer>
-    </div>
-
-    <div class="component-section" id="component-4">
-      <h2 class="govuk-heading-m">
-        {{ components.govuk.component[13].example[3].heading }}
-      </h2>
-      <p class="govuk-body">
-        {{ components.govuk.component[13].example[3].body }}
-      </p>
-
-      <div class="component-section__example" role="region" aria-label="Component example: {{ components.govuk.component[13].example[3].heading }}">
-        {{ govukFooter({
-          navigation: [
-            {
-              title: "Services and information",
-              columns: 2,
-              items: [
-                {
-                  href: "#",
-                  text: "Benefits"
-                },
-                {
-                  href: "#",
-                  text: "Births, deaths, marriages and care"
-                },
-                {
-                  href: "#",
-                  text: "Business and self-employed"
-                },
-                {
-                  href: "#",
-                  text: "Childcare and parenting"
-                },
-                {
-                  href: "#",
-                  text: "Citizenship and living in the UK"
-                },
-                {
-                  href: "#",
-                  text: "Crime, justice and the law"
-                },
-                {
-                  href: "#",
-                  text: "Disabled people"
-                },
-                {
-                  href: "#",
-                  text: "Driving and transport"
-                },
-                {
-                  href: "#",
-                  text: "Education and learning"
-                },
-                {
-                  href: "#",
-                  text: "Employing people"
-                },
-                {
-                  href: "#",
-                  text: "Environment and countryside"
-                },
-                {
-                  href: "#",
-                  text: "Housing and local services"
-                },
-                {
-                  href: "#",
-                  text: "Money and tax"
-                },
-                {
-                  href: "#",
-                  text: "Passports, travel and living abroad"
-                },
-                {
-                  href: "#",
-                  text: "Visas and immigration"
-                },
-                {
-                  href: "#",
-                  text: "Working, jobs and pensions"
-                }
-              ]
-            },
-            {
-              title: "Departments and policy",
-              items: [
-                {
-                  href: "#",
-                  text: "How government works"
-                },
-                {
-                  href: "#",
-                  text: "Departments"
-                },
-                {
-                  href: "#",
-                  text: "Worldwide"
-                },
-                {
-                  href: "#",
-                  text: "Policies"
-                },
-                {
-                  href: "#",
-                  text: "Publications"
-                },
-                {
-                  href: "#",
-                  text: "Announcements"
-                }
-              ]
-            }
-          ],
-          meta: {
-            items: [
-              {
-                href: "#",
-                text: "Help"
-              },
-              {
-                href: "#",
-                text: "Cookies"
-              },
-              {
-                href: "#",
-                text: "Contact"
-              },
-              {
-                href: "#",
-                text: "Terms and conditions"
-              },
-              {
-                href: "#",
-                text: "Rhestr o Wasanaethau Cymraeg",
-                attributes: {
-                  lang: "cy",
-                  hreflang: "cy"
-                }
-              }
-            ],
-            html: 'Built by the <a href="#" class="govuk-footer__link">Government Digital Service</a>'
-          }
-        }) }}
-
-      </div>
-
-      <footer class="component-section__footer">
-        {{ govukDetails({
-        summaryText: "What we are testing in this component",
-        html: "<ul class='govuk-list govuk-list--bullet'>
-          <li>Make sure the Change and Remove links have unique, hidden context for screen reader users.</li>
-          <li>The hint text must be associated correctly with the checkboxes.</li>
-          <li>The focus colours must be the updated version.</li>
-        </ul>"
-        }) }}
-      </footer>
-    </div>
+    {% call appComponentSection({
+      componentIndex: 4,
+      heading: component.example[3].heading,
+      body: component.example[3].body,
+      testing: component.example[3].testing
+    }) -%}
+      {{ appExampleFrame({
+        dept: component.dept,
+        example: 4,
+        slug: component.slug,
+        title: component.name
+      }) }}
+    {%-endcall %}
 
   </div>
 

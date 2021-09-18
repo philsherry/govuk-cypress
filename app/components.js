@@ -299,7 +299,7 @@ module.exports = {
         ],
         experimental: false,
         name: 'Button',
-        slug: 'breadcrumbs',
+        slug: 'button',
         url: 'https://design-system.service.gov.uk/components/button/',
       },
       {
@@ -1702,7 +1702,7 @@ module.exports = {
             ],
           },
           {
-            body: '',
+            body: 'Use the `autocomplete` attribute on text inputs to help users complete forms more quickly. This lets you specify an input’s purpose so browsers can autofill the information on a user’s behalf if they’ve entered it previously.',
             heading: 'Use the autocomplete attribute',
             testing: [
               {
@@ -1715,7 +1715,7 @@ module.exports = {
             ],
           },
           {
-            body: '',
+            body: 'Sometimes, browsers will spellcheck the information a user puts into a text input. If a user enters something which is recognised as a spelling error, sighted users will see a red line under the word.',
             heading: 'How and when to spellcheck a user’s input',
             testing: [
               {

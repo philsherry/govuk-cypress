@@ -1,0 +1,50 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[9] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukCheckboxes({
+      idPrefix: "nationality",
+      name: "nationality",
+      fieldset: {
+        legend: {
+          text: "What is your nationality?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      hint: {
+        text: "If you have dual nationality, select all options that are relevant to you."
+      },
+      errorMessage: {
+        text: "Select if you are British, Irish or a citizen of a different country"
+      },
+      items: [
+        {
+          value: "british",
+          text: "British"
+        },
+        {
+          value: "irish",
+          text: "Irish"
+        },
+        {
+          value: "other",
+          text: "Citizen of another country"
+        }
+      ]
+    }) }}
+  </div>
+</div>
+{% endblock %}

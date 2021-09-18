@@ -19,3 +19,11 @@ code {
   font-size: 16px;
   font-size: 1rem;
 }
+
+.govuk-list .govuk-link.is-active {
+  background-color: #fff;
+  border-left: 4px solid $govuk-link-colour;
+  font-weight: 700;
+  margin-left: -10px;
+  padding-left: 10px;
+}

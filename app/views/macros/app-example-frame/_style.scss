@@ -8,6 +8,127 @@ iframe {
   width: 1px;
 }
 
+.app-example-wrapper {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+@media (min-width: 40.0625em) {
+  .app-example-wrapper {
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+}
+
+@media print {
+  .app-example-wrapper {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .app-example-wrapper {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.31579;
+  }
+}
+
+@media print {
+  .app-example-wrapper {
+    font-size: 14pt;
+    line-height: 1.15;
+  }
+}
+
+.app-example {
+  background: #f3f2f1;
+  border: 1px solid #b1b4b6;
+  position: relative;
+}
+
+.app-example-page {
+  padding: 60px 30px 30px;
+}
+
+.app-example--tabs {
+  margin-bottom: 0;
+}
+
+@media (min-width: 40.0625em) {
+  .app-example--tabs {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 48.0625em) {
+  .app-example--tabs {
+    margin-bottom: -1px;
+  }
+}
+
+.app-example__link {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #f3f2f1;
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 0.75rem;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.25;
+  padding: 5px 10px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+@media print {
+  .app-example__link {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .app-example__link {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.42857;
+  }
+}
+
+@media print {
+  .app-example__link {
+    font-size: 12pt;
+    line-height: 1.2;
+  }
+}
+
+.app-example__link a {
+  color: #1d70b8;
+  text-decoration: none;
+}
+
+.app-example__new-window {
+  left: 0;
+}
+
+.app-example__language-switch {
+  right: 0;
+}
+
+.app-example__language-switch--current,
+.app-example__language-switch--cy-activated .app-example__language-switch--en-only-content,
+.app-example__language-switch--en-activated .app-example__language-switch--cy-only-content {
+  display: none;
+}
+
 .app-example__frame {
   background: #fff;
   border: 0;
@@ -17,13 +138,36 @@ iframe {
   width: 100%;
 }
 
+.app-example__frame--xs,
+.app-example__iframe {
+  height: 150px;
+}
+
+.app-example__frame--s {
+  height: 250px;
+}
+
+.app-example__frame--m {
+  height: 350px;
+}
+
+.app-example__frame--l {
+  height: 450px;
+}
+
+.app-example__frame--xl {
+  height: 550px;
+}
+
 .app-example__frame--resizable {
   min-height: 60px;
   min-width: 230px;
   overflow: auto;
   transform: translateZ( 0 );
+}
 
-  @media (min-width: 48.0625em) {
+@media (min-width: 48.0625em) {
+  .app-example__frame--resizable {
     resize: both;
   }
 }

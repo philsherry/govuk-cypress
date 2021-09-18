@@ -1,0 +1,51 @@
+{% extends "hmrc/layouts/account-header.html" %}
+
+{% set component = components.hmrc.component[0] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+{{ appPageTitle({
+  componentHeading: componentHeading,
+  sectionHeading: sectionHeading
+}) }}
+{% endblock %}
+
+{%
+  set hmrcAccountHeader = {
+    language: "en",
+    serviceName: "Rejoin the European Union",
+    serviceUrl: "/",
+    homepageUrl: "/",
+    containerClasses: "govuk-width-container",
+    classes: "",
+    languageToggle: {
+      en: {
+        href: "/hmrc-design-patterns/account-header/example/"
+      },
+      cy: {
+        href: "/hmrc-design-patterns/account-header/example-welsh/"
+      }
+    },
+    accountHome: {
+      href: "#home",
+      active: true
+    },
+    messages: {
+      href: "#messages",
+      messageCount: "69"
+    },
+    checkProgress: {
+      href: "#check-progress"
+    },
+    paperlessSettings: {
+      href: "#paperless-settings"
+    },
+    personalDetails: {
+      href: "#personal-details"
+    },
+    signOut: {
+      href: "#sign-out"
+    }
+  }
+%}

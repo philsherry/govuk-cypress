@@ -1,0 +1,31 @@
+{% extends "layout_example.html" %}
+{% from "hmrc/components/page-heading/macro.njk" import hmrcPageHeading %}
+
+{% set component = components.hmrc.component[19] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+{{ appPageTitle({
+  componentHeading: componentHeading,
+  sectionHeading: sectionHeading
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ hmrcPageHeading({
+      text: 'Sorry, there is a problem with the service'
+    }) }}
+
+    <p class="govuk-body">Try again later.</p>
+
+    <p class="govuk-body">We saved your answers. They will be available for 30 days.</p>
+
+    <p class="govuk-body">
+      <a href="#" class="govuk-link">Contact the Tax Credits Helpline</a> if you need to make changes to your claim or speak to someone about your tax credits.
+    </p>
+  </div>
+</div>
+{% endblock %}

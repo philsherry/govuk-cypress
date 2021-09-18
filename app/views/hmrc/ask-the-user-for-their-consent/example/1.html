@@ -1,0 +1,45 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[3] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+{{ appPageTitle({
+  componentHeading: componentHeading,
+  sectionHeading: sectionHeading
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukRadios({
+      classes: "govuk-radios--inline",
+      idPrefix: "paperless",
+      name: "paperless",
+      fieldset: {
+        legend: {
+          text: "Do you want to get electronic communications instead of letters from HMRC?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--xl"
+        }
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Yes"
+        },
+        {
+          value: "no",
+          text: "No"
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+  </div>
+</div>
+{% endblock %}

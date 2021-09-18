@@ -1,0 +1,35 @@
+{% extends "layout_example.html" %}
+{%- from "hmrc/components/timeout-dialog/macro.njk" import hmrcTimeoutDialog -%}
+
+{% set component = components.hmrc.component[15] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+{{ appPageTitle({
+  componentHeading: componentHeading,
+  sectionHeading: sectionHeading
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      For your security, we signed you out
+    </h1>
+
+    <p class="govuk-body">
+      We saved your answers.
+    </p>
+
+    <div class="govuk-form-group">
+      <button id="timeout-keep-signin-btn" class="govuk-button govuk-!-margin-bottom-0">
+        Sign in
+      </button>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

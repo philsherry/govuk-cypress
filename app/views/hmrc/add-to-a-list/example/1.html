@@ -1,0 +1,47 @@
+{% extends "layout_example.html" %}
+{%- from "hmrc/components/add-to-a-list/macro.njk" import hmrcAddToAList -%}
+
+{% set component = components.hmrc.component[2] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+{{ appPageTitle({
+  componentHeading: componentHeading,
+  sectionHeading: sectionHeading
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{
+      hmrcAddToAList({
+        itemList: [
+          {
+            name: 'David St. Hubbins',
+            changeUrl: '#',
+            removeUrl: '#'
+          },
+          {
+            name: 'Nigel Tufnel',
+            changeUrl: '#',
+            removeUrl: '#'
+          },
+          {
+            name: 'Derek Smalls',
+            changeUrl: '#',
+            removeUrl: '#'
+          }
+        ],
+        itemType: {
+          singular: 'director',
+          plural: 'directors',
+          formAction: '#'
+        },
+        hintText: 'You must tell us about all your directors.'
+      })
+    }}
+  </div>
+</div>
+{% endblock %}

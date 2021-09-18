@@ -1,0 +1,30 @@
+{% extends "layout_example.html" %}
+{% from "hmrc/components/page-heading/macro.njk" import hmrcPageHeading %}
+
+{% set component = components.hmrc.component[12] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+{{ appPageTitle({
+  componentHeading: componentHeading,
+  sectionHeading: sectionHeading
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ hmrcPageHeading({
+      text: 'Page not found'
+    }) }}
+
+    <p class="govuk-body">If you typed the web address, check it is correct.</p>
+
+    <p class="govuk-body">If you pasted the web address, check you copied the entire address.</p>
+
+    <p class="govuk-body">
+      If the web address is correct or you selected a link or button, <a href="#" class="govuk-link">contact the Tax Credits Helpline if you need to speak to someone about your tax credits</a>.
+    </p>  </div>
+</div>
+{% endblock %}

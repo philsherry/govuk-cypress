@@ -1,0 +1,39 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[6] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+{{ appPageTitle({
+  componentHeading: componentHeading,
+  sectionHeading: sectionHeading
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukInput({
+      id: "currency",
+      name: "currency",
+      label: {
+        text: "How much does your employer pay towards this?",
+        isPageHeading: false
+      },
+      hint: {
+        text: "For example, £600 or £193.54."
+      },
+      prefix: {
+        text: "£"
+      },
+      classes: "govuk-input--width-10",
+      spellcheck: false
+    }) }}
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+  </div>
+</div>
+{% endblock %}

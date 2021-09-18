@@ -1,0 +1,42 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[3] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+{{ appPageTitle({
+  componentHeading: componentHeading,
+  sectionHeading: sectionHeading
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukInput({
+      label: {
+        text: "Access code"
+      },
+      id: "access-code",
+      name: "access-code",
+      classes: "govuk-input--width-10"
+    }) }}
+
+    {{ govukCheckboxes({
+      idPrefix: "access-code-7-days",
+      name: "access-code-7-days",
+      items: [
+        {
+          value: "Keep for 7 days",
+          text: "Remember this access code for 7 days"
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+  </div>
+</div>
+{% endblock %}

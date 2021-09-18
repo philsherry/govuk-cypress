@@ -1,0 +1,48 @@
+{% extends "layout_example.html" %}
+
+{% set component = components.hmrc.component[10] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+{{ appPageTitle({
+  componentHeading: componentHeading,
+  sectionHeading: sectionHeading
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukRadios({
+      classes: "govuk-radios--inline",
+      idPrefix: "has-registration-number",
+      name: "has-registration-number",
+      fieldset: {
+        legend: {
+          text: "Do you have a company registration number?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--xl"
+        }
+      },
+      hint: {
+        text: "Companies House may have sent this to you if you registered as a limited partnership."
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Yes"
+        },
+        {
+          value: "no",
+          text: "No"
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+  </div>
+</div>
+{% endblock %}

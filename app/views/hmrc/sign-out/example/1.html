@@ -1,0 +1,22 @@
+{% extends "layout_example.html" %}
+{% from "hmrc/components/header/macro.njk" import hmrcHeader %}
+
+{% set component = components.hmrc.component[17] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+{{ appPageTitle({
+  componentHeading: componentHeading,
+  sectionHeading: sectionHeading
+}) }}
+{% endblock %}
+
+{% block content %}
+{{ hmrcHeader({
+  "serviceName": "Service Name",
+  "serviceUrl" : "/",
+  "phaseBanner" : true,
+  "signOutHref" : "?sign-out"
+}) }}
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "layout_example.html" %}
+{% from "hmrc/components/page-heading/macro.njk" import hmrcPageHeading %}
+
+{% set component = components.hmrc.component[16] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.hmrc.heading %}
+
+{% block pageTitle %}
+{{ appPageTitle({
+  componentHeading: componentHeading,
+  sectionHeading: sectionHeading
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ hmrcPageHeading({
+      text: 'Sorry, the service is unavailable'
+    }) }}
+
+    <p class="govuk-body">You will be able to use the service from 9am on Monday 19 November 2018.</p>
+
+    <p class="govuk-body">We have not saved your answers. When the service is available, you will have to start again.</p>
+
+    <p class="govuk-body">
+      <a class="govuk-link" href="#">Contact the Tax Credits Helpline</a> if you need to make changes to your claim or speak to someone about your tax credits.
+    </p>
+  </div>
+</div>
+{% endblock %}

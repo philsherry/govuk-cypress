@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+{% from "hmrc/components/page-heading/macro.njk" import hmrcPageHeading %}
+{% set page = page.start %}
+{% set componentHeading = page.name %}
+{% set sectionHeading = page.section %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="fixture-example govuk-grid-column-two-thirds">
+
+    {{ hmrcPageHeading({
+      text: componentHeading,
+      section: sectionHeading
+    }) }}
+    <p class="govuk-body">{{ page.body }}</p>
+
+    <h2 class="govuk-heading-l">What this is not</h2>
+    <p class="govuk-body">
+      This is not a replacement for the tests that come with the GOV.UK Prototype Kit—far, <em>far</em> from it.
+    </p>
+
+    <h2 class="govuk-heading-l">What this is</h2>
+    <p class="govuk-body">
+      This is an educational project to promote better accessibility knowledge when using these components in your daily job.
+    </p>
+
+    <h3 class="govuk-heading-m">The primary aim</h3>
+    <blockquote>
+      {{ govukInsetText({
+        text: "“To promote testing in a way that makes people think about accessibility as they use these components in their daily
+        jobs.”"
+      }) }}
+    </blockquote>
+
+    <p class="govuk-body">
+      Not everyone knows what they should be looking for when testing for accessibility. This project aims to help people with that.
+    </p>
+
+    <p class="govuk-body">
+      My idea is that teams can read through the annotated patterns and have a better understanding of what they need to pay attention to, in order to put them in a better position to deliver a good service.
+    </p>
+
+    <h3 class="govuk-heading-m">The secondary aim</h3>
+    <blockquote>
+      {{ govukInsetText({
+        text: "“To try and target which tests can be pulled out into a plugin for people who regularly use these components.”"
+      }) }}
+    </blockquote>
+
+    <p class="govuk-body">
+      I’ve already written each test separately, but maybe there are some components or patterns where you think you could help out; or, even better, improve what’s here.
+    </p>
+
+    <p class="govuk-body">
+      Because I’m just one person, I’m hoping that there might be some traction here and others might pick up a few other components, or patterns. Besides, I’m rubbish at this.
+    </p>
+
+    <h2 class="govuk-heading-l">Further reading</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a href="/get-started/less-technical">documentation for less-technical people</a></li>
+      <li><a href="/get-started/more-technical">documentation for more-technical people</a></li>
+    </ul>
+
+  </div>
+</div>
+
+{% endblock %}

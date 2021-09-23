@@ -43,38 +43,18 @@ Cypress.Commands.add('checkPageTitle', (subject, options) => {
   });
 
   /**
-     * TODO: Get sectionName from the visible part of `.hmrc-caption-xl`
-     * This is most likely one of two things:
-     * 1. a free text node
-     * 2. a `<span>` element hidden with aria-hidden="true"
-     * Example:
-     * <p class="govuk-caption-xl hmrc-caption-xl">
-     *   <span aria-hidden="true">HMRC Design Patterns</span>
-     *   <span class="govuk-visually-hidden">
-     *     This section is HMRC Design Patterns
-     *   </span>
-     * </p>
-     **/
-
-  cy.get('.hmrc-caption-xl').then(($sectionName) => {
-    if ($sectionName.length === 0) {
-      // error, so scream very loudly.
-      cy.task('log', '---- LENGTH 0:', $sectionName.length);
-      // 1. sectionName.childNodes[1].textContent
-    } else if ($sectionName.length === 1) {
-      cy.task('log', '---- LENGTH 1:', $sectionName.length);
-      hasSectionName = true;
-      sectionName = $sectionName.not('.govuk-visually-hidden').text().trim();
-      // document.querySelector(sectionNameRef).childNodes[1].textContent;
-      expect(sectionName).to.be.true;
-      // 2. sectionName.[aria-hidden="true"].textContent
-    } else if ($sectionName.length >= 2) {
-      cy.task('log', '---- LENGTH 2:', $sectionName.length);
-      hasSectionName = true;
-      sectionName = $sectionName.filter("[aria-hidden='true']").text().trim();
-      expect(sectionName).to.be.true;
-    }
-  });
+   * TODO: Get sectionName from the visible part of `.hmrc-caption-xl`
+   * This is most likely one of two things:
+   * 1. a free text node
+   * 2. a `<span>` element hidden with aria-hidden="true"
+   * Example:
+   * <p class="govuk-caption-xl hmrc-caption-xl">
+   *   <span aria-hidden="true">HMRC Design Patterns</span>
+   *   <span class="govuk-visually-hidden">
+   *     This section is HMRC Design Patterns
+   *   </span>
+   * </p>
+   **/
 
   // Capture `cy.title()`
   cy.title().then(($title) => {
@@ -83,6 +63,7 @@ Cypress.Commands.add('checkPageTitle', (subject, options) => {
     const titleArray = $title.split(' - ');
     // Get the length of the array to check if there is a section name
     const titleArrayLength = titleArray.length;
+
 
     // First part should match the page heading (h1)
     // Unless it has `hasId` is true (see HMRC PII above)
@@ -94,25 +75,7 @@ Cypress.Commands.add('checkPageTitle', (subject, options) => {
       expect(titleArray[0]).to.equal(pageHeading);
     }
 
-    // Next part should be the section name
-    if (hasSectionName === true) {
-      expect(titleArray[1]).to.equal(sectionName);
-    }
-
-    // Next part should be the service name
-    if (hasSectionName === true) {
-      expect(titleArray[2]).to.equal(sectionName);
-    } else {
-      // should match exactly
-      expect(titleArray[1]).to.equal(sectionName);
-    }
-
     // Last part should be “GOV.UK”
-    if (hasSectionName === true) {
-      expect(titleArray[3]).to.equal(govukName);
-    } else {
-      // should match exactly
-      expect(titleArray[2]).to.equal(govukName);
-    }
+    expect(titleArray[titleArrayLength - 1]).to.equal(govukName);
   });
 });

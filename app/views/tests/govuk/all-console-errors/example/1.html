@@ -1,0 +1,43 @@
+{% extends "layout_example.html" %}
+{% from "hmrc/components/page-heading/macro.njk" import hmrcPageHeading %}
+
+{% set component = components.tests.component[0] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.tests.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="fixture-example govuk-grid-column-two-thirds">
+    <script>
+      const ready = function (callback) {
+        if (document.readyState != "loading") callback();
+        else document.addEventListener("DOMContentLoaded", callback);
+      }
+
+      ready(function () {
+        const button = document.querySelector('[name="break-things"]');
+        const breakThings = (event) => {
+          console.error('Purposeful console error: ', event);
+        };
+        button.addEventListener('click', breakThings, false);
+        window.addEventListener('keypress', breakThings, false);
+      });
+    </script>
+
+    <div id="component-1">
+      {{ appPageHeader() }}
+      {{ govukButton({
+        name: "break-things",
+        text: "Continue"
+      }) }}
+    </div>
+  </div>
+</div>
+{% endblock %}

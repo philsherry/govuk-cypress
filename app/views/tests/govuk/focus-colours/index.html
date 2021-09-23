@@ -1,0 +1,133 @@
+{% extends "layout.html" %}
+{% from "hmrc/components/page-heading/macro.njk" import hmrcPageHeading %}
+
+{% set component = components.tests.component[5] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.tests.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+{{ appPageHeader() }}
+
+<div class="govuk-grid-row main-section">
+  {% include "includes/skip-links.html" %}
+
+  <div class="govuk-grid-column-one-third">
+    {{ appInpageNavigation() }}
+    {% include "includes/nav-tests.html" %}
+  </div>
+
+  <div id="component-section" class="govuk-grid-column-two-thirds">
+    <p class="govuk-body">{{ component.body }}</p>
+
+    <div id="component-1">
+      {{ govukErrorSummary({
+        "titleText": "There is a problem",
+        "errorList": [
+          {
+            "text": "Enter your full name",
+            "href": "#full-name-input"
+          }
+        ]
+      }) }}
+    </div>
+
+    <div id="component-2">
+      <h2 class="govuk-heading-l">Event details</h2>
+      {{ govukInput({
+        label: {
+          "text": 'Full name'
+        },
+        id: "full-name-input",
+        name: "name",
+        autocomplete: "name",
+        errorMessage: {
+          "text": "Enter your full name"
+        }
+      }) }}
+    </div>
+
+    <div id="component-3">
+      {{ govukRadios({
+        idPrefix: "where--s-this-event",
+        name: "where--s-this-event",
+        fieldset: {
+          legend: {
+            text: "Where is this event?"
+          }
+        },
+        items: [
+          {
+            value: "england",
+            text: "England"
+          },
+          {
+            value: "scotland",
+            text: "Scotland"
+          },
+          {
+            value: "wales",
+            text: "Wales"
+          },
+          {
+            value: "northern-ireland",
+            text: "Northern Ireland"
+          }
+        ]
+      }) }}
+    </div>
+
+    <div id="component-4">
+      {{ govukCharacterCount({
+        id: "label-as-page-heading",
+        name: "label-as-page-heading",
+        maxlength: 200,
+        label: {
+          text: "Describe the nature of your event"
+        }
+      }) }}
+    </div>
+
+    <div id="component-5">
+      {{ govukFileUpload({
+        id: "file-upload-1",
+        name: "file-upload-1",
+        label: {
+          text: "Upload a file"
+        }
+      }) }}
+    </div>
+
+    <div id="component-6">
+      {% set html %}
+        <h3 class="govuk-notification-banner__heading">
+          Your event image was uploaded
+        </h3>
+        <p class="govuk-body">Contact <a class="govuk-notification-banner__link" href="#">example@department.gov.uk</a> if you think there's a problem.</p>
+      {% endset %}
+
+      {{ govukNotificationBanner({
+        html: html,
+        type: 'success'
+      }) }}
+    </div>
+
+    <div id="component-7">
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+        <a class="govuk-link" href="#">Cancel</a>
+      </div>
+    </div>
+
+</div>
+
+{% endblock %}

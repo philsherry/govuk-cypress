@@ -2,7 +2,7 @@
 {%- from "hmrc/components/add-to-a-list/macro.njk" import hmrcAddToAList -%}
 
 {% set component = components.hmrc.component[2] %}
-{% set componentHeading = component.name %}
+{% set componentHeading = "Change Mick Shrimpton’s details - " + component.name %}
 {% set sectionHeading = components.hmrc.heading %}
 
 {% block pageTitle %}
@@ -14,7 +14,7 @@
 
 {% block content %}
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="fixture-example govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">Change Mick Shrimpton’s details</h1>
       {{ govukSummaryList({
         classes: 'govuk-!-margin-bottom-9',

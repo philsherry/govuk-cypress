@@ -8,7 +8,7 @@ Install instructions are further down. Read about it first.
 
 This is **not** a replacement for the tests that come with the GOV.UK Prototype Kit—far, *far* from it.
 
-This is **not** something that you will have to install into your service to see results.
+This is **not** something that you will have to install into your service to see results. (Although, that part will come later.)
 
 ## What this is
 

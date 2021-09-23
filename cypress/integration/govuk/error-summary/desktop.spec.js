@@ -5,6 +5,10 @@ const user = require('../../../fixtures/user.json')
 const { terminalLog } = require('../../../plugins/hmrc')
 
 /**
+ * https://github.com/alphagov/govuk-design-system/issues/1696
+ */
+
+/**
  * @screenshotFormat png
  * @screenshotFileName `${service}--${component}--${viewport}--${state}`
  **/

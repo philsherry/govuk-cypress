@@ -91,7 +91,7 @@ module.exports = {
       {
         // components.govuk.component[0]
         body: 'The accordion component lets users show and hide sections of related content on a page.',
-        dept: 'govuk',
+        dept: 'tests/govuk',
         example: [
           {
             body: 'Just links, no context.',
@@ -128,7 +128,7 @@ module.exports = {
       {
         // components.govuk.component[1]
         body: 'Use the back link component to help users go back to the previous page in a multi-page transaction.',
-        dept: 'govuk',
+        dept: 'tests/govuk',
         example: [
           {
             body: '',
@@ -152,7 +152,7 @@ module.exports = {
       {
         // components.govuk.component[2]
         body: 'The breadcrumbs component helps users to understand where they are within a website’s structure and move between levels.',
-        dept: 'govuk',
+        dept: 'tests/govuk',
         example: [
           {
             body: 'The breadcrumb should start with your ‘home’ page and end with the parent section of the current page.',
@@ -189,7 +189,7 @@ module.exports = {
       {
         // components.govuk.component[3]
         body: 'Use the button component to help users carry out an action like starting an application or saving their information.',
-        dept: 'govuk',
+        dept: 'tests/govuk',
         example: [
           {
             body: 'Use a default button for the main call to action on a page.',
@@ -1498,7 +1498,7 @@ module.exports = {
         dept: 'govuk',
         example: [
           {
-            body: 'Tabs can work well for people who use a service regularly, for example, users of a caseworking system. Their need to perform tasks quickly may be greater than their need for simplicity of first-time use.',
+            body: 'Tabs can work well for people who use a service regularly, for example, users of a case-working system. Their need to perform tasks quickly may be greater than their need for simplicity of first-time use.',
             heading: 'Default view',
             testing: [
               {
@@ -1887,9 +1887,25 @@ module.exports = {
             heading: 'Default view',
             testing: [
               {
-                reason: '',
+                reason: 'Hint is associated with input.',
                 tags: {
                   best: [],
+                  wcag: ['1.3.1'],
+                },
+              },
+              {
+                reason:
+                  'Input `type` is correct for this particular scenario.',
+                tags: {
+                  best: ['type-attribute-incorrect'],
+                  wcag: [],
+                },
+              },
+              {
+                reason:
+                  'Whether the heading is nested or repeated as a visually-hidden `legend`.',
+                tags: {
+                  best: ['labels-legends-headings'],
                   wcag: [],
                 },
               },
@@ -3102,11 +3118,11 @@ module.exports = {
     component: [
       {
         // components.tests.component[0]
-        body: 'Cypress function to check the DWP Timeline component.',
-        dept: 'dwp',
+        body: 'Cypress function to check for console errors.',
+        dept: 'tests/govuk',
         example: [
           {
-            body: '',
+            body: 'While Logs and Warnings in the Console are mostly harmless, Errors can cause functionality to break.',
             heading: 'Default view',
             testing: [
               {
@@ -3119,13 +3135,13 @@ module.exports = {
             ],
           },
         ],
-        name: 'checkDwpTimeline',
-        slug: 'dwp--timeline',
+        name: 'checkAllConsoleErrors',
+        slug: 'all-console-errors',
       },
       {
         // components.tests.component[1]
         body: 'Cypress function to check any `aria-describedby` value has a valid target in the page.',
-        dept: 'govuk',
+        dept: 'tests/govuk',
         example: [
           {
             body: '',
@@ -3142,12 +3158,12 @@ module.exports = {
           },
         ],
         name: 'checkAriaDescribedBy',
-        slug: 'govuk--aria-describedby',
+        slug: 'aria-describedby',
       },
       {
         // components.tests.component[2]
         body: 'Cypress function to check any `aria-labelledby` value has a valid target in the page.',
-        dept: 'govuk',
+        dept: 'tests/govuk',
         example: [
           {
             body: '',
@@ -3164,12 +3180,12 @@ module.exports = {
           },
         ],
         name: 'checkAriaLabelledby',
-        slug: 'govuk--aria-labelledby',
+        slug: 'aria-labelledby',
       },
       {
         // components.tests.component[3]
         body: 'Cypress function to check each error message on the page conforms to the standards set by the GOV.UK Design System.',
-        dept: 'govuk',
+        dept: 'tests/govuk',
         example: [
           {
             body: '',
@@ -3186,12 +3202,12 @@ module.exports = {
           },
         ],
         name: 'checkGovukErrorMessage',
-        slug: 'govuk--error-message',
+        slug: 'error-message',
       },
       {
         // components.tests.component[4]
         body: 'Cypress function to check each error summary link has a valid target in the page.',
-        dept: 'govuk',
+        dept: 'tests/govuk',
         example: [
           {
             body: '',
@@ -3208,16 +3224,16 @@ module.exports = {
           },
         ],
         name: 'checkGovukErrorSummary',
-        slug: 'govuk--error-summary',
+        slug: 'error-summary',
       },
       {
         // components.tests.component[5]
         body: 'Cypress function to check the focus colours match the latest GOV.UK Design System.',
-        dept: 'govuk',
+        dept: 'tests/govuk',
         example: [
           {
-            body: '',
-            heading: 'Default view',
+            body: 'Test page with each element that has a focus style.',
+            heading: 'Focus styles',
             testing: [
               {
                 reason: '',
@@ -3230,12 +3246,12 @@ module.exports = {
           },
         ],
         name: 'checkFocusColours',
-        slug: 'govuk--focus-colours',
+        slug: 'focus-colours',
       },
       {
         // components.tests.component[6]
         body: 'Cypress function to check heading levels, including nested `legend` and `label` elements.',
-        dept: 'govuk',
+        dept: 'tests/govuk',
         example: [
           {
             body: 'Regular page heading with no section heading.',
@@ -3322,12 +3338,12 @@ module.exports = {
         ],
         experimental: false,
         name: 'checkHeadings',
-        slug: 'headings',
+        slug: 'check-headings',
       },
       {
         // components.tests.component[7]
         body: 'Cypress function to check each link has enough unique context for screen reader users to understand its purpose.',
-        dept: 'govuk',
+        dept: 'tests/govuk',
         example: [
           {
             body: '',
@@ -3344,11 +3360,11 @@ module.exports = {
           },
         ],
         name: 'checkLinkContext',
-        slug: 'govuk--link-context',
+        slug: 'link-context',
       },
       {
         body: 'Cypress function to check the HMRC Account Header pattern.',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3366,12 +3382,12 @@ module.exports = {
         ],
         name: 'checkAccountHeader',
         // components.tests.component[8]
-        slug: 'hmrc--account-header',
+        slug: 'account-header',
       },
       {
         // components.tests.component[9]
         body: 'Cypress function to check the HMRC Page Heading pattern.',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3388,12 +3404,12 @@ module.exports = {
           },
         ],
         name: 'checkUserConsent',
-        slug: 'hmrc--ask-the-user-for-their-consent',
+        slug: 'ask-the-user-for-their-consent',
       },
       {
         // components.tests.component[10]
         body: 'Cypress function to check tax years are formatted correctly, but also not wrapped in a span.',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: 'The heading contains three span-wrapped elements, causing the heading to be announced as having four items.',
@@ -3417,7 +3433,7 @@ module.exports = {
       {
         // components.tests.component[11]
         body: 'Cypress function to CHECK THE THING DOES THE THING TO THE THINGS.',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3434,12 +3450,12 @@ module.exports = {
           },
         ],
         name: 'checkConditionallyRevealingContent',
-        slug: 'hmrc--conditionally-revealing-content',
+        slug: 'conditionally-revealing-content',
       },
       {
         // components.tests.component[12]
         body: 'Cypress function to check the HMRC Currency Input pattern.',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3456,12 +3472,12 @@ module.exports = {
           },
         ],
         name: 'hmrcCurrencyInput',
-        slug: 'hmrc--currency-input',
+        slug: 'currency-input',
       },
       {
         // components.tests.component[13]
         body: 'Cypress function to CHECK THE THING DOES THE THING.',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3478,11 +3494,11 @@ module.exports = {
           },
         ],
         name: 'checkDefaultBrowserLinkStyle',
-        slug: 'hmrc--default-browser-link-style',
+        slug: 'default-browser-link-style',
       },
       {
         body: '____',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3500,12 +3516,12 @@ module.exports = {
         ],
         name: 'checkErrorMessage',
         // components.tests.component[14]
-        slug: 'hmrc--error-message',
+        slug: 'error-message',
       },
       {
         // components.tests.component[15]
         body: '____',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3522,12 +3538,12 @@ module.exports = {
           },
         ],
         name: '____',
-        slug: 'hmrc--error-not-associated',
+        slug: 'error-not-associated',
       },
       {
         // components.tests.component[16]
         body: '____',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3544,12 +3560,12 @@ module.exports = {
           },
         ],
         name: 'checkPageTitleError',
-        slug: 'hmrc--error-page-title',
+        slug: 'error-page-title',
       },
       {
         // components.tests.component[17]
         body: '____',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3566,12 +3582,12 @@ module.exports = {
           },
         ],
         name: 'checkErrorSummaryLinks',
-        slug: 'hmrc--error-summary-links',
+        slug: 'error-summary-links',
       },
       {
         // components.tests.component[18]
         body: '____',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3588,12 +3604,12 @@ module.exports = {
           },
         ],
         name: '____',
-        slug: 'hmrc--error-summary-missing',
+        slug: 'error-summary-missing',
       },
       {
         // components.tests.component[19]
         body: '____',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3610,12 +3626,12 @@ module.exports = {
           },
         ],
         name: 'checkHintErrorInLabel',
-        slug: 'hmrc--hint-error-in-label',
+        slug: 'hint-error-in-label',
       },
       {
         // components.tests.component[20]
         body: '____',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3632,12 +3648,12 @@ module.exports = {
           },
         ],
         name: 'checkHintNotAssociated',
-        slug: 'hmrc--hint-not-associated',
+        slug: 'hint-not-associated',
       },
       {
         // components.tests.component[21]
         body: '____',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3654,12 +3670,12 @@ module.exports = {
           },
         ],
         name: 'checkHtmlValidationWcag',
-        slug: 'hmrc--html-validation-wcag',
+        slug: 'html-validation-wcag',
       },
       {
         // components.tests.component[22]
         body: '____',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3676,12 +3692,12 @@ module.exports = {
           },
         ],
         name: 'checkHtml5ValidationPresent',
-        slug: 'hmrc--html5-validation-present',
+        slug: 'html5-validation-present',
       },
       {
         // components.tests.component[23]
         body: '____',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3698,12 +3714,12 @@ module.exports = {
           },
         ],
         name: 'checkAutocompleteAttributes',
-        slug: 'hmrc--missing-autocomplete',
+        slug: 'missing-autocomplete',
       },
       {
         // components.tests.component[24]
         body: '____',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3720,12 +3736,12 @@ module.exports = {
           },
         ],
         name: 'checkForMissingFieldsetOrLegend',
-        slug: 'hmrc--missing-fieldset-or-legend',
+        slug: 'missing-fieldset-or-legend',
       },
       {
         // components.tests.component[25]
         body: '____',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3742,12 +3758,12 @@ module.exports = {
           },
         ],
         name: 'checkInputMode',
-        slug: 'hmrc--missing-inputmode',
+        slug: 'missing-inputmode',
       },
       {
         // components.tests.component[26]
         body: '____',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3764,12 +3780,12 @@ module.exports = {
           },
         ],
         name: 'checkMissingInstructions',
-        slug: 'hmrc--missing-instructions',
+        slug: 'missing-instructions',
       },
       {
         // components.tests.component[27]
         body: '____',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3786,12 +3802,12 @@ module.exports = {
           },
         ],
         name: 'checkMissingLabel',
-        slug: 'hmrc--missing-label',
+        slug: 'missing-label',
       },
       {
         // components.tests.component[28]
         body: '____',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3808,12 +3824,12 @@ module.exports = {
           },
         ],
         name: 'checkNestedFieldsets',
-        slug: 'hmrc--nested-fieldsets',
+        slug: 'nested-fieldsets',
       },
       {
         // components.tests.component[29]
         body: '____',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3830,12 +3846,12 @@ module.exports = {
           },
         ],
         name: 'checkNotificationBadge',
-        slug: 'hmrc--notification-badge',
+        slug: 'notification-badge',
       },
       {
         // components.tests.component[30]
         body: '____',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3852,12 +3868,12 @@ module.exports = {
           },
         ],
         name: 'checkNewTarget',
-        slug: 'hmrc--open-in-new-window-links',
+        slug: 'open-in-new-window-links',
       },
       {
         // components.tests.component[31]
         body: '____',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3874,12 +3890,12 @@ module.exports = {
           },
         ],
         name: 'checkHmrcPageHeading',
-        slug: 'hmrc--page-heading',
+        slug: 'page-heading',
       },
       {
         // components.tests.component[32]
         body: '____',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3896,12 +3912,12 @@ module.exports = {
           },
         ],
         name: 'checkPageTitle',
-        slug: 'hmrc--page-title',
+        slug: 'page-title',
       },
       {
         // components.tests.component[33]
         body: '____',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3918,12 +3934,12 @@ module.exports = {
           },
         ],
         name: 'checkHmrcReferences',
-        slug: 'hmrc--references',
+        slug: 'references',
       },
       {
         // components.tests.component[34]
         body: '____',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3940,12 +3956,12 @@ module.exports = {
           },
         ],
         name: 'checkHmrcTimeline',
-        slug: 'hmrc--timeline',
+        slug: 'timeline',
       },
       {
         // components.tests.component[35]
         body: '____',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3962,12 +3978,12 @@ module.exports = {
           },
         ],
         name: 'checkSessionTimeoutExtends',
-        slug: 'hmrc--timeout-dialog-cannot-extend-session',
+        slug: 'timeout-dialog-cannot-extend-session',
       },
       {
         // components.tests.component[36]
         body: '____',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -3984,12 +4000,12 @@ module.exports = {
           },
         ],
         name: 'checkServiceTimeout',
-        slug: 'hmrc--timeout-dialog',
+        slug: 'timeout-dialog',
       },
       {
         // components.tests.component[37]
         body: '____',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -4006,12 +4022,12 @@ module.exports = {
           },
         ],
         name: 'checkTypeAttribute',
-        slug: 'hmrc--type-attribute-incorrect',
+        slug: 'type-attribute-incorrect',
       },
       {
         // components.tests.component[38]
         body: '____',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -4028,12 +4044,12 @@ module.exports = {
           },
         ],
         name: 'checkUnassociatedLabel',
-        slug: 'hmrc--unassociated-label',
+        slug: 'unassociated-label',
       },
       {
         // components.tests.component[39]
         body: '____',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -4050,12 +4066,12 @@ module.exports = {
           },
         ],
         name: 'checkFormValidation',
-        slug: 'hmrc--validation',
+        slug: 'validation',
       },
       {
         // components.tests.component[40]
         body: '____',
-        dept: 'hmrc',
+        dept: 'tests/hmrc',
         example: [
           {
             body: '',
@@ -4072,7 +4088,7 @@ module.exports = {
           },
         ],
         name: 'checkWelshTranslations',
-        slug: 'hmrc--welsh-translations',
+        slug: 'welsh-translations',
       },
     ],
     heading: 'Cypress tests for common issues',
@@ -4080,5 +4096,33 @@ module.exports = {
   wcag: {
     body: 'A quick look over the guidelines, understanding them, and how to meet them.',
     heading: 'Web Content Accessibility Guidelines',
+  },
+  xtra: {
+    body: 'External departments',
+    heading: 'Extra',
+    component: [
+      {
+        // components.xtra.component[0]
+        body: 'Cypress function to check the DWP Timeline component.',
+        dept: 'dwp',
+        example: [
+          {
+            body: '',
+            heading: 'Default view',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: [],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+        ],
+        name: 'checkDwpTimeline',
+        slug: 'dwp--timeline',
+      },
+    ],
   },
 };

@@ -1,8 +1,8 @@
 /* eslint-disable no-undef, no-unused-vars, cypress/no-unnecessary-waiting, sonarjs/no-duplicate-string */
-const page = '/hmrc/add-to-a-list';
-const env = require('../../../fixtures/env.json');
-const user = require('../../../fixtures/user.json');
-const { terminalLog } = require('../../../plugins/hmrc');
+const page = '/hmrc/add-to-a-list/example/2';
+const env = require('../../../../../fixtures/env.json');
+const user = require('../../../../../fixtures/user.json');
+const { terminalLog } = require('../../../../../plugins/hmrc');
 
 /**
  * @screenshotFormat png
@@ -19,16 +19,7 @@ beforeEach(() => {
   cy.injectAxe();
 
   // example aliases here…
-  cy.get('#component-1').as('component-1');
-  cy.get('#component-2').as('component-2');
-  cy.get('#component-3').as('component-3');
-  cy.get('#component-4').as('component-4');
-  cy.get('#component-5').as('component-5');
-  cy.get('#component-1 .component-section__example').as('example-1');
-  cy.get('#component-2 .component-section__example').as('example-2');
-  cy.get('#component-3 .component-section__example').as('example-3');
-  cy.get('#component-4 .component-section__example').as('example-4');
-  cy.get('#component-5 .component-section__example').as('example-5');
+  cy.get('.fixture-example').as('example');
 
   // headings etc
   cy.get('.govuk-heading-xl').as('componentHeading');
@@ -53,34 +44,22 @@ beforeEach(() => {
   // example aliases must be set in beforeEach.
   // keep them in a describe block to scope them to the example.
   describe('sets up aliases for example 1', () => {
-    cy.get('@example-1').get('@componentHeading');
-    cy.get('@example-1').get('@componentSubHeading');
-    cy.get('@example-1').get('@componentHint');
-    cy.get('@example-1').get('@component');
+    cy.get('@example').get('@componentHeading');
+    cy.get('@example').get('@componentSubHeading');
+    cy.get('@example').get('@componentHint');
+    cy.get('@example').get('@component');
     cy.get('@component').get('@directors');
-    cy.get('@example-1').get('@fieldset');
+    cy.get('@example').get('@fieldset');
 
-    cy.get('@example-1')
-      .get('@radio1')
-      .get('@radioLabel')
-      .as('radio1__label');
+    cy.get('@example').get('@radio1').get('@radioLabel').as('radio1__label');
 
-    cy.get('@example-1')
-      .get('@radio1')
-      .get('@radioInput')
-      .as('radio1__input');
+    cy.get('@example').get('@radio1').get('@radioInput').as('radio1__input');
 
-    cy.get('@example-1')
-      .get('@radio2')
-      .get('@radioLabel')
-      .as('radio2__label');
+    cy.get('@example').get('@radio2').get('@radioLabel').as('radio2__label');
 
-    cy.get('@example-1')
-      .get('@radio2')
-      .get('@radioInput')
-      .as('radio2__input');
+    cy.get('@example').get('@radio2').get('@radioInput').as('radio2__input');
 
-    cy.get('@example-1').find('.govuk-button').as('continue');
+    cy.get('@example').find('.govuk-button').as('continue');
   });
 });
 
@@ -124,24 +103,6 @@ describe(`Component :: ${component} :: example 1`, () => {
     cy.get('@fieldset').checkAriaDescribedBy();
   });
 
-  // it checks whether the heading is a legend for a fieldset
-  it('checks the heading is a legend for a fieldset', () => {});
-
-  // it checks the focus colours are correct
-  it('checks the focus colours are correct', () => {
-    state = 'label';
-    cy.get('@componentSubHeading').click({ multiple: true }).wait(1000);
-    cy.screenshot(`${service}--${component}--${viewport}--${state}`, {
-      capture: 'viewport',
-    });
-
-    state = 'focus';
-    cy.get('@radio1__input').click({ multiple: true }).checkFocusColours();
-    cy.screenshot(`${service}--${component}--${viewport}--${state}`, {
-      capture: 'viewport',
-    });
-  });
-
   it('checks the link context', () => {
     cy.get('@directors').each(() => {
       cy.get('@directorChange').checkLinkContext();
@@ -150,7 +111,7 @@ describe(`Component :: ${component} :: example 1`, () => {
   });
 
   it('screenshots the component for a diff state', () => {
-    cy.get('@example-1').screenshot(
+    cy.get('@example').screenshot(
       `${service}--${component}--${viewport}--${state}`,
       {
         capture: 'viewport',

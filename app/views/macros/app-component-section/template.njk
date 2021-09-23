@@ -11,7 +11,14 @@
     {# Nunjucks example snippet gets dropped in here: #}
     {{ caller() | safe }}
   </div>
-
+  {%- if component.experimental %}
+    {{ govukPhaseBanner({
+      tag: {
+        text: "experimental"
+      },
+      text: 'Maybe we can help improve this one with our testing.'
+    }) }}
+  {% endif %}
   {{ appComponentFooter({ testing: params.testing }) }}
 
 </div>

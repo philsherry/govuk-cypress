@@ -24,7 +24,7 @@ const packageJson = require('./package.json');
 const routes = require('./app/routes.js');
 const utils = require('./lib/utils.js');
 const extensions = require('./lib/extensions/extensions.js');
-const cats = require('./app/cats');
+const pages = require('./app/pages');
 const tags = require('./app/tags');
 const components = require('./app/components');
 const {
@@ -200,7 +200,7 @@ app.locals.serviceName = config.serviceName;
 app.locals.titleSuffix = config.titleSuffix;
 // extensionConfig sets up variables used to add the scripts and stylesheets to each page.
 app.locals.extensionConfig = extensions.getAppConfig();
-app.locals.cat = cats;
+app.locals.page = pages;
 app.locals.tags = tags;
 app.locals.components = components;
 // Session uses service name to avoid clashes with other prototypes

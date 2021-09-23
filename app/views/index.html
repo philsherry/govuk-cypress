@@ -1,5 +1,8 @@
 {% extends "layout.html" %}
-{% set componentHeading = cat.serviceHeading %}
+{% from "hmrc/components/page-heading/macro.njk" import hmrcPageHeading %}
+{% set page = page.index %}
+{% set componentHeading = page.name %}
+{% set section = 'Prototype Kit ' + releaseVersion %}
 
 {% block pageTitle %}
 {{ appPageTitle({
@@ -9,44 +12,24 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">
-      {{ cat.serviceHeading }} {{ serviceHeading }}
-      <span class="govuk-caption-xl">Prototype Kit {{releaseVersion}}</span>
-    </h1>{{releaseVersion | log }}
-    <p>
-      {{ cat.serviceDescription }}
-    </p>
+  <div class="fixture-example govuk-grid-column-two-thirds">
 
-    <h2 class="govuk-heading-m">
-      <a href="/cypress">{{ cat.cypressHeading }}</a>
-    </h2>
-    <p class="govuk-body">{{ cat.cypressDescription }}</p>
+    {{ hmrcPageHeading({
+      text: componentHeading,
+      section: section
+    }) }}
+    <p class="govuk-body">{{ page.body }}</p>
 
+    {% for section in page.sections|sort(attribute="_id") %}
     <h2 class="govuk-heading-m">
-      <a href="/hmrc">{{ cat.hmrcHeading }}</a>
+      <a class="govuk-link govuk-link--no-visited-state" href="{{ section.slug }}">
+        {{ section.name }}
+      </a>
     </h2>
-    <p class="govuk-body">{{ cat.hmrcDescription }}</p>
-
-    <h2 class="govuk-heading-m">
-      <a href="/govuk">{{ cat.govukHeading }}</a>
-    </h2>
-    <p class="govuk-body">{{ cat.govukDescription }}</p>
-
-    <h2 class="govuk-heading-m">
-      <a href="/tests">{{ cat.testsHeading }}</a>
-    </h2>
-    <p class="govuk-body">{{ cat.testsDescription }}</p>
-
-    <h2 class="govuk-heading-m">
-      <a href="/wcag">{{ cat.wcagHeading }}</a>
-    </h2>
-    <p class="govuk-body">{{ cat.wcagDescription }}</p>
-
-    <h2 class="govuk-heading-m">
-      <a href="/resources">{{ cat.resourcesHeading }}</a>
-    </h2>
-    <p class="govuk-body">{{ cat.resourcesDescription }}</p>
+    <p class="govuk-body">{{ section.body }}</p>
+    {% else %}
+    <p class="govuk-heading-m">Data error</p>
+    {% endfor %}
 
   </div>
 </div>

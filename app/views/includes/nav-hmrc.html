@@ -1,9 +1,9 @@
 <nav aria-label="Section: HMRC">
   <h2 class="govuk-heading-m" id="section-navigation__components">Section navigation</h2>
-  <ul class="govuk-list" role="list" aria-describedby="section-navigation__components">
+  <ul class="govuk-list" id="section-navigation" role="list" aria-describedby="section-navigation__components">
     {% for item in components.hmrc.component %}
     <li>
-      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/hmrc/{{ item.slug }}">
+      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/{{ item.dept }}/{{ item.slug }}">
         {{ item.name }}
       </a>
     </li>

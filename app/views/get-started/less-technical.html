@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% from "hmrc/components/page-heading/macro.njk" import hmrcPageHeading %}
+{% set componentHeading = "For the less technical user" %}
+{% set sectionHeading = "Get started" %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="fixture-example govuk-grid-column-two-thirds">
+
+    {{ hmrcPageHeading({
+      text: componentHeading,
+      section: sectionHeading
+    }) }}
+    <p class="govuk-body">This version will aim to tell you what you can hope to get out of this, but without too much jargon.</p>
+
+
+  </div>
+</div>
+
+{% endblock %}

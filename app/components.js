@@ -3364,7 +3364,7 @@ module.exports = {
       },
       {
         body: 'Cypress function to check the HMRC Account Header pattern.',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -3387,7 +3387,7 @@ module.exports = {
       {
         // components.tests.component[9]
         body: 'Cypress function to check the HMRC Page Heading pattern.',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -3409,7 +3409,7 @@ module.exports = {
       {
         // components.tests.component[10]
         body: 'Cypress function to check tax years are formatted correctly, but also not wrapped in a span.',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: 'The heading contains three span-wrapped elements, causing the heading to be announced as having four items.',
@@ -3433,7 +3433,7 @@ module.exports = {
       {
         // components.tests.component[11]
         body: 'Cypress function to CHECK THE THING DOES THE THING TO THE THINGS.',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -3455,7 +3455,7 @@ module.exports = {
       {
         // components.tests.component[12]
         body: 'Cypress function to check the HMRC Currency Input pattern.',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -3476,17 +3476,43 @@ module.exports = {
       },
       {
         // components.tests.component[13]
-        body: 'Cypress function to CHECK THE THING DOES THE THING.',
-        dept: 'tests/hmrc',
+        body: 'Cypress function to links have a class of `govuk-link` where relevant.',
+        dept: 'hmrc',
         example: [
           {
             body: '',
-            heading: 'Default view',
+            heading: 'No classes',
             testing: [
               {
                 reason: '',
                 tags: {
-                  best: [],
+                  best: ['default-browser-link-style'],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+          {
+            body: '',
+            heading: 'A mix of classes',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: ['default-browser-link-style'],
+                  wcag: [],
+                },
+              },
+            ],
+          },
+          {
+            body: '',
+            heading: 'Correct classes',
+            testing: [
+              {
+                reason: '',
+                tags: {
+                  best: ['default-browser-link-style'],
                   wcag: [],
                 },
               },
@@ -3498,7 +3524,7 @@ module.exports = {
       },
       {
         body: '____',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -3521,7 +3547,7 @@ module.exports = {
       {
         // components.tests.component[15]
         body: '____',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -3543,7 +3569,7 @@ module.exports = {
       {
         // components.tests.component[16]
         body: '____',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -3565,7 +3591,7 @@ module.exports = {
       {
         // components.tests.component[17]
         body: '____',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -3587,7 +3613,7 @@ module.exports = {
       {
         // components.tests.component[18]
         body: '____',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -3609,7 +3635,7 @@ module.exports = {
       {
         // components.tests.component[19]
         body: '____',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -3631,7 +3657,7 @@ module.exports = {
       {
         // components.tests.component[20]
         body: '____',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -3653,7 +3679,7 @@ module.exports = {
       {
         // components.tests.component[21]
         body: '____',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -3675,7 +3701,7 @@ module.exports = {
       {
         // components.tests.component[22]
         body: '____',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -3697,7 +3723,7 @@ module.exports = {
       {
         // components.tests.component[23]
         body: '____',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -3719,7 +3745,7 @@ module.exports = {
       {
         // components.tests.component[24]
         body: '____',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -3741,7 +3767,7 @@ module.exports = {
       {
         // components.tests.component[25]
         body: '____',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -3763,7 +3789,7 @@ module.exports = {
       {
         // components.tests.component[26]
         body: '____',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -3785,7 +3811,7 @@ module.exports = {
       {
         // components.tests.component[27]
         body: '____',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -3807,7 +3833,7 @@ module.exports = {
       {
         // components.tests.component[28]
         body: '____',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -3829,7 +3855,7 @@ module.exports = {
       {
         // components.tests.component[29]
         body: '____',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -3851,7 +3877,7 @@ module.exports = {
       {
         // components.tests.component[30]
         body: '____',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -3873,7 +3899,7 @@ module.exports = {
       {
         // components.tests.component[31]
         body: '____',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -3895,7 +3921,7 @@ module.exports = {
       {
         // components.tests.component[32]
         body: '____',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -3917,7 +3943,7 @@ module.exports = {
       {
         // components.tests.component[33]
         body: '____',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -3939,7 +3965,7 @@ module.exports = {
       {
         // components.tests.component[34]
         body: '____',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -3961,7 +3987,7 @@ module.exports = {
       {
         // components.tests.component[35]
         body: '____',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -3983,7 +4009,7 @@ module.exports = {
       {
         // components.tests.component[36]
         body: '____',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -4005,7 +4031,7 @@ module.exports = {
       {
         // components.tests.component[37]
         body: '____',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -4027,7 +4053,7 @@ module.exports = {
       {
         // components.tests.component[38]
         body: '____',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -4049,7 +4075,7 @@ module.exports = {
       {
         // components.tests.component[39]
         body: '____',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',
@@ -4071,7 +4097,7 @@ module.exports = {
       {
         // components.tests.component[40]
         body: '____',
-        dept: 'tests/hmrc',
+        dept: 'hmrc',
         example: [
           {
             body: '',

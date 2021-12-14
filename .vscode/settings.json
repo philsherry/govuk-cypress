@@ -20,6 +20,7 @@
     },
     "MD041": false
   },
+  "npm.autoDetect": "on",
   "spellright.documentTypes": ["markdown", "plaintext"],
   "spellright.language": ["en_GB"]
 }

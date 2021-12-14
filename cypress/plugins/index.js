@@ -34,45 +34,50 @@ module.exports = (on, config) => {
   // or, if there is already a before:browser:launch handler, use .browserLaunchHandler inside of it
   // @see https://github.com/flotwig/cypress-log-to-output/issues/5
   on('before:browser:launch', (browser = {}, launchOptions) => {
-    prepareAudit(launchOptions)
-    launchOptions.args = require('cypress-log-to-output').browserLaunchHandler(
-      browser,
-      launchOptions.args
-    )
-  })
+    prepareAudit(launchOptions);
+    launchOptions.args =
+      require('cypress-log-to-output').browserLaunchHandler(
+        browser,
+        launchOptions.args
+      );
+  });
+
+  /**
+   * @description Jest with Cypress coverage for full-stack web applications
+   * @link https://mdluo.com/jest-with-cypress-coverage-for-full-stack-web-applications
+   */
+  on('task', require('@cypress/code-coverage/task'));
+  on('file:preprocessor', require('@cypress/code-coverage/use-babelrc'));
 
   on('before:run', async (details) => {
-    console.log('override before:run')
-    await beforeRunHook(details)
-  })
+    console.log('override before:run');
+    await beforeRunHook(details);
+  });
 
   on('after:run', async () => {
-    console.log('override after:run')
-    await afterRunHook()
-  })
+    console.log('override after:run');
+    await afterRunHook();
+  });
 
   // Log things to the console
   on('task', {
-    log (message) {
-      console.log(message)
+    log(message) {
+      console.log(message);
 
-      return null
+      return null;
     },
-    table (message) {
-      console.table(message)
+    table(message) {
+      console.table(message);
 
-      return null
+      return null;
     },
     lighthouse: lighthouse((lighthouseReport) => {
-      console.log(lighthouseReport) // raw lighthouse reports
+      console.log(lighthouseReport); // raw lighthouse reports
     }),
     pa11y: pa11y((pa11yReport) => {
-      console.log(pa11yReport) // raw pa11y reports
-    })
-  })
+      console.log(pa11yReport); // raw pa11y reports
+    }),
+  });
 
-  // on('task', require('@cypress/code-coverage/task'));
-  // on('file:preprocessor', require('@cypress/code-coverage/use-babelrc'));
-
-  return config
+  return config;
 }

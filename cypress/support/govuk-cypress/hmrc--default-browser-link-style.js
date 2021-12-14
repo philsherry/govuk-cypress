@@ -3,7 +3,7 @@
 /**
  * @author:
  * @function checkDefaultBrowserLinkStyle
- * @description Cypress function to CHECK THE THING DOES THE THING.
+ * @description Cypress function to links have a class of `govuk-link` where relevant.
  * @example cy.get("@component").checkDefaultBrowserLinkStyle();
  * @link https://design-system.service.gov.uk/styles/typography/#links
  **/
@@ -15,6 +15,11 @@ Cypress.Commands.add(
     prevSubject: 'element',
   },
   (subject, options) => {
-    //
+    cy.get(subject).within(() => {
+      cy.get('a').each(($link, index) => {
+        console.log(index, $link.attr('class'));
+        expect(($link.attr('class')).to.equal('govuk-link'));
+      })
+    });
   }
 );

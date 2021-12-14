@@ -23,6 +23,9 @@ import '@cypress/code-coverage/support';
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
+/**
+ * Whinge about console errors or warnings.
+ */
 Cypress.on('window:before:load', (win) => {
   cy.spy(win.console, 'error');
   cy.spy(win.console, 'warn');

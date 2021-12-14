@@ -1,66 +1,151 @@
 {
-  // See https://go.microsoft.com/fwlink/?LinkId=733558
-  // for the documentation about the tasks.json format
-  "version": "2.0.0",
   "tasks": [
     {
-      "label": "sbt clean",
-      "type": "shell",
-      "command": "sbt",
+      "detail": "run-s install start:coverage",
+      "group": {
+        "isDefault": true,
+        "kind": "test"
+      },
+      "label": "install and start",
+      "presentation": {
+        "group": "coverage",
+        "panel": "dedicated",
+        "reveal": "always"
+      },
+      "problemMatcher": {
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}"
+        ],
+        "owner": "node",
+        "pattern": {
+          "column": 3,
+          "file": 1,
+          "line": 2,
+          "message": 5,
+          "regexp": "^(starting `node listen-on-port.js`)$",
+          "severity": 4
+        }
+      },
+      "runOptions": {
+        "runOn": "default"
+      },
+      "script": "auto",
+      "type": "npm"
+    },
+    {
+      "detail": "run-s install start:coverage",
+      "group": {
+        "isDefault": true,
+        "kind": "test"
+      },
+      "label": "coverage",
+      "presentation": {
+        "group": "coverage",
+        "panel": "dedicated",
+        "reveal": "always"
+      },
+      "runOptions": {
+        "runOn": "default"
+      },
+      "script": "auto",
+      "type": "npm"
+    },
+    {
+      "detail": "cypress run --reporter mochawesome --reporter-options reportDir='cypress/results',overwrite=false,html=true,json=true",
+      "group": {
+        "isDefault": true,
+        "kind": "test"
+      },
+      "label": "cypress run",
+      "presentation": {
+        "group": "coverage",
+        "panel": "dedicated",
+        "reveal": "always"
+      },
+      "runOptions": {
+        "runOn": "default"
+      },
+      "script": "auto",
+      "type": "npm"
+    },
+    {
+      "dependsOn": [
+        "install and start",
+        "coverage",
+        "cypress run"
+      ],
+      "dependsOrder": "sequence",
+      "label": "run with coverage",
+      "presentation": {
+        "panel": "dedicated",
+        "reveal": "always"
+      },
+      "runOptions": {
+        "runOn": "default"
+      }
+    },
+    {
       "args": [
         "clean"
       ],
+      "command": "sbt",
+      "label": "sbt clean",
       "options": {
         "cwd": "${workspaceFolder}"
-      }
+      },
+      "type": "shell"
     },
     {
-      "label": "sbt compile",
-      "type": "shell",
-      "command": "sbt",
       "args": [
         "compile"
       ],
+      "command": "sbt",
+      "label": "sbt compile",
       "options": {
         "cwd": "${workspaceFolder}"
-      }
+      },
+      "type": "shell"
     },
     {
-      "label": "sbt evicted",
-      "type": "shell",
-      "command": "sbt",
       "args": [
         "evicted"
       ],
+      "command": "sbt",
+      "label": "sbt evicted",
       "options": {
         "cwd": "${workspaceFolder}"
-      }
+      },
+      "type": "shell"
     },
     {
-      "label": "sbt run",
-      "type": "shell",
-      "command": "sbt",
       "args": [
         "run",
         "--mem",
         "6699"
       ],
+      "command": "sbt",
+      "label": "sbt run",
       "options": {
         "cwd": "${workspaceFolder}"
-      }
+      },
+      "type": "shell"
     },
     {
-      "label": "sbt test",
-      "type": "shell",
-      "command": "sbt",
       "args": [
         "test",
         "--mem",
         "6699"
       ],
+      "command": "sbt",
+      "label": "sbt test",
       "options": {
         "cwd": "${workspaceFolder}"
-      }
-    },
-  ]
+      },
+      "type": "shell"
+    }
+  ],
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0"
 }

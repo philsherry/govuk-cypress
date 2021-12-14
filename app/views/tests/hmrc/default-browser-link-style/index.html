@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+{% from "hmrc/components/page-heading/macro.njk" import hmrcPageHeading %}
+
+{% set component = components.tests.component[13] %}
+{% set componentHeading = component.name %}
+{% set sectionHeading = components.tests.heading %}
+
+{% block pageTitle %}
+  {{ appPageTitle({
+    componentHeading: componentHeading,
+    sectionHeading: sectionHeading
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+{{ appPageHeader() }}
+
+<div class="govuk-grid-row main-section">
+  {% include "includes/skip-links.html" %}
+
+  <div class="govuk-grid-column-one-third">
+    {{ appInpageNavigation() }}
+    {% include "includes/nav-tests.html" %}
+  </div>
+
+  <div id="component-section" class="govuk-grid-column-two-thirds">
+    <p class="govuk-body">{{ component.body }}</p>
+
+    {% call appComponentSection({
+      componentIndex: 1,
+      heading: component.example[0].heading,
+      body: component.example[0].body,
+      testing: component.example[0].testing
+    }) -%}
+    <div class="cypress-example">
+      <p>Hello. My name is <a href="https://www.imdb.com/title/tt0088258/characters/nm0001661">Marty DiBergi</a>.</p>
+      <p>I’m a film maker. I make a lot of commercials. That little dog that chases the covered wagon underneath the
+        sink? That was mine.</p>
+      <p>In 1966, I went down to <a href="https://en.wikipedia.org/wiki/Greenwich_Village">Greenwich Village</a>, <a
+          href="https://en.wikipedia.org/wiki/New_York_City">New York City</a> to a rock club called the Electric
+        Banana. Don’t look for it, it’s not there anymore.</p>
+      <p>But that night I heard a band that for me redefined the word “rock and roll”.</p>
+    </div>
+    {%-endcall %}
+
+    {% call appComponentSection({
+      componentIndex: 2,
+      heading: component.example[1].heading,
+      body: component.example[1].body,
+      testing: component.example[1].testing
+    }) -%}
+    <div class="cypress-example">
+      <p>I remember being knocked out by their, their exuberance, their raw power&mdash;and their punctuality.</p>
+      <p>That band was Britain’s now-legendary <a class="ggovuk-linkk"
+          href="https://music.apple.com/gb/artist/spinal-tap/328242">Spinal Tap</a>.</p>
+      <p>Seventeen years and fifteen albums later, Spinal Tap is still going strong, and they’ve earned a distinguished
+        place
+        in rock history as one of <a class="govuk-link" href="https://www.80stees.com/products/one-of-englands-loudest-bands-spinal-tap-t-shirt">England’s loudest bands</a>.</p>
+    </div>
+    {%-endcall %}
+
+    {% call appComponentSection({
+      componentIndex: 3,
+      heading: component.example[2].heading,
+      body: component.example[2].body,
+      testing: component.example[2].testing
+    }) -%}
+    <div class="cypress-example">
+      <p>So in the late fall of 1982 when I heard that Tap was releasing a new album called <a class="govuk-link"
+          href="https://pbs.twimg.com/media/ESMXPTaW4AcuLsy.jpg">’Smell the Glove’</a>, and was planning their first
+        tour of
+        the United States in almost 6 years to promote that album, well needless to say I jumped at the chance to make
+        the
+        documentary&mdash;the, if you will, <em><a class="govuk-link" href="https://www.merriam-webster.com/dictionary/rockumentary">“rockumentary”</a></em>&mdash;that you’re about to see.</p>
+      <p>I wanted to capture the, the sights, the sounds, the smells, of a hard-working rock band on the road.</p>
+      <p>And I got that. But I got more, a lot more.</p>
+      <p>But hey&mdash;enough of my yakkin’. Whaddaya say, let’s boogie!</p>
+    </div>
+    {%-endcall %}
+
+  </div>
+
+  {% endblock %}

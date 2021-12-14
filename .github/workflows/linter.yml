@@ -1,0 +1,44 @@
+---
+name: Lint Code Base
+
+##
+## Documentation:
+## https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions
+##
+
+on:
+  push:
+    branches-ignore: [main, master]
+    ## Remove the line above to run when pushing to master
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  build:
+    name: Lint Code Base
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+        with:
+          ## Full git history is needed to get a proper list of changed files within `super-linter`
+          fetch-depth: 0
+
+      - name: Lint Code Base
+        uses: github/super-linter@v4
+        env:
+          CSS_FILE_NAME: .stylelintrc.json
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          JAVASCRIPT_DEFAULT_STYLE: prettier
+          JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.json
+          MARKDOWN_CONFIG_FILE: .markdownlint.json
+          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_CSS: true
+          VALIDATE_EDITORCONFIG: true
+          VALIDATE_GITHUB_ACTIONS: true
+          VALIDATE_HTML: true
+          VALIDATE_JAVASCRIPT_ES: true
+          VALIDATE_JSON: true
+          VALIDATE_MARKDOWN: true
+          VALIDATE_YAML: true

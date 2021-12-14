@@ -7,7 +7,8 @@
   get automatically required below.
   To add a new task, simply add a new task file that directory.
 */
-
+/* eslint-disable no-unused-vars */
+const cy = require ('cypress')
 const gulp = require('gulp')
 const requireDir = require('require-dir')
 

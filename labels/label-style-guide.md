@@ -17,8 +17,10 @@ All label names are lowercase to avoid any potential case-sensitivity issues.
 - `app`
 - `code quality`
 - `cognitive`
+- `dark mode`
 - `design pattern`
 - `dragon`
+- `focus mode`
 - `font size`
 - `greyscale`
 - `high-contrast`
@@ -29,12 +31,15 @@ All label names are lowercase to avoid any potential case-sensitivity issues.
 - `neurodivergent`
 - `nvda`
 - `performance`
+- `read-and-write`
+- `reduce motion`
 - `screen magnifier`
 - `screen reader`
 - `settings`
 - `talkback`
 - `tools`
 - `usability`
+- `user journey`
 - `voice control`
 - `voice recognition`
 - `voiceover`
@@ -113,6 +118,7 @@ No action needed or possible. The issue is either fixed, addressed better by oth
 - `christopher`
 - `claudia`
 - `pawel`
+- `persona`
 - `ron`
 - `saleem`
 - `simone`

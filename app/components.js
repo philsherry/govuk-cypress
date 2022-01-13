@@ -91,7 +91,7 @@ module.exports = {
       {
         // components.govuk.component[0]
         body: 'The accordion component lets users show and hide sections of related content on a page.',
-        dept: 'tests/govuk',
+        dept: 'govuk',
         example: [
           {
             body: 'Just links, no context.',
@@ -128,7 +128,7 @@ module.exports = {
       {
         // components.govuk.component[1]
         body: 'Use the back link component to help users go back to the previous page in a multi-page transaction.',
-        dept: 'tests/govuk',
+        dept: 'govuk',
         example: [
           {
             body: '',
@@ -152,7 +152,7 @@ module.exports = {
       {
         // components.govuk.component[2]
         body: 'The breadcrumbs component helps users to understand where they are within a website’s structure and move between levels.',
-        dept: 'tests/govuk',
+        dept: 'govuk',
         example: [
           {
             body: 'The breadcrumb should start with your ‘home’ page and end with the parent section of the current page.',
@@ -189,7 +189,7 @@ module.exports = {
       {
         // components.govuk.component[3]
         body: 'Use the button component to help users carry out an action like starting an application or saving their information.',
-        dept: 'tests/govuk',
+        dept: 'govuk',
         example: [
           {
             body: 'Use a default button for the main call to action on a page.',
@@ -3119,7 +3119,7 @@ module.exports = {
       {
         // components.tests.component[0]
         body: 'Cypress function to check for console errors.',
-        dept: 'tests/govuk',
+        dept: 'govuk',
         example: [
           {
             body: 'While Logs and Warnings in the Console are mostly harmless, Errors can cause functionality to break.',
@@ -3141,7 +3141,7 @@ module.exports = {
       {
         // components.tests.component[1]
         body: 'Cypress function to check any `aria-describedby` value has a valid target in the page.',
-        dept: 'tests/govuk',
+        dept: 'govuk',
         example: [
           {
             body: '',
@@ -3163,7 +3163,7 @@ module.exports = {
       {
         // components.tests.component[2]
         body: 'Cypress function to check any `aria-labelledby` value has a valid target in the page.',
-        dept: 'tests/govuk',
+        dept: 'govuk',
         example: [
           {
             body: '',
@@ -3185,7 +3185,7 @@ module.exports = {
       {
         // components.tests.component[3]
         body: 'Cypress function to check each error message on the page conforms to the standards set by the GOV.UK Design System.',
-        dept: 'tests/govuk',
+        dept: 'govuk',
         example: [
           {
             body: '',
@@ -3207,7 +3207,7 @@ module.exports = {
       {
         // components.tests.component[4]
         body: 'Cypress function to check each error summary link has a valid target in the page.',
-        dept: 'tests/govuk',
+        dept: 'govuk',
         example: [
           {
             body: '',
@@ -3229,7 +3229,7 @@ module.exports = {
       {
         // components.tests.component[5]
         body: 'Cypress function to check the focus colours match the latest GOV.UK Design System.',
-        dept: 'tests/govuk',
+        dept: 'govuk',
         example: [
           {
             body: 'Test page with each element that has a focus style.',
@@ -3251,7 +3251,7 @@ module.exports = {
       {
         // components.tests.component[6]
         body: 'Cypress function to check heading levels, including nested `legend` and `label` elements.',
-        dept: 'tests/govuk',
+        dept: 'govuk',
         example: [
           {
             body: 'Regular page heading with no section heading.',
@@ -3343,7 +3343,7 @@ module.exports = {
       {
         // components.tests.component[7]
         body: 'Cypress function to check each link has enough unique context for screen reader users to understand its purpose.',
-        dept: 'tests/govuk',
+        dept: 'govuk',
         example: [
           {
             body: '',
@@ -3893,7 +3893,7 @@ module.exports = {
             ],
           },
         ],
-        name: 'checkNewTarget',
+        name: 'checkOpenInNewWindowLinks',
         slug: 'open-in-new-window-links',
       },
       {

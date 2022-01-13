@@ -1,0 +1,31 @@
+{
+  "all": true,
+  "branches": 80,
+  "check-coverage": true,
+  "exclude": [
+    "**/*.spec.js",
+    "app/assets/javascript/auto-store-data.js",
+    "app/assets/javascript/highlight.min.js",
+    "app/assets/javascript/iframeResizer.contentWindow.min.js",
+    "app/assets/javascript/iframeResizer.min.js",
+    "app/assets/javascript/jquery-1.11.3.js",
+    "app/assets/javascript/step-by-step-nav.js"
+  ],
+  "excludeNodeModules": true,
+  "extends": "@istanbuljs/nyc-config-babel",
+  "functions": 80,
+  "include": [
+    "app/assets/javascript/application.js"
+  ],
+  "instrument": true,
+  "lines": 80,
+  "report-dir": "coverage",
+  "reporter": [
+    "json",
+    "lcov",
+    "text",
+    "text-summary"
+  ],
+  "sourceMap": true,
+  "statements": 80
+}

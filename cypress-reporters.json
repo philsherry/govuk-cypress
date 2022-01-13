@@ -4,10 +4,10 @@
     "embeddedScreenshots": true,
     "inlineAssets": true,
     "reportDir": "cypress/reports",
-    "reportPageTitle": "Vodafone accessibility audit"
+    "reportPageTitle": "GOV.UK Cypress accessibility audit"
   },
   "mochaJunitReporterReporterOptions": {
     "mochaFile": "cypress/results/results-[hash].xml"
   },
-  "reporterEnabled": "spec, json, cypress-mochawesome-reporter, mocha-junit-reporter, cypress-image-snapshot/reporter"
+  "reporterEnabled": "spec, json, cypress-mochawesome-reporter, mocha-junit-reporter"
 }

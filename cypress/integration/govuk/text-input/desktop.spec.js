@@ -6,7 +6,7 @@ const { terminalLog } = require('../../../plugins/hmrc')
 
 /**
  * @screenshotFormat png
- * @screenshotFileName `${service}--${component}--${viewport}--${state}`
+ * @screenshotFileName `${service}--${thing}--${viewport}--${state}`
  **/
 const service = 'govuk'
 const component = 'text-input'

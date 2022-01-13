@@ -32,6 +32,7 @@ const {
   wcagTagFunction,
 } = require('./app/views/macros/app-tagify/script.js');
 
+
 // Variables for v6 backwards compatibility
 // Set false by default, then turn on if we find /app/v6/routes.js
 let useV6 = false;
@@ -85,6 +86,7 @@ if (isSecure) {
 }
 
 middleware.forEach((func) => app.use(func));
+require('@cypress/code-coverage/middleware/express')(app);
 
 // Set up App
 const appViews = extensions.getAppViews([

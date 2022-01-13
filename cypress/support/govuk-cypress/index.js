@@ -14,6 +14,7 @@ import './hmrc--ask-the-user-for-their-consent';
 import './hmrc--check-tax-years.js';
 import './hmrc--conditionally-revealing-content';
 import './hmrc--currency-input';
+import './hmrc--cysp-chart';
 import './hmrc--default-browser-link-style';
 import './hmrc--error-message';
 import './hmrc--error-not-associated';

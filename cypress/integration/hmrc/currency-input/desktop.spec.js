@@ -6,7 +6,7 @@ const { terminalLog } = require('../../../plugins/hmrc')
 
 /**
  * @screenshotFormat png
- * @screenshotFileName `${service}--${component}--${viewport}--${state}`
+ * @screenshotFileName `${service}--${thing}--${viewport}--${state}`
  **/
 const service = 'homepage'
 const journey = 'desktop'
@@ -72,7 +72,7 @@ describe(`Component :: ${component}`, () => {
 
   it('screenshots the component for a diff state', () => {
     cy.get('@component').screenshot(
-      `${service}--${component}--${viewport}--${state}`,
+      `${service}--${thing}--${viewport}--${state}`,
       {
         capture: 'viewport'
       }
@@ -87,7 +87,7 @@ describe(`Component :: ${component}`, () => {
     cy.get('@componentLabel')
       .click()
       .wait(1000)
-    cy.screenshot(`${service}--${component}--${viewport}--${state}`, {
+    cy.screenshot(`${service}--${thing}--${viewport}--${state}`, {
       capture: 'viewport'
     })
 
@@ -102,7 +102,7 @@ describe(`Component :: ${component}`, () => {
       .should('have.css', 'outline-width', '3px')
       .type('13.37')
       .wait(250)
-    cy.screenshot(`${service}--${component}--${viewport}--${state}`, {
+    cy.screenshot(`${service}--${thing}--${viewport}--${state}`, {
       capture: 'viewport'
     })
   })

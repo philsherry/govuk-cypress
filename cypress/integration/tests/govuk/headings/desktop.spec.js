@@ -6,7 +6,7 @@ const { terminalLog } = require('../../../../plugins/hmrc');
 
 /**
  * @screenshotFormat png
- * @screenshotFileName `${service}--${component}--${viewport}--${state}`
+ * @screenshotFileName `${service}--${thing}--${viewport}--${state}`
  **/
 const service = 'hmrc';
 const component = 'tax-years';
@@ -59,7 +59,7 @@ describe(`Component :: ${component} :: example 1`, () => {
 
   it('screenshots the component for a diff state', () => {
     cy.get('@example-1').screenshot(
-      `${service}--${component}--${viewport}--${state}`,
+      `${service}--${thing}--${viewport}--${state}`,
       {
         capture: 'viewport',
       }
@@ -84,7 +84,7 @@ describe(`Component :: ${component} :: example 2`, () => {
 
   it('screenshots the component for a diff state', () => {
     cy.get('@example-2').screenshot(
-      `${service}--${component}--${viewport}--${state}`,
+      `${service}--${thing}--${viewport}--${state}`,
       {
         capture: 'viewport',
       }
@@ -109,7 +109,7 @@ describe(`Component :: ${component} :: example 3`, () => {
 
   it('screenshots the component for a diff state', () => {
     cy.get('@example-2').screenshot(
-      `${service}--${component}--${viewport}--${state}`,
+      `${service}--${thing}--${viewport}--${state}`,
       {
         capture: 'viewport',
       }
@@ -135,7 +135,7 @@ describe(`Component :: ${component} :: example 4`, () => {
 
   it('screenshots the component for a diff state', () => {
     cy.get('@example-4').screenshot(
-      `${service}--${component}--${viewport}--${state}`,
+      `${service}--${thing}--${viewport}--${state}`,
       {
         capture: 'viewport',
       }
@@ -160,7 +160,7 @@ describe(`Component :: ${component} :: example 5`, () => {
 
   it('screenshots the component for a diff state', () => {
     cy.get('@component-5').screenshot(
-      `${service}--${component}--${viewport}--${state}`,
+      `${service}--${thing}--${viewport}--${state}`,
       {
         capture: 'viewport',
       }

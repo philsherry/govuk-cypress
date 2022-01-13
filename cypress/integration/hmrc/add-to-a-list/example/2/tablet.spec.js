@@ -6,7 +6,7 @@ const { terminalLog } = require('../../../../../plugins/hmrc');
 
 /**
  * @screenshotFormat png
- * @screenshotFileName `${service}--${component}--${viewport}--${state}`
+ * @screenshotFileName `${service}--${thing}--${viewport}--${state}`
  **/
 const service = 'hmrc';
 const component = 'add-to-a-list';
@@ -112,7 +112,7 @@ describe(`Component :: ${component} :: example 1`, () => {
 
   it('screenshots the component for a diff state', () => {
     cy.get('@example').screenshot(
-      `${service}--${component}--${viewport}--${state}`,
+      `${service}--${thing}--${viewport}--${state}`,
       {
         capture: 'viewport',
       }

@@ -1,5 +1,5 @@
 {
-  "cSpell.userWords": ["dept", "describedby", "fieldsets", "firefox", "govuk", "greyscale", "hljs", "hmrc", "inputmode", "ios", "javascripts", "labelledby", "macos", "mochawesome", "monochromacy", "noindex", "nvda", "philsherry", "siteimprove", "sonarjs", "tabindex", "tagify", "talkback", "textareas", "vodafone", "wcag", "webhint", "xcode", "xtra", "zoomtext"],
+  "cSpell.userWords": ["cysp", "dept", "describedby", "fieldsets", "firefox", "govuk", "greyscale", "hljs", "hmrc", "inputmode", "ios", "javascripts", "labelledby", "macos", "mochawesome", "monochromacy", "nisp", "noindex", "nvda", "philsherry", "siteimprove", "sonarjs", "tabindex", "tagify", "talkback", "textareas", "vars", "vodafone", "wcag", "webhint", "xcode", "xtra", "zoomtext"],
   "files.watcherExclude": {
     "**/target": true
   },

@@ -16,10 +16,9 @@ Cypress.Commands.add(
   },
   (subject, options) => {
     cy.get(subject).within(() => {
-      cy.get('a').each(($link, index) => {
-        console.log(index, $link.attr('class'));
-        expect(($link.attr('class')).to.equal('govuk-link'));
-      })
+      cy.get('a').each(($link, index, $links) => {
+        cy.wrap($link).should('have.class', 'govuk-link');
+      });
     });
   }
 );

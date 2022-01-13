@@ -7,7 +7,7 @@ const { terminalLog } = require('../../../plugins/hmrc')
 
 /**
  * @screenshotFormat png
- * @screenshotFileName `${service}--${component}--${viewport}--${state}`
+ * @screenshotFileName `${service}--${thing}--${viewport}--${state}`
  **/
 const service = 'homepage'
 const component = 'tablet';
@@ -15,10 +15,15 @@ const viewport = 'accordion';
 const state = 'default'
 
 beforeEach(() => {
-  cy.viewport(env.tablet.viewport[0])
-  cy.visit(page)
-  cy.injectAxe()
+  cy.viewport(env.tablet.viewport[0]);
+  cy.visit(page);
+  cy.injectAxe();
+
+  // example aliases here…
+  cy.get('.fixture-example').as('example');
+
   // set up aliases here
+  cy.get('.govuk-accordion').as('component');
 })
 
 describe(`Component :: ${component}`, () => {
@@ -28,7 +33,7 @@ describe(`Component :: ${component}`, () => {
 
   it('screenshots the component for a diff state', () => {
     cy.get('@component').screenshot(
-      `${service}--${component}--${viewport}--${state}`,
+      `${service}--${thing}--${viewport}--${state}`,
       {
         capture: 'viewport'
       }

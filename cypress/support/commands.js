@@ -1,30 +1,48 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
 // For more comprehensive examples of custom
 // commands please read more here:
 // https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+/// <reference types="cypress" />
 import './govuk-cypress/index';
+
+/**
+ * @link https://docs.cypress.io/api/cypress-api/screenshot-api
+ */
+Cypress.Screenshot.defaults({
+  disableTimersAndAnimations: false,
+  overwrite: true,
+  screenshotOnRunFailure: false,
+});
+
+/**
+ * @link https://github.com/cypress-io/cypress/issues/877
+ * @use cy.isNotInViewport('[data-cy="some-invisible-element"]')
+ * @use cy.isInViewport('[data-cy="some-visible-element"]')
+ */
+Cypress.Commands.add('isNotInViewport', (element) => {
+  cy.get(element).then(($el) => {
+    const bottom = Cypress.$(cy.state('window')).height();
+    const rect = $el[0].getBoundingClientRect();
+
+    expect(rect.top).to.be.greaterThan(bottom);
+    expect(rect.bottom).to.be.greaterThan(bottom);
+    expect(rect.top).to.be.greaterThan(bottom);
+    expect(rect.bottom).to.be.greaterThan(bottom);
+  });
+});
+
+Cypress.Commands.add('isInViewport', (element) => {
+  cy.get(element).then(($el) => {
+    const bottom = Cypress.$(cy.state('window')).height();
+    const rect = $el[0].getBoundingClientRect();
+
+    expect(rect.top).not.to.be.greaterThan(bottom);
+    expect(rect.bottom).not.to.be.greaterThan(bottom);
+    expect(rect.top).not.to.be.greaterThan(bottom);
+    expect(rect.bottom).not.to.be.greaterThan(bottom);
+  });
+});
+
 
 /**
  * @link https://github.com/cypress-io/cypress/issues/2186#issuecomment-606796041
@@ -57,5 +75,40 @@ Cypress.Commands.overwrite(
       return originalFn(subject, customMatchers[expectation]);
     }
     return originalFn(subject, expectation, ...args);
+  }
+);
+
+// cy.compareStrings('element1', 'element2');
+Cypress.Commands.add(
+  'compareStrings',
+  (element1, element2) => {
+    Cypress.log({
+      name: 'compareStrings',
+      message: `${element1} || ${element2}`,
+    });
+    /**
+     * Text from the first element.
+     * @type {string}
+     */
+    let text;
+
+    /**
+     * Normalizes passed text,
+     * useful before comparing text with spaces and different capitalization.
+     * @param {string} s Text to normalize
+     */
+    const normalizeText = (s) => s.replace(/\s/g, '').toLowerCase();
+
+    cy.get(element1).then(($first) => {
+      // save text from the first element
+      text = normalizeText($first.text());
+    });
+
+    cy.get(element2).should(($div) => {
+      // we can massage text before comparing
+      const secondString = normalizeText($div.text());
+
+      expect(secondString, 'second string').to.equal(text);
+    });
   }
 );

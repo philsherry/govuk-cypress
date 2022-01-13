@@ -17,19 +17,24 @@
  */
 
 /**
- * @link https://github.com/LironEr/cypress-mochawesome-reporter
- **/
-const {
-  beforeRunHook,
-  afterRunHook
-} = require('cypress-mochawesome-reporter/lib')
-
-/**
  * @link https://github.com/mfrachet/cypress-audit
  **/
 const { lighthouse, pa11y, prepareAudit } = require('cypress-audit')
 
 module.exports = (on, config) => {
+
+/**
+ * @link https://github.com/LironEr/cypress-mochawesome-reporter
+ **/
+  require('cypress-mochawesome-reporter/plugin')(on);
+
+  require('@cypress/code-coverage/task')(on, config);
+  // tell Cypress to use .babelrc file
+  // and instrument the specs files
+  // only the extra application files will be instrumented
+  // not the spec files themselves
+  on('file:preprocessor', require('@cypress/code-coverage/use-babelrc'));
+
   // require('cypress-log-to-output').install(on);
   // or, if there is already a before:browser:launch handler, use .browserLaunchHandler inside of it
   // @see https://github.com/flotwig/cypress-log-to-output/issues/5
@@ -40,23 +45,6 @@ module.exports = (on, config) => {
         browser,
         launchOptions.args
       );
-  });
-
-  /**
-   * @description Jest with Cypress coverage for full-stack web applications
-   * @link https://mdluo.com/jest-with-cypress-coverage-for-full-stack-web-applications
-   */
-  on('task', require('@cypress/code-coverage/task'));
-  on('file:preprocessor', require('@cypress/code-coverage/use-babelrc'));
-
-  on('before:run', async (details) => {
-    console.log('override before:run');
-    await beforeRunHook(details);
-  });
-
-  on('after:run', async () => {
-    console.log('override after:run');
-    await afterRunHook();
   });
 
   // Log things to the console
@@ -80,4 +68,4 @@ module.exports = (on, config) => {
   });
 
   return config;
-}
+};

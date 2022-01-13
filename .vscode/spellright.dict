@@ -1,3 +1,4 @@
+cysp
 dept
 describedby
 fieldsets
@@ -13,6 +14,7 @@ labelledby
 macos
 mochawesome
 monochromacy
+nisp
 noindex
 nvda
 philsherry
@@ -22,6 +24,7 @@ tabindex
 tagify
 talkback
 textareas
+vars
 vodafone
 wcag
 webhint

@@ -4,11 +4,13 @@
 import './dwp--timeline';
 import './govuk--aria-describedby';
 import './govuk--aria-labelledby';
+import './govuk--button-colours';
 import './govuk--error-message';
 import './govuk--error-summary';
 import './govuk--focus-colours';
 import './govuk--headings';
 import './govuk--link-context';
+import './govuk--skip-links';
 import './hmrc--account-header';
 import './hmrc--ask-the-user-for-their-consent';
 import './hmrc--check-tax-years.js';
